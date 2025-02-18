@@ -352,75 +352,10 @@
      
     
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const bushraNumbers = document.querySelectorAll('.bushra-stat-number');
-                        bushraNumbers.forEach(animateNumber);
-                        observer.disconnect();
-                    }
-                });
-            }, observerOptions);
-
-            observer.observe(document.querySelector('#bushra-stats'));
-
-            function animateNumber(element) {
-                const target = parseInt(element.getAttribute('data-target'));
-                const suffix = element.getAttribute('data-suffix');
-                const duration = 2000; // Animation duration in milliseconds
-                const steps = 50; // Number of steps in the animation
-                const stepDuration = duration / steps;
-                
-                let current = 0;
-                const increment = target / steps;
-                
-                const counter = setInterval(() => {
-                    current += increment;
-                    
-                    // Handle different number formats
-                    if (current >= target) {
-                        element.textContent = target.toLocaleString() + suffix;
-                        clearInterval(counter);
-                    } else {
-                        element.textContent = Math.floor(current).toLocaleString() + suffix;
-                    }
-                }, stepDuration);
-            }
-        });
-
-        // chat
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const messages = document.querySelectorAll('.ali-message');
-            
-            function startAnimation() {
-                messages.forEach(message => {
-                    message.classList.remove('visible');
-                });
-                
-                setTimeout(() => {
-                    messages.forEach(message => {
-                        setTimeout(() => {
-                            message.classList.add('visible');
-                        }, parseInt(message.dataset.delay));
-                    });
-                }, 100);
-            }
-
-            startAnimation();
-            setInterval(startAnimation, 8000);
-        });
-    </script>
+    
       <script src="../script.js"></script>
       <script src="../script1.js"></script>
+      <script src="../script3.js"></script>
 
 </body>
 </html>

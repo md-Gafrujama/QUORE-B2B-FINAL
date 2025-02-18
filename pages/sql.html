@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="../styles/solution.css">
     <link rel="stylesheet" href="../styles/styles.css">
-    <style>
-        
-    </style>
+   
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -319,96 +317,9 @@
         </div>
     </div>
 
-    
-    <script>
-        let mansiLeadGraph;
-        function createMansiChart() {
-            const ctx = document.getElementById('mansi-lead-graph').getContext('2d');
-
-            if (mansiLeadGraph) {
-                mansiLeadGraph.destroy();
-            }
-
-            mansiLeadGraph = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                    datasets: [{
-                        label: 'Leads Generated',
-                        data: [12, 19, 3, 5, 2, 3, 10],
-                        backgroundColor: '#00ffa3',
-                        borderColor: '#00ffa3',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    },
-                    animation: {
-                        duration: 1500, // Animation duration in milliseconds
-                        easing: 'easeOutBounce' // Smooth bounce effect
-                    }
-                }
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            createMansiChart();
-
-            document.getElementById('mansi-cta-button').addEventListener('click', function (event) {
-                event.preventDefault();
-                alert('Thank you for starting the conversion process!');
-            });
-        });
-
-        let resizeTimeout;
-        window.addEventListener('resize', function () {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(createMansiChart, 100);
-        });
-
-        // Detect when the chart section is visible and trigger animation
-        function handleVisibility(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    createMansiChart();
-                }
-            });
-        }
-        const observer = new IntersectionObserver(handleVisibility, { threshold: 0.5 });
-        observer.observe(document.getElementById('mansi-lead-graph'));
-
-        // TRANSFORM JS
-        document.addEventListener("DOMContentLoaded", function () {
-            const hiddenElements = document.querySelectorAll(".hidden");
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        if (entry.target.classList.contains("left")) {
-                            entry.target.classList.add("show-from-left");
-                        } else if (entry.target.classList.contains("right")) {
-                            entry.target.classList.add("show-from-right");
-                        }
-                    } else {
-                        // Remove animation when out of view to allow re-triggering
-                        entry.target.classList.remove("show-from-left", "show-from-right");
-                    }
-                });
-            }, { threshold: 0.3 });
-
-            hiddenElements.forEach(element => observer.observe(element));
-        });
-    </script>
-
-
 <script src="../script.js"></script>
 <script src="../script1.js"></script>
+<script src="../script3.js"></script>
 
 </body>
 
