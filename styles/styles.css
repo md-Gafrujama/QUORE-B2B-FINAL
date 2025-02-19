@@ -1558,8 +1558,13 @@ h1 span {
   z-index: 1;
   opacity: 0;
   padding: 8px 0px;
-
 }
+@media (max-width: 480px){
+  .r-dropdown-content {
+    min-width: 200px;
+  }
+}
+
 /* Dropdown items */
 .r-dropdown-content a {
   padding: 10px;
