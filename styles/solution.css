@@ -867,7 +867,7 @@ subscribe-button:hover {
 /* General Styling */
 body {
   background: #f8f9fa;
-  color: #333;
+  /* color: #333; */
 }
 
 /* Navigation and Breadcrumb */
@@ -1514,10 +1514,7 @@ width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-body {
-  background: #fafafa;
-  color: #333;
-}
+
 
 .mansi-container {
   max-width: 1200px;
