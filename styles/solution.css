@@ -208,7 +208,7 @@
 }
 
 /* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   #yasmin {
     background-color: whitesmoke;
   }
@@ -217,7 +217,7 @@
     background: #2d2d2d;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
   }
-}
+} */
 
 /* content+ email  */
 * {
