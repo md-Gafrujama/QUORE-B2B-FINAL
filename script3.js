@@ -277,8 +277,8 @@ function createMansiChart() {
             datasets: [{
                 label: 'Leads Generated',
                 data: [12, 19, 3, 5, 2, 3, 10],
-                backgroundColor: '#00ffa3',
-                borderColor: '#00ffa3',
+                backgroundColor: '#00d8a6',
+                borderColor: '#00d8a6',
                 borderWidth: 1
             }]
         },

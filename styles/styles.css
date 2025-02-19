@@ -79,7 +79,7 @@ body {
   overflow-x: hidden;
   /* height: 100%; */
   padding-top: 160px;
-  color: white;
+  /* color: white; */
 }
 
 #kazim.navbar.scrolled {
@@ -709,6 +709,9 @@ body {
   width: 100%;
   z-index: 1001;
   height: 50px;
+}
+.text-section-unique p{
+  color: #000;
 }
 
 #footer #contact {

@@ -282,7 +282,10 @@
   font-weight: 600;
   font-size: 1.2rem;
 }
-
+.talk-button:hover{
+  background: #1a1a1a;
+}
+  
 .con-image-container {
   flex: 1;
   position: relative;
@@ -897,11 +900,8 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-}
 
-/* .bushra-hero-content {
-  padding-right: 2rem;
-} */
+}
 
 .bushra-hero-title {
   font-size: 3rem;
@@ -1013,6 +1013,7 @@ width: 100%;
 }
 
 /* Responsive Design */
+
 @media (max-width: 1024px) {
   #bushra-hero{
     padding: 2rem 40px;
@@ -1054,13 +1055,6 @@ width: 100%;
       grid-template-columns: 1fr;
   }
 
-  /* .bushra-hero-title {
-      font-size: 2rem;
-  } */
-
-  /* .bushra-hero-text {
-      font-size: 1rem;
-  } */
 }
 @media (max-width: 400px) {
   .bushra-hero-content{
@@ -1071,11 +1065,14 @@ width: 100%;
       justify-self: center;
   }
 }
+@media (min-width: 1330px) {
+  #bushra-hero {
+    padding: 0px 15% ;
+  }
+}
 
 /* MQL Generation */
 .aditya-container {
-   width: 92%; 
-  
   margin: 20px 70px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
@@ -1083,6 +1080,13 @@ width: 100%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
+}
+@media(min-width:1330px){
+  .aditya-container{
+    
+    max-width: 100%;
+  }
 }
 
 .aditya-left-section {
@@ -1589,7 +1593,7 @@ width: 100%;
   background: linear-gradient(90deg, #d9eb72, #00D4A4);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 30px;
   font-weight: 500;
   transition: transform 0.3s ease, background 0.3s ease;
 }
