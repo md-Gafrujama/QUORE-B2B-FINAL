@@ -867,7 +867,7 @@ subscribe-button:hover {
 /* General Styling */
 body {
   background: #f8f9fa;
-  /* color: #333; */
+  color: #333;
 }
 
 /* Navigation and Breadcrumb */
@@ -1667,6 +1667,23 @@ width: 100%;
   grid-template-columns: 1fr 1fr;
 }
 
+.kumar-heading {
+  color: #1A2B3C;
+  font-size:40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 clamp(20px, 4vw, 32px) 0;
+}
+
+.kumar-description {
+  color: #4A5568;
+  font-size:20px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+
 /* TRANSFORM */
 /* Initially hide the cards */
 .hidden {
@@ -2112,19 +2129,19 @@ width: 100%;
   }
 
   .kumar-heading {
-      color: #1A2B3C;
-      font-size: clamp(28px, 6vw, 48px);
-      font-weight: 700;
-      line-height: 1.2;
-      margin: 0 0 clamp(20px, 4vw, 32px) 0;
+    color: #1A2B3C;
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 clamp(20px, 4vw, 32px) 0;
   }
-
+  
   .kumar-description {
-      color: #4A5568;
-      font-size: clamp(16px, 2.5vw, 18px);
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0;
+    color: #4A5568;
+    font-size: clamp(16px, 2.5vw, 18px);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0;
   }
 
   .kumar-orange-line {
