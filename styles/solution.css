@@ -210,7 +210,7 @@
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   #yasmin {
-    background-color: #1a1a1a;
+    background-color: whitesmoke;
   }
 
   .sahidu-card {
