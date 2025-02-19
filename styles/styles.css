@@ -1024,12 +1024,19 @@ body {
   opacity: 0.9;
 }
 
+
+
 h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2rem;
   line-height: 1.2;
+  color: #000000da;
 }
+.meena {
+    color: black;
+}
+
 
 h1 span {
   color: #2ecc71;

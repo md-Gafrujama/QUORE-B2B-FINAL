@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 .syed-services {
@@ -161,6 +162,7 @@
   border-radius: 1rem;
   margin-bottom: clamp(2rem, 5vw, 3rem);
   transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 15px;
 }
 
 .syed-service-image:hover {
