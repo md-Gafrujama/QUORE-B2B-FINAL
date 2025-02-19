@@ -195,6 +195,17 @@
       document.querySelectorAll('.stat').forEach(stat => observer.observe(stat));
 
 
+// ACTIVE LINKS
+const currentLocation = window.location.pathname;
 
+// Get all navbar links
+const navLinks = document.querySelectorAll(".nav-links a");
+
+navLinks.forEach(link => {
+  // Check if the link's href matches the current location
+  if (link.getAttribute("href") === currentLocation) {
+    link.classList.add("active");
+  }
+});
 
   
