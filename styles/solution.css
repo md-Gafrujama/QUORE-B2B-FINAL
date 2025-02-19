@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #00ff9d;
-  --secondary-color: #00cc7a;
+  --primary-color: #00d8a6;;
+  --secondary-color:#00d8a6;
   --text-color: #1f2937;
   --bg-color: #f3f4f6;
   --card-bg: #ffffff;
@@ -58,7 +58,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #00d4a7, #6eff79);
+  background: linear-gradient(270deg, #75d04a, #00D4A4);
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 1;
@@ -86,7 +86,7 @@
 /* Service Icon Styles */
 .sahidu-icon {
   margin-bottom: 2.5rem;
-  stroke: #00ff9d;
+  stroke: #00d8a6;
   transition: all 0.4s ease;
   width: 80px;
   height: 80px;
@@ -252,8 +252,7 @@
 }
 
 .r-content-green-heading {
-  color: #00ff99;
-  font-size: 3rem;
+  color:#00d8a6;  font-size: 3rem;
   text-align: left;
 }
 
@@ -273,11 +272,11 @@
 }
 
 .talk-button {
-  background: #00ff99;
+  background: linear-gradient(90deg, #d9eb72, #00D4A4);
   color: #fff;
   padding: 15px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
   width: 50%;
   font-weight: 600;
@@ -384,14 +383,14 @@
 .bar {
   flex: 1;
   min-width: 20px;
-  background-color: #4ade80;
+  background-color: #00d8a6;
   /* Lighter, more visible green */
   transition: height 0.3s ease;
   position: relative;
 }
 
 .bar.clicks {
-  background-color: #16a34a;
+  background-color: #00d8a6;
   /* Darker, more visible green */
 }
 
@@ -467,7 +466,7 @@
 }
 
 .emailmarket-container h2 {
-  color: #00D4A4;
+  color:#00d8a6;
   margin-bottom: 20px;
   font-size: 40px;
 }
@@ -861,7 +860,7 @@ subscribe-button:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 /* General Styling */
@@ -882,7 +881,7 @@ body {
 }
 
 .bushra-nav span {
-  color: #00E693;
+  color:#00d8a6;
 }
 
 /* Hero Section */
@@ -906,7 +905,7 @@ body {
 
 .bushra-hero-title {
   font-size: 3rem;
-  color: #00E693;
+  color:#00d8a6;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
@@ -921,10 +920,10 @@ body {
 .bushra-cta-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background: #00E693;
+  background: linear-gradient(90deg, #d9eb72, #00D4A4);
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px;
   font-weight: 500;
   transition: background 0.3s ease;
 }
@@ -933,7 +932,7 @@ body {
   color: white;
 }
 .bushra-cta-button:hover {
-  background: #00B36B;
+  background:black;
 }
 
 .bushra-hero-image-container {
@@ -950,7 +949,7 @@ width: 100%;
   width: 100%;
   height: auto;
   border-radius: 20px;
-  background-color: #00E693;
+  background: #00d8a6; 
   padding: 10px; /* Optional: Add padding so the background color is visible around the image */
   border-radius: 20px; /* Keep rounded corners */
   display: inline-block; /* Ensure background only applies to the image */
@@ -996,7 +995,7 @@ width: 100%;
 .bushra-stat-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #00E693;
+  color:#00d8a6;
   margin-bottom: 1rem;
   min-height: 4rem;
   display: flex;
@@ -1097,7 +1096,7 @@ width: 100%;
 }
 
 .aditya-left-section:hover {
-  background: #00E693;
+  background: linear-gradient(270deg, #75d04a, #00D4A4);
 }
 
 .aditya-image-container {
@@ -1125,7 +1124,7 @@ width: 100%;
 }
 
 .aditya-title {
-  color: #00E693;
+  color:#00d8a6;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
@@ -1134,7 +1133,7 @@ width: 100%;
 .aditya-orange-line {
   height: 2px;
   width: 30px;
-  background: #00E693;
+  background: #00d8a6;
   margin-left: 10px;
 }
 
@@ -1155,11 +1154,11 @@ width: 100%;
 }
 
 .aditya-cta-button {
-  background: #00E693;
+  background: linear-gradient(90deg, #d9eb72, #00D4A4);
   color: white;
   border: none;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 16px;
   transition: all 0.3s ease;
@@ -1169,7 +1168,7 @@ width: 100%;
 }
 
 .aditya-cta-button:hover {
-  background: #00B36B;
+  background: black;
   transform: translateY(-2px);
 }
 
@@ -1297,7 +1296,7 @@ width: 100%;
 }
 
 .ali-sender {
-  background: linear-gradient(135deg, #00E693 0%, #00B36B 100%);
+  background: #00d8a6;
   color: white;
   margin-left: auto;
 }
@@ -1314,7 +1313,7 @@ width: 100%;
   margin: 0 12px;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 2px solid #00E693;
+  border: 2px solid #00d8a6;
   transition: transform 0.3s ease;
 }
 
@@ -1342,7 +1341,7 @@ width: 100%;
 }
 
 .ali-header-title {
-  color: #00E693;
+  color:#00d8a6;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1361,7 +1360,7 @@ width: 100%;
 .ali-green-line {
   height: 3px;
   width: 40px;
-  background: linear-gradient(90deg, #00E693 0%, #00B36B 100%);
+  background: #00d8a6;
   margin-left: 20px;
   border-radius: 2px;
 }
@@ -1415,18 +1414,18 @@ width: 100%;
 
 .ali-checklist-item:before {
   content: "✓";
-  color: #00E693;
+  color:#00d8a6;
   font-size: 20px;
   margin-right: 15px;
   font-weight: bold;
 }
 
 .ali-cta-button {
-  background: linear-gradient(135deg, #00E693 0%, #00B36B 100%);
+  background: linear-gradient(90deg, #d9eb72, #00D4A4);
   color: white;
   border: none;
   padding: 18px 36px;
-  border-radius: 12px;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 17px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1439,6 +1438,7 @@ width: 100%;
 }
 
 .ali-cta-button:hover {
+  background: black;
   transform: translateY(-3px) scale(1.02);
   box-shadow: 0 15px 30px rgba(0, 230, 147, 0.4);
 }
@@ -1511,7 +1511,7 @@ width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 
@@ -1531,7 +1531,7 @@ width: 100%;
 }
 
 .kumar-section-label {
-  color: #00E693;
+  color:#00d8a6;
   font-size: 2rem;
 }
 
@@ -1570,7 +1570,7 @@ width: 100%;
 
 .mansi-hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  color: #00ffa3;
+  color:#00d8a6;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   font-weight: 600;
@@ -1586,7 +1586,7 @@ width: 100%;
 .mansi-cta-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background: #00ffa3;
+  background: linear-gradient(90deg, #d9eb72, #00D4A4);
   color: white;
   text-decoration: none;
   border-radius: 8px;
@@ -1596,7 +1596,8 @@ width: 100%;
 
 .mansi-cta-button:hover {
   transform: translateY(-2px);
-  background: #00e693;
+  background: black;
+
 }
 
 .mansi-hero-image {
@@ -1761,8 +1762,7 @@ width: 100%;
 .mansi-check-icon svg {
   width: 24px;
   height: 24px;
-  color: #00B67A;
-}
+  color:#00d8a6;}
 
 .mansi-criteria-title {
   font-size: 1.1rem;
@@ -1793,7 +1793,7 @@ width: 100%;
 
 .mansi-criteria-item::before {
   content: "✓";
-  color: #00ffa3;
+  color:#00d8a6;
   font-weight: bold;
 }
 
@@ -1860,7 +1860,7 @@ width: 100%;
 .image-wrapper {
   height: 100%;
   border-radius: clamp(1rem, 3vw, 2rem);
-  background: #00E693;
+  background: #00d8a6;
   padding: 45px;
   overflow: hidden;
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
@@ -1942,13 +1942,13 @@ width: 100%;
   content: '';
   width: clamp(1rem, 3vw, 2rem);
   height: 2px;
-  background: #00E693;
+  background: #00d8a6;
   flex-shrink: 0;
 }
 
 .funnel-level:hover {
   transform: translateX(-0.5rem);
-  background: #00E693;
+  background: #00d8a6;
 }
 
 .funnel-level:hover .funnel-label {
@@ -2115,12 +2115,12 @@ width: 100%;
       max-width: 1200px;
       margin: 0 auto;
       padding: clamp(20px, 5vw, 40px) clamp(10px, 3vw, 20px);
-      font-family: system-ui, -apple-system, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       text-align: left;
   }
 
   .kumar-section-label {
-      color: #00d4a7;
+    color:#00d8a6;
       font-size: clamp(12px, 2vw, 14px);
       font-weight: 600;
       letter-spacing: 1px;
@@ -2147,7 +2147,7 @@ width: 100%;
   .kumar-orange-line {
       width: clamp(40px, 8vw, 60px);
       height: 4px;
-      background-color: #00d4a7;
+      background-color: #00d8a6;
       margin: clamp(8px, 2vw, 16px) 0 clamp(20px, 4vw, 32px) 0;
   }
 }

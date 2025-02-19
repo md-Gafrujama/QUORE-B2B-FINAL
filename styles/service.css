@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #00ff9d;
-  --secondary-color: #00cc7a;
+  --primary-color:#00d8a6;
+  --secondary-color: #00d8a6;
   --text-color: #1f2937;
   --bg-color: #f3f4f6;
   --card-bg: #ffffff;
@@ -40,21 +40,21 @@
 }
 
 .syed-services-title span {
-  color: var(--primary-color);
+  color:#00d8a6;
   position: relative;
   display: inline-block;
   transition: color var(--transition-speed) ease;
 }
 
 .syed-services-title span:hover {
-  color: var(--secondary-color);
+  color:#00d8a6;
   transform: scale(1.1);
 }
 
 .syed-view-all-btn {
   display: inline-block;
   padding: clamp(0.75rem, 2.5vw, 1rem) clamp(2rem, 5vw, 3rem);  /* Larger padding */
-  background-color: var(--primary-color);
+  background: linear-gradient(90deg, #d9eb72, #00D4A4);
   color: white;
   text-decoration: none;
   border-radius: 9999px;
@@ -65,7 +65,8 @@
 }
 
 .syed-view-all-btn:hover {
-  background-color: var(--secondary-color);
+  background-color: black;
+  
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
@@ -130,7 +131,7 @@
 .syed-service-icon {
   width: clamp(48px, 10vw, 72px);  /* Larger icons */
   height: clamp(48px, 10vw, 72px);
-  color: var(--primary-color);
+  color:#00d8a6;
   flex-shrink: 0;
   transition: transform var(--transition-speed) ease;
 }
@@ -143,7 +144,7 @@
   font-size: clamp(1.5rem, 3.5vw, 2rem);  /* Larger headings */
   font-weight: 700;
   margin-bottom: clamp(1.5rem, 4vw, 2rem);
-  color: var(--primary-color);
+  color:#00d8a6;
 }
 
 .syed-service-description p {
@@ -196,7 +197,7 @@
   display: block;
   font-size: clamp(1.5rem, 4vw, 2.25rem);  /* Larger values */
   font-weight: 800;
-  color: var(--primary-color);
+  color:#00d8a6;
 }
 
 .syed-metric-label {
