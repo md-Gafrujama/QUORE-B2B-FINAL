@@ -1559,6 +1559,61 @@ h1 span {
   opacity: 0;
   padding: 8px 0px;
 }
+
+@media (max-width: 968px){
+  .r-dropdown-content {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .r-dropdown:hover .r-dropdown-content {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Dropdown items hidden initially */
+  .r-dropdown-content a {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .r-dropdown:hover .r-dropdown-content a {
+    animation: dropdownFade 0.3s ease-in-out forwards;
+  }
+  @keyframes dropdownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .r-dropdown-content a:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+  .r-dropdown-content a:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  .r-dropdown-content a:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+  .r-dropdown-content a:nth-child(4) {
+    animation-delay: 0s;
+  }
+  .r-dropdown-content a:nth-child(5) {
+    animation-delay: 1.2s;
+  }
+  
+  /* Show dropdown with animation */
+  .r-dropdown:hover .r-dropdown-content {
+    display: block;
+    opacity: 1;
+  }
+}
+
 @media (max-width: 480px){
   .r-dropdown-content {
     min-width: 200px;
@@ -1608,6 +1663,7 @@ h1 span {
   opacity: 1;
 }
 /*arrow dropown*/
+
 
 .arrow-buttons{
       position: fixed;
