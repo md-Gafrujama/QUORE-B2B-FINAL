@@ -1416,6 +1416,7 @@ h1 span {
   margin-left: -5px;
 }
 
+
 /* Quick links */
 .quick-links ul {
   list-style: none;
@@ -1431,9 +1432,16 @@ h1 span {
   font-size: 12px;
   transition: 0.3s;
 }
+.quick-links{
+  padding-left: 80px;
+}
 .quick-links ul li a:hover {
   color:#00d8a6;}
-
+  @media(max-width:889px){
+    .quick-links{
+      padding-left: 10px;
+    }
+  }
 /* Contact Details */
 .contact p {
   font-size: 12px;
@@ -1664,7 +1672,4 @@ h1 span {
 
 .scroll-btn i {
   transition: transform 0.3s ease;
-}
-.quick-links{
-  padding-left: 80px;
 }
