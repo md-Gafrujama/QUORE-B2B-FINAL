@@ -1404,8 +1404,10 @@ h1 span {
   text-align: left;
 }
 #dh1 {
-  margin-bottom:23px;
+  margin-bottom:20px;
   margin-left: -12px;
+  margin-top: 2px;
+  
 }
 #dheading {
   color: #333333;
@@ -1662,4 +1664,7 @@ h1 span {
 
 .scroll-btn i {
   transition: transform 0.3s ease;
+}
+.quick-links{
+  padding-left: 80px;
 }
