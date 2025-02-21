@@ -350,11 +350,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* .gafru-circle {
-  height: 24px;
-  width: auto;
-  transition: transform 0.3s ease;
-} */
+
 
 .menu-toggle {
   display: none;
@@ -388,14 +384,7 @@ body {
   }
 }
 
-/* .nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  position: relative;
-} */
+
 
 .nav-links a:hover {
   color:#00d8a6;
@@ -534,25 +523,6 @@ body {
   } */
 }
 
-/* Navbar Styles */
-/* .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: white;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-} */
-
-/* .nav-left {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-} */
-
 .logo-container {
   display: flex;
   align-items: center;
@@ -583,10 +553,7 @@ body {
   color: #434343;
 }
 
-/* .nav-links {
-  display: flex;
-  gap: 2.5rem;
-} */
+
 
 .nav-links a {
   text-decoration: none;
@@ -653,17 +620,7 @@ body {
     margin-top: 1rem;
   }
 
-  /* .logo-circle{
-    height: 40px;
-  }
-
-  .gafru-circle{
-    height: 60px;
-  }
-
-  .logo{
-    height: 40px;
-  } */
+ 
 
   .nav-button {
     margin-top: 1rem;
@@ -1045,13 +1002,6 @@ h1 span {
   color: #2ecc71;
 }
 
-/* p {
-  color: #666;
-  line-height: 1.8;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  text-align: center;
-} */
 
 .features {
   list-style: none;
@@ -1103,13 +1053,7 @@ h1 span {
   font-weight: 700;
 }
 
-/* .subtitle {
-  text-align: center;
-  color: #666;
-  margin-bottom: 50px;
-  font-size: 1.2rem;
-  font-weight: 300;
-} */
+
 
 .subtitle {
   color:#00d8a6;
@@ -1460,7 +1404,7 @@ h1 span {
   text-align: left;
 }
 #dh1 {
-  margin-bottom: 30px;
+  margin-bottom:23px;
   margin-left: -12px;
 }
 #dheading {
