@@ -1,22 +1,115 @@
+<!-- HTML Optimization -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="critical.css" as="style">
+    <link rel="preload" href="main.js" as="script">
+    
+    <!-- Compress and minify CSS -->
+    <style>
+    /* Critical CSS inline */
+    .header{width:100%;max-width:1200px;margin:0 auto}
+    .hero{height:100vh;background-size:cover}
+    /* Load non-critical CSS asynchronously */
+    </style>
+    <link rel="stylesheet" href="non-critical.css" media="print" onload="this.media='all'">
 </head>
 <body>
+    <!-- Optimize images -->
+    <img src="image.jpg" 
+         loading="lazy" 
+         srcset="image-300.jpg 300w, 
+                 image-600.jpg 600w, 
+                 image-900.jpg 900w"
+         sizes="(max-width: 300px) 300px,
+                (max-width: 600px) 600px,
+                900px"
+         alt="Optimized image">
 
-    <!-- Standard favicon -->
-    <link rel="icon" type="image/ICON.jpg" sizes="32x32" href="favicon.JPG">
-    
-    <!-- Favicon for Apple devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon-apple.png">
+    <!-- JavaScript Optimization -->
+    <script>
+    // Defer non-critical JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load heavy scripts after page load
+        const script = document.createElement('script');
+        script.src = 'heavy-features.js';
+        document.body.appendChild(script);
+    });
 
-    <!-- Favicon for older browsers -->
-    <link rel="shortcut icon" href="favicon.ico">
+    // Implement efficient event handlers
+    const container = document.querySelector('.container');
+    container.addEventListener('click', function(e) {
+        if (e.target.matches('.button')) {
+            handleClick(e);
+        }
+    });
 
+    // Cache DOM queries
+    const frequentElements = document.querySelectorAll('.frequent');
+    const elementCache = Array.from(frequentElements);
 
-  
+    // Use requestAnimationFrame for animations
+    function animate() {
+        requestAnimationFrame(() => {
+            // Perform animations here
+            elementCache.forEach(el => {
+                el.style.transform = `translateX(${currentPos}px)`;
+            });
+        });
+    }
+    </script>
 </body>
 </html>
+
+/* CSS Optimization */
+/* Use efficient selectors */
+.button { /* Direct class selector */
+    background: #007bff;
+}
+
+/* Avoid deep nesting */
+.header .nav .list .item { /* Bad */
+    color: #333;
+}
+.nav-item { /* Good */
+    color: #333;
+}
+
+/* Use CSS containment */
+.widget {
+    contain: content;
+    contain: size layout paint;
+}
+
+/* JavaScript Performance Optimization */
+// Optimize loops
+const items = ['item1', 'item2', 'item3'];
+const len = items.length; // Cache length
+for (let i = 0; i < len; i++) { // More efficient than checking length each time
+    processItem(items[i]);
+}
+
+// Use efficient data structures
+const frequentLookups = new Set(['item1', 'item2']); // O(1) lookup
+if (frequentLookups.has('item1')) {
+    // Process item
+}
+
+// Implement throttling for expensive operations
+function throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
+const throttledScroll = throttle(() => {
+    // Handle scroll event
+}, 100);
+
+window.addEventListener('scroll', throttledScroll);
