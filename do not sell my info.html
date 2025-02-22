@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="terms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Form</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <footer id="footer">
+      <div id="contact">
+      </div>
+      <div id="social-icons">
+          <a href="#" title="Linkdin"><i class="fa fa-linkedin"></i></a>
+      </div>
+  </footer>
+
+  <nav id="kazim" class="navbar">
+      <div class="nav-left">
+          <a href="index.html" class="logo">
+              <img src="image/ICON.jpg" alt="gafru" class="logo-circle" />
+              <img src="image/QUORE.png" alt="gafru" class="gafru-circle" />
+          </a>
+      </div>
+
+      <div class="menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+          <a href="index.html">HOME</a>
+          <a href="about.html" class="active">ABOUT</a>
+          <li class="r-dropdown">
+              <a href="service.html">SERVICE</a>
+              <div class="r-dropdown-content">
+                  <a href="/pages/displayAdvertisement.html">Display Advertisement</a>
+              <a href="/pages/Account-Based Marketing.html">Account-Based Marketing</a>
+              <a href="/pages/Lead Generation.html">Lead Generation</a>
+              <a href="/pages/Data Solutions.html">Data Solutions</a>
+              <a href="/pages/webdesign.html">Web Design</a>
+              </div>
+          </li>
+          <li class="r-dropdown">
+              <a href="solutions.html">SOLUTION</a>
+              <div class="r-dropdown-content">
+                  <a href="/pages/contentsyndication.html">Content Syndication
+                     </a>
+                  <a href="/pages/sql.html">Sales Qualified Leads</a>
+                  <a href="/pages/intentLeadss.html">Intent Leads</a>
+                  <a href="/pages/emailMarketing.html">Email Marketing</a>
+                 
+              </div>
+          </li>
+          <a href='contact.html'>CONTACT</a>
+      </div>
+
+      <button class="nav-button">Get Started</button>
+  </nav>
+
+  <div class="term-navbar-header">
+      <div class="terms-container">
+          <h1>QUORE B2B MARKETING Terms of Use</h1>
+      </div>
+  </div> 
+
+
+  <div class="trying">
+    <p class="cal-para">We take your privacy seriously. If you are a resident of California, you may use this form to make a request to exercise certain rights which you may have under the California Consumer Privacy Act.</p>
+    <div class="form-container">
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name <span class="required">*</span></label>
+            <div class="d_phonenum">
+              <div class="form-group">
+                <!-- <label>First Name <span class="required">*</span></label> -->
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="first name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <!-- <label>Last Name <span class="required">*</span></label> -->
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="last name"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group form-group-email">
+            <label>E-mail <span class="required">*</span></label>
+            <input
+              type="email"
+              name="email"
+              placeholder="ex: myname@example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label>Phone Number <span class="required">*</span></label>
+            <div class="d_phonenum">
+              <div class="form-group-1">
+                <!-- <label>Area Code <span class="required">*</span></label> -->
+                <select
+                  name="areaCode"
+                  id="areaCodeSelect"
+                  required
+                  onchange="toggleManualInput(this)"
+                >
+                  <option value="">Select</option>
+                  <option value="+1">+1 (USA)</option>
+                  <option value="+91">+91 (India)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+61">+61 (Australia)</option>
+                  <option value="+81">+81 (Japan)</option>
+                  <option value="+49">+49 (Germany)</option>
+                  <option value="+33">+33 (France)</option>
+                  <option value="+39">+39 (Italy)</option>
+                </select>
+                <!-- <input type="text" name="areaCodeManual" id="areaCodeManual" placeholder="Enter area code" style="display:none;" pattern="\\+?[0-9]{1,4}"> -->
+              </div>
+              <div class="form-group-2">
+                <!-- <label>Phone Number <span class="required">*</span></label> -->
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  placeholder="Enter your phone no."
+                  required
+                  pattern="[0-9]{10}"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group form-group-company">
+          <label>Company Name <span class="required">*</span></label>
+          <input
+            type="text"
+            name="companyName"
+            placeholder="company name"
+            required
+          />
+        </div>
+
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" name="doNotSell" required />
+            Please do not sell my personal information<span class="required"
+              >*</span
+            >
+          </label>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitButton">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          const form = e.target;
+          const formData = new FormData(form);
+          const submitButton = document.getElementById("submitButton");
+
+          // Disable button to prevent multiple clicks
+          submitButton.disabled = true;
+          submitButton.textContent = "Submitting...";
+
+          const accessKey = "547b251c-6d1b-454f-9dd7-4c8894814ea5"; // Check if this key is correct!
+
+          try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+              method: "POST",
+              body: JSON.stringify({
+                access_key: accessKey,
+                firstName: formData.get("firstName"),
+                lastName: formData.get("lastName"),
+                email: formData.get("email"),
+                phone: `${formData.get("areaCode")}${formData.get(
+                  "phoneNumber"
+                )}`, // FIXED BUG
+                companyName: formData.get("companyName"),
+                doNotSell: formData.get("doNotSell") ? "Yes" : "No",
+              }),
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+            });
+
+            const result = await response.json();
+            console.log(result); // Debugging: Log response
+
+            if (response.ok) {
+              form.style.display = "none";
+
+              // Create the "Thank You" message
+              const thankYouMessage = document.createElement("div");
+              thankYouMessage.innerHTML = `
+    <div class="submit_image" style="text-align: center; padding: 20px; border-radius: 10px; height: 300px">
+                    <img src="image/california.jpg" alt="Success" style="width: 140px; height: auto; margin-bottom: 10px"/>
+                    <h1>Thank You!</h1>
+                    <p>Your submission has been received.</p>
+                </div>
+`;
+
+              // Insert the message into the container
+              document
+                .querySelector(".form-container")
+                .appendChild(thankYouMessage);
+              // alert('Form submitted successfully!');
+              // form.reset();
+            } else {
+              alert("Error: " + result.message); // Show detailed error
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert("There was an error submitting the form. Please try again.");
+          }
+
+          //Enable
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit";
+        });
+    </script>
+     <footer>
+      <div class="footer-container">
+          
+          <!-- Company Info -->
+          <div class="footer-section company-info">
+              <div id="dh1">
+                  <img src="image/ICON.jpg" alt="Company Logo" class="dlogo1">
+              <span id="dheading">QUORE B2B MARKETING</span></div>
+              <div class="underline2">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+      </div>
+              <p>While the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees. While the lovely valley teems with vapour around me.</p>
+          </div>
+  
+          <!-- Quick Links (Updated) -->
+          <div class="footer-section quick-links">
+              <div id="dh2">QUICK LINKS</div>
+              <div class="underline2">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+              </div>
+              <ul>
+                  <li><a href="careers.html">Careers</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="Trems.html">Terms of use</a></li>
+                  <li><a href="privcy.html">Privacy & Policy</a></li>
+                  <li><a href="do not sell my info.html">California Do Not Sell My Info</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+  
+          <!-- Contact Details -->
+          <div class="footer-section contact">
+              <div id="dh3">CONTACT</div>
+              <div class="underline2">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+              </div>
+              <p>Patricia C. Amedee 4401 Waldeck Street Grapevine Nashville, TX 76051</p>
+              <p>Email: info@yourdomain.com</p>
+              <p>Phone: +1 (987) 654-3210</p>
+          </div>
+  
+          <!-- Google Map -->
+          <div class="footer-section map2">
+              <div id="dh4">LOCATION ON MAP</div>
+              <div class="underline2">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+              </div>
+              <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2294415337057!2d73.856743!3d18.5204303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08744a74c81%3A0x4cbe7e56a3d1a1a9!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1633958808463!5m2!1sen!2sin
+                  "
+                  width="310"
+                  height="160"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy">
+              </iframe>
+          </div>
+      </div>
+  </footer>
+  
+  <!-- downav-->
+    <!-- Footer-Bottom -->
+    <div id="footer-bottom">
+      <div class="dcopy"> 2025 QUORE B2B MARKETING</div>
+      <div class="social-icons">
+          <a href="https://www.linkedin.com/company/quoreb2bmarketing/" title="Linkdin"><i class="fa fa-linkedin"></i></a>
+      </div>
+  </div>
+      <script src="script.js"></script>
+      <script src="script1.js"></script>
+      <script src="script3.js"></script>
+  </body>
+</html>
