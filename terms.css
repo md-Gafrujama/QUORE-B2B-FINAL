@@ -15,7 +15,6 @@ body {
   background: linear-gradient(180deg, #90e668, #76f5d7);
   color: white;
   padding: 2rem 0;
-  position: fixed;
   overflow: hidden;
   height: 100px;
   width: 100%;
@@ -23,6 +22,7 @@ body {
   align-items: center;
   text-align: center;
   display: flex;
+  position: relative;
   top: 130px;
   /* left: 0; */
   z-index: 10;
@@ -43,7 +43,7 @@ body {
 .terms-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 70px;
   line-height: 2rem;
   display: flex;
   flex-direction: column;
@@ -61,11 +61,18 @@ body {
   color: white;
 }
 
+.terms-container h3 {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 600;
+  color: white;
+}
+
 .terms-content {
   padding: 3rem 0;
-  position: relative;
+  /* position: relative; */
   z-index: 1;
-  margin-top: 18%;
+  margin-top: 10%;
 }
 
 .terms-header {
@@ -114,15 +121,18 @@ body {
 
 @media (max-width: 1170px) {
  .terms-content{
-  margin-top: 25%;
+  margin-top: 15%;
  }
 }
 @media (max-width: 868px){
   .terms-content{
-      margin-top: 30%;
+      margin-top: 20%;
      }
   .terms-container h1 {
       font-size: 1.5rem;
+  }
+  .terms-container h3 {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 768px) {
@@ -132,17 +142,21 @@ body {
 }
 @media (max-width: 678px) {
   .terms-content{
-   margin-top: 35%;
+   margin-top:25%;
   }
 }
 
 @media (max-width: 600px) {
   .terms-content{
-   margin-top: 40%;
+   margin-top: 30%;
   }
   .terms-container h1 {
       font-size: 1rem;
   }
+  .terms-container h3 {
+    font-size: 1rem;
+  }
+
 }
 @media (max-width: 468px) {
 
@@ -150,7 +164,7 @@ body {
       font-size: 1rem;
   }
   .terms-content {
-      margin-top: 55%;
+      margin-top: 25%;
   }
 }
 
@@ -241,7 +255,7 @@ body {
 }
 
 .submit-btn {
-  background: #8bc34a;
+  background: linear-gradient(to right, #1de1a3, #cee230);
   color: white;
   border: none;
   padding: 12px 40px;
@@ -254,7 +268,7 @@ body {
 }
 
 .submit-btn:hover {
-  background: #7cb342;
+  background: black;
 }
 
 .error {
@@ -270,6 +284,10 @@ body {
 .submit_image h1,
 .submit_image p {
   margin-bottom: 10px;
+}
+.trying {
+
+  margin: 200px 70px 0px 70px;
 }
 
 @media (max-width: 600px) {
@@ -288,12 +306,15 @@ body {
     width: 100%;
   }
   .form-group-email {
-    margin-bottom: 50px;
+    margin-bottom: 30px
+  }
+}
+@media(max-width: 480px){
+  .trying{
+    margin: 200px 30px 0px 30px;
+  }
+  .terms-container{
+    padding: 0px 30px;
   }
 }
 
-
-.trying {
-  clear: both; /* Ensures it doesn't overlap */
-  margin-top: 250px; /* Adjust as needed */
-}

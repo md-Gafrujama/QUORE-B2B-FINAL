@@ -594,3 +594,73 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// do not shell
+document
+.getElementById("contactForm")
+.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const form = e.target;
+  const formData = new FormData(form);
+  const submitButton = document.getElementById("submitButton");
+
+  // Disable button to prevent multiple clicks
+  submitButton.disabled = true;
+  submitButton.textContent = "Submitting...";
+
+  const accessKey = "547b251c-6d1b-454f-9dd7-4c8894814ea5"; // Check if this key is correct!
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: JSON.stringify({
+        access_key: accessKey,
+        firstName: formData.get("firstName"),
+        lastName: formData.get("lastName"),
+        email: formData.get("email"),
+        phone: `${formData.get("areaCode")}${formData.get(
+          "phoneNumber"
+        )}`, // FIXED BUG
+        companyName: formData.get("companyName"),
+        doNotSell: formData.get("doNotSell") ? "Yes" : "No",
+      }),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+
+    const result = await response.json();
+    console.log(result); // Debugging: Log response
+
+    if (response.ok) {
+      form.style.display = "none";
+
+      // Create the "Thank You" message
+      const thankYouMessage = document.createElement("div");
+      thankYouMessage.innerHTML = `
+<div class="submit_image" style="text-align: center; padding: 20px; border-radius: 10px; height: 300px">
+            <img src="image/california.jpg" alt="Success" style="width: 140px; height: auto; margin-bottom: 10px"/>
+            <h1>Thank You!</h1>
+            <p>Your submission has been received.</p>
+        </div>
+`;
+
+      // Insert the message into the container
+      document
+        .querySelector(".form-container")
+        .appendChild(thankYouMessage);
+      // alert('Form submitted successfully!');
+      // form.reset();
+    } else {
+      alert("Error: " + result.message); // Show detailed error
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("There was an error submitting the form. Please try again.");
+  }
+
+  //Enable
+  submitButton.disabled = false;
+  submitButton.textContent = "Submit";
+});
