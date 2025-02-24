@@ -151,7 +151,7 @@
 .syed-service-description p {
   color: #4b5563;
   margin-bottom: auto;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);  /* Larger text */
+ 
   line-height: 1.8;
 }
 
@@ -161,7 +161,7 @@
   object-fit: cover;
   border-radius: 1rem;
   margin-bottom: clamp(2rem, 5vw, 3rem);
-  transition: transform var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform cubic-bezier(0.2, 0, 0.1, 0.5);
   margin-top: 15px;
 }
 
