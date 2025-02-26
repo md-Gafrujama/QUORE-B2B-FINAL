@@ -3,16 +3,80 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/about",
       "destination": "/about.html"
+    },
+    {
+      "source": "/careers",
+      "destination": "/careers.html"
     },
     {
       "source": "/contact",
       "destination": "/contact.html"
     },
     {
-      "source": "/",
-      "destination": "/index.html"
+      "source": "/do-not-sell-my-info",
+      "destination": "/do not sell my info.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privcy.html"
+    },
+    {
+      "source": "/readmoreabout",
+      "destination": "/readmoreabout.html"
+    },
+    {
+      "source": "/service",
+      "destination": "/service.html"
+    },
+    {
+      "source": "/solutions",
+      "destination": "/solutions.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/Trems.html"
+    },
+    {
+      "source": "/account-based-marketing",
+      "destination": "/Account-Based Marketing.html"
+    },
+    {
+      "source": "/content-syndication",
+      "destination": "/contentsyndication.html"
+    },
+    {
+      "source": "/data-solutions",
+      "destination": "/Data Solutions.html"
+    },
+    {
+      "source": "/display-advertisement",
+      "destination": "/displayAdvertisement.html"
+    },
+    {
+      "source": "/email-marketing",
+      "destination": "/emailMarketing.html"
+    },
+    {
+      "source": "/intent-leads",
+      "destination": "/intentLeadss.html"
+    },
+    {
+      "source": "/lead-generation",
+      "destination": "/Lead Generation.html"
+    },
+    {
+      "source": "/sql",
+      "destination": "/sql.html"
+    },
+    {
+      "source": "/web-design",
+      "destination": "/webdesign.html"
     },
     {
       "source": "/:path*",
@@ -20,11 +84,6 @@
     }
   ],
   "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
     {
       "source": "/:path*.html",
       "destination": "/:path*",
