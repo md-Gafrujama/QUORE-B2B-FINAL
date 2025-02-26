@@ -440,6 +440,33 @@
         <a href="https://www.linkedin.com/company/quoreb2bmarketing/" title="Linkdin"><i class="fa fa-linkedin"></i></a>
     </div>
   </div>
+  <script> 
+    document.addEventListener('DOMContentLoaded', function() {
+  // Get all links
+  const links = document.querySelectorAll('a');
+  
+  links.forEach(link => {
+    // Store original href
+    const originalHref = link.getAttribute('href');
+    
+    // Add click event that uses the original href
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = originalHref;
+    });
+    
+    // On hover, remove the href attribute completely
+    link.addEventListener('mouseover', function() {
+      this.removeAttribute('href');
+    });
+    
+    // When mouse leaves, restore the href
+    link.addEventListener('mouseout', function() {
+      this.setAttribute('href', originalHref);
+    });
+  });
+});
+  </script>
     <script src="script.js"></script>
     <script src="script1.js"></script>
     

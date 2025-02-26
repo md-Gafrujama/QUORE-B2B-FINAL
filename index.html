@@ -499,40 +499,28 @@
     </div>
 </div>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+ document.addEventListener('DOMContentLoaded', function() {
   // Get all links
   const links = document.querySelectorAll('a');
   
   links.forEach(link => {
-    // Store the original title and href
-    const originalTitle = link.getAttribute('title') || '';
+    // Store original href
     const originalHref = link.getAttribute('href');
     
-    // On hover, set the href to javascript:void(0) which won't show a URL
-    link.addEventListener('mouseover', function() {
-      // Optionally save original title if it exists
-      if (originalTitle) {
-        this.dataset.originalTitle = originalTitle;
-      }
-      
-      // Remove the href temporarily
-      this.setAttribute('href', 'quoreb2b.com;');
-    });
-    
-    // When mouse leaves, restore original href
-    link.addEventListener('mouseout', function() {
-      this.setAttribute('href', originalHref);
-      
-      // Restore original title if there was one
-      if (this.dataset.originalTitle) {
-        this.setAttribute('title', this.dataset.originalTitle);
-      }
-    });
-    
-    // On click, navigate to the original URL
+    // Add click event that uses the original href
     link.addEventListener('click', function(e) {
       e.preventDefault();
       window.location.href = originalHref;
+    });
+    
+    // On hover, remove the href attribute completely
+    link.addEventListener('mouseover', function() {
+      this.removeAttribute('href');
+    });
+    
+    // When mouse leaves, restore the href
+    link.addEventListener('mouseout', function() {
+      this.setAttribute('href', originalHref);
     });
   });
 });
