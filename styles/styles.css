@@ -1403,7 +1403,7 @@ h1 span {
   text-align: left;
 }
 #dh1 {
-  margin-bottom:20px;
+  margin-bottom:20px;                         
   margin-left: -12px;
   margin-top: 2px;
   
@@ -1414,7 +1414,7 @@ h1 span {
   font-weight: 700;
   margin-left: -5px;
 }
-
+ 
 
 /* Quick links */
 .quick-links ul {
