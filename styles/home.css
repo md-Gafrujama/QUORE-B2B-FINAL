@@ -72,7 +72,7 @@ color:#00d8a6;
 }
 
 .hero-description {
-  font-size: 18px;
+  font-size: 1rem;
   color: #666;
   margin-bottom: 2rem;
   line-height: 1.6;
@@ -318,7 +318,7 @@ color:#00d8a6;
   justify-content: center;
 }
 .services-header{
-  flex: 0.3;
+  flex: 0.4;
   margin-left: 20px;
   margin-top: 3rem;
 }
@@ -326,7 +326,7 @@ color:#00d8a6;
   display: flex;
   margin-top: 3rem;
   flex-direction: column;
-  flex: 0.7;
+  flex: 0.6;
   gap: 20px;
   justify-content: center;
   align-items: center;
