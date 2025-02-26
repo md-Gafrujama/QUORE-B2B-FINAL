@@ -498,36 +498,7 @@
       <a href="https://www.linkedin.com/company/quoreb2bmarketing/" title="Linkdin"><i class="fa fa-linkedin"></i></a>
     </div>
 </div>
-<script>
-  // Function to load content dynamically
-function loadPage(page) {
-  fetch(page)
-    .then(response => response.text())
-    .then(html => {
-      // Create a temporary container to parse the HTML
-      const tempContainer = document.createElement('div');
-      tempContainer.innerHTML = html;
 
-      // Extract the content inside the <body> tag
-      const bodyContent = tempContainer.querySelector('body').innerHTML;
-
-      // Insert the extracted content into the #content div
-      document.getElementById('content').innerHTML = bodyContent;
-    })
-    .catch(error => {
-      console.error('Error loading page:', error);
-    });
-}
-
-// Add event listeners to navigation links
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent the default link behavior
-    const page = this.getAttribute('data-page'); // Get the page to load
-    loadPage(page); // Load the page content
-  });
-});
-</script>
     <script src="script.js"></script>
     <script src="script1.js"></script>
 
