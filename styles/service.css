@@ -35,7 +35,7 @@
 
 .syed-services-title {
   font-size: clamp(2rem, 5vw, 3.5rem);  /* Increased font sizes */
-  font-weight: 800;  /* Made bolder */
+  font-weight: 700;  /* Made bolder */
   margin-bottom: clamp(1.5rem, 4vw, 2rem);
   line-height: 1.2;
 }
@@ -61,7 +61,7 @@
   border-radius: 9999px;
   transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
   font-size: clamp(1rem, 2.5vw, 1.25rem);  /* Larger font */
-  font-weight: 600;
+  font-weight: 700;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -198,7 +198,7 @@
 .syed-metric-value {
   display: block;
   font-size: clamp(1.5rem, 4vw, 2.25rem);  /* Larger values */
-  font-weight: 800;
+  font-weight: 700;
   color:#00d8a6;
 }
 

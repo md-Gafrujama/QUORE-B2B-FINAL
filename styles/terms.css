@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   line-height: 1.6;
 }
 
@@ -57,14 +57,14 @@ body {
 .terms-container h1 {
   font-size: 2rem;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
 }
 
 .terms-container h3 {
   font-size: 2rem;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
 }
 
@@ -86,7 +86,7 @@ body {
 }
 
 .terms-notice {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 2rem;
 }
 
@@ -174,7 +174,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 

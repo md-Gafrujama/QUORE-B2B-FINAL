@@ -213,8 +213,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+  font-family: 'Quicksand', sans-serif;}
 
 .solution-content {
   display: flex;
@@ -268,7 +267,7 @@
   border-radius: 30px;
   cursor: pointer;
   width: 50%;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.2rem;
 }
 .talk-button:hover{
@@ -394,7 +393,7 @@
   font-size: 14px;
   color: #333;
   /* Darker text color */
-  font-weight: 500;
+  font-weight: 700;
   /* Made text bolder */
 }
 
@@ -852,8 +851,7 @@ subscribe-button:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
+  font-family: 'Quicksand', sans-serif;}
 
 /* General Styling */
 body {
@@ -913,7 +911,7 @@ body {
   color: white;
   text-decoration: none;
   border-radius: 30px;
-  font-weight: 500;
+  font-weight: 700;
   transition: background 0.3s ease;
 }
 .bushra-cta-button-1{
@@ -1120,7 +1118,7 @@ width: 100%;
   color:#00d8a6;
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .aditya-orange-line {
@@ -1157,7 +1155,7 @@ width: 100%;
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .aditya-cta-button:hover {
@@ -1365,7 +1363,7 @@ width: 100%;
   -webkit-text-fill-color: transparent;
   margin-bottom: 35px;
   line-height: 1.2;
-  font-weight: 800;
+  font-weight: 700;
   transform: translateY(0);
   transition: transform 0.3s ease;
 }
@@ -1410,7 +1408,7 @@ width: 100%;
   color:#00d8a6;
   font-size: 20px;
   margin-right: 15px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .ali-cta-button {
@@ -1504,8 +1502,7 @@ width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
+  font-family: 'Quicksand', sans-serif;}
 
 
 
@@ -1527,7 +1524,7 @@ width: 100%;
 .kumar-section-label {
   color:#00d8a6;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -1569,7 +1566,7 @@ width: 100%;
   color:#00d8a6;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mansi-hero-text {
@@ -1660,7 +1657,7 @@ width: 100%;
   color:whitesmoke;
   
   font-size:25px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2;
   margin: 0 0 clamp(10px, 2vw, 16px) 0;
 }
@@ -1757,7 +1754,7 @@ width: 100%;
   font-size: 1.1rem;
   color: #2D3748;
   margin-bottom: 0.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mansi-criteria-subtitle {
@@ -1783,7 +1780,7 @@ width: 100%;
 .mansi-criteria-item::before {
   content: "✓";
   color:#00d8a6;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* Graph Section */
@@ -1918,7 +1915,7 @@ width: 100%;
 .funnel-label {
   padding-left: max(15%, calc(5% + var(--shrink, 0%)));
   color: #333;
-  font-weight: 500;
+  font-weight: 700;
   font-size: clamp(0.875rem, 2vw, 1.125rem);
   display: flex;
   align-items: center;
@@ -2104,14 +2101,14 @@ width: 100%;
       max-width: 1200px;
       margin: 0 auto;
       padding: clamp(20px, 5vw, 40px) clamp(10px, 3vw, 20px);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-family: 'Quicksand', sans-serif;
       text-align: left;
   }
 
   .kumar-section-label {
     color:#00d8a6;
       font-size: clamp(12px, 2vw, 14px);
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
       margin-bottom: clamp(16px, 3vw, 24px);
