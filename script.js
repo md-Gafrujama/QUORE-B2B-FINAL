@@ -22,7 +22,7 @@ function updateSlider() {
         setTimeout(() => {
           slide.style.opacity = "1";
           slide.classList.add("active");
-        }, 500);
+        }, 600);
       } else {
         slide.classList.remove("active");
       }
@@ -32,7 +32,7 @@ function updateSlider() {
     dots.forEach((dot, index) => {
       dot.classList.toggle("active", index === currentSlide);
     });
-  }, 500);
+  }, 600);
 }
 
 function nextSlide() {
