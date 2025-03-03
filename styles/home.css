@@ -9,7 +9,7 @@
 
 .hero-slider {
   display: flex;
-  transition: transform 1s ease-in-out;
+  transition: transform 2.5s ease-in-out;
   height: 100%;
 }
 
