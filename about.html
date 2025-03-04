@@ -89,7 +89,7 @@
             </div>
             <div class="r-about-para">
                 <p>Welcome to Quore B2B Marketing, where our passion for excellence drives us to deliver top-tier marketing solutions for businesses across various industries. With a focus on innovation, customer-centric strategies, and measurable results, we are committed to empowering our clients growth and success.</p>
-                <a href="readmoreabout.html" class="r-read-more"><span>READ MORE</span></a>
+                <a href="#dis-section" class="r-read-more" onclick="smoothScroll(event)"><span>READ MORE</span></a>
             </div>
             <!-- <a href="#" class="r-read-more"><span>READ MORE</span></a> -->
         </div>
@@ -162,7 +162,7 @@
         </div>
     </section>
 
-    <section class="dis-section">
+    <section class="dis-section" id="dis-section">
         <div class="dis-container">
             <h2 class="dis-section-title">What We Love</h2>
             <div class="dis-grid">
@@ -546,6 +546,20 @@
     });
 
     document.querySelectorAll('.dis-animate-on-scroll').forEach((el) => observer.observe(el));
+
+
+    function smoothScroll(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        const targetId = event.currentTarget.getAttribute("href"); // Get the target ID
+        const targetElement = document.querySelector(targetId); // Find the target element
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: "smooth", // Enable smooth scrolling
+                block: "start" // Align to the top of the section
+            });
+        }
+    }
 </script>
     <script src="script.js"></script>
     <script src="script1.js"></script>
