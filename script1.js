@@ -608,7 +608,7 @@ document
   submitButton.disabled = true;
   submitButton.textContent = "Submitting...";
 
-  const accessKey = "5c119368-f7f6-49a3-8ad6-9c9547081e3a"; // Check if this key is correct!
+  const accessKey = "7106ba70-f32b-45ec-980b-410780296f86"; // Check if this key is correct!
 
   try {
     const response = await fetch("https://api.web3forms.com/submit", {
