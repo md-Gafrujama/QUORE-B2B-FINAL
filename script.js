@@ -46,7 +46,7 @@ function startAutoSlide() {
   // Set new interval
   autoSlideInterval = setInterval(() => {
     nextSlide();
-  }, 8000); // Change slide every 8 seconds
+  }, 6000); // Change slide every 8 seconds
 }
 
 // Event listeners for navigation
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     nextSlide();
     startAutoSlide(); // Restart the interval after first manual change
-  }, 8000);
+  }, 6000);
   
   console.log("Auto-slide initialized and will change slides every 8 seconds");
 });
@@ -164,7 +164,7 @@ if (document.readyState === "complete" || document.readyState === "interactive")
   setTimeout(() => {
     nextSlide();
     startAutoSlide(); // Restart the interval after first manual change
-  }, 8000);
+  }, 6000);
   
   console.log("Auto-slide initialized (DOM already loaded)");
 }
