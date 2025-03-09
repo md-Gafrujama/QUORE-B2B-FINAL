@@ -36,7 +36,7 @@ function prevSlide() {
   updateSlider();
 }
 
-// Start auto slide
+// Start auto slide function
 function startAutoSlide() {
   // Clear any existing interval first
   if (autoSlideInterval) {
@@ -103,7 +103,7 @@ slider.addEventListener("touchend", (e) => {
 function handleSwipe() {
   const swipeThreshold = 50; // minimum distance for swipe
   const difference = touchStartX - touchEndX;
-
+  
   if (Math.abs(difference) > swipeThreshold) {
     if (difference > 0) {
       // Swipe left
@@ -140,6 +140,34 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // Start auto-slide when page loads
 startAutoSlide();
+
+// Ensure the first slide change happens after DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
+  // Force initial state
+  updateSlider();
+  
+  // Schedule first automatic slide change
+  setTimeout(() => {
+    nextSlide();
+    startAutoSlide(); // Restart the interval after first manual change
+  }, 8000);
+  
+  console.log("Auto-slide initialized and will change slides every 8 seconds");
+});
+
+// Additional check for already loaded DOM
+if (document.readyState === "complete" || document.readyState === "interactive") {
+  // Force initial state
+  updateSlider();
+  
+  // Schedule first automatic slide change
+  setTimeout(() => {
+    nextSlide();
+    startAutoSlide(); // Restart the interval after first manual change
+  }, 8000);
+  
+  console.log("Auto-slide initialized (DOM already loaded)");
+}
 
 // Form submission handling
 const contactForm = document.querySelector(".contact-form");
