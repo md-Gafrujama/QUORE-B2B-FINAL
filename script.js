@@ -7,104 +7,79 @@ const nextButton = document.querySelector(".next");
 
 let currentSlide = 0;
 const slideCount = slides.length;
+let autoSlideInterval;
+
+// Initialize first slide
+slides[0].classList.add("active");
+dots[0].classList.add("active");
 
 function updateSlider() {
-  // Hide current slide
-  slides[currentSlide].style.opacity = "0";
-
-  setTimeout(() => {
-    // Move slider
-    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-    // Show new slide with animations
-    slides.forEach((slide, index) => {
-      if (index === currentSlide) {
-        setTimeout(() => {
-          slide.style.opacity = "1";
-          slide.classList.add("active");
-        }, 300);
-      } else {
-        slide.classList.remove("active");
-      }
-    });
-
-    // Update dots
-    dots.forEach((dot, index) => {
-      dot.classList.toggle("active", index === currentSlide);
-    });
-  }, 300);
+  // Remove active class from all slides and dots
+  slides.forEach(slide => slide.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active"));
+  
+  // Move slider
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  
+  // Add active class to current slide and dot
+  slides[currentSlide].classList.add("active");
+  dots[currentSlide].classList.add("active");
 }
 
 function nextSlide() {
-  slides[currentSlide].classList.remove("active");
   currentSlide = (currentSlide + 1) % slideCount;
   updateSlider();
 }
 
 function prevSlide() {
-  slides[currentSlide].classList.remove("active");
   currentSlide = (currentSlide - 1 + slideCount) % slideCount;
   updateSlider();
 }
 
-// Event listeners
-prevButton.addEventListener("click", prevSlide);
-nextButton.addEventListener("click", nextSlide);
+// Start auto slide
+function startAutoSlide() {
+  // Clear any existing interval first
+  if (autoSlideInterval) {
+    clearInterval(autoSlideInterval);
+  }
+  
+  // Set new interval
+  autoSlideInterval = setInterval(() => {
+    nextSlide();
+  }, 8000); // Change slide every 8 seconds
+}
 
-dots.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    if (currentSlide !== index) {
-      slides[currentSlide].classList.remove("active");
-      currentSlide = index;
-      updateSlider();
-    }
-  });
+// Event listeners for navigation
+prevButton.addEventListener("click", () => {
+  prevSlide();
+  // Reset timer when manually navigating
+  startAutoSlide();
 });
 
-// Event listeners
-prevButton.addEventListener("click", prevSlide);
-nextButton.addEventListener("click", nextSlide);
+nextButton.addEventListener("click", () => {
+  nextSlide();
+  // Reset timer when manually navigating
+  startAutoSlide();
+});
 
+// Dot navigation
 dots.forEach((dot, index) => {
   dot.addEventListener("click", () => {
     currentSlide = index;
     updateSlider();
+    // Reset timer when manually navigating
+    startAutoSlide();
   });
 });
 
-// Auto slide (every 5 seconds)
-const autoSlideInterval = setInterval(() => {
-  console.log("Auto-slide running...");
-  nextSlide();
-}, 6000);
-
-// auto-slide continuation
-slider.addEventListener("mouseleave", () => {
-  autoSlideInterval = setInterval(nextSlide, 6000);
-});
-
-
-
-
-// Smooth scroll for navigation
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  });
-});
-
-// Add keyboard navigation for slider
+// Keyboard navigation
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") {
     prevSlide();
+    startAutoSlide();
   } else if (e.key === "ArrowRight") {
     nextSlide();
+    startAutoSlide();
   }
 });
 
@@ -114,11 +89,15 @@ let touchEndX = 0;
 
 slider.addEventListener("touchstart", (e) => {
   touchStartX = e.touches[0].clientX;
+  // Pause auto-slide during touch interaction
+  clearInterval(autoSlideInterval);
 });
 
 slider.addEventListener("touchend", (e) => {
   touchEndX = e.changedTouches[0].clientX;
   handleSwipe();
+  // Restart auto-slide after touch interaction
+  startAutoSlide();
 });
 
 function handleSwipe() {
@@ -135,6 +114,32 @@ function handleSwipe() {
     }
   }
 }
+
+// Pause auto-slide when hovering over slider
+slider.addEventListener("mouseenter", () => {
+  clearInterval(autoSlideInterval);
+});
+
+// Resume auto-slide when mouse leaves slider
+slider.addEventListener("mouseleave", () => {
+  startAutoSlide();
+});
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  });
+});
+
+// Start auto-slide when page loads
+startAutoSlide();
 
 // Form submission handling
 const contactForm = document.querySelector(".contact-form");
