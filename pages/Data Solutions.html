@@ -183,20 +183,28 @@
     </section>
         </section>
         <div id="top-section">
-        <div id="box-dark" class="box">
-            <h3>Are You Ready?</h3>
-            <h2>Start a New Project</h2>
-            <div class="input-container">
-                <input type="email" id="email-input" placeholder="Enter Your Email Address" />
-                <span id="submit-text">SUBMIT</span>
+            <div id="box-dark" class="box">
+                <h3>Are You Ready?</h3>
+                <h2>Start a New Project</h2>
+                <form id="email-form" action="https://api.web3forms.com/submit" method="POST">
+                  <div class="input-container">
+                      <input type="email" id="email-input" name="email" placeholder="Enter Your Email Address" required />
+                      <button type="submit" id="submit-text" style="background: none; border: none; color: inherit; font: inherit; cursor: pointer; padding: 0;">SUBMIT</button>
+                  </div>
+                  <!-- Web3Forms Required Fields -->
+                  <input type="hidden" name="access_key" value="547b251c-6d1b-454f-9dd7-4c8894814ea5">
+                  <input type="hidden" name="subject" value="New Project Signup">
+                  <input type="hidden" name="from_name" value="Project Signup Form">
+                  <input type="hidden" name="botcheck" value="">
+              </form>
+              <div id="status-message" style="margin-top: 15px; font-size: 14px;"></div>
+            </div>
+            <div id="box-light" class="box">
+                <h3>What Are You Waiting For?</h3>
+                <h2>Let's Talk About Work</h2>
+                <button id="start-button" onclick="window.location.href='contact.html#contact-form'"><span>Start Now</span></button>
             </div>
         </div>
-        <div id="box-light" class="box">
-            <h3>What Are You Waiting For?</h3>
-            <h2>Let's Talk About Work</h2>
-            <button id="start-button"><span>Start Now</span></button>
-        </div>
-    </div>
     <!-- arrow button top to bottom-->
 <div class="arrow-buttons">
     <button id="scroll-up-btn" class="scroll-btn">
