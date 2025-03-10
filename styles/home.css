@@ -307,7 +307,7 @@ color:#00d8a6;
 
 /* Services Section */
 .services {
-  padding: 6rem 3%;
+  padding: 6rem 4.5%;
   background-color: #ffffff;
 }
 .d_newclass{
@@ -319,7 +319,7 @@ color:#00d8a6;
 }
 .services-header{
   flex: 0.4;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   margin-top: 3rem;
 }
 .services-grid {
@@ -448,9 +448,17 @@ color:#00d8a6;
     /* min-height: 315px; */
   }
 }
+
 @media(max-width: 1024px){
   .d_newclass{
     flex-direction: column;
+  }
+  .overlay-unique{
+    left: 30px;
+
+  }
+  .image-section-unique{
+    padding: 5rem;
   }
   .services-header{
     margin-left: 0;
@@ -577,7 +585,7 @@ color:#00d8a6;
 /* Responsive Design */
 @media (max-width: 1024px) {
   .services {
-    padding: 6rem 3%;
+    padding: 6rem 7%;
   }
 
   .services-grid {

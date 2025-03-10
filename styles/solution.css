@@ -17,7 +17,7 @@
 
 /* Main container */
 #yasmin {
-  padding: 4rem;
+  padding: 2.5rem;
   background-color: #f5f5f5;
   min-height: 100vh;
   display: flex;
@@ -227,7 +227,7 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
-  padding: 85px;
+  padding: 53px;
   gap: 80px;
 }
 
@@ -1366,7 +1366,9 @@ width: 100%;
   font-weight: 700;
   transform: translateY(0);
   transition: transform 0.3s ease;
+
 }
+
 
 .ali-main-title:hover {
   transform: translateY(-5px);
