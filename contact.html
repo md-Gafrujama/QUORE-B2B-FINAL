@@ -109,7 +109,7 @@
         </div>
       </div>
     </div>
-    <div class="try">
+    <div class="try" id="contact-form">
       <div class="abc">
         <h2 id="heading1">
           Please get in
@@ -142,14 +142,22 @@
     </div>
     </div>
 </div>
-  <div id="top-section">
+<div id="top-section">
     <div id="box-dark" class="box">
         <h3>Are You Ready?</h3>
         <h2>Start a New Project</h2>
-        <div class="input-container">
-            <input type="email" id="email-input" placeholder="Enter Your Email Address" />
-            <span id="submit-text">SUBMIT</span>
-        </div>
+        <form id="email-form" action="https://api.web3forms.com/submit" method="POST">
+          <div class="input-container">
+              <input type="email" id="email-input" name="email" placeholder="Enter Your Email Address" required />
+              <button type="submit" id="submit-text" style="background: none; border: none; color: inherit; font: inherit; cursor: pointer; padding: 0;">SUBMIT</button>
+          </div>
+          <!-- Web3Forms Required Fields -->
+          <input type="hidden" name="access_key" value="547b251c-6d1b-454f-9dd7-4c8894814ea5">
+          <input type="hidden" name="subject" value="New Project Signup">
+          <input type="hidden" name="from_name" value="Project Signup Form">
+          <input type="hidden" name="botcheck" value="">
+      </form>
+      <div id="status-message" style="margin-top: 15px; font-size: 14px;"></div>
     </div>
     <div id="box-light" class="box">
         <h3>What Are You Waiting For?</h3>
@@ -240,6 +248,96 @@
 
 <script src="script.js"></script>
 <script src="script1.js"></script>
+<script>
+  // Get DOM elements
+  const startButton = document.getElementById('start-button');
+  const trySection = document.querySelector('.try');
+  
+  // Function to show the form section with animation
+  function showFormSection() {
+      // Add fade-in class to the try section
+      trySection.classList.add('fade-in');
+      
+      // Scroll to the form section
+      trySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  
+  // Event listener for Start Now button
+  startButton.addEventListener('click', showFormSection);
+  
+  // Event listener for Submit text button
+  submitText.addEventListener('click', function() {
+      // If email is entered, copy it to the form
+      if (emailInput.value) {
+          dEmailInput.value = emailInput.value;
+      }
+      
+      showFormSection();
+  });
+  </script>
+  <script>
+    document.getElementById("email-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const form = this;
+        const statusMessage = document.getElementById("status-message");
+        const submitButton = document.getElementById("submit-text");
+        
+        statusMessage.textContent = "Submitting...";
+        submitButton.disabled = true;
+        
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: new FormData(form)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                statusMessage.textContent = "Thank you! Your email has been submitted successfully.";
+                form.reset();
+            } else {
+                statusMessage.textContent = "Submission failed: " + data.message;
+            }
+        })
+        .catch(error => {
+            statusMessage.textContent = "An error occurred. Please try again.";
+            console.error(error);
+        })
+        .finally(() => {
+            submitButton.disabled = false;
+        });
+    });
+</script>
+<script>
+  // Function to handle the page load and check for hash fragments
+  window.onload = function() {
+    // Check if there's a hash in the URL
+    if (window.location.hash === '#contact-form') {
+      // Get the form element
+      var formElement = document.getElementById('contact-form');
+      
+      // If found, scroll to it
+      if (formElement) {
+        // Add a slight delay to ensure everything is loaded
+        setTimeout(function() {
+          formElement.scrollIntoView({behavior: 'smooth'});
+          // Highlight the form with a visual effect (optional)
+          formElement.style.animation = 'highlight 2s';
+        }, 500);
+      }
+    }
+  };
+
+  // Add this to your CSS or add a style tag with this content
+  document.head.insertAdjacentHTML('beforeend', `
+    <style>
+      @keyframes highlight {
+        0% { background-color: rgba(255, 255, 0, 0.3); }
+        100% { background-color: transparent; }
+      }
+    </style>
+  `);
+</script>
   
 </body>
 </html>
