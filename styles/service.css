@@ -1,7 +1,7 @@
 :root {
   --primary-color:#00d8a6;
   --secondary-color: #00d8a6;
-  --text-color: #1f2937;
+  --text-color: #3D3C3C;
   --bg-color: #f3f4f6;
   --card-bg: #ffffff;
   --hover-scale: 1.03;
@@ -149,7 +149,7 @@
 }
 
 .syed-service-description p {
-  color: #4b5563;
+  color: #3D3C3C;
   margin-bottom: auto;
  
   line-height: 1.8;
@@ -204,7 +204,7 @@
 
 .syed-metric-label {
   font-size: clamp(1rem, 2.5vw, 1.25rem);  /* Larger labels */
-  color: #6b7280;
+  color: #3D3C3C;
   margin-top: 0.75rem;
 }
 

@@ -137,6 +137,7 @@ body {
 .dis-card p {
   position: relative;
   z-index: 2;
+  color: #3D3C3C;
 }
 
 .dis-card-icon {

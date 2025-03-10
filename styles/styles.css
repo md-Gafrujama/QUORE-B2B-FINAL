@@ -173,7 +173,7 @@ body {
 
   .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #3D3C3C;
     font-size: 0.95rem;
     font-weight: 700;
     transition: all 0.3s ease;
@@ -211,7 +211,7 @@ body {
   .nav-button {
     padding: 0.75rem 1.5rem;
     background: linear-gradient(90deg, #d9eb72, #00D4A4);
-    color: #333;
+    color: #3D3C3C;
     border: none;
     border-radius: 25px;
     font-size: 0.95rem;
@@ -367,7 +367,7 @@ body {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #333;
+  background-color: #3D3C3C;
   transition: all 0.3s ease-in-out;
 }
 
@@ -407,7 +407,7 @@ body {
 .nav-button {
   /* padding: 0.75rem 1.5rem; */
   background: #00ffa3;
-  color: #333;
+  color: #3D3C3C;
   border: none;
   border-radius: 25px;
   font-size: 0.95rem;
@@ -549,14 +549,14 @@ body {
   font-size: 18px;
   font-weight: 700;
   white-space: nowrap;
-  color: #434343;
+  color: #3D3C3C;
 }
 
 
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #3D3C3C;
   font-size: 1rem;
   font-weight: 700;
   position: relative;
@@ -574,7 +574,7 @@ body {
 .nav-button {
   padding: 15px 20px;
   background: linear-gradient(90deg, #d9eb72, #00D4A4);
-  color: #333;
+  color: #3D3C3C;
   border: none;
   border-radius: 25px;
   font-size: 1rem;
@@ -891,7 +891,9 @@ body {
   z-index: 1;
   margin-bottom: 1rem; /* Added margin for spacing */
 }
-
+#content-card p{
+  color: #3D3C3C;
+}
 /* Content card */
 #content-card {
   background: white;
@@ -1008,7 +1010,7 @@ h1 span {
 }
 
 .features li {
-  color: #666;
+  color: #3D3C3C;
   margin: 1rem 0;
   display: flex;
   align-items: center;
@@ -1382,7 +1384,7 @@ h1 span {
 #dh2,
 #dh3,
 #dh4 {
-  color: #333333;
+  color: #3D3C3C;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1399,7 +1401,7 @@ h1 span {
   margin-bottom: 0rem;
   font-size: 13px;
   line-height: 1.6;
-  color: #666666;
+  color: #3D3C3C;
   text-align: left;
 }
 #dh1 {
@@ -1409,7 +1411,7 @@ h1 span {
   
 }
 #dheading {
-  color: #333333;
+  color: #3D3C3C;
   font-size: 16px;
   font-weight: 700;
   margin-left: -5px;
@@ -1427,7 +1429,7 @@ h1 span {
 }
 .quick-links ul li a {
   text-decoration: none;
-  color: #666666;
+  color: #3D3C3C;
   font-size: 12.5px;
   transition: 0.3s;
 }
@@ -1444,7 +1446,7 @@ h1 span {
 /* Contact Details */
 .contact p {
   font-size: 13px;
-  color: #666666;
+  color: #3D3C3C;
   margin-bottom: 12px;
   line-height: 1.6;
   text-align: left;

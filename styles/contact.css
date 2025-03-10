@@ -69,7 +69,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333;
+  color: #3D3C3C;
 }
 
 #d_text {
@@ -172,7 +172,7 @@ html {
   text-align: left;
   font-size: 12.5px;
   line-height: 1.5;
-  color: #5e5858;
+  color: #3D3C3C;
   word-spacing: 0px;
   letter-spacing: 0.2px;
 } 
@@ -256,7 +256,7 @@ html {
   padding-bottom: 15px;
   font-size: 12px;
   font-style: normal;
-  color: #5e5858;
+  color: #3D3C3C;
   background: transparent;
 }
 textarea {
