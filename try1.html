@@ -555,6 +555,14 @@
         </div>
     </div>
     
+     <!-- Job Description Section -->
+     <div class="job-description-section" id="job-description-section" style="display: none;">
+        <div class="job-description-container">
+            <h2 id="job-description-title"></h2>
+            <div id="job-description-content"></div>
+        </div>
+    </div>
+
     <!-- Values Section -->
     <div class="values-section">
         <h2>Our Values</h2>
@@ -593,13 +601,7 @@
         </div>
     </div>
   
-    <!-- Job Description Section -->
-    <div class="job-description-section" id="job-description-section" style="display: none;">
-        <div class="job-description-container">
-            <h2 id="job-description-title"></h2>
-            <div id="job-description-content"></div>
-        </div>
-    </div>
+   
      
     <!-- Application Form Section -->
     <div class="application-section">
@@ -626,16 +628,12 @@
                 </div>
                 
                 <!-- Resume Upload Field - PDF -->
-                <div class="form-group">
-                    <label for="resume-pdf">Upload Resume (PDF only) *</label>
-                    <input type="file" id="resume-pdf" name="resume_pdf" class="form-control" accept=".pdf" required>
-                    <small class="form-text text-muted">Please upload your resume in PDF format.</small>
-                </div>
+          
                 
                 <!-- Resume Link Field -->
                 <div class="form-group">
-                    <label for="resume-link">Resume Link (Optional)</label>
-                    <input type="url" id="resume-link" name="resume_link" class="form-control" placeholder="URL to your resume (Google Drive, Dropbox, etc.)">
+                    <label for="resume-link">Resume Link</label>
+                    <input type="url" id="resume-link" name="resume_link" class="form-control" placeholder="URL to your resume (Google Drive Link.)">
                     <small class="form-text text-muted">If you have your resume hosted online, you can provide the link here.</small>
                 </div>
                 
@@ -661,7 +659,7 @@
         </div>
     </div>
     
- <script>
+<script>
     document.addEventListener('DOMContentLoaded', function () {
     // *** WEB3FORMS CONFIGURATION - REPLACE THESE VALUES ***
     // Replace with your actual Web3Forms access key
@@ -762,16 +760,44 @@
                 this.style.transform = 'scale(1)';
             }, 200);
 
-            // Highlight the job title in the form title
-            const sectionTitle = document.querySelector('.section-title');
-            sectionTitle.innerHTML = `Apply Now: <span style="color: #00d8a6;">${jobTitle}</span>`;
-
             // Update the job description section
             const jobDescription = jobDescriptions[jobTitle];
             if (jobDescription) {
                 jobDescriptionTitle.textContent = jobDescription.title;
-                jobDescriptionContent.innerHTML = jobDescription.description;
+                
+                // Add the job description content and "Apply Now" button
+                jobDescriptionContent.innerHTML = jobDescription.description + `
+                    <div class="apply-button-container" style="margin-top: 30px; text-align: center;">
+                        <button id="apply-now-btn" class="apply-now-btn" 
+                                style="padding: 12px 30px; background: linear-gradient(90deg, #d9eb72, #00D4A4); color: white; 
+                                border: none; border-radius:35px; font-size: 16px; font-weight: bold; 
+                                cursor: pointer; transition: all 0.3s ease;">
+                            Apply Now
+                        </button>
+                    </div>
+                `;
+                
                 jobDescriptionSection.style.display = 'block';
+                
+                // Add event listener to the new Apply Now button
+                document.getElementById('apply-now-btn').addEventListener('click', function() {
+                    // Scroll to application form
+                    document.querySelector('.application-section').scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Update the form title to highlight the job
+                    const sectionTitle = document.querySelector('.section-title');
+                    sectionTitle.innerHTML = `Apply Now: <span style="color: #00d8a6;">${jobTitle}</span>`;
+                    
+                    // Create a pulse effect on the form
+                    const formContainer = document.querySelector('.application-container');
+                    formContainer.style.boxShadow = '0 0 20px rgba(0, 216, 166, 0.5)';
+                    setTimeout(() => {
+                        formContainer.style.boxShadow = 'none';
+                    }, 1000);
+                });
             }
 
             // Scroll to the job description section with smooth effect
@@ -834,7 +860,7 @@
             } else {
                 // Error case
                 formStatus.className = 'form-status error';
-                formStatus.innerHTML = `<strong>Error:</strong> ${json.message || 'Something went wrong. Please try again.'}`;
+                formStatus.innerHTML =` <strong>Error:</strong> ${json.message || 'Something went wrong. Please try again.'}`;
                 console.error('Web3Forms error:', json);
             }
         })
@@ -926,6 +952,6 @@
         observer.observe(section);
     });
 });
- </script>
+</script>
   </body>
 </html>
