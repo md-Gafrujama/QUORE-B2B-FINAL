@@ -542,7 +542,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// aarow buton 
+// arrow buton 
 document.addEventListener("DOMContentLoaded", function () {
     const scrollUpBtn = document.getElementById("scroll-up-btn");
     const scrollDownBtn = document.getElementById("scroll-down-btn");

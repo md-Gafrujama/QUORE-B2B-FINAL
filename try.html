@@ -1,910 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Our Team - 360Connect</title>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <style>
-      * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: Arial, sans-serif;
-      }
-      
-      body {
-          color: #333;
-          line-height: 1.6;
-      }
-      
-      .hero-banner {
-          position: relative;
-          height: 300px; /* Increased height */
-          background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-                      url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1500&auto=format&fit=crop') center/cover no-repeat;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: transform 0.5s ease;
-          overflow: hidden;
-      }
-      
-      .hero-banner:hover {
-          transform: scale(1.02);
-      }
-      
-      .hero-text {
-          background-color: rgba(255, 255, 255, 0.8);
-          padding: 15px 30px;
-          font-size: 28px;
-          font-weight: bold;
-          border-radius: 5px;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-          transition: all 0.3s ease;
-      }
-      
-      .hero-text:hover {
-          background-color: rgba(255, 255, 255, 0.9);
-          transform: translateY(-5px);
-      }
-      
-      .section {
-          text-align: center;
-          padding: 40px 20px;
-          max-width: 1000px;
-          margin: 0 auto;
-      }
-      
-      .section h2 {
-          font-size: 32px;
-          margin-bottom: 20px;
-          color:#00d8a6;
-          position: relative;
-          display: inline-block;
-          padding-bottom: 10px;
-      }
-      
-      .section h2:after {
-          content: '';
-          position: absolute;
-          width: 60%;
-          height: 3px;
-          background: linear-gradient(to right, #00d4a7, #6eff79);
-          bottom: 0;
-          left: 20%;
-          transition: width 0.3s ease;
-      }
-      
-      .section h2:hover:after {
-          width: 100%;
-          left: 0;
-      }
-      
-      .section p {
-          font-size: 18px;
-          color: #555;
-          max-width: 800px;
-          margin: 0 auto 30px;
-      }
-      
-      .features-section {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          max-width: 1200px;
-          margin: 0 auto 50px;
-          padding: 0 20px;
-      }
-      
-      .feature-card {
-          width: 30%;
-          margin-bottom: 30px;
-          display: flex;
-          flex-direction: column;
-          border-radius: 8px;
-          overflow: hidden;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      
-      .feature-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-      
-      .card-image {
-          height: 200px;
-          width: 100%;
-          overflow: hidden;
-      }
-      
-      .card-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s ease;
-      }
-      
-      .feature-card:hover .card-image img {
-          transform: scale(1.1);
-      }
-      
-      .card-title {
-          text-align: center;
-          margin: 15px 0;
-          font-weight: bold;
-          font-size: 20px;
-          color: black;
-      }
-      
-      .card-content {
-          font-size: 15px;
-          flex-grow: 1;
-          padding: 0 15px 20px;
-          color: #555;
-      }
-      
-      /* Open Positions Section */
-      .positions-section {
-          background-color: #f5f5f5;
-          padding: 60px 0;
-          text-align: center;
-      }
-      
-      .job-list {
-          max-width: 800px;
-          margin: 30px auto;
-      }
-      
-      .job-card {
-          background-color: white;
-          border-radius: 8px;
-          margin-bottom: 20px;
-          padding: 25px 30px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      
-      .job-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      }
-      
-      .job-info h3 {
-          font-size: 20px;
-          margin-bottom: 8px;
-          color: black;
-      }
-      
-      .job-location {
-          color: #666;
-          font-size: 15px;
-          display: flex;
-          align-items: center;
-      }
-      
-      .job-location:before {
-          content: "📍";
-          margin-right: 5px;
-      }
-      
-      .view-details {
-         background: linear-gradient(90deg, #d9eb72, #00D4A4);
-          color: white;
-          border: none;
-          border-radius: 30px;
-          padding: 10px 20px;
-          cursor: pointer;
-          font-size: 15px;
-          font-weight: bold;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 10px #00D4A4;
-      }
-      
-      .view-details:hover {
-          background-color: black;
-          transform: translateY(-3px);
-          box-shadow: 0 6px 15px #00D4A4;
-      }
-      
-      /* Values Section */
-      .values-section {
-          padding: 60px 0;
-          text-align: center;
-          background-color: white;
-      }
-      
-      .values-intro {
-          max-width: 800px;
-          margin: 0 auto 40px;
-          font-size: 17px;
-          color: #555;
-      }
-      
-      .values-grid {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          max-width: 900px;
-          margin: 0 auto;
-      }
-      
-      .value-item {
-          width: 250px;
-          margin: 20px;
-          text-align: center;
-          transition: transform 0.3s ease;
-      }
-      
-      .value-item:hover {
-          transform: translateY(-10px);
-      }
-      
-      .value-icon {
-          width: 90px;
-          height: 90px;
-          background-color: #00d8a6;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto 20px;
-          color: white;
-          font-size: 40px;
-          box-shadow: 0 5px 15px rgba(13, 110, 170, 0.3);
-          transition: all 0.3s ease;
-      }
-      
-      .value-item:hover .value-icon {
-          transform: rotate(10deg) scale(1.1);
-          box-shadow: 0 8px 20px rgba(13, 110, 170, 0.4);
-      }
-      
-      .value-title {
-          font-size: 16px;
-          font-weight: bold;
-          margin-bottom: 10px;
-          color: #333;
-      }
-      
-      /* Awards Section */
-      .awards-section {
-          background-color: #f5f5f5;
-          padding: 40px 0;
-          text-align: center;
-      }
-      
-      .awards-title {
-          margin-bottom: 30px;
-      }
-      
-      .awards-showcase {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          max-width: 900px;
-          margin: 0 auto;
-      }
-      
-      .award-badge {
-          width: 100px;
-          margin: 10px;
-          transition: transform 0.3s ease;
-      }
-      
-      .award-badge:hover {
-          transform: scale(1.15) rotate(5deg);
-      }
-      
-      /* Application Form Section */
-      .application-section {
-          padding: 60px 20px;
-          background-color: white;
-      }
-      
-      .application-container {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 30px;
-          background-color: #f9f9f9;
-          border-radius: 10px;
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      }
-      
-      .application-form {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-gap: 20px;
-      }
-      
-      .form-group {
-          margin-bottom: 15px;
-      }
-      
-      .form-group:nth-child(6),
-      .form-group:nth-child(7) {
-          grid-column: 1 / 3;
-      }
-      
-      .form-group label {
-          display: block;
-          margin-bottom: 5px;
-          font-weight: bold;
-          color: black;
-      }
-      
-      .form-control {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ddd;
-          border-radius: 5px;
-          font-size: 16px;
-          transition: all 0.3s ease;
-      }
-      
-      .form-control:focus {
-          border-color: #00d8a6;
-          box-shadow: 0 0 8px rgba(13, 110, 170, 0.3);
-          outline: none;
-      }
-      
-      textarea.form-control {
-          min-height: 120px;
-          resize: vertical;
-      }
-      
-      .submit-btn {
-          grid-column: 1 / 3;
-          background: linear-gradient(90deg, #d9eb72, #00D4A4);
-          color: white;
-          border: none;
-          padding: 15px;
-          font-size: 18px;
-          font-weight: bold;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: all 0.3s ease;
-          box-shadow: 0 4px 10px #00D4A4;
-      }
-      
-      .submit-btn:hover {
-          background-color: black;
-          transform: translateY(-3px);
-          box-shadow: 0 6px 15px #00D4A4;
-      }
-      
-      .form-status {
-          grid-column: 1 / 3;
-          padding: 15px;
-          margin-top: 20px;
-          border-radius: 5px;
-          display: none;
-      }
-      
-      .form-status.success {
-          background-color: #dff0d8;
-          color: #3c763d;
-          border: 1px solid #d6e9c6;
-      }
-      
-      .form-status.error {
-          background-color: #f2dede;
-          color: #a94442;
-          border: 1px solid #ebccd1;
-      }
-      
-      /* Animations */
-      @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-      }
-      
-      .section, .feature-card, .job-card, .value-item {
-          animation: fadeIn 0.8s ease-out;
-      }
-      
-      /* Responsive Styles */
-      @media (max-width: 900px) {
-          .feature-card {
-              width: 48%;
-          }
-          
-          .value-item {
-              width: 200px;
-          }
-          
-          .application-form {
-              grid-template-columns: 1fr;
-          }
-          
-          .form-group:nth-child(6),
-          .form-group:nth-child(7),
-          .submit-btn,
-          .form-status {
-              grid-column: 1;
-          }
-      }
-      
-      @media (max-width: 600px) {
-          .feature-card {
-              width: 100%;
-          }
-          
-          .job-card {
-              flex-direction: column;
-              text-align: center;
-          }
-          
-          .job-info {
-              margin-bottom: 15px;
-          }
-          
-          .hero-text {
-              font-size: 24px;
-              padding: 10px 20px;
-          }
-      }
-
-
-      /* Job Description Section Styles */
-.job-description-section {
-    background-color: #f9f9f9;
-    padding: 40px 20px;
-    margin: 40px 0;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.job-description-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.job-description-container h2 {
-    font-size: 28px;
-    color: #00d8a6;
-    margin-bottom: 20px;
-}
-
-.job-description-container p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.job-description-container ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.job-description-container ul li {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 10px;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application</title>
+  <style>
+    :root {
+      --primary-color: #4a6cf7;
+      --primary-dark: #3a56d4;
+      --secondary-color: #6c757d;
+      --success-color: #28a745;
+      --light-bg: #f8f9fa;
+      --dark-text: #343a40;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .application-section {
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+    }
+    
+    .application-container {
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 
+        0 15px 35px var(--shadow-color),
+        0 5px 15px rgba(0, 0, 0, 0.07);
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .application-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 
+        0 20px 40px var(--shadow-color),
+        0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section-title {
+      color: var(--dark-text);
+      padding: 25px 0;
+      margin: 0;
+      background: var(--light-bg);
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+    
+    .application-form {
+      padding: 30px;
+    }
+    
+    .form-group {
+      margin-bottom: 25px;
+      position: relative;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: var(--dark-text);
+      transition: all 0.3s;
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #e9ecef;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: all 0.3s;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.25);
+      outline: none;
+    }
+    
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .form-text {
+      margin-top: 5px;
+      display: block;
+      font-size: 13px;
+      color: var(--secondary-color);
+    }
+    
+    .submit-btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: block;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(74, 108, 247, 0.4);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: var(--primary-dark);
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
+    
+    .submit-btn:hover::before {
+      width: 100%;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(74, 108, 247, 0.5);
+    }
+    
+    .submit-btn:active {
+      transform: translateY(1px);
+    }
+    
+    .form-status {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      display: none;
+      text-align: center;
+      font-weight: 500;
+    }
+    
+    .form-status.success {
+      background-color: rgba(40, 167, 69, 0.1);
+      color: var(--success-color);
+      border: 1px solid rgba(40, 167, 69, 0.2);
+      display: block;
+    }
+    
+    .form-status.error {
+      background-color: rgba(220, 53, 69, 0.1);
+      color: #dc3545;
+      border: 1px solid rgba(220, 53, 69, 0.2);
+      display: block;
+    }
+    
+    /* 3D form field effect */
+    .form-group.focus-within {
+      transform: translateZ(10px);
+    }
+    
+    /* Input animation */
+    @keyframes inputFocus {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.01); }
+      100% { transform: scale(1); }
+    }
+    
+    .form-control:focus {
+      animation: inputFocus 0.3s ease;
+    }
+    
+    /* Required field indicator */
+    label::after {
+      content: ' *';
+      color: #dc3545;
+      display: none;
+    }
+    
+    label[for="name"]::after,
+    label[for="email"]::after,
+    label[for="phone"]::after,
+    label[for="cover-letter"]::after,
+    label[for="experience"]::after {
+      display: inline;
+    }
+    
+    /* Loading spinner for form submission */
+    .spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    @keyframes spin {
+      to { transform: translateY(-50%) rotate(360deg); }
+    }
+    
+    .submit-btn.loading {
+      padding-right: 40px;
+    }
+    
+    .submit-btn.loading .spinner {
+      display: block;
+    }
+    
+    /* Field completion animation */
+    @keyframes fieldComplete {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .field-complete {
+      animation: fieldComplete 0.5s ease;
+      border-color: var(--success-color) !important;
+    }
   </style>
 </head>
 <body>
-  <div class="hero-banner">
-      <div class="hero-text">Join Our Team!</div>
-  </div>
-  
-  <div class="section">
-      <h2>Work with Great People</h2>
-      <p>We have a diverse team of hard-working and fun-loving individuals</p>
-  </div>
-  
-  <div class="features-section">
-      <div class="feature-card">
-          <div class="card-image">
-              <img src="https://www.360connect.com/wp-content/uploads/2022/02/Contact-Rate-edited.png" alt="Team members collaborating">
-          </div>
-          <div class="card-title">Benefits</div>
-          <div class="card-content">
-              We offer competitive salaries, health and dental benefits, paid time off, retirement plan, and working in a fun environment.
-          </div>
-      </div>
-      
-      <div class="feature-card">
-          <div class="card-image">
-              <img src="https://www.360connect.com/wp-content/uploads/2021/04/back-to-work-1024x684.jpeg" alt="Modern office space">
-          </div>
-          <div class="card-title">Culture</div>
-          <div class="card-content">
-              Last year, 360Connect hosted several fun events: an all-company boating/jet ski trip on Lake Travis, holiday party at Bangers Austin, a Halloween costume contest with cash prizes, and a Thanksgiving eating contest to name just a few. We all work hard but have some fun, all the while encouraging everyone to be themselves.
-          </div>
-      </div>
-      
-      <div class="feature-card">
-          <div class="card-image">
-              <img src="https://www.360connect.com/wp-content/uploads/2021/04/back-to-work-1024x684.jpeg" alt="Award trophy">
-          </div>
-          <div class="card-title">Awards</div>
-          <div class="card-content">
-              360Connect LP is consistently ranked on the Austin American-Statesman's Top Workplaces list, so if you thrive in a fast-paced environment and have a strong work ethic, this is the company for you.
-          </div>
-      </div>
-  </div>
-  
-  <!-- Open Positions Section -->
-  <div class="positions-section">
-      <h2>Open Positions</h2>
-      
-      <div class="job-list">
-          <div class="job-card">
-              <div class="job-info">
-                  <h3>B2B Sales Executive</h3>
-                  <div class="job-location">Austin, TX</div>
-              </div>
-              <button class="view-details" data-job-url="https://example.com/jobs/sales-executive" data-job-title="B2B Sales Executive">View details</button>
-          </div>
-          
-          <div class="job-card">
-              <div class="job-info">
-                  <h3>Client Success Manager</h3>
-                  <div class="job-location">Austin, TX</div>
-              </div>
-              <button class="view-details" data-job-url="https://example.com/jobs/client-success-manager" data-job-title="Client Success Manager">View details</button>
-          </div>
-      </div>
-  </div>
-  
-  <!-- Values Section -->
-  <div class="values-section">
-      <h2>Our Values</h2>
-      <p class="values-intro">At 360Connect, we embrace six core values that are referenced to help us make decisions and to serve as a guide for our actions when dealing with our clients, coworkers, service providers, and the company.</p>
-      
-      <div class="values-grid">
-          <div class="value-item">
-              <div class="value-icon">📈</div>
-              <div class="value-title">Do what it takes to deliver excellent results</div>
-          </div>
-          
-          <div class="value-item">
-              <div class="value-icon">🤲</div>
-              <div class="value-title">Bring a proactive, solution-oriented attitude to everything you do</div>
-          </div>
-          
-          <div class="value-item">
-              <div class="value-icon">🙌</div>
-              <div class="value-title">Act with integrity and respect</div>
-          </div>
-          
-          <div class="value-item">
-              <div class="value-icon">💬</div>
-              <div class="value-title">Communicate directly and honestly</div>
-          </div>
-          
-          <div class="value-item">
-              <div class="value-icon">🎯</div>
-              <div class="value-title">Do what you say you are going to do</div>
-          </div>
-          
-          <div class="value-item">
-              <div class="value-icon">🧠</div>
-              <div class="value-title">Always learn and try new things</div>
-          </div>
-      </div>
-  </div>
-
-  <!-- Job Description Section -->
-<div class="job-description-section" id="job-description-section" style="display: none;">
-    <div class="job-description-container">
-        <h2 id="job-description-title"></h2>
-        <div id="job-description-content"></div>
-    </div>
-</div>
-   
-    <!-- Application Form Section -->
-<div class="application-section">
+  <div class="application-section">
     <div class="application-container">
-        <h2 class="section-title" style="text-align: center; margin-bottom: 30px;">Apply Now</h2>
+      <h2 class="section-title" style="text-align: center;">Apply Now</h2>
+      
+      <form class="application-form" id="application-form" enctype="multipart/form-data">
+        <!-- Hidden field to store the job title -->
+        <input type="hidden" name="job_title" id="job-title-field" value="General Application">
         
-        <form class="application-form" id="application-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
-            <!-- Web3Forms Access Key - Replace with your actual key -->
-            <input type="hidden" name="access_key" value="2c1b7668-e873-404a-9759-f85af53e550b">
-            
-            <!-- Hidden field to store the job title -->
-            <input type="hidden" name="job_title" id="job-title-field" value="General Application">
-            
-            <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" class="form-control" required>
-            </div>
-            
-            <!-- Resume Upload Field -->
-            <div class="form-group">
-                <label for="resume-pdf">Upload Resume (PDF only) *</label>
-                <input type="file" id="resume-pdf" name="resume_pdf" class="form-control" accept=".pdf" required>
-                <small class="form-text text-muted">Please upload your resume in PDF format.</small>
-            </div>
-            
-            <div class="form-group">
-                <label for="linkedin">LinkedIn Profile</label>
-                <input type="url" id="linkedin" name="linkedin" class="form-control">
-            </div>
-            
-            <div class="form-group">
-                <label for="cover-letter">Why are you interested in this position? *</label>
-                <textarea id="cover-letter" name="cover_letter" class="form-control" required></textarea>
-            </div>
-            
-            <div class="form-group">
-                <label for="experience">Relevant Experience *</label>
-                <textarea id="experience" name="experience" class="form-control" required></textarea>
-            </div>
-            
-            <!-- Honeypot field to prevent spam -->
-            <input type="checkbox" name="botcheck" id="botcheck" class="hidden" style="display: none;">
-            
-            <button type="submit" class="submit-btn">Submit Application</button>
-            
-            <div id="form-status" class="form-status"></div>
-        </form>
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" class="form-control" required>
+        </div>
+        
+        <!-- Resume Link Field -->
+        <div class="form-group">
+          <label for="resume-link">Resume Link</label>
+          <input type="url" id="resume-link" name="resume_link" class="form-control" placeholder="URL to your resume (Google Drive Link)">
+          <small class="form-text text-muted">If you have your resume hosted online, you can provide the link here.</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="linkedin">LinkedIn Profile</label>
+          <input type="url" id="linkedin" name="linkedin" class="form-control">
+        </div>
+        
+        <div class="form-group">
+          <label for="cover-letter">Why are you interested in this position?</label>
+          <textarea id="cover-letter" name="cover_letter" class="form-control" required></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="experience">Relevant Experience</label>
+          <textarea id="experience" name="experience" class="form-control" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">
+          Submit Application
+          <span class="spinner"></span>
+        </button>
+        
+        <div id="form-status" class="form-status"></div>
+      </form>
     </div>
-</div>
-    
-   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const viewDetailsButtons = document.querySelectorAll('.view-details');
-    const jobTitleField = document.getElementById('job-title-field');
-    const applicationForm = document.getElementById('application-form');
-    const formStatus = document.getElementById('form-status');
-    const jobDescriptionSection = document.getElementById('job-description-section');
-    const jobDescriptionTitle = document.getElementById('job-description-title');
-    const jobDescriptionContent = document.getElementById('job-description-content');
+  </div>
 
-    // Job descriptions data
-    const jobDescriptions = {
-        "B2B Sales Executive": {
-            title: "B2B Sales Executive",
-            description: `
-                <p>We are looking for a motivated and results-driven B2B Sales Executive to join our team. You will be responsible for generating new business opportunities and building strong relationships with clients.</p>
-                <h3>Responsibilities:</h3>
-                <ul>
-                    <li>Identify and prospect new business opportunities.</li>
-                    <li>Build and maintain strong relationships with clients.</li>
-                    <li>Meet and exceed sales targets.</li>
-                    <li>Collaborate with the marketing team to develop sales strategies.</li>
-                </ul>
-                <h3>Requirements:</h3>
-                <ul>
-                    <li>2+ years of experience in B2B sales.</li>
-                    <li>Strong communication and negotiation skills.</li>
-                    <li>Proven track record of meeting sales targets.</li>
-                    <li>Ability to work independently and as part of a team.</li>
-                </ul>
-            `
-        },
-        "Client Success Manager": {
-            title: "Client Success Manager",
-            description: `
-                <p>We are seeking a dedicated Client Success Manager to ensure our clients achieve their goals using our services. You will act as the main point of contact for clients, providing support and guidance.</p>
-                <h3>Responsibilities:</h3>
-                <ul>
-                    <li>Onboard new clients and ensure a smooth transition.</li>
-                    <li>Provide ongoing support and training to clients.</li>
-                    <li>Monitor client satisfaction and address any issues.</li>
-                    <li>Collaborate with internal teams to improve client experience.</li>
-                </ul>
-                <h3>Requirements:</h3>
-                <ul>
-                    <li>3+ years of experience in client success or account management.</li>
-                    <li>Excellent communication and interpersonal skills.</li>
-                    <li>Strong problem-solving abilities.</li>
-                    <li>Ability to manage multiple clients and projects simultaneously.</li>
-                </ul>
-            `
-        }
-    };
-
-    // Add hover effects to job cards
-    const jobCards = document.querySelectorAll('.job-card');
-    jobCards.forEach(card => {
-        card.addEventListener('mouseenter', function () {
-            this.querySelector('.view-details').style.transform = 'scale(1.05)';
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Focus and blur effects for form groups
+      const formControls = document.querySelectorAll('.form-control');
+      
+      formControls.forEach(control => {
+        control.addEventListener('focus', function() {
+          this.closest('.form-group').classList.add('focus-within');
         });
-
-        card.addEventListener('mouseleave', function () {
-            this.querySelector('.view-details').style.transform = 'scale(1)';
-        });
-    });
-
-    // Add hover effects to feature cards
-    const featureCards = document.querySelectorAll('.feature-card');
-    featureCards.forEach(card => {
-        card.addEventListener('mouseenter', function () {
-            this.querySelector('.card-title').style.color = 'black';
-        });
-
-        card.addEventListener('mouseleave', function () {
-            this.querySelector('.card-title').style.color = 'black';
-        });
-    });
-
-    // Handle "View details" button clicks
-    viewDetailsButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            // Get the job URL and title from the data attributes
-            const jobUrl = this.getAttribute('data-job-url');
-            const jobTitle = this.getAttribute('data-job-title') || 'General Application';
-
-            // Update the hidden job title field in the form
-            if (jobTitleField) {
-                jobTitleField.value = jobTitle;
-            }
-
-            // Create a pulse effect on the button
-            this.style.transform = 'scale(0.95)';
+        
+        control.addEventListener('blur', function() {
+          this.closest('.form-group').classList.remove('focus-within');
+          
+          // Add completion animation if field has content
+          if (this.value.trim() !== '') {
+            this.classList.add('field-complete');
             setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 200);
-
-            // Highlight the job title in the form title
-            const sectionTitle = document.querySelector('.section-title');
-            sectionTitle.innerHTML = `Apply Now: <span style="color: #00d8a6;">${jobTitle}</span>`;
-
-            // Update the job description section
-            const jobDescription = jobDescriptions[jobTitle];
-            if (jobDescription) {
-                jobDescriptionTitle.textContent = jobDescription.title;
-                jobDescriptionContent.innerHTML = jobDescription.description;
-                jobDescriptionSection.style.display = 'block';
-            }
-
-            // Scroll to the job description section with smooth effect
-            jobDescriptionSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+              this.classList.remove('field-complete');
+            }, 500);
+          }
         });
-    });
-
-    // Add form field animations
-    const formFields = document.querySelectorAll('.form-control');
-    formFields.forEach(field => {
-        field.addEventListener('focus', function () {
-            this.parentElement.style.transform = 'translateX(5px)';
-            setTimeout(() => {
-                this.parentElement.style.transform = 'translateX(0)';
-            }, 300);
-        });
-    });
-
-    // Handle form submission
-    applicationForm.addEventListener('submit', async function (e) {
+      });
+      
+      // Form submission with animation
+      const form = document.getElementById('application-form');
+      const submitBtn = form.querySelector('.submit-btn');
+      const formStatus = document.getElementById('form-status');
+      
+      form.addEventListener('submit', function(e) {
         e.preventDefault();
-
-        formStatus.style.display = 'none';
-
-        // Show loading state on submit button
-        const submitBtn = document.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Submitting...';
-        submitBtn.disabled = true;
-
-        try {
-            const response = await fetch(applicationForm.action, {
-                method: 'POST',
-                body: new FormData(applicationForm)
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                // Success case
-                formStatus.className = 'form-status success';
-                formStatus.innerHTML = '<strong>Thanks for your application!</strong> We will be in touch soon.';
-                applicationForm.reset();
-
-                // Add a confetti effect
-                addConfetti();
-            } else {
-                // Error case
-                formStatus.className = 'form-status error';
-                formStatus.innerHTML = `<strong>Error:</strong> ${data.message || 'Something went wrong. Please try again.'}`;
-            }
-        } catch (error) {
-            formStatus.className = 'form-status error';
-            formStatus.innerHTML = '<strong>Error:</strong> An error occurred. Please try again later.';
-        }
-
-        // Restore button state
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-
-        // Show status with animation
-        formStatus.style.display = 'block';
-        formStatus.style.opacity = '0';
+        
+        // Add loading state
+        submitBtn.classList.add('loading');
+        
+        // Simulate form submission (replace with actual submission logic)
         setTimeout(() => {
-            formStatus.style.opacity = '1';
-        }, 10);
+          // Remove loading state
+          submitBtn.classList.remove('loading');
+          
+          // Show success message
+          formStatus.textContent = "Application submitted successfully! We'll be in touch soon.";
+          formStatus.classList.add('success');
+          
+          // Reset form after delay
+          setTimeout(() => {
+            form.reset();
+            formStatus.classList.remove('success');
+          }, 5000);
+        }, 1500);
+      });
+      
+      // 3D tilt effect on container
+      const container = document.querySelector('.application-container');
+      
+      container.addEventListener('mousemove', function(e) {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const xRotation = ((y - rect.height / 2) / rect.height) * 4;
+        const yRotation = ((x - rect.width / 2) / rect.width) * -4;
+        
+        container.style.transform = `perspective(1000px) rotateX(${xRotation}deg) rotateY(${yRotation}deg) translateY(-5px)`;
+      });
+      
+      container.addEventListener('mouseleave', function() {
+        container.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+      });
     });
-
-    // Simple confetti effect function
-    function addConfetti() {
-        const confettiContainer = document.createElement('div');
-        confettiContainer.style.position = 'fixed';
-        confettiContainer.style.top = '0';
-        confettiContainer.style.left = '0';
-        confettiContainer.style.width = '100%';
-        confettiContainer.style.height = '100%';
-        confettiContainer.style.pointerEvents = 'none';
-        confettiContainer.style.zIndex = '9999';
-        document.body.appendChild(confettiContainer);
-        const colors = ['#0d6eaa', '#76b729', '#f8d258', '#ff6b6b', '#8c52ff'];
-        for (let i = 0; i < 100; i++) {
-            const confetti = document.createElement('div');
-            const color = colors[Math.floor(Math.random() * colors.length)];
-
-            confetti.style.position = 'absolute';
-            confetti.style.width = Math.random() * 10 + 5 + 'px';
-            confetti.style.height = Math.random() * 10 + 5 + 'px';
-            confetti.style.backgroundColor = color;
-            confetti.style.borderRadius = '50%';
-            confetti.style.left = Math.random() * 100 + 'vw';
-            confetti.style.top = '-10px';
-            confetti.style.opacity = Math.random() + 0.5;
-
-            confettiContainer.appendChild(confetti);
-
-            const animationDuration = Math.random() * 3 + 2;
-            const horizonalMovement = (Math.random() - 0.5) * 200;
-
-            confetti.animate([
-                { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
-                { transform: `translate(${horizonalMovement}px, 100vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
-            ], {
-                duration: animationDuration * 1000,
-                easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
-                fill: 'forwards'
-            });
-
-            setTimeout(() => {
-                confetti.remove();
-            }, animationDuration * 1000);
-        }
-
-        setTimeout(() => {
-            confettiContainer.remove();
-        }, 5000);
-    }
-
-    // Add scroll reveal effect for sections
-    const sections = document.querySelectorAll('.section, .positions-section, .values-section, .application-section');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    });
-});
-   </script>
+  </script>
 </body>
 </html>
