@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Services - Ramanujan Cards</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    body {
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    
+    .ramanujan-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .ramanujan-header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      background: linear-gradient(135deg, #051937, #004d7a);
+      color: white;
+      border-radius: 10px;
+    }
+    
+    .ramanujan-title {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    .ramanujan-subtitle {
+      font-size: 16px;
+      opacity: 0.8;
+    }
+    
+    .ramanujan-cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 20px;
+    }
+    
+    .ramanujan-card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: white;
+    }
+    
+    .ramanujan-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .ramanujan-card-image {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    #ramanujan-email .ramanujan-card-image {
+      background-color: #2196F3;
+    }
+    
+    #ramanujan-content-syndication .ramanujan-card-image {
+      background-color: #9C27B0;
+    }
+    
+    #ramanujan-abm .ramanujan-card-image {
+      background-color: #F44336;
+    }
+    
+    #ramanujan-lead-generation .ramanujan-card-image {
+      background-color: #FF9800;
+    }
+    
+    #ramanujan-data-solutions .ramanujan-card-image {
+      background-color: #4CAF50;
+    }
+    
+    #ramanujan-web-design .ramanujan-card-image {
+      background-color: #795548;
+    }
+    
+    .ramanujan-card-content {
+      padding: 25px;
+    }
+    
+    .ramanujan-card-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+      font-weight: bold;
+    }
+    
+    .ramanujan-card-description {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .ramanujan-card-features {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+    
+    .ramanujan-feature-item {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 5px;
+      padding-left: 20px;
+      position: relative;
+    }
+    
+    .ramanujan-feature-item:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    
+    .ramanujan-card-cta {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    
+    #ramanujan-email .ramanujan-card-cta {
+      background-color: #2196F3;
+    }
+    
+    #ramanujan-content-syndication .ramanujan-card-cta {
+      background-color: #9C27B0;
+    }
+    
+    #ramanujan-abm .ramanujan-card-cta {
+      background-color: #F44336;
+    }
+    
+    #ramanujan-lead-generation .ramanujan-card-cta {
+      background-color: #FF9800;
+    }
+    
+    #ramanujan-data-solutions .ramanujan-card-cta {
+      background-color: #4CAF50;
+    }
+    
+    #ramanujan-web-design .ramanujan-card-cta {
+      background-color: #795548;
+    }
+    
+    .ramanujan-card-cta:hover {
+      opacity: 0.9;
+    }
+    
+    .ramanujan-footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ramanujan-container">
+    <header class="ramanujan-header">
+      <h1 class="ramanujan-title">Comprehensive Marketing Solutions</h1>
+      <p class="ramanujan-subtitle">Transform your business with our data-driven marketing services</p>
+    </header>
+    
+    <div class="ramanujan-cards-container">
+      <!-- Email Marketing Card -->
+      <div id="ramanujan-email" class="ramanujan-card">
+        <div class="ramanujan-card-image">
+          <img src="/api/placeholder/350/180" alt="Email Marketing" />
+        </div>
+        <div class="ramanujan-card-content">
+          <h2 class="ramanujan-card-title">Email Marketing</h2>
+          <p class="ramanujan-card-description">Drive engagement and conversions with targeted email campaigns tailored to your audience segments.</p>
+          <ul class="ramanujan-card-features">
+            <li class="ramanujan-feature-item">Personalized automation sequences</li>
+            <li class="ramanujan-feature-item">A/B testing and optimization</li>
+            <li class="ramanujan-feature-item">Detailed analytics and reporting</li>
+          </ul>
+          <a href="#" class="ramanujan-card-cta">Learn More</a>
+        </div>
+      </div>
+      
+      <!-- Content Syndication Card -->
+      <div id="ramanujan-content-syndication" class="ramanujan-card">
+        <div class="ramanujan-card-image">
+          <img src="/api/placeholder/350/180" alt="Content Syndication" />
+        </div>
+        <div class="ramanujan-card-content">
+          <h2 class="ramanujan-card-title">Content Syndication</h2>
+          <p class="ramanujan-card-description">Expand your content reach and generate quality leads by distributing your content across relevant platforms.</p>
+          <ul class="ramanujan-card-features">
+            <li class="ramanujan-feature-item">Access to 200+ industry platforms</li>
+            <li class="ramanujan-feature-item">Targeted audience segmentation</li>
+            <li class="ramanujan-feature-item">Lead qualification and scoring</li>
+          </ul>
+          <a href="#" class="ramanujan-card-cta">Learn More</a>
+        </div>
+      </div>
+      
+      <!-- Account-Based Marketing Card -->
+      <div id="ramanujan-abm" class="ramanujan-card">
+        <div class="ramanujan-card-image">
+          <img src="/api/placeholder/350/180" alt="Account-Based Marketing" />
+        </div>
+        <div class="ramanujan-card-content">
+          <h2 class="ramanujan-card-title">Account-Based Marketing</h2>
+          <p class="ramanujan-card-description">Focus your resources on high-value accounts with personalized marketing strategies that drive results.</p>
+          <ul class="ramanujan-card-features">
+            <li class="ramanujan-feature-item">Target account identification</li>
+            <li class="ramanujan-feature-item">Multi-channel engagement</li>
+            <li class="ramanujan-feature-item">ROI-focused measurement</li>
+          </ul>
+          <a href="#" class="ramanujan-card-cta">Learn More</a>
+        </div>
+      </div>
+      
+      <!-- Lead Generation Card -->
+      <div id="ramanujan-lead-generation" class="ramanujan-card">
+        <div class="ramanujan-card-image">
+          <img src="/api/placeholder/350/180" alt="Lead Generation" />
+        </div>
+        <div class="ramanujan-card-content">
+          <h2 class="ramanujan-card-title">Lead Generation</h2>
+          <p class="ramanujan-card-description">Attract and convert high-quality leads with our comprehensive lead generation solutions.</p>
+          <ul class="ramanujan-card-features">
+            <li class="ramanujan-feature-item">Intent-based targeting</li>
+            <li class="ramanujan-feature-item">Sales-qualified lead delivery</li>
+            <li class="ramanujan-feature-item">CRM integration capabilities</li>
+          </ul>
+          <a href="#" class="ramanujan-card-cta">Learn More</a>
+        </div>
+      </div>
+      
+      <!-- Data Solutions Card -->
+      <div id="ramanujan-data-solutions" class="ramanujan-card">
+        <div class="ramanujan-card-image">
+          <img src="/api/placeholder/350/180" alt="Data Solutions" />
+        </div>
+        <div class="ramanujan-card-content">
+          <h2 class="ramanujan-card-title">Data Solutions</h2>
+          <p class="ramanujan-card-description">Leverage high-quality data to inform your marketing decisions and drive better business outcomes.</p>
+          <ul class="ramanujan-card-features">
+            <li class="ramanujan-feature-item">Buyer intent signals</li>
+            <li class="ramanujan-feature-item">Data enrichment services</li>
+            <li class="ramanujan-feature-item">Custom audience development</li>
+          </ul>
+          <a href="#" class="ramanujan-card-cta">Learn More</a>
+        </div>
+      </div>
+      
+      <!-- Web Design Card -->
+      <div id="ramanujan-web-design" class="ramanujan-card">
+        <div class="ramanujan-card-image">
+          <img src="/api/placeholder/350/180" alt="Web Design & Development" />
+        </div>
+        <div class="ramanujan-card-content">
+          <h2 class="ramanujan-card-title">Web Design & Development</h2>
+          <p class="ramanujan-card-description">Create engaging, conversion-focused websites that drive traffic and generate leads.</p>
+          <ul class="ramanujan-card-features">
+            <li class="ramanujan-feature-item">Responsive design</li>
+            <li class="ramanujan-feature-item">SEO optimization</li>
+            <li class="ramanujan-feature-item">Conversion rate optimization</li>
+          </ul>
+          <a href="#" class="ramanujan-card-cta">Learn More</a>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="ramanujan-footer">
+      <p>Contact us today to transform your marketing strategy and drive measurable results.</p>
+    </footer>
+  </div>
+</body>
+</html>

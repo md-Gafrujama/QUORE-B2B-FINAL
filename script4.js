@@ -1,5 +1,4 @@
-
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     // *** WEB3FORMS CONFIGURATION - REPLACE THESE VALUES ***
     // Replace with your actual Web3Forms access key
     const WEB3FORMS_ACCESS_KEY = "e505fedc-14ad-49ed-834f-32cd23ad6136"; 
@@ -18,13 +17,13 @@
         "Lead Generation Executive": {
             title: "Lead Generation Executive",
             description: `
-                <p>We are looking for a highly motivated and results-driven Lead Generation Executive to join our team. The ideal candidate will have a minimum of 6 months’ experience in lead generation and possess excellent interpersonal communication skills. In this role, you will be responsible for identifying potential leads, building strong relationships with prospective clients, and driving new business opportunities. Your ability to engage with prospects and effectively communicate the value of our products/services will be key to achieving success in this position. If you are passionate about lead generation and are eager to contribute to the growth of a dynamic team, we would love to hear from you.</h3>
-                    <ul>
-  <li><strong>Function:</strong> Lead Generation Executive</li>
-  <li><strong>Lead Generation</strong></li>
-  <li><strong>Interpersonal Communication</strong></li>
-  <li>Hiring Lead Generation Executive with minimum 6 months’ experience in lead generation</li>
-</ul>
+                <p>We are looking for a highly motivated and results-driven Lead Generation Executive to join our team. The ideal candidate will have a minimum of 6 months' experience in lead generation and possess excellent interpersonal communication skills. In this role, you will be responsible for identifying potential leads, building strong relationships with prospective clients, and driving new business opportunities. Your ability to engage with prospects and effectively communicate the value of our products/services will be key to achieving success in this position. If you are passionate about lead generation and are eager to contribute to the growth of a dynamic team, we would love to hear from you.</h3>
+                <ul>
+                <li><strong>Function:</strong> Lead Generation Executive</li>
+                <li><strong>Lead Generation</strong></li>
+                <li><strong>Interpersonal Communication</strong></li>
+                <li>Hiring Lead Generation Executive with minimum 6 months' experience in lead generation</li>
+                </ul>
 
                 <ul>
                     <li>Making cold calls to International (US) Prospects and pitching IT products/services.</li>
@@ -46,12 +45,11 @@
                 <p>This role involves utilizing data analysis skills to identify and qualify potential B2B leads, optimize lead generation strategies, and provide data-driven insights to the sales and marketing teams. </p>
                 <h3>Responsibilities:</h3>
                 <ul>
-                    <li>Data Collection and Analysis:li>
+                    <li>Data Collection and Analysis:</li>
                     <li>Gather and analyze data from various sources, including CRM systems, marketing automation platforms, and external databases.</li>
-                    <li>Clean, preprocess, and validate data to ensure accuracy and consistency. .</li>
-                    <li>Identify patterns, trends, and opportunities within the data to inform lead generation efforts .</li>
-                    <li>Develop and maintain databases and dashboards to track lead generation metrics and key performance indicators (KPIs).</>
-
+                    <li>Clean, preprocess, and validate data to ensure accuracy and consistency.</li>
+                    <li>Identify patterns, trends, and opportunities within the data to inform lead generation efforts.</li>
+                    <li>Develop and maintain databases and dashboards to track lead generation metrics and key performance indicators (KPIs).</li>
                 </ul>
                 <h3>Requirements:</h3>
                 <ul>
@@ -135,7 +133,7 @@
                     
                     // Update the form title to highlight the job
                     const sectionTitle = document.querySelector('.section-title');
-                    sectionTitle.innerHTML = `Apply Now: <span style="color: #00d8a6;">${jobTitle}</span>`;
+                    sectionTitle.innerHTML =` Apply Now: <span style="color: #00d8a6;">${jobTitle}</span>`;
                     
                     // Create a pulse effect on the form
                     const formContainer = document.querySelector('.application-container');
@@ -278,3 +276,4 @@
             confettiContainer.remove();
         }, 5000);
     }
+});
