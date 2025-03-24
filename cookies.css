@@ -2,10 +2,9 @@
 :root {
   --primary-color: #2C3E50; /* QuoreB2B Primary Color */
   --secondary-color: #34495E; /* QuoreB2B Secondary Color */
-  --accent-color: #3498DB; /* QuoreB2B Accent Color */
+  --accent-color: linear-gradient(90deg, #d9eb72, #00D4A4); /* QuoreB2B Accent Color */
   --background-color: #ffffff;
   --text-color: #2C3E50;
-  --border-color: #E5E7E9;
   --banner-height: 80px;
   --focus-outline: 2px solid var(--accent-color);
 }
@@ -17,7 +16,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
 }
@@ -92,7 +91,7 @@ body {
 }
 
 .cookie-links a {
-  color: var(--accent-color);
+  color:#00d8a6;
   text-decoration: none;
   font-size: 0.8rem;
   white-space: nowrap;
@@ -124,12 +123,12 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--accent-color);
+  background: var(--accent-color);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #2980b9;
+  background: black;
   transform: translateY(-1px);
 }
 
@@ -279,7 +278,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: var(--accent-color);
+  background-color: #ccc;
 }
 
 input:checked + .slider:before {
@@ -324,4 +323,4 @@ input:disabled + .slider {
       width: 95%;
       padding: 1.5rem;
   }
-} 
+}
