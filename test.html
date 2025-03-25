@@ -1,361 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marketing Services - Ramanujan Cards</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
-    }
-    
-    body {
-      background-color: #f5f5f5;
-      padding: 20px;
-    }
-    
-    .ramanujan-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
-    .ramanujan-header {
-      text-align: center;
-      margin-bottom: 30px;
-      padding: 20px;
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-      color: white;
-      border-radius: 10px;
-    }
-    
-    .ramanujan-title {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-    
-    .ramanujan-subtitle {
-      font-size: 16px;
-      opacity: 0.8;
-    }
-    
-    .ramanujan-cards-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: 20px;
-    }
-    
-    .ramanujan-card {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background: white;
-    }
-    
-    .ramanujan-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-    
-    .ramanujan-card-image {
-      height: 180px;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    
-    #ramanujan-email .ramanujan-card-image {
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-    }
-    
-    #ramanujan-content-syndication .ramanujan-card-image {
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-    }
-    
-    #ramanujan-abm .ramanujan-card-image {
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-    }
-    
-    #ramanujan-lead-generation .ramanujan-card-image {
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-    }
-    
-    #ramanujan-data-solutions .ramanujan-card-image {
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-    }
-    
-    #ramanujan-web-design .ramanujan-card-image {
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-    }
-    
-    #ramanujan-display-ads .ramanujan-card-image {
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-    }
-    
-    #ramanujan-sql-generation .ramanujan-card-image {
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-    }
-    
-    #ramanujan-intent-leads .ramanujan-card-image {
-      background: linear-gradient(to right, #00d4a7, #6eff79);
-    }
-    
-    .ramanujan-card-content {
-      padding: 25px;
-    }
-    
-    .ramanujan-card-title {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #333;
-      font-weight: 700;
-    }
-    
-    .ramanujan-card-description {
-      font-size: 14px;
-      color: #666;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    
-    .ramanujan-card-features {
-      list-style-type: none;
-      margin-bottom: 20px;
-    }
-    
-    .ramanujan-feature-item {
-      font-size: 13px;
-      color: #555;
-      margin-bottom: 5px;
-      padding-left: 20px;
-      position: relative;
-    }
-    
-    .ramanujan-feature-item:before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #4CAF50;
-      font-weight: 700;
-    }
-    
-    .ramanujan-card-cta {
-      display: inline-block;
-      padding: 10px 20px;
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 14px;
-      font-weight:700;
-      transition: background-color 0.3s ease;
-    }
-    
-    #ramanujan-email .ramanujan-card-cta {
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-    }
-    
-    #ramanujan-content-syndication .ramanujan-card-cta {
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-    }
-    
-    #ramanujan-abm .ramanujan-card-cta {
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-    }
-    
-    #ramanujan-lead-generation .ramanujan-card-cta {
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-    }
-    
-    #ramanujan-data-solutions .ramanujan-card-cta {
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-    }
-    
-    #ramanujan-web-design .ramanujan-card-cta {
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-    }
-    
-    #ramanujan-display-ads .ramanujan-card-cta {
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-    }
-    
-    #ramanujan-sql-generation .ramanujan-card-cta {
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-    }
-    
-    #ramanujan-intent-leads .ramanujan-card-cta {
-      background: linear-gradient(90deg, #d9eb72,#00D4A4);
-    }
-    
-    .ramanujan-card-cta:hover {
-      opacity: 0.9;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+    <title>QuoreB2B Email Marketing Solutions</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        .rohit-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Section Styles */
+        .rohit-section {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .rohit-section-title {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            position: relative;
+        }
+
+        .rohit-section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #00d8a6;
+            margin: 15px auto 0;
+        }
+
+        /* Features Styles */
+        .rohit-features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .rohit-feature {
+            flex-basis: calc(33.333% - 20px);
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .rohit-feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .rohit-feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background-color: #00d8a6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+        }
+
+        /* Workflow Styles */
+        .rohit-workflow {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .rohit-workflow-step {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .rohit-workflow-step::before {
+            content: attr(data-step);
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #00d8a6;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+
+        /* Use Cases Styles */
+        .rohit-use-cases {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .rohit-use-case {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Image Placeholder Styles */
+        .rohit-image-placeholder {
+            background-color: #e0e0e0;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            color: #00d8a6;
+        }
+
+        .rohit-image-placeholder span {
+            color: #00d8a6;
+        }
+
+        /* Call to Action Button */
+        .rohit-cta-button {
+            background: linear-gradient(to right, #00d4a7, #6eff79);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .rohit-cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .rohit-features,
+            .rohit-workflow,
+            .rohit-use-cases {
+                grid-template-columns: 1fr;
+            }
+
+            .rohit-feature {
+                flex-basis: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="ramanujan-container">
-    <header class="ramanujan-header">
-      <h1 class="ramanujan-title">Comprehensive Marketing Solutions</h1>
-      <p class="ramanujan-subtitle">Transform your business with our data-driven marketing services</p>
-    </header>
-    
-    <div class="ramanujan-cards-container">
-      <!-- Display Advertisement Card -->
-      <div id="ramanujan-display-ads" class="ramanujan-card">
-        <div class="ramanujan-card-image">
-          <img src="/api/placeholder/350/180" alt="Display Advertisement" />
-        </div>
-        <div class="ramanujan-card-content">
-          <h2 class="ramanujan-card-title">Display Advertisement</h2>
-          <p class="ramanujan-card-description">Reach your target audience with strategic display ads across premium websites and platforms.</p>
-          <ul class="ramanujan-card-features">
-            <li class="ramanujan-feature-item">Strategic ad placement</li>
-            <li class="ramanujan-feature-item">Retargeting capabilities</li>
-            <li class="ramanujan-feature-item">Performance tracking</li>
-          </ul>
-          <a href="#" class="ramanujan-card-cta">Learn More</a>
-        </div>
+  <div class="rohit-container">
+      <!-- Hero Section with Image Placeholder -->
+      <div class="rohit-section">
+          <div class="rohit-image-placeholder">
+              <span>Hero Image Placeholder (Email Marketing Landscape)</span>
+          </div>
+          <h1 class="rohit-section-title">QuoreB2B Email Marketing Solutions</h1>
+          <p class="rohit-hero-text" style="text-align: center; margin-bottom: 20px;">
+              Revolutionize your digital communication with our comprehensive email marketing platform designed to drive engagement, conversions, and growth.
+          </p>
       </div>
-      
-      <!-- Email Marketing Card -->
-      <div id="ramanujan-email" class="ramanujan-card">
-        <div class="ramanujan-card-image">
-          <img src="/api/placeholder/350/180" alt="Email Marketing" />
-        </div>
-        <div class="ramanujan-card-content">
-          <h2 class="ramanujan-card-title">Email Marketing</h2>
-          <p class="ramanujan-card-description">Drive engagement and conversions with targeted email campaigns tailored to your audience segments.</p>
-          <ul class="ramanujan-card-features">
-            <li class="ramanujan-feature-item">Personalized automation sequences</li>
-            <li class="ramanujan-feature-item">A/B testing and optimization</li>
-            <li class="ramanujan-feature-item">Detailed analytics and reporting</li>
-          </ul>
-          <a href="#" class="ramanujan-card-cta">Learn More</a>
-        </div>
+
+      <!-- Features Section -->
+      <div class="rohit-section">
+          <h2 class="rohit-section-title">Why Choose QuoreB2B?</h2>
+          <div class="rohit-features">
+              <div class="rohit-feature">
+                  <div class="rohit-feature-icon">🎯</div>
+                  <h3>Targeted Campaigns</h3>
+                  <p>Precision targeting through advanced audience segmentation and behavioral analysis.</p>
+              </div>
+              <div class="rohit-feature">
+                  <div class="rohit-feature-icon">🤖</div>
+                  <h3>AI-Powered Personalization</h3>
+                  <p>Machine learning algorithms craft individually tailored email experiences.</p>
+              </div>
+              <div class="rohit-feature">
+                  <div class="rohit-feature-icon">📊</div>
+                  <h3>Advanced Analytics</h3>
+                  <p>Real-time performance tracking and actionable insights for continuous improvement.</p>
+              </div>
+          </div>
       </div>
-      
-      <!-- B2B Content Syndication Card -->
-      <div id="ramanujan-content-syndication" class="ramanujan-card">
-        <div class="ramanujan-card-image">
-          <img src="/api/placeholder/350/180" alt="B2B Content Syndication" />
-        </div>
-        <div class="ramanujan-card-content">
-          <h2 class="ramanujan-card-title">B2B Content Syndication</h2>
-          <p class="ramanujan-card-description">Expand your content reach and generate quality B2B leads by distributing your content across relevant platforms.</p>
-          <ul class="ramanujan-card-features">
-            <li class="ramanujan-feature-item">Access to 200+ industry platforms</li>
-            <li class="ramanujan-feature-item">Targeted audience segmentation</li>
-            <li class="ramanujan-feature-item">Lead qualification and scoring</li>
-          </ul>
-          <a href="#" class="ramanujan-card-cta">Learn More</a>
-        </div>
+
+      <!-- Workflow Section -->
+      <div class="rohit-section">
+          <h2 class="rohit-section-title">Our Email Marketing Workflow</h2>
+          <div class="rohit-image-placeholder" style="height: 200px;">
+              <span>Workflow Visualization Placeholder</span>
+          </div>
+          <div class="rohit-workflow">
+              <div class="rohit-workflow-step" data-step="1">
+                  <h3>Strategy Development</h3>
+                  <p>Comprehensive audience analysis and strategic campaign planning.</p>
+              </div>
+              <div class="rohit-workflow-step" data-step="2">
+                  <h3>Content Creation</h3>
+                  <p>Engaging, personalized content crafted with data-driven insights.</p>
+              </div>
+              <div class="rohit-workflow-step" data-step="3">
+                  <h3>Campaign Execution</h3>
+                  <p>Precision-timed automated workflows maximizing engagement potential.</p>
+              </div>
+          </div>
       </div>
-      
-      <!-- Account-Based Marketing Card -->
-      <div id="ramanujan-abm" class="ramanujan-card">
-        <div class="ramanujan-card-image">
-          <img src="/api/placeholder/350/180" alt="Account-Based Marketing" />
-        </div>
-        <div class="ramanujan-card-content">
-          <h2 class="ramanujan-card-title">Account-Based Marketing</h2>
-          <p class="ramanujan-card-description">Focus your resources on high-value accounts with personalized marketing strategies that drive results.</p>
-          <ul class="ramanujan-card-features">
-            <li class="ramanujan-feature-item">Target account identification</li>
-            <li class="ramanujan-feature-item">Multi-channel engagement</li>
-            <li class="ramanujan-feature-item">ROI-focused measurement</li>
-          </ul>
-          <a href="#" class="ramanujan-card-cta">Learn More</a>
-        </div>
+
+      <!-- Use Cases Section -->
+      <div class="rohit-section">
+          <h2 class="rohit-section-title">Email Marketing Use Cases</h2>
+          <div class="rohit-image-placeholder">
+              <span>Use Cases Visualization Placeholder</span>
+          </div>
+          <div class="rohit-use-cases">
+              <div class="rohit-use-case">
+                  <h3>Lead Nurturing</h3>
+                  <p>Transform prospects into loyal customers through strategic communication.</p>
+              </div>
+              <div class="rohit-use-case">
+                  <h3>Product Promotion</h3>
+                  <p>Drive sales and engagement with targeted promotional campaigns.</p>
+              </div>
+              <div class="rohit-use-case">
+                  <h3>Customer Retention</h3>
+                  <p>Build lasting relationships through personalized ongoing communication.</p>
+              </div>
+          </div>
       </div>
-      
-      <!-- Lead Generation Card -->
-      <div id="ramanujan-lead-generation" class="ramanujan-card">
-        <div class="ramanujan-card-image">
-          <img src="/api/placeholder/350/180" alt="Lead Generation" />
-        </div>
-        <div class="ramanujan-card-content">
-          <h2 class="ramanujan-card-title">Lead Generation</h2>
-          <p class="ramanujan-card-description">Attract and convert high-quality leads with our comprehensive lead generation solutions.</p>
-          <ul class="ramanujan-card-features">
-            <li class="ramanujan-feature-item">Intent-based targeting</li>
-            <li class="ramanujan-feature-item">Sales-qualified lead delivery</li>
-            <li class="ramanujan-feature-item">CRM integration capabilities</li>
-          </ul>
-          <a href="#" class="ramanujan-card-cta">Learn More</a>
-        </div>
+
+      <!-- Testimonials Section -->
+      <div class="rohit-section">
+          <h2 class="rohit-section-title">Client Success Stories</h2>
+          <div class="rohit-image-placeholder">
+              <span>Testimonials Placeholder</span>
+          </div>
       </div>
-      
-      <!-- Sales-Qualified Lead Generation Card -->
-      <div id="ramanujan-sql-generation" class="ramanujan-card">
-        <div class="ramanujan-card-image">
-          <img src="/api/placeholder/350/180" alt="Sales-Qualified Lead Generation" />
-        </div>
-        <div class="ramanujan-card-content">
-          <h2 class="ramanujan-card-title">Sales-Qualified Lead Generation</h2>
-          <p class="ramanujan-card-description">Generate high-quality, sales-ready leads that are pre-qualified and ready for your sales team.</p>
-          <ul class="ramanujan-card-features">
-            <li class="ramanujan-feature-item">Custom qualification criteria</li>
-            <li class="ramanujan-feature-item">Direct integration with sales pipeline</li>
-            <li class="ramanujan-feature-item">Quality guarantee</li>
-          </ul>
-          <a href="#" class="ramanujan-card-cta">Learn More</a>
-        </div>
+
+      <!-- Call to Action -->
+      <div class="rohit-section" style="text-align: center; background-color: #3498db; color: white;">
+          <h2>Ready to Transform Your Email Marketing?</h2>
+          <p>Book a free consultation and discover how QuoreB2B can elevate your digital communication strategy.</p>
+          <button style="background-color: white; color: #3498db; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 20px;">
+              Schedule Demo
+          </button>
       </div>
-      
-      <!-- Intent Leads Card -->
-      <div id="ramanujan-intent-leads" class="ramanujan-card">
-        <div class="ramanujan-card-image">
-          <img src="/api/placeholder/350/180" alt="Intent Leads" />
-        </div>
-        <div class="ramanujan-card-content">
-          <h2 class="ramanujan-card-title">Intent Leads</h2>
-          <p class="ramanujan-card-description">Target prospects showing active buying signals with our advanced intent data solutions.</p>
-          <ul class="ramanujan-card-features">
-            <li class="ramanujan-feature-item">Real-time intent monitoring</li>
-            <li class="ramanujan-feature-item">Behavioral analytics</li>
-            <li class="ramanujan-feature-item">High conversion potential</li>
-          </ul>
-          <a href="#" class="ramanujan-card-cta">Learn More</a>
-        </div>
-      </div>
-      
-      <!-- Data Solutions Card -->
-      <div id="ramanujan-data-solutions" class="ramanujan-card">
-        <div class="ramanujan-card-image">
-          <img src="/api/placeholder/350/180" alt="Data Solutions" />
-        </div>
-        <div class="ramanujan-card-content">
-          <h2 class="ramanujan-card-title">Data Solutions</h2>
-          <p class="ramanujan-card-description">Leverage high-quality data to inform your marketing decisions and drive better business outcomes.</p>
-          <ul class="ramanujan-card-features">
-            <li class="ramanujan-feature-item">Buyer intent signals</li>
-            <li class="ramanujan-feature-item">Data enrichment services</li>
-            <li class="ramanujan-feature-item">Custom audience development</li>
-          </ul>
-          <a href="#" class="ramanujan-card-cta">Learn More</a>
-        </div>
-      </div>
-      
-      <!-- Web Design Card -->
-      <div id="ramanujan-web-design" class="ramanujan-card">
-        <div class="ramanujan-card-image">
-          <img src="/api/placeholder/350/180" alt="Web Design & Development" />
-        </div>
-        <div class="ramanujan-card-content">
-          <h2 class="ramanujan-card-title">Web Design & Development</h2>
-          <p class="ramanujan-card-description">Create engaging, conversion-focused websites that drive traffic and generate leads.</p>
-          <ul class="ramanujan-card-features">
-            <li class="ramanujan-feature-item">Responsive design</li>
-            <li class="ramanujan-feature-item">SEO optimization</li>
-            <li class="ramanujan-feature-item">Conversion rate optimization</li>
-          </ul>
-          <a href="#" class="ramanujan-card-cta">Learn More</a>
-        </div>
-      </div>
-    </div>
   </div>
 </body>
 </html>

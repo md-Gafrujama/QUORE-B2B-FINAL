@@ -1369,3 +1369,8 @@
 } 
 
 
+@media (max-width: 768px){
+  .abm-goals-container{
+    flex-direction: column;
+}
+}
