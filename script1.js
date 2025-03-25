@@ -5,9 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
     const navItems = document.querySelectorAll('.nav-links a');
+    const dropdownArrows = document.querySelectorAll('.dropdown-arrow');
+    const dropdownContents = document.querySelectorAll('.r-dropdown-content');
+    const navbar = document.querySelector('#kazim.navbar');
 
     // Menu toggle functionality
-    menuToggle.addEventListener('click', function() {
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation(); // Prevent event from bubbling
         this.classList.toggle('active');
         navLinks.classList.toggle('active');
 
@@ -19,25 +23,112 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.style.transitionDelay = '0s';
             }
         });
+
+        // Close all dropdowns when menu is toggled
+        dropdownContents.forEach(content => {
+            content.classList.remove('active');
+        });
+        dropdownArrows.forEach(arrow => {
+            arrow.classList.remove('active');
+        });
     });
 
-    // Close menu when clicking outside
+    // Function to center dropdown
+    function centerDropdown(dropdown) {
+        dropdown.style.position = 'fixed';
+        dropdown.style.top = '50%';
+        dropdown.style.left = '50%';
+        dropdown.style.transform = 'translate(-50%, -50%)';
+    }
+
+    // Handle dropdown toggles
+    dropdownArrows.forEach(arrow => {
+        arrow.addEventListener('click', function(e) {
+            e.stopPropagation(); // Prevent event from bubbling up
+            
+            // Get the dropdown associated with this arrow
+            const dropdown = this.closest('.r-dropdown').querySelector('.r-dropdown-content');
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+            this.classList.toggle('active');
+            
+            // Close other dropdowns
+            dropdownContents.forEach(content => {
+                if (content !== dropdown) {
+                    content.classList.remove('active');
+                }
+            });
+            
+            dropdownArrows.forEach(arr => {
+                if (arr !== this) {
+                    arr.classList.remove('active');
+                }
+            });
+
+            // Center the dropdown on mobile
+            if (window.innerWidth <= 968) {
+                centerDropdown(dropdown);
+            }
+        });
+    });
+
+    // Close menu and dropdowns when clicking outside
     document.addEventListener('click', function(e) {
+        // Check if click is outside navigation and menu toggle
         if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+            // Close mobile menu
             menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
+
+            // Close dropdowns
+            dropdownContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            dropdownArrows.forEach(arrow => {
+                arrow.classList.remove('active');
+            });
         }
     });
 
-    // Close mobile menu on window resize
+    // Close mobile menu and dropdowns on window resize
     window.addEventListener('resize', function() {
         if (window.innerWidth > 968) {
+            // Reset mobile menu
             menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
+
+            // Reset dropdown styles
+            dropdownContents.forEach(content => {
+                content.style.position = '';
+                content.style.top = '';
+                content.style.left = '';
+                content.style.transform = '';
+                content.classList.remove('active');
+            });
+            dropdownArrows.forEach(arrow => {
+                arrow.classList.remove('active');
+            });
+        }
+    });
+
+    // Prevent dropdown from closing when clicking inside
+    dropdownContents.forEach(content => {
+        content.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+
+    // Scroll navbar on page load
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('#kazim.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
     });
 });
-
 
 
 // graph for chart and other graph visulaztion for service
