@@ -2139,3 +2139,116 @@ width: 100%;
       margin: clamp(8px, 2vw, 16px) 0 clamp(20px, 4vw, 32px) 0;
   }
 }
+
+
+/* extra */
+.rohit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.rohit-section {
+  background-color: white;
+  margin-bottom: 30px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.rohit-section-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 25px;
+  position: relative;
+}
+
+.rohit-section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #00d8a6;
+  margin: 15px auto 0;
+}
+
+.rohit-image-placeholder {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  border: 2px solid #00d8a6;
+  overflow: hidden;
+}
+
+.rohit-image-placeholder img {
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.rohit-features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.rohit-feature {
+  flex-basis: calc(33.333% - 20px);
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.rohit-feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  background-color: #00d8a6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 25px;
+}
+
+.rohit-workflow, .rohit-use-cases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.rohit-workflow-step, .rohit-use-case {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.rohit-cta-button {
+  background: linear-gradient(to right, #00d4a7, #6eff79);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .rohit-features, .rohit-workflow, .rohit-use-cases {
+      grid-template-columns: 1fr;
+  }
+}
