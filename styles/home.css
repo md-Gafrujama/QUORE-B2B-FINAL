@@ -814,6 +814,7 @@ color:#00d8a6; /* Change link color on hover */
   max-width: 1100px;
   margin: 0 auto;
   gap: 80px;
+  padding-top: 50px;
 }
 
 #unique-services-section .text-content {
