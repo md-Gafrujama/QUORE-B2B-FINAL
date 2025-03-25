@@ -334,57 +334,77 @@
        
         
         <!-- added 7th div -->
-        <div class="gauge-wrapper">
-            <div class="campaign-gauge">
-                <div class="gauge-header">
-                    <h3>Current Campaign Performance</h3>
-                    <div class="gauge-period">Last 30 Days</div>
-                </div>
-
-                <div class="gauge-container">
-                    <div class="gauge">
-                        <div class="gauge-body">
-                            <div class="gauge-fill" style="transform: rotate(0.6turn);"></div>
-                        </div>
-                        <div class="gauge-cover">72%</div>
+        <div class="abm-dashboard">
+            <!-- Campaign Gauge Component -->
+            <div class="gauge-wrapper">
+                <div class="campaign-gauge">
+                    <div class="gauge-header">
+                        <h3>Current Campaign Performance</h3>
+                        <div class="gauge-period">Last 30 Days</div>
                     </div>
-
-                    <div class="gauge-metrics">
-                        <div class="metric">
-                            <div class="metric-value">45%</div>
-                            <div class="metric-label">Open Rate</div>
-                            <div class="metric-change positive">+12% <svg viewBox="0 0 24 24" width="12" height="12">
-                                    <path fill="currentColor" d="M7,14L12,9L17,14H7Z" />
-                                </svg></div>
+                    
+                    <div class="gauge-container">
+                        <div class="gauge">
+                            <div class="gauge-body">
+                                <div class="gauge-fill" style="transform: rotate(0.6turn);"></div>
+                            </div>
+                            <div class="gauge-cover">72%</div>
                         </div>
-                        <div class="metric">
-                            <div class="metric-value">28%</div>
-                            <div class="metric-label">Response Rate</div>
-                            <div class="metric-change positive">+5% <svg viewBox="0 0 24 24" width="12" height="12">
-                                    <path fill="currentColor" d="M7,14L12,9L17,14H7Z" />
-                                </svg></div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-value">3.2</div>
-                            <div class="metric-label">Avg. Touchpoints</div>
-                            <div class="metric-change negative">-0.4 <svg viewBox="0 0 24 24" width="12" height="12">
-                                    <path fill="currentColor" d="M7,10L12,15L17,10H7Z" />
-                                </svg></div>
+                        
+                        <div class="gauge-metrics">
+                            <div class="metric">
+                                <div class="gauge-metric-value">45%</div>
+                                <div class="gauge-metric-label">Open Rate</div>
+                                <div class="metric-change positive">+12% <svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M7,14L12,9L17,14H7Z"/></svg></div>
+                            </div>
+                            <div class="metric">
+                                <div class="gauge-metric-value">28%</div>
+                                <div class="gauge-metric-label">Response Rate</div>
+                                <div class="metric-change positive">+5% <svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M7,14L12,9L17,14H7Z"/></svg></div>
+                            </div>
+                            <div class="metric">
+                                <div class="gauge-metric-value">3.2</div>
+                                <div class="gauge-metric-label">Avg. Touchpoints</div>
+                                <div class="metric-change negative">-0.4 <svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"/></svg></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="gauge-footer">
-                    <div class="gauge-target">
-                        <span>Target: 85%</span>
-                        <div class="target-bar">
-                            <div class="target-progress" style="width: 72%;"></div>
-                            <div class="target-indicator" style="left: 72%;"></div>
+                    
+                    <div class="gauge-footer">
+                        <div class="gauge-target">
+                            <span>Target: 85%</span>
+                            <div class="target-bar">
+                                <div class="target-progress" style="width: 72%;"></div>
+                                <div class="target-indicator" style="left: 72%;"></div>
+                            </div>
                         </div>
+                        <button class="gauge-action">
+                            
+                        </button>
                     </div>
                 </div>
             </div>
             
+            <!-- ABM Content Section -->
+            <div class="abm-explainer">
+                <h3>Understanding Account-Based Marketing (ABM)</h3>
+                <div class="abm-content">
+                    <p>Account-Based Marketing is a strategic approach that aligns marketing and sales efforts to target high-value accounts with personalized campaigns.</p>
+                    
+                    <h4>Key ABM Principles:</h4>
+                    <ul>
+                        <li><strong>Account Selection:</strong> Focus on high-potential accounts rather than broad markets</li>
+                        <li><strong>Personalization:</strong> Tailor messaging to specific account needs and pain points</li>
+                        <li><strong>Alignment:</strong> Tight coordination between marketing and sales teams</li>
+                        <li><strong>Multi-channel:</strong> Coordinated outreach across multiple platforms</li>
+                        <li><strong>Metrics:</strong> Measure success by account engagement rather than lead volume</li>
+                    </ul>
+                    
+                    <h4>Why ABM Matters:</h4>
+                    <p>ABM delivers higher ROI than traditional marketing by focusing resources on accounts most likely to convert and provide significant lifetime value. It's particularly effective for B2B companies with complex sales cycles and high-value contracts.</p>
+                    
+                </div>
+            </div>
         </div>
 
         <!-- 8th div -->
