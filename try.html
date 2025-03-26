@@ -572,37 +572,7 @@
             display: block;
         }
 
-        footer {
-            background: var(--dark-gray);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .footer-link {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-link:hover {
-            color: var(--primary-color);
-        }
+       
 
         .copyright {
             margin-top: 20px;
@@ -651,37 +621,15 @@
                 grid-template-columns: 1fr;
             }
             
-            .header {
-                padding: 40px 20px;
-            }
+          
             
-            .cta-buttons {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .cta-button {
-                width: 100%;
-                max-width: 300px;
-                margin: 5px 0;
-            }
-        }
+           
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Hero Header -->
-        <header class="header">
-            <div class="header-content">
-                <h1>B2B Content Syndication: The Ultimate Guide</h1>
-                <p class="subtitle">Learn how to amplify your content reach, generate high-quality leads, and establish thought leadership through strategic content syndication</p>
-                <div class="cta-buttons">
-                    <a href="#strategies" class="cta-button">Explore Strategies</a>
-                    <a href="#platforms" class="cta-button secondary">View Platforms</a>
-                </div>
-            </div>
-        </header>
+       
+       
 
         <!-- Key Stats Section -->
         <div class="metrics-grid">
@@ -791,7 +739,7 @@
             
             <div class="quote-card">
                 <p>"Our content syndication program generates 35% of our marketing-qualified leads at a 40% lower cost than our paid search campaigns. The quality of leads is consistently higher as well."</p>
-                <p class="quote-author">— Sarah Johnson, VP Marketing at TechSolutions Inc.</p>
+                <p class="quote-author">— Sarah Rohit Sawantt, VP Marketing at Quoreb2b.com.</p>
             </div>
         </div>
 
@@ -1076,9 +1024,7 @@
             
             <p>Remember that successful syndication requires ongoing optimization. Regularly review performance data, test different approaches, and refine your strategy based on what delivers the best results for your specific business goals.</p>
             
-            <div style="text-align: center; margin-top: 30px;">
-                <a href="#" class="cta-button">Download Complete Guide (PDF)</a>
-            </div>
+           
         </div>
     </div>
 
@@ -1087,7 +1033,7 @@
 
 
     <script>
-        // Back to Top Button
+    
        
 
         // Tab functionality
@@ -1107,7 +1053,14 @@
         });
 
         // FAQ accordion
-        
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('show');
+            });
+        });
     </script>
 </body>
 </html>
