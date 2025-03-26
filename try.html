@@ -621,15 +621,37 @@
                 grid-template-columns: 1fr;
             }
             
-          
+            .header {
+                padding: 40px 20px;
+            }
             
-           
+            .cta-buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-       
-       
+        <!-- Hero Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>B2B Content Syndication: The Ultimate Guide</h1>
+                <p class="subtitle">Learn how to amplify your content reach, generate high-quality leads, and establish thought leadership through strategic content syndication</p>
+                <div class="cta-buttons">
+                    <a href="#strategies" class="cta-button">Explore Strategies</a>
+                    <a href="#platforms" class="cta-button secondary">View Platforms</a>
+                </div>
+            </div>
+        </header>
 
         <!-- Key Stats Section -->
         <div class="metrics-grid">
@@ -1036,6 +1058,31 @@
     
        
 
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                
+                // Remove active class from all tabs and contents
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('show');
+            });
+        });
     </script>
 </body>
 </html>
