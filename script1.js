@@ -118,18 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
         });
     });
-
-    // Scroll navbar on page load
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('#kazim.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
 });
-
 
 // graph for chart and other graph visulaztion for service
 
