@@ -1,0 +1,860 @@
+/* intent leds extra */
+/* INTENT LEADS */
+/* 1st div css */
+.il-page-generation-section {
+  padding: 2rem 1rem;
+  background-color: #ffffff;
+}
+
+.il-page-generation-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+/* Process Steps Styles */
+.il-page-process-steps {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.il-page-section-title {
+  font-size: 1.8rem;
+  color: #3d3c3c;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.il-page-section-subtitle {
+  color: #3d3c3c;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.il-page-process-step {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  align-items: flex-start;
+}
+
+.il-page-process-step:hover {
+  background: #edf2f7;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.il-page-step-number {
+  background-color: #00d8a6;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.il-page-step-content {
+  flex: 1;
+}
+
+.il-page-step-title {
+  font-size: 25px;
+  color: #3d3c3c;
+  margin-bottom: 0.5rem;
+}
+
+.il-page-step-desc {
+  color: #3d3c3c;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .il-page-generation-section {
+    padding: 3rem 2rem;
+  }
+  
+  .il-page-section-title {
+    font-size: 2rem;
+  }
+  
+  .il-page-process-step {
+    padding: 2rem;
+  }
+  
+  .il-page-process-label {
+    font-size: 14px;
+  }
+}
+
+
+/* 2nd css */
+/* Base Styles */
+.il-page-intent-lead-section {
+    /* padding: 4rem 1rem; */
+    padding: 0rem 1rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.il-page-benefits-container {
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.il-page-section-title {
+    font-size: 2.5rem;
+    color: #3d3c3c;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.il-page-section-title span {
+    color: #00d8a6;
+    position: relative;
+}
+
+.il-page-section-title span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #00d4a7, #6eff79);
+    border-radius: 3px;
+}
+
+.il-page-section-intro {
+    color: #3d3c3c;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+/* Benefit Card Styles */
+.il-page-benefit-card {
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 4rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.il-page-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.il-page-benefit-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.il-page-benefit-icon {
+    width: 28px;
+    height: 30px;
+    fill: #00d8a6;
+    margin-right: 1rem;
+}
+
+.il-page-benefit-card h3 {
+    font-size: 25px;
+    color: #3d3c3c;
+    margin: 0;
+}
+
+/* Strategic Benefits List */
+.il-page-benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.il-page-benefit-list-item {
+    display: flex;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.il-page-benefit-list-item:last-child {
+    border-bottom: none;
+}
+
+.il-page-benefit-bullet {
+    min-width: 24px;
+    height: 24px;
+    background: #00d8a6;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    margin-top: 4px;
+    position: relative;
+}
+
+.il-page-benefit-bullet::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+}
+
+.il-page-benefit-text h4 {
+    font-size: 20px;
+    color: #3d3c3c;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.il-page-benefit-text p {
+    color: #3d3c3c;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Operational Benefits Grid */
+.il-page-benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.il-page-grid-item {
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.il-page-grid-item:hover {
+    transform: translateY(-3px);
+}
+
+.il-page-grid-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00d8a6;
+}
+
+.il-page-grid-item h4 {
+    font-size: 20px;
+    color: #3d3c3c;
+    margin: 0 0 0.5rem 0;
+}
+
+.il-page-grid-item p {
+    color: #3d3c3c;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Table Styles */
+.il-page-table-container {
+    overflow-x: auto;
+}
+
+.il-page-benefits-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.il-page-benefits-table th,
+.il-page-benefits-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+    color: #3d3c3c;
+}
+
+.ali-main-title h1{
+  color: green;
+}
+.il-page-benefits-table th {
+    background: #00d8a6;
+    color: white;
+    font-weight: 500;
+}
+
+.il-page-benefits-table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.il-page-benefits-table tr:hover {
+    background: #edf2f7;
+}
+
+/* Stats Grid */
+.il-page-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.il-page-stat-item {
+  background: linear-gradient(to right, #00d4a7, #6eff79);
+    color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.il-page-stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.il-page-stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .il-page-section-title {
+        font-size: 2rem;
+    }
+    
+    .il-page-benefit-list-item {
+        flex-direction: column;
+    }
+    
+    .il-page-benefit-bullet {
+        margin-bottom: 1rem;
+    }
+    
+    .il-page-benefits-table th,
+    .il-page-benefits-table td {
+        padding: 0.75rem;
+    }
+    
+    .il-page-benefits-table {
+        display: block;
+    }
+    
+    .il-page-benefits-table thead {
+        display: none;
+    }
+    
+    .il-page-benefits-table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+    }
+    
+    .il-page-benefits-table td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.75rem 1rem;
+    }
+    
+    .il-page-benefits-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #3d3c3c;
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .il-page-section-title {
+        font-size: 1.75rem;
+    }
+    
+    .il-page-benefit-card {
+        padding: 1.5rem;
+    }
+    
+    .il-page-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* added 3rd css */
+/* Base Styles */
+.il-page-strategies-section {
+    padding: 4rem 1rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.il-page-strategies-container {
+   padding: 0rem 3rem;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.il-page-strategies-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.il-page-section-title {
+    font-size: 2.5rem;
+    color: #3d3c3c;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.il-page-section-title span {
+    color: #00d8a6;
+    position: relative;
+}
+
+.il-page-section-title span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #00d4a7, #6eff79);
+    border-radius: 3px;
+}
+
+.il-page-section-intro {
+    color: #3d3c3c;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Strategy Card Styles */
+.il-page-strategy-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.il-page-strategy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.il-page-strategy-icon {
+    min-width: 60px;
+    height: 60px;
+    background: #f0f4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.il-page-strategy-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: #00d8a6;
+}
+
+.il-page-strategy-content {
+    flex: 1;
+}
+
+.il-page-strategy-content h3 {
+    font-size: 25px;
+    color: #3d3c3c;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.il-page-strategy-details h4 {
+    font-size: 20px;
+    color: #3d3c3c;
+    margin: 1.5rem 0 1rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.il-page-strategy-details h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 18px;
+    background: #00d8a6;
+    border-radius: 2px;
+}
+
+/* Content Strategy Specific */
+.il-page-tactics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.il-page-tactic {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.il-page-tactic:hover {
+    background: #edf2f7;
+    transform: translateY(-3px);
+}
+
+.il-page-tactic-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.il-page-tactic h5 {
+    font-size: 1.1rem;
+    color: #3d3c3c;
+    margin: 0.5rem 0;
+}
+
+.il-page-tactic p {
+    color: #3d3c3c;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Technology Strategy Specific */
+.il-page-tools-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.il-page-tool {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.il-page-tool-badge {
+    background: #00d8a6;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.il-page-tool-info h5 {
+    font-size: 1rem;
+    color: #3d3c3c;
+    margin: 0 0 0.25rem;
+}
+
+.il-page-tool-info p {
+    color: #3d3c3c;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.il-page-integration-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.il-page-flow-step {
+    background: #f0f4ff;
+    border-radius: 6px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.il-page-flow-number {
+    background: #00d8a6;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.il-page-flow-step p {
+    color: #3d3c3c;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Multi-Channel Strategy Specific */
+.il-page-channel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.il-page-channel {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.il-page-channel h5 {
+    font-size: 1.1rem;
+    color: #3d3c3c;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.il-page-channel h5::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #00d8a6;
+}
+
+.il-page-channel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.il-page-channel li {
+    padding: 0.35rem 0;
+    position: relative;
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: #3d3c3c;
+}
+
+.il-page-channel li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #00d8a6;
+    font-weight: bold;
+}
+
+.il-page-timing-framework {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.il-page-timing-stage {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.il-page-timing-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.il-page-timing-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.il-page-timing-stage h5 {
+    font-size: 1rem;
+    color: #3d3c3c;
+    margin: 0;
+}
+
+.il-page-timing-stage p {
+    color: #3d3c3c;
+    font-size: 0.9rem;
+    margin: 0;
+    padding-left: 1.75rem;
+}
+
+/* Measurement Strategy Specific */
+.il-page-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.il-page-metric {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.il-page-metric-value {
+    font-size: 20px;
+    color: #00d8a6;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.il-page-metric p {
+    color: #3d3c3c;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.il-page-optimization-cycle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.il-page-cycle-step {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    transition: all 0.3s ease;
+}
+
+.il-page-cycle-step:hover {
+    border-color: #00d8a6;
+    transform: translateY(-3px);
+}
+
+.il-page-cycle-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.il-page-cycle-step h5 {
+    font-size: 1rem;
+    color: #3d3c3c;
+    margin: 0.5rem 0;
+}
+
+.il-page-cycle-step p {
+    color: #3d3c3c;
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px){
+  .il-page-strategy-card {
+    margin: 3rem;
+}
+}
+@media (max-width: 768px) {
+    .il-page-section-title {
+        font-size: 25px;
+    }
+    
+    .il-page-strategy-card {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 2rem;
+    }
+    
+    .il-page-strategy-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .il-page-strategy-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    .il-page-section-subtitle{
+      font-size: 1rem;
+      padding: 0rem 1rem
+    }
+}
+
+@media (max-width: 480px) {
+    .il-page-section-title {
+        font-size: 1.75rem;
+    }
+    
+    .il-page-strategy-card {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    .il-page-benefit-card{
+      margin: 1rem;
+    }
+    .il-page-strategies-container{
+      padding: 0rem;
+    }
+    .il-page-section-intro{
+      padding:0rem 1rem;
+    }
+    
+    .il-page-tactics-grid,
+    .il-page-channel-grid,
+    .il-page-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .il-page-integration-flow,
+    .il-page-timing-framework,
+    .il-page-optimization-cycle {
+        flex-direction: column;
+    }
+}
