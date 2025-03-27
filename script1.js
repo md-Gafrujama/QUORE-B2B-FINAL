@@ -1,61 +1,65 @@
 // ahmburgguer and active ll in nav bar
 
-
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
     const navItems = document.querySelectorAll('.nav-links a');
     const dropdownArrows = document.querySelectorAll('.dropdown-arrow');
     const dropdownContents = document.querySelectorAll('.r-dropdown-content');
+    const dropdowns = document.querySelectorAll('.r-dropdown');
     const navbar = document.querySelector('#kazim.navbar');
 
     // Menu toggle functionality
-    menuToggle.addEventListener('click', function(e) {
-        e.stopPropagation(); // Prevent event from bubbling
-        this.classList.toggle('active');
-        navLinks.classList.toggle('active');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
 
-        // Add staggered animation to nav items
-        navItems.forEach((item, index) => {
-            if (navLinks.classList.contains('active')) {
-                item.style.transitionDelay = `${index * 0.1}s`;
-            } else {
-                item.style.transitionDelay = '0s';
-            }
-        });
+            // Add staggered animation to nav items
+            navItems.forEach((item, index) => {
+                if (navLinks.classList.contains('active')) {
+                    item.style.transitionDelay = `${index * 0.1}s`;
+                } else {
+                    item.style.transitionDelay = '0s';
+                }
+            });
 
-        // Close all dropdowns when menu is toggled
-        dropdownContents.forEach(content => {
-            content.classList.remove('active');
+            // Close all dropdowns when menu is toggled
+            dropdownContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            dropdownArrows.forEach(arrow => {
+                arrow.classList.remove('active');
+            });
         });
-        dropdownArrows.forEach(arrow => {
-            arrow.classList.remove('active');
-        });
-    });
-
-    // Function to center dropdown
-    function centerDropdown(dropdown) {
-        dropdown.style.position = 'fixed';
-        dropdown.style.top = '50%';
-        dropdown.style.left = '50%';
-        dropdown.style.transform = 'translate(-50%, -50%)';
     }
 
-    // Handle dropdown toggles
-    dropdownArrows.forEach(arrow => {
-        arrow.addEventListener('click', function(e) {
-            e.stopPropagation(); // Prevent event from bubbling up
-            
-            // Get the dropdown associated with this arrow
-            const dropdown = this.closest('.r-dropdown').querySelector('.r-dropdown-content');
+    // Hover and mouse events for dropdowns
+    dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('.dropdown-link');
+        const dropdownContent = dropdown.querySelector('.r-dropdown-content');
+        const dropdownArrow = dropdown.querySelector('.dropdown-arrow');
+
+        // Function to open dropdown
+        const openDropdown = () => {
+            if (window.innerWidth > 968) {
+                dropdownContent.classList.add('active');
+                dropdownArrow.classList.add('active');
+            }
+        };
+
+        // Handle dropdown toggles for mobile
+        dropdownArrow.addEventListener('click', function(e) {
+            e.stopPropagation();
             
             // Toggle current dropdown
-            dropdown.classList.toggle('active');
+            dropdownContent.classList.toggle('active');
             this.classList.toggle('active');
             
             // Close other dropdowns
             dropdownContents.forEach(content => {
-                if (content !== dropdown) {
+                if (content !== dropdownContent) {
                     content.classList.remove('active');
                 }
             });
@@ -65,21 +69,35 @@ document.addEventListener('DOMContentLoaded', function() {
                     arr.classList.remove('active');
                 }
             });
+        });
 
-            // Center the dropdown on mobile
-            if (window.innerWidth <= 968) {
-                centerDropdown(dropdown);
+        // Hover events for desktop
+        dropdown.addEventListener('mouseenter', openDropdown);
+    });
+
+    // Add hover persistence for entire navbar
+    if (navbar) {
+        navbar.addEventListener('mouseleave', function(e) {
+            if (window.innerWidth > 968) {
+                // Close dropdowns
+                dropdownContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                dropdownArrows.forEach(arrow => {
+                    arrow.classList.remove('active');
+                });
             }
         });
-    });
+    }
 
     // Close menu and dropdowns when clicking outside
     document.addEventListener('click', function(e) {
-        // Check if click is outside navigation and menu toggle
-        if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        // Check if click is outside navigation
+        if (navLinks && !navLinks.contains(e.target) && 
+            menuToggle && !menuToggle.contains(e.target)) {
             // Close mobile menu
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+            if (menuToggle) menuToggle.classList.remove('active');
+            if (navLinks) navLinks.classList.remove('active');
 
             // Close dropdowns
             dropdownContents.forEach(content => {
@@ -95,15 +113,11 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         if (window.innerWidth > 968) {
             // Reset mobile menu
-            menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
+            if (menuToggle) menuToggle.classList.remove('active');
+            if (navLinks) navLinks.classList.remove('active');
 
             // Reset dropdown styles
             dropdownContents.forEach(content => {
-                content.style.position = '';
-                content.style.top = '';
-                content.style.left = '';
-                content.style.transform = '';
                 content.classList.remove('active');
             });
             dropdownArrows.forEach(arrow => {
@@ -119,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
 // graph for chart and other graph visulaztion for service
 
 document.addEventListener('DOMContentLoaded', function() {

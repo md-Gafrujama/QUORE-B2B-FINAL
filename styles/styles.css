@@ -166,6 +166,15 @@
 }
 .dropdown-link {
   vertical-align: middle;
+  /* hhh */
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+  /* hhh */
 }
 .dropdown-arrow {
   display: inline-block;
@@ -526,6 +535,13 @@
 .logo:hover .logo-circle,
 .logo:hover .gafru-circle {
   transform: scale(1.05);
+}
+
+.dropdown-link:hover,
+.dropdown-link:hover + .dropdown-arrow,
+.r-dropdown:hover .dropdown-link,
+.r-dropdown:hover .dropdown-arrow {
+  color: #00d8a6;
 }
 
 /* Stats card */
