@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuoreB2B | Advanced SQL Generation Strategies</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <style>
+        :root {
+            --primary:#00d8a6;
+            --primary-dark: #00d8a6;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: var(--light);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 25px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .hero h1 span {
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .secondary-button {
+            background-color: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .secondary-button:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .hero-image {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: var(--gray);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: #f8fafc;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .section-header p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+        
+        .learn-more {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .learn-more i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .learn-more:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background-color: var(--primary);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .step-content p {
+            color: var(--gray);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: #f8fafc;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.popular {
+            border: 2px solid var(--primary);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background-color: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .pricing-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .price {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .price span {
+            font-size: 16px;
+            color: var(--gray);
+            font-weight: 400;
+        }
+        
+        .pricing-features {
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--dark);
+        }
+        
+        .pricing-features i {
+            color: var(--success);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-button:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background-color: #f8fafc;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-answer.show {
+            padding: 0 20px 20px;
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .footer-logo span {
+            color: var(--secondary);
+        }
+        
+        .footer-about p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        
+        .social-links a:hover {
+            opacity: 1;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-header h2 {
+                font-size: 30px;
+            }
+            
+            .step {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+   
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">3-5x</div>
+                    <div class="stat-label">Higher Conversion Rates</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">SQLs Generated Monthly</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">27%</div>
+                    <div class="stat-label">Average Close Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Shorter Sales Cycles</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced SQL Generation Framework</h2>
+                <p>Our comprehensive approach combines the best of marketing automation, sales intelligence, and conversion optimization</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa fa-bullseye"></i>
+                    </div>
+                    <h3>Precision Targeting</h3>
+                    <p>Identify and reach your Ideal Customer Profile with laser-focused accuracy using our advanced targeting algorithms.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <h3>Smart Lead Scoring</h3>
+                    <p>Our dynamic scoring model evaluates both behavioral and demographic signals to prioritize the hottest leads.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <h3>High-Converting Outreach</h3>
+                    <p>Proven email and LinkedIn sequences that get responses from even the most elusive decision-makers.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <h3>Automated Nurturing</h3>
+                    <p>Keep leads engaged with personalized content until they're sales-ready, reducing leakage in your funnel.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa fa-bar-chart"></i>
+                    </div>
+                    <h3>Real-Time Analytics</h3>
+                    <p>Track every interaction and optimize your campaigns based on what's actually working to generate SQLs.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <h3>ABM Integration</h3>
+                    <p>Align your SQL generation with account-based marketing strategies for enterprise-level results.</p>
+                    <a href="#" class="learn-more">Learn more <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Proven 4-Step SQL Generation Process</h2>
+                <p>We've helped hundreds of B2B companies transform their lead generation into a predictable revenue engine</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>ICP Development & Targeting</h3>
+                        <p>We work with you to refine your Ideal Customer Profile, then build targeted lists of companies and decision-makers that match your criteria.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Multi-Channel Engagement</h3>
+                        <p>Our system engages prospects through email, LinkedIn, content marketing, and paid ads - all coordinated to move them toward becoming SQLs.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Lead Scoring & Qualification</h3>
+                        <p>Using our proprietary scoring model, we identify which leads are truly sales-ready based on their engagement level, firmographics, and intent signals.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Sales Handoff & Optimization</h3>
+                        <p>SQLs are delivered to your sales team with full context, while we continuously optimize campaigns based on conversion data and feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say</h2>
+                <p>Don't just take our word for it - hear from companies that have transformed their lead generation with QuoreB2B</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "QuoreB2B helped us increase our SQL conversion rate by 300% in just 90 days. Their targeting and scoring system is unlike anything we've used before."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>VP of Sales, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "We were struggling with lead quality before working with QuoreB2B. Now our sales team loves the leads they're getting - they actually convert!"
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>CMO, GrowthStack</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The combination of their technology and strategic approach has given us a predictable pipeline for the first time. Worth every penny."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Amanda Rodriguez" class="author-avatar">
+                        <div class="author-info">
+                            <h4>Amanda Rodriguez</h4>
+                            <p>CEO, SaaSForward</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Case Study: 500+ SQLs in 30 Days</h2>
+                <p>How we helped a SaaS company transform their lead generation</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">
+                        <i class="fa fa-building"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>The Challenge</h3>
+                        <p>A fast-growing SaaS company was generating plenty of leads, but their sales team was frustrated with low conversion rates. Only 5% of marketing leads were becoming SQLs, and the sales cycle was too long.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <i class="fa fa-lightbulb-o"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Our Solution</h3>
+                        <p>We implemented our full SQL generation framework: rebuilt their ICP, deployed multi-channel campaigns, implemented lead scoring, and aligned sales/marketing processes.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">
+                        <i class="fa fa-bar-chart"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>The Results</h3>
+                        <p>Within 30 days, they generated 527 SQLs (up from 85 previously). The close rate improved from 8% to 27%, driving $1.2M in new revenue that quarter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your growth goals</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$2,500<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa fa-check"></i> Up to 100 SQLs/month</li>
+                        <li><i class="fa fa-check"></i> Basic Lead Scoring</li>
+                        <li><i class="fa fa-check"></i> Email Campaigns</li>
+                        <li><i class="fa fa-check"></i> Monthly Reporting</li>
+                        <li><i class="fa fa-check"></i> Dedicated Account Manager</li>
+                    </ul>
+                    <a href="#cta" class="cta-button" style="display: block; text-align: center;">Get Started</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Growth</h3>
+                    <div class="price">$5,000<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa fa-check"></i> Up to 300 SQLs/month</li>
+                        <li><i class="fa fa-check"></i> Advanced Lead Scoring</li>
+                        <li><i class="fa fa-check"></i> Multi-Channel Campaigns</li>
+                        <li><i class="fa fa-check"></i> Weekly Optimization</li>
+                        <li><i class="fa fa-check"></i> CRM Integration</li>
+                    </ul>
+                    <a href="#cta" class="cta-button" style="display: block; text-align: center;">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">$9,000<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fa fa-check"></i> 500+ SQLs/month</li>
+                        <li><i class="fa fa-check"></i> Custom Scoring Model</li>
+                        <li><i class="fa fa-check"></i> Full ABM Integration</li>
+                        <li><i class="fa fa-check"></i> Dedicated Strategist</li>
+                        <li><i class="fa fa-check"></i> Priority Support</li>
+                    </ul>
+                    <a href="#cta" class="cta-button" style="display: block; text-align: center;">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about our SQL generation services</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What exactly is an SQL?
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A Sales Qualified Lead (SQL) is a prospect who has been thoroughly vetted and is ready for a sales conversation. They have confirmed budget, decision-making authority, clear pain points your solution addresses, and urgency to buy within 30-90 days.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do you ensure lead quality?
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use a proprietary lead scoring model that evaluates both behavioral signals (content engagement, website visits, etc.) and firmographic fit (company size, industry, etc.). Only leads that meet our strict threshold are passed to your sales team as SQLs.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What industries do you work with?
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We specialize in B2B SaaS, technology services, professional services, and manufacturing. Our framework works best for companies with deal sizes above $10,000 and sales cycles of 30+ days.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How quickly will I see results?
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most clients see their first SQLs within 2-3 weeks of launch. Full program optimization typically takes 60-90 days as we gather data and refine targeting based on what's converting best.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you work with international companies?
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we have experience running SQL generation campaigns in North America, Europe, and APAC regions. Our approach is adapted based on regional differences in buying behavior and communication preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <script>
+     
+
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                question.classList.toggle('active');
+                answer.classList.toggle('show');
+                
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('show');
+                    }
+                });
+            });
+        });
+
+     
+
+       
+    </script>
+</body>
+</html>
