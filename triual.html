@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --light-bg: #f9f9f9;
+            --border-color: #e0e0e0;
+            --text-color: #333;
+            --transition-speed: 0.3s;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 50px auto 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all var(--transition-speed) ease;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 20px;
+            background-color: var(--light-bg);
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            position: relative;
+            transition: background-color var(--transition-speed) ease;
+        }
+
+        .faq-question:hover {
+            background-color: #f0f0f0;
+        }
+
+        .faq-question-icon {
+            margin-right: 15px;
+            color: var(--primary-color);
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .faq-question-text {
+            flex-grow: 1;
+        }
+
+        .faq-toggle-icon {
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .faq-question.active .faq-toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-speed) ease, padding var(--transition-speed) ease;
+            background-color: white;
+            padding: 0 20px;
+            opacity: 0;
+        }
+
+        .faq-answer.show {
+            max-height: 1000px;
+            padding: 20px;
+            opacity: 1;
+        }
+
+        .faq-answer p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .faq-answer ul {
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+
+        .section-title .icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <h2 class="section-title">
+            <i class="fas fa-question-circle icon"></i> 
+            Frequently Asked Questions
+        </h2>
+        <p class="section-subtitle">
+            Get answers to common questions about our email marketing services
+        </p>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-chart-line faq-question-icon"></i>
+                    <span class="faq-question-text">How does B2B email marketing differ from B2C email marketing?</span>
+                    <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>B2B email marketing focuses on longer sales cycles, multiple decision-makers, and relationship building. Key differences include:</p>
+                    <ul>
+                        <li>More educational and nurturing content</li>
+                        <li>Targeting specific job roles and industries</li>
+                        <li>Focus on ROI and business value</li>
+                        <li>Integration with CRM and sales processes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-clock faq-question-icon"></i>
+                    <span class="faq-question-text">What's the ideal frequency for B2B email campaigns?</span>
+                    <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The optimal frequency depends on your audience and goals, but we generally recommend:</p>
+                    <ul>
+                        <li>Nurture sequences: 1-2 emails per week</li>
+                        <li>Newsletters: 1-2 times per month</li>
+                        <li>Promotional campaigns: 2-4 times per quarter</li>
+                        <li>Triggered emails: As needed based on user actions</li>
+                    </ul>
+                    <p>We'll help you determine the right cadence for your specific audience.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-shield-alt faq-question-icon"></i>
+                    <span class="faq-question-text">How do you ensure email deliverability?</span>
+                    <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We employ multiple strategies to maximize inbox placement:</p>
+                    <ul>
+                        <li>Strict list hygiene and permission-based marketing</li>
+                        <li>Authentication protocols (SPF, DKIM, DMARC)</li>
+                        <li>Gradual warm-up of new IP addresses</li>
+                        <li>Continuous monitoring of sender reputation</li>
+                        <li>A/B testing of subject lines and content</li>
+                        <li>Regular list cleaning and engagement monitoring</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <i class="fas fa-envelope-open-text faq-question-icon"></i>
+                    <span class="faq-question-text">What types of email content perform best for B2B?</span>
+                    <i class="fas fa-chevron-down faq-toggle-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The most effective B2B email content includes:</p>
+                    <ul>
+                        <li>Educational content (guides, whitepapers)</li>
+                        <li>Case studies and customer success stories</li>
+                        <li>Product updates and feature highlights</li>
+                        <li>Industry insights and trend reports</li>
+                        <li>Webinar and event invitations</li>
+                        <li>Personalized recommendations</li>
+                    </ul>
+                    <p>We'll help you create the right mix for your audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                
+                // Toggle current question
+                question.classList.toggle('active');
+                answer.classList.toggle('show');
+                
+                // Close other open answers
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('show');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
