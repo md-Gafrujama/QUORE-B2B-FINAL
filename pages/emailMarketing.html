@@ -423,7 +423,7 @@
 
   <!-- FAQ Section -->
 <section class="section">
-    <h2 class="section-title"><i class="fas fa-question-circle icon"></i> Frequently Asked Questions</h2>
+    <h2 class="section-title"><i class="fa fa-question-circle icon"></i> Frequently Asked Questions</h2>
     <p class="section-subtitle">Get answers to common questions about our email marketing services</p>
     
     <div class="faq-container">
@@ -678,15 +678,23 @@
 <script src="../script3.js"></script>
 
 <script>
-         // FAQ accordion
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                question.classList.toggle('active');
-                const answer = question.nextElementSibling;
-                answer.classList.toggle('show');
+          // FAQ accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            question.classList.toggle('active');
+            answer.classList.toggle('show');
+            
+            // Close other open answers
+            faqQuestions.forEach(q => {
+                if (q !== question) {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('show');
+                }
             });
         });
+    });
 </script>
 </body>
 
