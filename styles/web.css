@@ -398,3 +398,624 @@
       grid-template-columns: 1fr;
   }
 }
+/* not */
+ /* Features Section - Scoped Styles Only */
+ .wd-features-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.wd-section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.wd-section-header h2 {
+  font-size: 32px;
+  color: #00d8a6;
+  margin-bottom: 15px;
+  position: relative;
+  font-weight: 600;
+}
+
+.wd-section-header h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #00d8a6;
+  border-radius: 2px;
+}
+
+.wd-section-header p {
+  color: #3D3C3C;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.wd-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wd-feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.wd-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.wd-feature-icon {
+  font-size: 48px;
+  color: #00d8a6;
+  margin-bottom: 20px;
+}
+
+.wd-feature-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #3D3C3C;
+  font-weight: 600;
+}
+
+.wd-feature-card p {
+  color: #3D3C3C;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Stats Section - Scoped Styles Only */
+.wd-stats-section {
+  padding: 80px 20px;
+  background: linear-gradient(270deg, #75d04a, #00D4A4);
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+.wd-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wd-stat-item {
+  padding: 30px;
+}
+
+.wd-stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.wd-stat-label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Responsive Design - Scoped to Components */
+@media (max-width: 1024px) {
+  .wd-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wd-section-header h2 {
+      font-size: 2rem;
+  }
+  
+  .wd-stats-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .wd-feature-card {
+      padding: 25px;
+  }
+}
+
+
+
+
+/* newnot */
+
+/* Results Showcase Section */
+.wd-results-showcase {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.wd-results-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.wd-results-header h2 {
+  font-size: 2.5rem;
+  color: #00d8a6;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.wd-results-header h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #00d8a6;
+  border-radius: 2px;
+}
+
+.wd-results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wd-result-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.wd-result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.wd-result-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 216, 166, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.wd-result-icon i {
+  font-size: 2rem;
+  color: #00d8a6;
+}
+
+.wd-result-card h3 {
+  font-size: 1.4rem;
+  color: #2a2a2a;
+  margin-bottom: 15px;
+}
+
+.wd-result-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Design Packages Section */
+.wd-packages-section {
+  padding: 80px 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.wd-packages-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.wd-packages-header h2 {
+  font-size: 2.5rem;
+  color: #00d8a6;
+  margin-bottom: 15px;
+}
+
+.wd-packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wd-package-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.wd-package-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+.wd-package-header {
+  background: #00d8a6;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.wd-package-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.wd-package-price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.wd-package-body {
+  padding: 30px;
+}
+
+.wd-package-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.wd-package-features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.wd-package-features li:last-child {
+  border-bottom: none;
+}
+
+.wd-package-features li i {
+  color: #00d8a6;
+  margin-right: 10px;
+}
+
+.wd-package-button {
+  display: block;
+  text-align: center;
+  background: #00d8a6;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.wd-package-button:hover {
+  background: #00c095;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .wd-results-header h2,
+  .wd-packages-header h2 {
+      font-size: 2rem;
+  }
+}
+
+
+
+
+
+
+
+/* try */
+/* Awards Section */
+.wd-awards-section {
+  padding: 80px 20px;
+  background: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.wd-awards-header h2 {
+  font-size: 2.5rem;
+  color: #00d8a6;
+  margin-bottom: 15px;
+}
+
+.wd-awards-header p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+}
+
+.wd-awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wd-award-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 40px 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.wd-award-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.wd-award-badge {
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 216, 166, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 2rem;
+  color: #00d8a6;
+}
+
+.wd-award-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #2a2a2a;
+}
+
+.wd-award-card p {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.wd-award-category {
+  display: inline-block;
+  background: #00d8a6;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+
+/* Team Section */
+.wd-team-section {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+.wd-team-header h2 {
+  font-size: 2.5rem;
+  color: #00d8a6;
+  margin-bottom: 15px;
+}
+
+.wd-team-header p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+}
+
+.wd-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wd-team-member {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.wd-team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.wd-team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.wd-team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wd-team-social {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 216, 166, 0.8);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wd-team-member:hover .wd-team-social {
+  opacity: 1;
+}
+
+.wd-team-social a {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.wd-team-member h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #2a2a2a;
+}
+
+.wd-team-member p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.wd-team-specialty {
+  display: inline-block;
+  background: rgba(0, 216, 166, 0.1);
+  color: #00d8a6;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+
+/* Tools Section */
+.wd-tools-section {
+  padding: 80px 20px;
+  background: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.wd-tools-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.wd-tools-header h2 {
+  font-size: 2.5rem;
+  color: #00d8a6;
+  margin-bottom: 15px;
+}
+
+.wd-tools-header p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.wd-tools-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+
+.wd-tab-button {
+  padding: 12px 25px;
+  background: none;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wd-tab-button.active {
+  background: #00d8a6;
+  color: white;
+}
+
+.wd-tab-button:not(.active) {
+  background: rgba(0, 216, 166, 0.1);
+  color: #00d8a6;
+}
+
+.wd-tab-button:not(.active):hover {
+  background: rgba(0, 216, 166, 0.2);
+}
+
+.wd-tools-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wd-tab-pane {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.wd-tab-pane.active {
+  display: grid;
+}
+
+.wd-tool-item {
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.wd-tool-item:hover {
+  background: #f9f9f9;
+  transform: translateY(-5px);
+}
+
+.wd-tool-item img {
+  height: 60px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.wd-tool-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2a2a2a;
+}
+
+.wd-tool-item p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .wd-awards-header h2,
+  .wd-team-header h2,
+  .wd-tools-header h2 {
+      font-size: 2rem;
+  }
+  
+  .wd-tools-tabs {
+      flex-wrap: wrap;
+  }
+}
