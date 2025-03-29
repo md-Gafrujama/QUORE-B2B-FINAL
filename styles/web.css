@@ -1,23 +1,28 @@
 /* web design new code */
 
-/* Advanced Services Section */
 .wd-advanced-services {
   background-color: #f9f9f9;
   padding: 80px 0;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
 }
+
 .wd-advanced-services h2 {
-  font-size: 2.5rem;
+  /* Fluid typography using clamp */
+  font-size: 32px;
   margin-bottom: 50px;
   color: #00d8a6;
+  line-height: 1.2;
+  padding: 0 20px; /* Added padding to prevent text touching edges on small screens */
 }
+
 .wd-services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   padding: 0 50px;
 }
+
 .wd-service-card {
   background-color: white;
   padding: 30px;
@@ -26,21 +31,61 @@
   transition: transform 0.3s ease;
   font-family: 'Quicksand', sans-serif;
 }
+
 .wd-service-card:hover {
   transform: translateY(-10px);
 }
+
 .wd-service-icon {
   font-size: 3rem;
   color: #00d8a6;
   margin-bottom: 20px;
 }
+
 .wd-service-card h3 {
   margin-bottom: 15px;
   color: #3d3c3c;
 }
+
 .wd-service-card p {
   color: #3d3c3c;
   line-height: 1.6;
+}
+
+/* Tablet Responsiveness */
+@media screen and (max-width: 1024px) {
+  .wd-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 30px;
+  }
+
+  .wd-advanced-services h2 {
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .wd-services-grid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  .wd-advanced-services h2 {
+    margin-bottom: 30px;
+  }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+  .wd-advanced-services {
+    padding: 50px 0;
+  }
+
+  .wd-advanced-services h2 {
+    margin-bottom: 25px;
+  }
 }
 
 /* Technology Stack Section */
