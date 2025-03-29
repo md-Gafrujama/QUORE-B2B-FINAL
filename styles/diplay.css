@@ -60,7 +60,7 @@
 }
 
 .reaman-service-description {
-  font-size: 14px;
+  font-size: 1rem;
   color:#3d3c3c;
   line-height: 1.5;
 }
@@ -159,7 +159,7 @@
 }
 
 .reaman-advantage-description {
-  font-size: 14px;
+  font-size: 1rem;
   color: #3d3c3c;
   line-height: 1.5;
 }
@@ -300,7 +300,7 @@
   }
   
   .ramanujan-card-description {
-    font-size: 14px;
+    font-size: 1rem;
     color: #3d3c3c;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -312,7 +312,7 @@
   }
   
   .ramanujan-feature-item {
-    font-size: 13px;
+    font-size: 14px;
     color: #3d3c3c;
     margin-bottom: 5px;
     padding-left: 20px;
