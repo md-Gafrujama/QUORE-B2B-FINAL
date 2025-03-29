@@ -14,7 +14,9 @@
   --success-color: #10b981;
   --warning-color: #f59e0b;
   --error-color: #ef4444;
+  --text-color: #3d3c3c;
 }
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -43,7 +45,7 @@ body {
   font-family: 'Quicksand', sans-serif;
   color: var(--primary-color);
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 30px;
   font-weight: 700;
   font-style: normal;
@@ -127,7 +129,7 @@ body {
 
 .reason-icon {
   color: var(--primary-color);
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
@@ -406,7 +408,7 @@ body {
 
 .cta-title {
   font-family: 'Quicksand', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 700;
@@ -456,7 +458,7 @@ body {
 
 .stat-number {
   font-family: 'Quicksand', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--primary-color);
   margin: 0 0 10px;
@@ -631,11 +633,7 @@ body {
   line-height: 1.5;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 20px;
-  color: var(--text-color);
-}
+
 
 .section-title .icon {
   margin-right: 10px;
