@@ -1,6 +1,15 @@
 /* dtata solution */
 /* DATA SOLUTIONS */
 /* 1st div css */
+:root {
+  --primary-color:#00d8a6;
+  --secondary-color: #00d8a6;
+  --text-color: #3d3c3c;
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --hover-scale: 1.03;
+  --transition-speed: 0.4s;
+}
 .ds-container {
   margin: 3rem auto;
   display: grid;
@@ -575,6 +584,7 @@ grid-template-columns: repeat(1, 1fr);
 .ds-page-container h1{
   text-align: center;
   color: #3d3c3c;
+  font-size: 2rem;
 } 
 
 @media (max-width: 468px){
@@ -661,11 +671,13 @@ grid-template-columns: repeat(1, 1fr);
   margin-bottom: 1.5rem;
   color: var(--text-color);
   opacity: 0.8;
+  font-size: 1rem;
 }
 
 .ds-page-solution-list {
   list-style-type: none;
   margin-bottom: 1.5rem;
+  font-size: 1rem;
 }
 
 .ds-page-solution-list li {
@@ -711,6 +723,7 @@ grid-template-columns: repeat(1, 1fr);
 .ds-page-solution-benefits h3 {
   margin-top: 0;
   color: #3d3c3c;
+  font-size: 1.5rem;
 }
 .ds-benefit-details {
   color: #3d3c3c;
@@ -724,6 +737,7 @@ grid-template-columns: repeat(1, 1fr);
   margin-bottom: 0;
   color: #3d3c3c;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 
