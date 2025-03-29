@@ -253,10 +253,10 @@
 
 .con-content p {
   margin: 10px 0;
-  color: #555;
+  color: #3d3c3c;
   text-align: left;
   line-height: 1.7rem;
-  font-size: 20px;
+  font-size: 1rem;
 
 }
 
@@ -584,7 +584,7 @@ subscribe-button:hover {
   }
 
   .con-content p {
-      color: #555;
+      color: #3d3c3c;
       line-height: normal;
       text-align: left;
       font-size: 14px;
