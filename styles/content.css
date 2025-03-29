@@ -1,11 +1,11 @@
 /* extra content syndication */
 :root {
   --primary-color: #00d8a6;
-  --primary-dark: #00a086;
-  --secondary-color: #2d87ff;
-  --gradient-bg: linear-gradient(135deg, #00d8a6, #2d87ff);
-  --dark-gray: #333333;
-  --medium-gray: #666666;
+  --primary-dark:  #00d8a6;
+  --secondary-color:  #00d8a6;
+  --gradient-bg:  #00d8a6;
+  --dark-gray: #3d3c3c;
+  --medium-gray: 3d3c3c;
   --light-gray: #f4f4f4;
   --card-bg: white;
   --shadow-color: rgba(0,0,0,0.1);
@@ -187,6 +187,7 @@ h1 {
 .card p, .card ul {
   margin-bottom: 20px;
   color: var(--medium-gray);
+  font-size: 1rem;
 }
 
 .card ul {
@@ -312,6 +313,7 @@ h1 {
   margin-bottom: 12px;
   padding-left: 35px;
   position: relative;
+  font-size: 1rem;
 }
 
 .checklist li::before {
@@ -476,7 +478,7 @@ h1 {
 }
 
 .metric-label {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--medium-gray);
 }
 
