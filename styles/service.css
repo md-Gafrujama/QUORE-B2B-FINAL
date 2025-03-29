@@ -152,7 +152,7 @@
   color: #3D3C3C;
   margin-bottom: auto;
   font-family: 'Quicksand', sans-serif;
-  line-height: 1.8;
+ 
   font-size: 1rem;
 }
 
@@ -166,9 +166,6 @@
   margin-top: 15px;
 }
 
-.syed-service-image:hover {
-  
-}
 
 .syed-graph-container {
   flex-grow: 1;
