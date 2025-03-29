@@ -58,6 +58,7 @@
 .abm-service-description {
   flex-grow: 1;
   margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
 .abm-service-metrics {
@@ -75,7 +76,7 @@
 }
 
 .abm-metric-label {
-  font-size: 0.8rem;
+  font-size: 14px;
   opacity: 0.8;
 }
 
@@ -184,12 +185,13 @@
 .step h3 {
   color: #00d8a6;
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .step p {
-  color: #666;
+  color: #3d3c3c;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -217,7 +219,7 @@
   text-align: center;
   color: #00d8a6;
   margin-bottom: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .comparison-table {
   display: grid;
@@ -306,7 +308,7 @@
   text-align: center;
   color: #00d8a6;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .channels-grid {
@@ -336,6 +338,7 @@
 .channel-card h4 {
   margin: 0 0 1.5rem 0;
   color: black;
+  font-size: 1rem;
 }
 
 .channel-stats {
@@ -359,8 +362,8 @@
 
 .stat-label {
   display: block;
-  font-size: 0.8rem;
-  color: #666;
+  font-size: 1rem;
+  color: #3d3c3c;
 }
 
 /* Channel-specific colors */
@@ -369,11 +372,7 @@
 .direct { border-top: 3px solid #00d8a6; }
 .ads { border-top: 3px solid #00d8a6; }
 
-/* @media (max-width: 600px) {
-  .channels-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-} */
+
 
 @media (max-width: 400px) {
   .channels-grid {
@@ -381,11 +380,7 @@
   }
 }
 
-/* @media (max-width: 980px) {
-  .channels-grid {
-    grid-template-columns: 2fr;
-  }
-} */
+
 
 /* added 7th css */
 .abm-dashboard {
@@ -423,8 +418,9 @@
 .gauge-header h3 {
   margin: 0;
   color: #2c3e50;
-  font-size: 20px;
+
   font-weight: 600;
+  font-size: 1.5rem;
 }
 
 .gauge-period {
@@ -601,8 +597,8 @@
 }
 
 .abm-explainer h3 {
-  color: #2c3e50;
-  font-size: 20px;
+  color: #3d3c3c;
+  font-size:1.5rem;
   margin-top: 0;
   border-bottom: 1px solid #ecf0f1;
   padding-bottom: 15px;
@@ -617,6 +613,7 @@
 .abm-content p {
   line-height: 1.6;
   margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 .abm-content ul {
