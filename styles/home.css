@@ -837,6 +837,7 @@ color:#00d8a6; /* Change link color on hover */
   color: #3d3c3c;
   font-size: 1rem;
   font-family: 'Quicksand', sans-serif;
+  line-height: 1.8;
 }
 
 #unique-services-section .text-content h3 span {
