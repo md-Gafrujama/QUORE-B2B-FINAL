@@ -429,6 +429,7 @@
     color: #3d3c3c;
     line-height: 1.6;
     margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 .ds-new-service-image {
@@ -441,7 +442,7 @@
 .ds-new-service-content {
     flex: 1;
     padding: 30px;
-    background-color: #f8fafc;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -483,7 +484,7 @@
 
 .ds-new-step-description {
     color: #3d3c3c;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
