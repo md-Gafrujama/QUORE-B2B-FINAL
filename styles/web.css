@@ -96,7 +96,7 @@
   font-family: 'Quicksand', sans-serif;
 }
 .wd-technology-stack h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 50px;
   color: #00d8a6;
 }
@@ -135,7 +135,7 @@
   width: 100%;
   margin: 30px 0 20px;
   font-size: 1.5rem;
-    color: #555;
+    color: #3d3c3c;
     font-weight: 700;
     margin-bottom: 25px;
 }
@@ -200,7 +200,7 @@
   color: #00d8a6;
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -227,11 +227,6 @@
   }
 }
 
-
-
-
-
-
 /* clienttt */
 .wd-success-stories-container {
   max-width: 1400px;
@@ -246,7 +241,7 @@
 }
 
 .wd-success-stories-header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #3d3c3c;
   margin-bottom: 1rem;
 }
@@ -395,7 +390,7 @@
 
 .dev-section-header h1 {
   color: #00d8a6;
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 10px;
 }
 
@@ -598,7 +593,7 @@
 }
 
 .wd-results-header h2 {
-  font-size: 2.5rem;
+  font-size: 2;
   color: #00d8a6;
   margin-bottom: 15px;
   position: relative;
@@ -661,7 +656,7 @@
 }
 
 .wd-result-card p {
-  color: #555;
+  color: #3d3c3c;
   line-height: 1.6;
 }
 
@@ -678,7 +673,7 @@
 }
 
 .wd-packages-header h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #00d8a6;
   margin-bottom: 15px;
 }
@@ -734,7 +729,7 @@
 .wd-package-features li {
   padding: 8px 0;
   border-bottom: 1px solid #eee;
-  color: #555;
+  color: #3d3c3c;
 }
 
 .wd-package-features li:last-child {
@@ -786,13 +781,13 @@
 }
 
 .wd-awards-header h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #00d8a6;
   margin-bottom: 15px;
 }
 
 .wd-awards-header p {
-  color: #555;
+  color:#3d3c3c;
   max-width: 700px;
   margin: 0 auto 50px;
   font-size: 1.1rem;
@@ -840,7 +835,7 @@
 }
 
 .wd-award-card p {
-  color: #555;
+  color: #3d3c3c;
   margin-bottom: 15px;
 }
 
@@ -862,13 +857,13 @@
 }
 
 .wd-team-header h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #00d8a6;
   margin-bottom: 15px;
 }
 
 .wd-team-header p {
-  color: #555;
+  color: #3d3c3c;
   max-width: 700px;
   margin: 0 auto 50px;
   font-size: 1.1rem;
@@ -940,10 +935,9 @@
 }
 
 .wd-team-member p {
-  color: #555;
+  color: #3d3c3c;
   margin-bottom: 10px;
-}
-
+} 
 .wd-team-specialty {
   display: inline-block;
   background: rgba(0, 216, 166, 0.1);
@@ -967,13 +961,13 @@
 }
 
 .wd-tools-header h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #00d8a6;
   margin-bottom: 15px;
 }
 
 .wd-tools-header p {
-  color: #555;
+  color: #3d3c3c;
   font-size: 1.1rem;
 }
 
@@ -1049,7 +1043,7 @@
 }
 
 .wd-tool-item p {
-  color: #555;
+  color: #3d3c3c;
   font-size: 0.9rem;
 }
 
