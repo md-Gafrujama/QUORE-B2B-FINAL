@@ -1687,6 +1687,7 @@ width: 100%;
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 clamp(10px, 2vw, 16px) 0;
+  
 }
 
 .kumar-description {
@@ -2167,3 +2168,6 @@ width: 100%;
 
 
 /* extra */
+.email-hero{
+  margin: 7rem 0rem;
+}
