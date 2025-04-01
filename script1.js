@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Hover events for desktop
         dropdown.addEventListener('mouseenter', openDropdown);
+        dropdown.addEventListener('mouseleave', closeDropdown);
     });
 
     // Add hover persistence for entire navbar
