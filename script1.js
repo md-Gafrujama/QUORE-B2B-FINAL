@@ -1,5 +1,139 @@
 // ahmburgguer and active ll in nav bar
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const menuToggle = document.querySelector('.menu-toggle');
+//     const navLinks = document.querySelector('.nav-links');
+//     const navItems = document.querySelectorAll('.nav-links a');
+//     const dropdownArrows = document.querySelectorAll('.dropdown-arrow');
+//     const dropdownContents = document.querySelectorAll('.r-dropdown-content');
+//     const dropdowns = document.querySelectorAll('.r-dropdown');
+//     const navbar = document.querySelector('#kazim.navbar');
+
+//     // Menu toggle functionality
+//     if (menuToggle) {
+//         menuToggle.addEventListener('click', function(e) {
+//             e.stopPropagation();
+//             this.classList.toggle('active');
+//             navLinks.classList.toggle('active');
+
+//             // Add staggered animation to nav items
+//             navItems.forEach((item, index) => {
+//                 if (navLinks.classList.contains('active')) {
+//                     item.style.transitionDelay = `${index * 0.1}s`;
+//                 } else {
+//                     item.style.transitionDelay = '0s';
+//                 }
+//             });
+
+//             // Close all dropdowns when menu is toggled
+//             dropdownContents.forEach(content => {
+//                 content.classList.remove('active');
+//             });
+//             dropdownArrows.forEach(arrow => {
+//                 arrow.classList.remove('active');
+//             });
+//         });
+//     }
+
+//     // Hover and mouse events for dropdowns
+//     dropdowns.forEach(dropdown => {
+//         const dropdownLink = dropdown.querySelector('.dropdown-link');
+//         const dropdownContent = dropdown.querySelector('.r-dropdown-content');
+//         const dropdownArrow = dropdown.querySelector('.dropdown-arrow');
+
+//         // Function to open dropdown
+//         const openDropdown = () => {
+//             if (window.innerWidth > 968) {
+//                 dropdownContent.classList.add('active');
+//                 dropdownArrow.classList.add('active');
+//             }
+//         };
+
+//         // Handle dropdown toggles for mobile
+//         dropdownArrow.addEventListener('click', function(e) {
+//             e.stopPropagation();
+            
+//             // Toggle current dropdown
+//             dropdownContent.classList.toggle('active');
+//             this.classList.toggle('active');
+            
+//             // Close other dropdowns
+//             dropdownContents.forEach(content => {
+//                 if (content !== dropdownContent) {
+//                     content.classList.remove('active');
+//                 }
+//             });
+            
+//             dropdownArrows.forEach(arr => {
+//                 if (arr !== this) {
+//                     arr.classList.remove('active');
+//                 }
+//             });
+//         });
+
+//         // Hover events for desktop
+//         dropdown.addEventListener('mouseenter', openDropdown);
+//     });
+
+//     // Add hover persistence for entire navbar
+//     if (navbar) {
+//         navbar.addEventListener('mouseleave', function(e) {
+//             if (window.innerWidth > 968) {
+//                 // Close dropdowns
+//                 dropdownContents.forEach(content => {
+//                     content.classList.remove('active');
+//                 });
+//                 dropdownArrows.forEach(arrow => {
+//                     arrow.classList.remove('active');
+//                 });
+//             }
+//         });
+//     }
+
+//     // Close menu and dropdowns when clicking outside
+//     document.addEventListener('click', function(e) {
+//         // Check if click is outside navigation
+//         if (navLinks && !navLinks.contains(e.target) && 
+//             menuToggle && !menuToggle.contains(e.target)) {
+//             // Close mobile menu
+//             if (menuToggle) menuToggle.classList.remove('active');
+//             if (navLinks) navLinks.classList.remove('active');
+
+//             // Close dropdowns
+//             dropdownContents.forEach(content => {
+//                 content.classList.remove('active');
+//             });
+//             dropdownArrows.forEach(arrow => {
+//                 arrow.classList.remove('active');
+//             });
+//         }
+//     });
+
+//     // Close mobile menu and dropdowns on window resize
+//     window.addEventListener('resize', function() {
+//         if (window.innerWidth > 968) {
+//             // Reset mobile menu
+//             if (menuToggle) menuToggle.classList.remove('active');
+//             if (navLinks) navLinks.classList.remove('active');
+
+//             // Reset dropdown styles
+//             dropdownContents.forEach(content => {
+//                 content.classList.remove('active');
+//             });
+//             dropdownArrows.forEach(arrow => {
+//                 arrow.classList.remove('active');
+//             });
+//         }
+//     });
+
+//     // Prevent dropdown from closing when clicking inside
+//     dropdownContents.forEach(content => {
+//         content.addEventListener('click', function(e) {
+//             e.stopPropagation();
+//         });
+//     });
+// });
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -8,6 +142,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdownContents = document.querySelectorAll('.r-dropdown-content');
     const dropdowns = document.querySelectorAll('.r-dropdown');
     const navbar = document.querySelector('#kazim.navbar');
+    
+    // Get current page URL
+    const currentPageUrl = window.location.pathname;
+
+    // Highlight current page in navigation
+    navItems.forEach(item => {
+        const itemUrl = item.getAttribute('href');
+        // Check if this item matches current page
+        if (itemUrl === currentPageUrl) {
+            item.classList.add('active-page');
+            
+            // If this item is in a dropdown, highlight parent dropdown too
+            const parentDropdown = item.closest('.r-dropdown');
+            if (parentDropdown) {
+                const dropdownLink = parentDropdown.querySelector('.dropdown-link');
+                if (dropdownLink) {
+                    dropdownLink.classList.add('active-dropdown');
+                }
+            }
+        }
+    });
 
     // Menu toggle functionality
     if (menuToggle) {
@@ -19,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add staggered animation to nav items
             navItems.forEach((item, index) => {
                 if (navLinks.classList.contains('active')) {
-                    item.style.transitionDelay = `${index * 0.1}s`;
+                    item.style.transitionDelay = ${index * 0.1}s;
                 } else {
                     item.style.transitionDelay = '0s';
                 }
@@ -46,6 +201,25 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth > 968) {
                 dropdownContent.classList.add('active');
                 dropdownArrow.classList.add('active');
+                
+                // Highlight the dropdown link when opened
+                if (dropdownLink) {
+                    dropdownLink.classList.add('active-dropdown');
+                }
+            }
+        };
+        
+        // Function to close dropdown
+        const closeDropdown = () => {
+            if (window.innerWidth > 968) {
+                dropdownContent.classList.remove('active');
+                dropdownArrow.classList.remove('active');
+                
+                // Only remove highlight if not on a page within this dropdown
+                const hasActiveChild = dropdown.querySelector('.active-page');
+                if (!hasActiveChild && dropdownLink) {
+                    dropdownLink.classList.remove('active-dropdown');
+                }
             }
         };
 
@@ -56,6 +230,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Toggle current dropdown
             dropdownContent.classList.toggle('active');
             this.classList.toggle('active');
+            
+            // Toggle highlight on dropdown link
+            if (dropdownLink) {
+                dropdownLink.classList.toggle('active-dropdown');
+            }
             
             // Close other dropdowns
             dropdownContents.forEach(content => {
@@ -69,10 +248,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     arr.classList.remove('active');
                 }
             });
+            
+            // Remove highlight from other dropdown links
+            document.querySelectorAll('.dropdown-link').forEach(link => {
+                if (link !== dropdownLink) {
+                    const hasActiveChild = link.closest('.r-dropdown').querySelector('.active-page');
+                    if (!hasActiveChild) {
+                        link.classList.remove('active-dropdown');
+                    }
+                }
+            });
         });
 
         // Hover events for desktop
         dropdown.addEventListener('mouseenter', openDropdown);
+        dropdown.addEventListener('mouseleave', closeDropdown);
     });
 
     // Add hover persistence for entire navbar
@@ -85,6 +275,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 dropdownArrows.forEach(arrow => {
                     arrow.classList.remove('active');
+                });
+                
+                // Remove highlights from dropdown links (except for current page)
+                document.querySelectorAll('.dropdown-link').forEach(link => {
+                    const hasActiveChild = link.closest('.r-dropdown').querySelector('.active-page');
+                    if (!hasActiveChild) {
+                        link.classList.remove('active-dropdown');
+                    }
                 });
             }
         });
@@ -105,6 +303,14 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             dropdownArrows.forEach(arrow => {
                 arrow.classList.remove('active');
+            });
+            
+            // Remove highlights from dropdown links (except for current page)
+            document.querySelectorAll('.dropdown-link').forEach(link => {
+                const hasActiveChild = link.closest('.r-dropdown').querySelector('.active-page');
+                if (!hasActiveChild) {
+                    link.classList.remove('active-dropdown');
+                }
             });
         }
     });
@@ -133,8 +339,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
 // arrow buton 
 document.addEventListener("DOMContentLoaded", function () {
     const scrollUpBtn = document.getElementById("scroll-up-btn");
