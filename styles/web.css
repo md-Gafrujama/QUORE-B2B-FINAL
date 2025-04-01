@@ -90,7 +90,7 @@
 
 /* Technology Stack Section */
 .wd-technology-stack {
-  background-color: #ffffff;
+  background-color:white;
   padding: 80px 0;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
@@ -142,7 +142,7 @@
 
 /* graphweb */
 .wd-performance-metrics-wd {
-  background-color: #f9f9f9;
+  background-color: white;
   padding: 4rem 2rem;
   text-align: center;
   color: #3d3c3c;
@@ -262,10 +262,11 @@
   background-color: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: var(--card-shadow);
+ 
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .wd-success-story-card:hover {
@@ -370,7 +371,7 @@
 
 .dev-page-wrapper {
   font-family: 'Quicksand', sans-serif;
-  background-color: #f4f4f4;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -442,7 +443,7 @@
  /* Features Section - Scoped Styles Only */
  .wd-features-section {
   padding: 80px 20px;
-  background: #ffffff;
+  background-color:white;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -487,7 +488,7 @@
 }
 
 .wd-feature-card {
-  background: #ffffff;
+  background: white;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
@@ -582,7 +583,7 @@
 /* Results Showcase Section */
 .wd-results-showcase {
   padding: 80px 20px;
-  background: #f9f9f9;
+  background: white;
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -620,7 +621,7 @@
 }
 
 .wd-result-card {
-  background: #ffffff;
+  background: white;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
@@ -687,7 +688,7 @@
 }
 
 .wd-package-card {
-  background: #ffffff;
+  background: white;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
@@ -775,7 +776,7 @@
 /* Awards Section */
 .wd-awards-section {
   padding: 80px 20px;
-  background: #ffffff;
+  background: white;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
 }
@@ -802,12 +803,13 @@
 }
 
 .wd-award-card {
-  background: #f9f9f9;
+  background:white;
   border-radius: 12px;
   padding: 40px 30px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .wd-award-card:hover {
@@ -851,7 +853,7 @@
 /* Team Section */
 .wd-team-section {
   padding: 80px 20px;
-  background: #f9f9f9;
+  background: white;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
 }
@@ -1023,10 +1025,11 @@
   padding: 30px;
   border-radius: 12px;
   transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .wd-tool-item:hover {
-  background: #f9f9f9;
+  background:white;
   transform: translateY(-5px);
 }
 
