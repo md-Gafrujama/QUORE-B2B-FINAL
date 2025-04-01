@@ -1158,11 +1158,11 @@ width: 100%;
 }
 
 .aditya-main-title {
-  font-size: 28px;
+  font-size: 2rem;
   color: #3d3c3c;
   margin-bottom: 20px;
-  font-weight: 600;
-  line-height: 1.3;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .aditya-description {
@@ -1386,7 +1386,7 @@ width: 100%;
 }
 
 .ali-main-title {
-  font-size: 48px;
+  font-size: 2rem;
   background: #3d3c3c;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
