@@ -43,7 +43,7 @@ body {
 
 .section-title {
   font-family: 'Quicksand', sans-serif;
-  color: var(--primary-color);
+  color: #3d3c3c;
   text-align: center;
   font-size: 2rem;
   margin-bottom: 30px;
@@ -52,12 +52,12 @@ body {
 }
 
 .section-subtitle {
-  color: var(--text-dark);
+  color: #3d3c3c;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   max-width: 800px;
   margin: 0 auto 40px;
-  font-weight: 500;
+  
 }
 
 /* Hero Section */
@@ -196,7 +196,7 @@ body {
 .feature-title {
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 16px;
-  color: var(--text-dark);
+  color: #00d8a6;
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.4;
@@ -528,6 +528,10 @@ body {
 .pricing-features li {
   padding: 10px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color:#3d3c3c; 
+  font-size: 1rem;
+
+
 }
 
 .pricing-features li:last-child {
@@ -638,11 +642,12 @@ body {
 .section-title .icon {
   margin-right: 10px;
   color: var(--primary-color);
+  
 }
 
 .section-subtitle {
   text-align: center;
-  color: #666;
+  color: #3d3c3c;
   margin-bottom: 30px;
 }
 

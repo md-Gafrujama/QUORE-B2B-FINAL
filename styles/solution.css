@@ -244,22 +244,23 @@
 }
 
 .r-content-green-heading {
-  color:#00d8a6;  font-size: 3rem;
+  color:#3d3c3c; 
+   font-size: 3rem;
   text-align: left;
 }
 
 .r-content-black-heading {
   font-size: 2rem;
-  color:#00d8a6;
+  color:#3d3c3c;
   text-align: left;
 }
 
 .con-content p {
   margin: 10px 0;
-  color: #555;
+  color: #3d3c3c;
   text-align: left;
   line-height: 1.7rem;
-  font-size: 20px;
+  font-size: 1rem;
 
 }
 
