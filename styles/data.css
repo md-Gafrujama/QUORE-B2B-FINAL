@@ -749,3 +749,138 @@ grid-template-columns: repeat(1, 1fr);
     font-size: 10px;
   }
 }
+
+/* data solution 1st div */
+.dsol-new-hero-1 {
+
+  color: #3d3c3c;
+  padding: 40px 50px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.dsol-new-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+.dsol-new-hero-card {
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: center;
+}
+
+.dsol-new-hero-content {
+  flex: 1;
+}
+
+.dsol-new-hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.dsol-new-hero-image img {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.dsol-new-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.dsol-new-description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.dsol-new-features {
+  margin: 40px 0;
+}
+
+.dsol-new-feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dsol-new-feature-icon {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.dsol-new-feature-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: #00d8a6;
+}
+
+.dsol-new-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background: linear-gradient(90deg, #d9eb72, #00D4A4);
+  color: white;
+  border-radius: 10rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dsol-new-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: black;
+}
+
+@media (max-width:900px) {
+  .dsol-new-hero-card {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .dsol-new-hero-card {
+      flex-direction: column;
+  }
+
+  .dsol-new-hero-1 {
+      padding: 0rem 2rem;
+  }
+}
+
+@media (max-width: 468px) {
+  .dsol-new-hero-1 {
+      padding: 0rem 1rem;
+  }
+  .dsol-new-title {
+      font-size: 20px;
+  }
+  .dsol-new-btn {
+  font-size: 15px;
+}
+}
