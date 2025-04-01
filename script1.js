@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add staggered animation to nav items
             navItems.forEach((item, index) => {
                 if (navLinks.classList.contains('active')) {
-                    item.style.transitionDelay = `${index * 0.1}s`;
+                    item.style.transitionDelay =`${index * 0.1}s`;
                 } else {
                     item.style.transitionDelay = '0s';
                 }
@@ -133,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-// graph for chart and other graph visulaztion for service
 
 
 
