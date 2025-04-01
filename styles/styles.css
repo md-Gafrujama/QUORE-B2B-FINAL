@@ -19,7 +19,7 @@
   width: 100%;
   z-index: 1001;
   height: 50px;
-  margin-top: 150px;
+  
 }
 
 #footer #contact {
@@ -480,9 +480,7 @@
     flex-direction: column;
     gap: 5px;
   }
-  .r-hero{
-    margin-top: 100px;
-  }
+
 
   #footer #contact span {
     font-size: 12px;
