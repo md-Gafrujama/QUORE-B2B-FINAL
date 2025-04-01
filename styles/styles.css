@@ -364,8 +364,8 @@
   }
 }
 
-/* @media screen and (max-width: 968px) {
-  body {
+@media screen and (max-width: 968px) {
+  /* body {
     padding-top: 180px;
   } */
 
@@ -466,8 +466,8 @@
   }
 }
 
-/* @media screen and (max-width: 480px) {
-  body {
+@media screen and (max-width: 480px) {
+  /* body {
     padding-top: 200px;
   } */
 
