@@ -1577,7 +1577,7 @@ width: 100%;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
-  padding: 4rem 0;
+  padding: 12rem 0;
   position: relative;
 
 
@@ -1593,7 +1593,7 @@ width: 100%;
 }
 
 .mansi-hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: 2rem;
   color:#00d8a6;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -1601,8 +1601,8 @@ width: 100%;
 }
 
 .mansi-hero-text {
-  font-size: 1.25rem;
-  color: #4F5B76;
+  font-size: 1rem;
+  color: #3d3c3c;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
@@ -1982,9 +1982,9 @@ width: 100%;
       flex: 0.3;
   }
 
-  .mansi-hero {
+  /* .mansi-hero {
       padding: 2rem 30px;
-  }
+  } */
 
   .mansi-hero-image {
       width: 80%;

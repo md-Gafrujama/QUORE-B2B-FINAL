@@ -2,10 +2,10 @@
   --primary:#00d8a6;
   --primary-dark: #00d8a6;
   --secondary: #f59e0b;
-  --dark: #1e293b;
-  --light: #f8fafc;
-  --gray: #64748b;
-  --success: #10b981;
+  --dark: #3d3c3c;
+  --light: white;
+  --gray: #3d3c3c;
+  --success: #00d8a6;
 }
 
 * {
@@ -186,7 +186,7 @@ nav {
 /* Features Section */
 .features {
   padding: 80px 0;
-  background-color: #f8fafc;
+  background-color: white;
 }
 
 .section-header {
