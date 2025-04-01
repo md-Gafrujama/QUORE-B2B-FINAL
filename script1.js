@@ -8,6 +8,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdownContents = document.querySelectorAll('.r-dropdown-content');
     const dropdowns = document.querySelectorAll('.r-dropdown');
     const navbar = document.querySelector('#kazim.navbar');
+    // Get current page URL
+    const currentPageUrl = window.location.pathname;
+
+    // Highlight current page in navigation
+    navItems.forEach(item => {
+        const itemUrl = item.getAttribute('href');
+        // Check if this item matches current page
+        if (itemUrl === currentPageUrl) {
+            item.classList.add('active-page');
+            
+            // If this item is in a dropdown, highlight parent dropdown too
+            const parentDropdown = item.closest('.r-dropdown');
+            if (parentDropdown) {
+                const dropdownLink = parentDropdown.querySelector('.dropdown-link');
+                if (dropdownLink) {
+                    dropdownLink.classList.add('active-dropdown');
+                }
+            }
+        }
+    });
 
     // Menu toggle functionality
     if (menuToggle) {
@@ -46,6 +66,24 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth > 968) {
                 dropdownContent.classList.add('active');
                 dropdownArrow.classList.add('active');
+                // Highlight the dropdown link when opened
+                if (dropdownLink) {
+                    dropdownLink.classList.add('active-dropdown');
+                }
+            }
+
+        };
+        // Function to close dropdown
+        const closeDropdown = () => {
+            if (window.innerWidth > 968) {
+                dropdownContent.classList.remove('active');
+                dropdownArrow.classList.remove('active');
+                
+                // Only remove highlight if not on a page within this dropdown
+                const hasActiveChild = dropdown.querySelector('.active-page');
+                if (!hasActiveChild && dropdownLink) {
+                    dropdownLink.classList.remove('active-dropdown');
+                }
             }
         };
 
@@ -56,17 +94,30 @@ document.addEventListener('DOMContentLoaded', function() {
             // Toggle current dropdown
             dropdownContent.classList.toggle('active');
             this.classList.toggle('active');
-            
+            // Toggle highlight on dropdown link
+            if (dropdownLink) {
+                dropdownLink.classList.toggle('active-dropdown');
+            }
             // Close other dropdowns
             dropdownContents.forEach(content => {
                 if (content !== dropdownContent) {
                     content.classList.remove('active');
+
                 }
             });
             
             dropdownArrows.forEach(arr => {
                 if (arr !== this) {
                     arr.classList.remove('active');
+                }
+            });
+            // Remove highlight from other dropdown links
+            document.querySelectorAll('.dropdown-link').forEach(link => {
+                if (link !== dropdownLink) {
+                    const hasActiveChild = link.closest('.r-dropdown').querySelector('.active-page');
+                    if (!hasActiveChild) {
+                        link.classList.remove('active-dropdown');
+                    }
                 }
             });
         });
@@ -85,6 +136,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 dropdownArrows.forEach(arrow => {
                     arrow.classList.remove('active');
+                });
+                // Remove highlights from dropdown links (except for current page)
+                document.querySelectorAll('.dropdown-link').forEach(link => {
+                    const hasActiveChild = link.closest('.r-dropdown').querySelector('.active-page');
+                    if (!hasActiveChild) {
+                        link.classList.remove('active-dropdown');
+                    }
                 });
             }
         });
@@ -105,6 +163,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             dropdownArrows.forEach(arrow => {
                 arrow.classList.remove('active');
+            });
+            // Remove highlights from dropdown links (except for current page)
+            document.querySelectorAll('.dropdown-link').forEach(link => {
+                const hasActiveChild = link.closest('.r-dropdown').querySelector('.active-page');
+                if (!hasActiveChild) {
+                    link.classList.remove('active-dropdown');
+                }
             });
         }
     });
