@@ -1257,7 +1257,7 @@ width: 100%;
 .ali-container {
   display: flex;
   min-height: 100vh;
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  background: white
 }
 
 .ali-left-section {
@@ -1277,7 +1277,7 @@ width: 100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 230, 147, 0.05) 0%, rgba(0, 230, 147, 0) 100%);
+  
   z-index: 0;
 }
 

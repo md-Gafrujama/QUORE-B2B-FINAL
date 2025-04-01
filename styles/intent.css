@@ -3,7 +3,7 @@
 /* 1st div css */
 .il-page-generation-section {
   padding: 2rem 1rem;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .il-page-generation-container {
@@ -38,7 +38,7 @@
   gap: 1.5rem;
   margin-bottom: 1.5rem;
   padding: 1.5rem;
-  background: #f8fafc;
+  background: white;
   border-radius: 8px;
   transition: all 0.3s ease;
   align-items: flex-start;
@@ -304,7 +304,7 @@
 }
 
 .il-page-benefits-table tr:hover {
-    background: #edf2f7;
+    background: white;
 }
 
 /* Stats Grid */
@@ -466,7 +466,7 @@
 .il-page-strategy-icon {
     min-width: 60px;
     height: 60px;
-    background: #f0f4ff;
+    background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
