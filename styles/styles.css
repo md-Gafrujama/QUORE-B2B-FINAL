@@ -364,10 +364,10 @@
   }
 }
 
-@media screen and (max-width: 968px) {
+/* @media screen and (max-width: 968px) {
   body {
     padding-top: 180px;
-  }
+  } */
 
   #kazim.navbar {
     flex-direction: row;
@@ -466,10 +466,10 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   body {
     padding-top: 200px;
-  }
+  } */
 
   #footer {
     padding: 8px 5px;
