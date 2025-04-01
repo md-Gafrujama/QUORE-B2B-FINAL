@@ -5,8 +5,8 @@
   --text-dark: #1f2937;
   --text-medium: #4b5563;
   --text-light: #6b7280;
-  --bg-color: #ffffff;
-  --light-bg: #f9fafb;
+  --bg-color: white;
+  --light-bg: white;
   --shadow-color: rgba(0, 0, 0, 0.05);
   --hover-shadow: rgba(37, 99, 235, 0.1);
   --border-color: rgba(0, 0, 0, 0.03);

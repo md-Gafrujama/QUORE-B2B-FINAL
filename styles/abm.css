@@ -740,7 +740,7 @@
   --ds-new-secondary-color: #00d8a6;
   --ds-new-accent-color: #f59e0b;
   --ds-new-dark-color: #3d3c3c;
-  --ds-new-light-color: #f8fafc;
+  --ds-new-light-color: white;
   --ds-new-text-color: #3d3c3c;
   --ds-new-shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
   --ds-new-shadow-md: 0 4px 6px rgba(0,0,0,0.1);
@@ -755,8 +755,8 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f1f5f9;
+  font-family: 'Quicksand', sans-serif;
+  background-color:white;
   color: var(--ds-new-text-color);
   line-height: 1.6;
 }
