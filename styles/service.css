@@ -18,7 +18,7 @@
 .syed-services {
   max-width: 1400px;  /* Increased from 1200px */
   margin: 0 auto;
-  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem);  /* Increased padding */
+ 
 }
 
 .syed-services-header {

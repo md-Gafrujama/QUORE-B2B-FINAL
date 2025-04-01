@@ -394,6 +394,8 @@
     overflow: hidden;
     margin-bottom: 30px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: row;
+    gap:50px;
 }
 
 .ds-new-service-container:hover {
@@ -546,4 +548,9 @@
     .ds-new-service-header h3 {
         font-size: 20px;
     }
+}
+@media (max-width: 468px) {
+  .ds-new-services-grid{
+      padding:0rem 1rem;
+  }
 }
