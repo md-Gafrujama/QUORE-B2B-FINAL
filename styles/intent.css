@@ -544,9 +544,9 @@
 
 .il-page-tactic p {
     color: #3d3c3c;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* Technology Strategy Specific */
@@ -749,9 +749,9 @@
 
 .il-page-metric p {
     color: #3d3c3c;
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .il-page-optimization-cycle {
@@ -783,16 +783,16 @@
 }
 
 .il-page-cycle-step h5 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: #3d3c3c;
     margin: 0.5rem 0;
 }
 
 .il-page-cycle-step p {
     color: #3d3c3c;
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* Responsive Styles */
