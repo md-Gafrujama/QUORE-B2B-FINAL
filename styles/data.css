@@ -882,5 +882,9 @@ grid-template-columns: repeat(1, 1fr);
   }
   .dsol-new-btn {
   font-size: 15px;
+
+}
+.ds-new-services-grid{
+  padding:0rem 1rem;
 }
 }
