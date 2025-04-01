@@ -46,7 +46,7 @@
 .lg-page-benefit-icon {
   width: 60px;
   height: 60px;
-  background-color: #f0f7ff;
+  background-color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -897,13 +897,13 @@
 
 .lg-new-hero-left-section {
   padding: 4rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f7f9fc 100%);
+ 
   justify-content: center;
-  border-right: 1px solid rgba(0,0,0,0.05);
+  
 }
 
 .lg-new-hero-right-section {
-  background: linear-gradient(135deg, rgba(217,235,114,0.05) 0%, rgba(0,212,164,0.1) 100%);
+ 
   justify-content: center;
   align-items: center;
 }
