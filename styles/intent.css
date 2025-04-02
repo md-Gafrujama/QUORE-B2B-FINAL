@@ -177,7 +177,7 @@
 }
 
 .il-page-benefit-card h3 {
-    font-size: 25px;
+    font-size: 2rem;
     color: #3d3c3c;
     margin: 0;
 }
@@ -222,7 +222,7 @@
 }
 
 .il-page-benefit-text h4 {
-    font-size: 20px;
+    font-size: 1.5rem;
     color: #3d3c3c;
     margin: 0 0 0.5rem 0;
     font-weight: 600;
@@ -259,7 +259,7 @@
 }
 
 .il-page-grid-item h4 {
-    font-size: 20px;
+    font-size:1.5rem;
     color: #3d3c3c;
     margin: 0 0 0.5rem 0;
 }
@@ -297,6 +297,7 @@
     background: #00d8a6;
     color: white;
     font-weight: 500;
+    font-size: 1.5rem;
 }
 
 .il-page-benefits-table tr:nth-child(even) {
@@ -330,7 +331,7 @@
 }
 
 .il-page-stat-label {
-    font-size: 1rem;
+    font-size: 1.5rem;
     opacity: 0.9;
 }
 
@@ -486,7 +487,7 @@
 }
 
 .il-page-strategy-content h3 {
-    font-size: 25px;
+    font-size: 2rem;
     color: #3d3c3c;
     margin-top: 0;
     margin-bottom: 1.5rem;
@@ -645,7 +646,7 @@
 }
 
 .il-page-channel h5 {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #3d3c3c;
     margin-top: 0;
     margin-bottom: 0.75rem;

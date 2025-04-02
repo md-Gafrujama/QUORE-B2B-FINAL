@@ -1152,7 +1152,7 @@ width: 100%;
 
 .aditya-title {
   color:#00d8a6;
-  font-size: 14px;
+  font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -1165,7 +1165,7 @@ width: 100%;
 }
 
 .aditya-main-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #3d3c3c;
   margin-bottom: 20px;
   font-weight: 700;
@@ -1369,7 +1369,7 @@ width: 100%;
 
 .ali-header-title {
   color:#00d8a6;
-  font-size: 18px;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
@@ -1393,7 +1393,7 @@ width: 100%;
 }
 
 .ali-main-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   background: #3d3c3c;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
