@@ -297,7 +297,7 @@ nav {
 }
 
 .step-content h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -309,7 +309,7 @@ nav {
 /* Testimonials */
 .testimonials {
   padding: 80px 0;
-  background-color: #f8fafc;
+  background-color: white;
 }
 
 .testimonial-grid {
@@ -374,6 +374,7 @@ nav {
   border: 1px solid #e2e8f0;
   transition: transform 0.3s, box-shadow 0.3s;
   position: relative;
+  border: 2px solid var(--primary);
 }
 
 .pricing-card:hover {
@@ -509,7 +510,7 @@ nav {
 /* FAQ */
 .faq {
   padding: 80px 0;
-  background-color: #f8fafc;
+  background-color: white;
 }
 
 .faq-container {

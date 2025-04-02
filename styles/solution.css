@@ -1692,18 +1692,18 @@ width: 100%;
 }
 
 .kumar-heading {
-  color:whitesmoke;
+  color:white;
   
-  font-size:25px;
-  font-weight: 700;
+  font-size:1.5rem;
+  font-weight: 500;
   line-height: 1.2;
   margin: 0 0 clamp(10px, 2vw, 16px) 0;
   
 }
 
 .kumar-description {
-  color: whitesmoke;
-  font-size:20px;
+  color: white;
+  font-size:1rem;
   line-height: 1.6;
   margin: 0;
 }
