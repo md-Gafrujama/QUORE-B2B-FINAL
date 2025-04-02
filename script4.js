@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // *** WEB3FORMS CONFIGURATION - REPLACE THESE VALUES ***
     // Replace with your actual Web3Forms access key
-    const WEB3FORMS_ACCESS_KEY = "e505fedc-14ad-49ed-834f-32cd23ad6136"; 
+    const WEB3FORMS_ACCESS_KEY = "5c119368-f7f6-49a3-8ad6-9c9547081e3a"; 
     // *** END WEB3FORMS CONFIGURATION ***
     
     const viewDetailsButtons = document.querySelectorAll('.view-details');
