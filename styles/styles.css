@@ -720,7 +720,7 @@ h1 span {
   text-align: center;
   color:#00d8a6;
   margin-bottom: 10px;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -728,9 +728,10 @@ h1 span {
 
 .subtitle {
   color:#00d8a6;
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
   font-weight: 700;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .logo-container {
