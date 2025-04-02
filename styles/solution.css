@@ -221,12 +221,19 @@
   gap: 40px;
   overflow-x: hidden;
 }
+.new-content-class{
+  margin-top: 10rem ;
+}
 @media(min-width: 968px){
   .solution-content {
     margin-top: 80px;
   }
   .bushra-hero-container{
     padding-top: 0px;
+
+  }
+  .new-content-class{
+    margin-top: 10rem ;
   }
 }
 
