@@ -273,10 +273,10 @@ function createMansiChart() {
     mansiLeadGraph = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September', 'October', 'November', 'December'],
             datasets: [{
                 label: 'Leads Generated',
-                data: [12, 19, 3, 5, 2, 3, 10],
+                data: [212, 119, 233, 115, 212, 183, 210,240,190,100,130,231],
                 backgroundColor: '#00d8a6',
                 borderColor: '#00d8a6',
                 borderWidth: 1
