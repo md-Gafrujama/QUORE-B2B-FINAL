@@ -276,7 +276,7 @@ function createMansiChart() {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August', 'September', 'October', 'November', 'December'],
             datasets: [{
                 label: 'Leads Generated',
-                data: [212, 119, 233, 115, 212, 183, 210,240,190,100,130,231],
+                data: [312, 319, 233, 315, 212, 383, 210,240,390,100,130,431],
                 backgroundColor: '#00d8a6',
                 borderColor: '#00d8a6',
                 borderWidth: 1

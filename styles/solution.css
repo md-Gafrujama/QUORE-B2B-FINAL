@@ -1790,15 +1790,15 @@ width: 100%;
   color:#00d8a6;}
 
 .mansi-criteria-title {
-  font-size: 1.1rem;
-  color: #2D3748;
+  font-size: 1.5rem;
+  color: #3d3c3c;
   margin-bottom: 0.25rem;
   font-weight: 700;
 }
 
 .mansi-criteria-subtitle {
-  color: #718096;
-  font-size: 0.9rem;
+  color: #3d3c3c;
+  font-size: 1rem;
 }
 
 .mansi-criteria-list {
@@ -1813,7 +1813,7 @@ width: 100%;
   align-items: center;
   gap: 0.5rem;
   color: #3d3c3c;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .mansi-criteria-item::before {
@@ -1885,7 +1885,7 @@ width: 100%;
 .image-wrapper {
   height: 100%;
   border-radius: clamp(1rem, 3vw, 2rem);
-  background: #00d8a6;
+ 
   padding: 45px;
   overflow: hidden;
   transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
@@ -1917,8 +1917,9 @@ width: 100%;
 .funnel-title {
   color: #3D3C3C;
   margin-bottom: clamp(1.5rem, 5vw, 3rem);
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+ 
   font-weight: 700;
+  font-size: 2rem;
 }
 
 .funnel {
@@ -1955,7 +1956,7 @@ width: 100%;
   padding-left: max(15%, calc(5% + var(--shrink, 0%)));
   color: #3D3C3C;
   font-weight: 700;
-  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
