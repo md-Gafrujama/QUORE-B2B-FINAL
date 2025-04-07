@@ -15,7 +15,6 @@
     <title> QUORE | B2B MARKETING</title>
   </head>
   <body>
-
     <footer id="footer">
         <div id="contact">
         </div>
@@ -89,7 +88,6 @@
             </div>
           </div>
         </li>
-        
         <a href='/contact'>CONTACT</a>
       </div>
     </nav>
@@ -392,14 +390,16 @@
             <h1 class="anna-title">Get In Touch To Fuel Your Pipeline With Warm And Qualified Leads</h1>
           </div>
           
-          <div class="anna-form-container">
+          <!-- Form Container -->
+          <div class="anna-form-container" id="anna-form-section">
             <h2 class="anna-form-title">Ready to Get <i><b>Q</b></i>uoreb2b?</h2>
             
             <form id="nur-lead-form" action="https://api.web3forms.com/submit" method="POST">
               <!-- Add your Web3Forms API Key here -->
               <input type="hidden" name="access_key" value="e505fedc-14ad-49ed-834f-32cd23ad6136">
               <input type="hidden" name="subject" value="New Lead Submission">
-              <input type="hidden" name="redirect" value="https://web3forms.com/success">
+              <!-- Removed the redirect URL to prevent page redirection -->
+              <input type="hidden" name="from_name" value="Quoreb2b Contact Form">
               
               <div class="anna-form-row">
                 <div class="anna-form-group">
@@ -501,18 +501,36 @@
               </div>
               
               <button type="submit" class="anna-submit-btn">Schedule a consultation today</button>
+              
+              <!-- Thank You Message (initially hidden) - Now positioned below the submit button -->
+              <div class="anna-thank-you-container" id="anna-inline-thank-you" style="display: none; margin-top: 20px; padding: 20px; border: 1px solid #4CAF50; background-color: #f8f8f8; border-radius: 5px; text-align: center; animation: fadeIn 0.5s;">
+                <div class="anna-thank-you-icon" style="color: #4CAF50; font-size: 42px; margin-bottom: 10px;">✓</div>
+                <h3 class="anna-thank-you-title" style="color: #333; margin-bottom: 10px;">Thank You <span id="inline-thank-you-name"></span>!</h3>
+                <p class="anna-thank-you-message" style="color: #666; line-height: 1.5;">
+                  Your request was successfully submitted. We appreciate your interest in our services. 
+                  Our team will review your information and get back to you shortly to discuss how we can help 
+                  fuel your pipeline with qualified leads.
+                </p>
+              </div>
             </form>
             
-            <div class="anna-loading">
+            <div class="anna-loading" style="display: none;">
               <div class="anna-loading-spinner"></div>
             </div>
             
-            <div class="anna-success-message">
+            <div class="anna-success-message" style="display: none;">
               Thank you for your submission! We'll be in touch shortly.
             </div>
           </div>
         </div>
       </div>
+    
+      <style>
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+      </style>
     
       <section class="client-section">
         <h2 class="section-title">Clients</h2>
@@ -661,8 +679,6 @@
         </div>
     </div>
 </footer>
-
-
 <!-- downav-->
   <!-- Footer-Bottom -->
   <div id="footer-bottom">
@@ -689,7 +705,6 @@
       </div>
   </div>
 </div>
-
 <!-- Cookie Settings Modal -->
 <div id="cookie-settings-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-describedby="modal-description">
   <div class="modal-content">
@@ -733,12 +748,10 @@
       </div>
   </div>
 </div>
-
-
 <script src="cookies.js"></script>
     <script src="script.js"></script>
     <script src="script1.js"></script>
     <script src="script2.js"></script>
-
+    <script src="form.js"></script>
 </body>
 </html>
