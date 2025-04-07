@@ -320,6 +320,133 @@
       </a>
     </div>
     </div>
+    <div class="anna-container-wrapper">
+      <div class="anna-container">
+        <div class="anna-header">
+          <h1 class="anna-title">Get In Touch To Fuel Your Pipeline With Warm And Qualified Leads</h1>
+        </div>
+        
+        <div class="anna-form-container">
+          <h2 class="anna-form-title">Ready to Get <i><b>Q</b></i>uoreb2b?</h2>
+          
+          <form id="nur-lead-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Add your Web3Forms API Key here -->
+            <input type="hidden" name="access_key" value="e505fedc-14ad-49ed-834f-32cd23ad6136">
+            <input type="hidden" name="subject" value="New Lead Submission">
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            
+            <div class="anna-form-row">
+              <div class="anna-form-group">
+                <label for="nur-name" class="anna-label">Name <span class="anna-required">*</span></label>
+                <input type="text" id="nur-name" name="name" class="anna-input" required>
+              </div>
+              
+              <div class="anna-form-group">
+                <label for="nur-email" class="anna-label">Email <span class="anna-required">*</span></label>
+                <input type="email" id="nur-email" name="email" class="anna-input" required>
+              </div>
+            </div>
+            
+            <div class="anna-form-group">
+              <label for="nur-phone" class="anna-label">Phone Number <span class="anna-required">*</span></label>
+              <input type="tel" id="nur-phone" name="phone" class="anna-input" required>
+            </div>
+            
+            <div class="anna-form-group">
+              <div class="anna-goals-container">
+                <label class="anna-label">What are your top marketing goals?</label>
+                
+                <div class="anna-goals-selector">
+                  <select id="nur-goal-select" class="anna-select">
+                    <option value="" selected disabled>Select a marketing goal</option>
+                    <option value="Build Brand Awareness">Build Brand Awareness</option>
+                    <option value="Create & Capture Demand">Create & Capture Demand</option>
+                    <option value="Account-Based Marketing Program">Account-Based Marketing Program</option>
+                    <option value="Increase Pipeline Revenue">Increase Pipeline Revenue</option>
+                    <option value="Improve Conversion Rates">Improve Conversion Rates</option>
+                    <option value="Google Search">Google Search</option>
+                    <option value="Email Marketing">Email Marketing</option>
+                    <option value="Others">Others</option>
+                  </select>
+                  <button type="button" id="nur-add-goal-btn" class="anna-submit-btn" style="padding: 12px 20px; width: auto;">Add Goal</button>
+                </div>
+                
+                <div class="anna-selected-goals-display" id="nur-selected-goals-display"></div>
+                
+                <input type="hidden" id="nur-selected-goals" name="goals">
+                
+                <div class="anna-checkbox-group">
+                  <div class="anna-checkbox-item">
+                    <input type="checkbox" id="nur-goal_1" name="goals_checkbox[]" value="Build Brand Awareness">
+                    <label for="nur-goal_1">Build Brand Awareness</label>
+                  </div>
+                  <div class="anna-checkbox-item">
+                    <input type="checkbox" id="nur-goal_2" name="goals_checkbox[]" value="Create & Capture Demand">
+                    <label for="nur-goal_2">Create & Capture Demand</label>
+                  </div>
+                  <div class="anna-checkbox-item">
+                    <input type="checkbox" id="nur-goal_3" name="goals_checkbox[]" value="Account-Based Marketing Program">
+                    <label for="nur-goal_3">Account-Based Marketing Program</label>
+                  </div>
+                  <div class="anna-checkbox-item">
+                    <input type="checkbox" id="nur-goal_4" name="goals_checkbox[]" value="Increase Pipeline Revenue">
+                    <label for="nur-goal_4">Increase Pipeline Revenue</label>
+                  </div>
+                  <div class="anna-checkbox-item">
+                    <input type="checkbox" id="nur-goal_5" name="goals_checkbox[]" value="Improve Conversion Rates">
+                    <label for="nur-goal_5">Improve Conversion Rates</label>
+                  </div>
+                  <div class="anna-checkbox-item">
+                    <input type="checkbox" id="nur-goal_6" name="goals_checkbox[]" value="Google Search">
+                    <label for="nur-goal_6">Google Search</label>
+                  </div>
+                  <div class="anna-checkbox-item">
+                    <input type="checkbox" id="nur-goal_7" name="goals_checkbox[]" value="Email Marketing">
+                    <label for="nur-goal_7">Email Marketing</label>
+                  </div>
+                  <div class="anna-checkbox-item">
+                    <input type="checkbox" id="nur-goal_8" name="goals_checkbox[]" value="Others">
+                    <label for="nur-goal_8">Others</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="anna-form-group">
+              <label for="nur-needs" class="anna-label">Tell us more about your needs</label>
+              <textarea id="nur-needs" name="needs" class="anna-textarea"></textarea>
+            </div>
+            
+            <div class="anna-form-group">
+              <label for="nur-source" class="anna-label">How did you hear about us? <span class="anna-required">*</span></label>
+              <select id="nur-source" name="source" class="anna-select" required>
+                <option value="" disabled selected>Please Select</option>
+                <option value="Google">Google</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Referral">Referral</option>
+                <option value="Email">Email</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+            <div class="anna-privacy">
+              By submitting this form, you agree to our <a href="#">Privacy Policy</a>
+            </div>
+            
+            <button type="submit" class="anna-submit-btn">Schedule a consultation today</button>
+          </form>
+          
+          <div class="anna-loading">
+            <div class="anna-loading-spinner"></div>
+          </div>
+          
+          <div class="anna-success-message">
+            Thank you for your submission! We'll be in touch shortly.
+          </div>
+        </div>
+      </div>
+    </div>
     <!--Learn more-->
       <!--3rd section-->
       <div class="container-unique">
@@ -382,7 +509,11 @@
             
           </ul>
         </div>
+        
       </div>
+     
+   
+    
       <section class="client-section">
         <h2 class="section-title">Clients</h2>
         <p class="subtitle"> We cater to some renowned brands</p>
@@ -431,6 +562,7 @@
     </section>
   
     </section>
+
 
     <div id="top-section">
       <div id="box-dark" class="box">
