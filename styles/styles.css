@@ -1234,13 +1234,7 @@ h1 span {
   --anna-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-}
+
 
 .anna-container-wrapper {
   min-height: 100%;
