@@ -276,6 +276,126 @@
       font-size: 15px;
     }
     
+    /* Thank you page */
+    .anna-thank-you-container {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    
+    .anna-thank-you-icon {
+      font-size: 60px;
+      color: var(--anna-primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .anna-thank-you-title {
+      font-size: 28px;
+      color: var(--anna-secondary-color);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .anna-thank-you-message {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .anna-back-btn {
+      background-color: var(--anna-primary-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+    
+    .anna-back-btn:hover {
+      background-color: #00c295;
+      box-shadow: 0 4px 12px rgba(0, 216, 166, 0.2);
+    }
+    
+    /* Popup styles */
+    .anna-popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .anna-popup-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .anna-popup {
+      background-color: white;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+    }
+    
+    .anna-popup-overlay.show .anna-popup {
+      transform: translateY(0);
+    }
+    
+    .anna-popup-icon {
+      font-size: 50px;
+      color: var(--anna-primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .anna-popup-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--anna-secondary-color);
+    }
+    
+    .anna-popup-message {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 25px;
+      line-height: 1.5;
+    }
+    
+    .anna-popup-close {
+      background-color: var(--anna-primary-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .anna-popup-close:hover {
+      background-color: #00c295;
+    }
+    
     @media (max-width: 768px) {
       .anna-form-row {
         flex-direction: column;
@@ -296,6 +416,18 @@
       .anna-checkbox-group {
         grid-template-columns: 1fr;
       }
+      
+      .anna-popup {
+        padding: 20px;
+      }
+      
+      .anna-popup-title {
+        font-size: 20px;
+      }
+      
+      .anna-popup-message {
+        font-size: 15px;
+      }
     }
   </style>
 </head>
@@ -306,7 +438,8 @@
         <h1 class="anna-title">Get In Touch To Fuel Your Pipeline With Warm And Qualified Leads</h1>
       </div>
       
-      <div class="anna-form-container">
+      <!-- Form Container -->
+      <div class="anna-form-container" id="anna-form-section">
         <h2 class="anna-form-title">Ready to Get <i><b>Q</b></i>uoreb2b?</h2>
         
         <form id="nur-lead-form" action="https://api.web3forms.com/submit" method="POST">
@@ -425,17 +558,30 @@
           Thank you for your submission! We'll be in touch shortly.
         </div>
       </div>
+      
+      <!-- Thank You Container (initially hidden) -->
+      <div class="anna-thank-you-container" id="anna-thank-you-section">
+        <div class="anna-thank-you-icon">✓</div>
+        <h2 class="anna-thank-you-title">Thank You <span id="thank-you-name"></span>!</h2>
+        <p class="anna-thank-you-message">
+          Your request was successfully submitted. We appreciate your interest in our services. Our team will review your information and get back to you shortly to discuss how we can help fuel your pipeline with qualified leads.
+        </p>
+        <button id="anna-back-btn" class="anna-back-btn">Back to Form</button>
+      </div>
     </div>
   </div>
 
   <script>
-    // Marketing goals selection functionality
     document.addEventListener('DOMContentLoaded', function() {
       const goalSelect = document.getElementById('nur-goal-select');
       const addGoalBtn = document.getElementById('nur-add-goal-btn');
       const selectedGoalsDisplay = document.getElementById('nur-selected-goals-display');
       const selectedGoalsInput = document.getElementById('nur-selected-goals');
       const checkboxes = document.querySelectorAll('input[name="goals_checkbox[]"]');
+      const formSection = document.getElementById('anna-form-section');
+      const thankYouSection = document.getElementById('anna-thank-you-section');
+      const backBtn = document.getElementById('anna-back-btn');
+      const thankYouName = document.getElementById('thank-you-name');
       
       let selectedGoals = [];
       
@@ -503,6 +649,12 @@
         });
       });
       
+      // Back button functionality
+      backBtn.addEventListener('click', function() {
+        thankYouSection.style.display = 'none';
+        formSection.style.display = 'block';
+      });
+      
       // Form submission handling
       document.getElementById('nur-lead-form').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -511,7 +663,7 @@
         const formData = new FormData(form);
         const submitBtn = form.querySelector('.anna-submit-btn');
         const loadingSpinner = document.querySelector('.anna-loading');
-        const successMessage = document.querySelector('.anna-success-message');
+        const userName = document.getElementById('nur-name').value;
         
         // Show loading spinner, hide button
         submitBtn.style.display = 'none';
@@ -528,22 +680,31 @@
           loadingSpinner.style.display = 'none';
           
           if(data.success) {
-            // Show success message
-            successMessage.style.display = 'block';
+            // Set the user's name in the thank you message
+            thankYouName.textContent = userName;
+            
+            // Show thank you section, hide form section
+            formSection.style.display = 'none';
+            thankYouSection.style.display = 'block';
+            
+            // Scroll to top if needed
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Reset form
             form.reset();
             selectedGoals = [];
             updateSelectedGoalsDisplay();
           } else {
             // Show button again if there's an error
             submitBtn.style.display = 'block';
-            
+            // You could add error handling here
           }
         })
         .catch(error => {
           console.error('Error:', error);
           loadingSpinner.style.display = 'none';
           submitBtn.style.display = 'block';
-         
+          // You could add error handling here
         });
       });
     });
