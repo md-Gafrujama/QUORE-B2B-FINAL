@@ -1183,7 +1183,44 @@ h1 span {
 
 
 /*arrow dropown*/
+.arrow-buttons{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
 
+.scroll-btn {
+position: fixed;
+bottom: 80px;
+right: 20px;
+width: 50px;
+height: 50px;
+background: white;
+color: black;
+border: none;
+border-radius: 50%;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+cursor: pointer;
+font-size: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.3s ease;
+z-index: 1000;
+}
+.scroll-btn:hover {
+background: #00d4a7;
+color: white;
+}
+
+.scroll-btn i {
+transition: transform 0.3s ease;
+}
+/* extra */
 
 :root {
   --anna-primary-color: #00d8a6;
