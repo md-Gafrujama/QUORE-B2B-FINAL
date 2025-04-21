@@ -1390,7 +1390,7 @@ body {
 .anna-goals-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+
 }
 
 .anna-goals-selector {
