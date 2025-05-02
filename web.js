@@ -172,3 +172,5 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+
+    <!-- <script src="cookies.js"></script> -->
