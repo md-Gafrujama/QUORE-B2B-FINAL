@@ -1,5 +1,11 @@
 /* Hero Section */
-
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+* {
+  box-sizing:border-box;
+}
 .hero-container {
   position: relative;
   overflow: hidden;

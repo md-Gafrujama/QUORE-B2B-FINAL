@@ -1121,10 +1121,10 @@ h1 span {
   }
 /* Contact Details */
 .contact p {
-  font-size: 13px;
+  font-size: 12px;
   color: #3D3C3C;
   margin-bottom: 12px;
-  line-height: 1.6;
+  line-height: 1.4;
   text-align: left;
 }
 
