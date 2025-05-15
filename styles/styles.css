@@ -1042,7 +1042,7 @@ h1 span {
   flex-wrap: wrap;
   max-width: 100%;
   margin: auto;
-  padding: 0px 70px 0px 70px;
+  padding: 0px 70px 30px 70px;
   /* padding: 0px 115px 0px 67px; */
 }
 
@@ -1101,12 +1101,13 @@ h1 span {
 }
 .quick-links ul li {
   
-  line-height: 1.4;
+  line-height: 1.8;
 }
 .quick-links ul li a {
   text-decoration: none;
   color: #3D3C3C;
-  font-size: 12.5px;
+  font-size: 13px;
+font-weight: 500;
   transition: 0.3s;
 }
 .quick-links{
