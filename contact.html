@@ -186,6 +186,133 @@ Marvel Fuego Office 7140 seventh floor, opposite We Work, Magarpatta road Hadaps
     </div>
     </div>
 </div>
+ <div class="anna-container-wrapper">
+        <div class="anna-container">
+          <div class="anna-header">
+            <h1 class="anna-title">Get Qualified Leads – Get in Touch Today!</h1>
+          </div>
+          
+          <!-- Form Container -->
+          <div class="anna-form-container" id="anna-form-section">
+            <h2 class="anna-form-title">Ready to Get Leads?</h2>
+            
+            <form id="nur-lead-form" action="https://api.web3forms.com/submit" method="POST">
+              <!-- Add your Web3Forms API Key here -->
+              <input type="hidden" name="access_key" value="e505fedc-14ad-49ed-834f-32cd23ad6136">
+              <input type="hidden" name="subject" value="New Lead Submission">
+              <!-- Removed the redirect URL to prevent page redirection -->
+              <input type="hidden" name="from_name" value="Quoreb2b Contact Form">
+              
+              <div class="anna-form-row">
+                <div class="anna-form-group">
+                  <label for="nur-name" class="anna-label">Name <span class="anna-required">*</span></label>
+                  <input type="text" id="nur-name" name="name" class="anna-input" required>
+                </div>
+                
+                <div class="anna-form-group">
+                  <label for="nur-email" class="anna-label">Email <span class="anna-required">*</span></label>
+                  <input type="email" id="nur-email" name="email" class="anna-input" required>
+                </div>
+              </div>
+              
+              <div class="anna-form-group">
+                <label for="nur-phone" class="anna-label">Phone Number <span class="anna-required">*</span></label>
+                <input type="tel" id="nur-phone" name="phone" class="anna-input" required>
+              </div>
+              
+              <div class="anna-form-group">
+                <div class="anna-goals-container">
+                  <label class="anna-label">What are your top marketing goals?</label>
+                  
+                 
+                  
+                  <div class="anna-selected-goals-display" id="nur-selected-goals-display"></div>
+                  
+                  <input type="hidden" id="nur-selected-goals" name="goals">
+                  
+                  <div class="anna-checkbox-group">
+                    <div class="anna-checkbox-item">
+                      <input type="checkbox" id="nur-goal_1" name="goals_checkbox[]" value="Build Brand Awareness">
+                      <label for="nur-goal_1">Build Brand Awareness</label>
+                    </div>
+                    <div class="anna-checkbox-item">
+                      <input type="checkbox" id="nur-goal_2" name="goals_checkbox[]" value="Create & Capture Demand">
+                      <label for="nur-goal_2">Create & Capture Demand</label>
+                    </div>
+                    <div class="anna-checkbox-item">
+                      <input type="checkbox" id="nur-goal_3" name="goals_checkbox[]" value="Account-Based Marketing Program">
+                      <label for="nur-goal_3">Account-Based Marketing Program</label>
+                    </div>
+                    <div class="anna-checkbox-item">
+                      <input type="checkbox" id="nur-goal_4" name="goals_checkbox[]" value="Increase Pipeline Revenue">
+                      <label for="nur-goal_4">Increase Pipeline Revenue</label>
+                    </div>
+                    <div class="anna-checkbox-item">
+                      <input type="checkbox" id="nur-goal_5" name="goals_checkbox[]" value="Improve Conversion Rates">
+                      <label for="nur-goal_5">Improve Conversion Rates</label>
+                    </div>
+                    <div class="anna-checkbox-item">
+                      <input type="checkbox" id="nur-goal_6" name="goals_checkbox[]" value="Google Search">
+                      <label for="nur-goal_6">Google Search</label>
+                    </div>
+                    <div class="anna-checkbox-item">
+                      <input type="checkbox" id="nur-goal_7" name="goals_checkbox[]" value="Email Marketing">
+                      <label for="nur-goal_7">Email Marketing</label>
+                    </div>
+                    <div class="anna-checkbox-item">
+                      <input type="checkbox" id="nur-goal_8" name="goals_checkbox[]" value="Others">
+                      <label for="nur-goal_8">Others</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="anna-form-group">
+                <label for="nur-needs" class="anna-label">Tell us more about your needs</label>
+                <textarea id="nur-needs" name="needs" class="anna-textarea"></textarea>
+              </div>
+              
+              <div class="anna-form-group">
+                <label for="nur-source" class="anna-label">How did you hear about us? <span class="anna-required">*</span></label>
+                <select id="nur-source" name="source" class="anna-select" required>
+                  <option value="" disabled selected>Please Select</option>
+                  <option value="Google">Google</option>
+                  <option value="Social Media">Social Media</option>
+                  <option value="Referral">Referral</option>
+                  <option value="Email">Email</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              
+              <div class="anna-privacy">
+                By submitting this form, you agree to our <a href="/privcy">Privacy Policy</a>
+              </div>
+              
+              <button type="submit" class="anna-submit-btn">Schedule a consultation today</button>
+              
+              <!-- Thank You Message (initially hidden) - Now positioned below the submit button -->
+              <div class="anna-thank-you-container" id="anna-inline-thank-you" style="display: none; margin-top: 20px; padding: 20px; border: 1px solid #4CAF50; background-color: #f8f8f8; border-radius: 5px; text-align: center; animation: fadeIn 0.5s;">
+                <div class="anna-thank-you-icon" style="color: #4CAF50; font-size: 42px; margin-bottom: 10px;">✓</div>
+                <h3 class="anna-thank-you-title" style="color: #333; margin-bottom: 10px;">Thank You <span id="inline-thank-you-name"></span>!</h3>
+                <p class="anna-thank-you-message" style="color: #666; line-height: 1.5;">
+                  Your request was successfully submitted. We appreciate your interest in our services. 
+                  Our team will review your information and get back to you shortly to discuss how we can help 
+                  fuel your pipeline with qualified leads.
+                </p>
+              </div>
+            </form>
+            
+            <div class="anna-loading" style="display: none;">
+              <div class="anna-loading-spinner"></div>
+            </div>
+            
+            <div class="anna-success-message" style="display: none;">
+              Thank you for your submission! We'll be in touch shortly.
+            </div>
+          </div>
+        </div>
+      </div>
 <div id="top-section">
     <div id="box-dark" class="box">
         <h3>Are You Ready?</h3>
@@ -209,6 +336,7 @@ Marvel Fuego Office 7140 seventh floor, opposite We Work, Magarpatta road Hadaps
         <button id="start-button"><span>Start Now</span></button>
     </div>
 </div>
+
 <!-- arrow button top to bottom-->
 <div class="arrow-buttons">
   <button id="scroll-up-btn" class="scroll-btn">
