@@ -56,6 +56,22 @@ img{max-width:100%;display:block}
 .nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:84px;min-width:0;gap:16px}
 body{padding-top:84px}
+.contact .hero-in{align-items:start;gap:48px;padding:72px 0 80px}
+.contact .hero h1{font-size:clamp(30px,4.4vw,46px);margin-top:16px}
+.contact .hero p.lead{margin:18px 0 8px;max-width:42ch}
+.contact .feat-list{margin-top:8px}
+.contact .feat-list li{border-top-color:rgba(255,255,255,.12);padding:14px 0}
+.contact .feat-list h4{color:#fff}
+.contact .feat-list p{color:#8FA1B2}
+.contact .hero-note a{color:#AFC0D0;transition:color .15s}
+.contact .hero-note a:hover{color:var(--signal)}
+.contact .form-card{position:relative;z-index:2;color:var(--ink);padding:32px}
+.contact .form-card h3{font-size:22px;margin:0 0 6px}
+.contact .form-intro{font-size:14.5px;color:var(--slate);margin:0 0 22px}
+.contact .field select{-webkit-appearance:none;appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath stroke='%2345596E' stroke-width='1.6' d='m1 1.5 5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.contact .reach a{color:var(--signal-d);font-weight:500}
+.contact .reach a:hover{color:var(--ink)}
+.contact .reach p{line-height:1.7}
 .brand{display:flex;align-items:center;gap:10px}
 .brand-mark{height:58px;width:auto;border-radius:10px;display:block;flex-shrink:0}
 .brand-word{height:54px;width:auto;display:block;flex-shrink:0;max-width:240px;object-fit:contain;object-position:left center}
@@ -265,6 +281,9 @@ body{padding-top:68px}
 .whom .p{padding:8px 12px;font-size:13px}
 .grid{gap:14px}
 .compliance{gap:12px}
+.contact .hero-in{padding:36px 0 40px !important;gap:28px}
+.contact .form-card{padding:22px}
+.contact .form-card h3{font-size:20px}
 }
 @media (max-width:600px){
 body{font-size:15.5px}
@@ -282,12 +301,14 @@ body{font-size:15.5px}
 .footer-btm{flex-direction:column;align-items:flex-start;gap:8px}
 .footer-grid{grid-template-columns:1fr}
 .hero-note{margin-top:16px;gap:10px 14px;font-size:12.5px}
+.contact .hero-in{padding:28px 0 32px !important}
+.contact .form-card{padding:20px}
 }
 @media (prefers-reduced-motion:reduce){*,.stage,.reveal{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;scroll-behavior:auto}}
 
 </style>
 </head>
-<body>
+<body class="contact">
 
 <header class="nav">
   <div class="wrap nav-in">
@@ -309,31 +330,33 @@ body{font-size:15.5px}
 
 <!-- HERO + FORM -->
 <section class="hero">
-  <div class="wrap hero-in" style="padding:64px 0 70px;">
+  <div class="wrap hero-in">
     <div>
       <span class="eyebrow">Request delivery capacity</span>
-      <h1 style="font-size:clamp(30px,4.2vw,46px);">Send us the order.<br><span class="hi">We'll spec the delivery.</span></h1>
+      <h1>Send us the order.<br><span class="hi">We'll spec the delivery.</span></h1>
       <p class="lead">Tell us the program you need fulfilled and we'll come back with feasibility, a per-lead rate, and a first delivery timeline - usually within one business day.</p>
-      <ul class="feat-list" style="max-width:420px;">
-        <li><span class="fi">01</span><div><h4 style="color:#fff">Share the spec</h4><p style="color:#8FA1B2">Asset, geo, titles, industries, volume, qualification.</p></div></li>
-        <li><span class="fi">02</span><div><h4 style="color:#fff">We confirm feasibility &amp; CPL</h4><p style="color:#8FA1B2">Clear pricing before anything goes live.</p></div></li>
-        <li><span class="fi">03</span><div><h4 style="color:#fff">First batch delivered</h4><p style="color:#8FA1B2">Verified, deduped, matched to your field map.</p></div></li>
+      <ul class="feat-list">
+        <li><span class="fi">01</span><div><h4>Share the spec</h4><p>Asset, geo, titles, industries, volume, qualification.</p></div></li>
+        <li><span class="fi">02</span><div><h4>We confirm feasibility &amp; CPL</h4><p>Clear pricing before anything goes live.</p></div></li>
+        <li><span class="fi">03</span><div><h4>First batch delivered</h4><p>Verified, deduped, matched to your field map.</p></div></li>
       </ul>
-      <div class="hero-note" style="margin-top:24px;">
-        <span><i class="dot"></i> contactus@quoreb2b.com</span>
-        <span><i class="dot"></i> +1 332-231-0404</span>
+      <div class="hero-note">
+        <span><i class="dot"></i> <a href="mailto:contactus@quoreb2b.com">contactus@quoreb2b.com</a></span>
+        <span><i class="dot"></i> <a href="tel:+13322310404">+1 332-231-0404</a></span>
       </div>
     </div>
 
-    <div class="panel" style="background:#fff; border-color:var(--line);">
+    <div class="form-card">
+      <h3>Program spec</h3>
+      <p class="form-intro">Fill this in and we'll reply with feasibility and a rate, usually within one business day.</p>
       <form id="capForm">
         <div class="form-grid">
-          <div class="field"><label>Full name <span class="req">*</span></label><input required type="text" name="name" placeholder="Your name"></div>
-          <div class="field"><label>Work email <span class="req">*</span></label><input required type="email" name="email" placeholder="you@company.com"></div>
-          <div class="field"><label>Company <span class="req">*</span></label><input required type="text" name="company" placeholder="Company name"></div>
-          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="+1"></div>
-          <div class="field full"><label>Partner type <span class="req">*</span></label>
-            <select required name="ptype" style="color:var(--ink)">
+          <div class="field"><label for="name">Full name <span class="req">*</span></label><input id="name" required type="text" name="name" placeholder="Your name" autocomplete="name"></div>
+          <div class="field"><label for="email">Work email <span class="req">*</span></label><input id="email" required type="email" name="email" placeholder="you@company.com" autocomplete="email"></div>
+          <div class="field"><label for="company">Company <span class="req">*</span></label><input id="company" required type="text" name="company" placeholder="Company name" autocomplete="organization"></div>
+          <div class="field"><label for="phone">Phone</label><input id="phone" type="tel" name="phone" placeholder="+1" autocomplete="tel"></div>
+          <div class="field full"><label for="ptype">Partner type <span class="req">*</span></label>
+            <select id="ptype" required name="ptype">
               <option value="">Select one</option>
               <option>Demand generation agency</option>
               <option>Media company / publisher</option>
@@ -342,8 +365,8 @@ body{font-size:15.5px}
               <option>Other</option>
             </select>
           </div>
-          <div class="field full"><label>Products you need <span class="req">*</span></label>
-            <select required name="product" style="color:var(--ink)">
+          <div class="field full"><label for="product">Products you need <span class="req">*</span></label>
+            <select id="product" required name="product">
               <option value="">Select primary product</option>
               <option>Content syndication (ST / DT)</option>
               <option>High-quality leads (HQL)</option>
@@ -354,10 +377,10 @@ body{font-size:15.5px}
               <option>Blended program</option>
             </select>
           </div>
-          <div class="field"><label>Target geography</label><input type="text" name="geo" placeholder="e.g. US, EMEA"></div>
-          <div class="field"><label>Monthly volume</label><input type="text" name="volume" placeholder="e.g. 500 leads/mo"></div>
-          <div class="field full"><label>Program details</label>
-            <textarea name="details" placeholder="Asset, target titles/industries, custom qualifiers, timeline, and any suppression or field-map requirements."></textarea>
+          <div class="field"><label for="geo">Target geography</label><input id="geo" type="text" name="geo" placeholder="e.g. US, EMEA"></div>
+          <div class="field"><label for="volume">Monthly volume</label><input id="volume" type="text" name="volume" placeholder="e.g. 500 leads/mo"></div>
+          <div class="field full"><label for="details">Program details</label>
+            <textarea id="details" name="details" placeholder="Asset, target titles/industries, custom qualifiers, timeline, and any suppression or field-map requirements."></textarea>
           </div>
         </div>
         <input type="hidden" name="access_key" value="7fea8735-0bd7-4b27-b4a7-1d4509d07247">
@@ -369,6 +392,37 @@ body{font-size:15.5px}
         <p id="okMsg" style="display:none; margin-top:14px; padding:14px; background:var(--signal-t); border-radius:9px; color:var(--signal-d); font-size:14px; font-weight:500;">✓ Thanks - your request is in. We'll reply with feasibility and a rate, usually within one business day.</p>
         <p id="errMsg" style="display:none; margin-top:14px; padding:14px; background:rgba(240,90,90,.08); border:1px solid rgba(240,90,90,.25); border-radius:9px; color:#c0392b; font-size:14px; font-weight:500;">Something went wrong sending your request. Please email us directly at <a href="mailto:contactus@quoreb2b.com" style="color:#c0392b; text-decoration:underline;">contactus@quoreb2b.com</a>.</p>
       </form>
+    </div>
+  </div>
+</section>
+
+<section class="section paper">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Offices &amp; direct line</span>
+      <h2>Two hubs. One delivery team.</h2>
+      <p>Prefer not to use the form? Email, call, or reach us on LinkedIn - same people who spec the program.</p>
+    </div>
+    <div class="grid c3 reach">
+      <div class="card">
+        <span class="tag">USA</span>
+        <h3>Dallas</h3>
+        <p>539 W. Commerce St #2577<br>Dallas, TX 75208</p>
+      </div>
+      <div class="card">
+        <span class="tag">India</span>
+        <h3>Pune</h3>
+        <p>Office 804, Omicron Commerz<br>Koregaon Park Annex, Mundhwa, Pune 411028</p>
+      </div>
+      <div class="card">
+        <span class="tag">Direct</span>
+        <h3>Talk to us</h3>
+        <p>
+          <a href="mailto:contactus@quoreb2b.com">contactus@quoreb2b.com</a><br>
+          <a href="tel:+13322310404">+1 332-231-0404</a><br>
+          <a href="https://www.linkedin.com/company/quoreb2bmarketing/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+      </div>
     </div>
   </div>
 </section>
