@@ -1,621 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="styles/service.css">
-    <link rel="icon" type="image/png" sizes="16x16" href="image/ICON2.jpg">
-    <link rel="shortcut icon" href="image/ICON2.jpg">
-    <link rel="apple-touch-icon" href="image/ICON2.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/abotreadmore.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-   
+<script>document.documentElement.classList.add('js')</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/png" href="image/ICON2.png">
+<link rel="shortcut icon" href="image/ICON2.png">
+<link rel="apple-touch-icon" href="image/ICON2.png">
+<title>About - Quore B2B Lead Fulfillment Partner</title>
+<meta name="description" content="Quore B2B is a lead fulfillment partner built on a proprietary B2B database and a human tele-verification delivery team. US HQ in Dallas, delivery operations in Pune.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Quore B2B - Lead Fulfillment Partner  ·  v2
+   ============================================================ */
+:root {
+  --ink:#0A1522; --ink-1:#0D1C2E; --ink-2:#123049;
+  --slate:#45596E; --slate-2:#64788D; --mist:#D6E0EA;
+  --line:#E8EEF4; --line-2:#EEF3F8; --paper:#F3F7FB; --white:#FFFFFF;
+  --signal:#14C8B4; --signal-2:#5EEAD4; --signal-d:#0B9A8B;
+  --signal-t:rgba(20,200,180,0.10); --signal-g:rgba(20,200,180,0.35); --amber:#F0B24A;
+  --shadow-sm:0 1px 2px rgba(10,21,34,.05),0 4px 14px rgba(10,21,34,.05);
+  --shadow:0 10px 30px rgba(10,21,34,.08),0 2px 8px rgba(10,21,34,.04);
+  --shadow-lg:0 30px 70px rgba(10,21,34,.16);
+  --r:16px; --r-lg:22px; --r-sm:10px; --maxw:1200px;
+  --ease:cubic-bezier(.22,.61,.36,1); --ease-2:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip;overflow-y:auto;max-width:100%;width:100%}
+body{margin:0;overflow-x:hidden;overflow-x:clip;overflow-y:auto;overscroll-behavior-x:none;max-width:100%;width:100%;position:relative;font-family:"Inter",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--white);line-height:1.62;font-size:17px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.site{width:100%;max-width:100%;overflow-x:hidden;overflow-x:clip}
+h1,h2,h3,h4{font-family:"Space Grotesk","Inter",sans-serif;font-weight:600;line-height:1.04;letter-spacing:-0.03em;margin:0;color:var(--ink)}
+p{margin:0 0 1em;color:var(--slate)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::selection{background:var(--signal-g);color:var(--ink)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--signal-d);font-weight:500;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:linear-gradient(90deg,var(--signal),transparent);display:inline-block}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease-2),transform .7s var(--ease-2)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-d="1"]{transition-delay:.08s}.reveal[data-d="2"]{transition-delay:.16s}.reveal[data-d="3"]{transition-delay:.24s}.reveal[data-d="4"]{transition-delay:.32s}.reveal[data-d="5"]{transition-delay:.4s}.reveal[data-d="6"]{transition-delay:.48s}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:"Space Grotesk",sans-serif;font-weight:500;font-size:15px;padding:14px 24px;border-radius:11px;cursor:pointer;border:1px solid transparent;transition:transform .2s var(--ease),background .2s,box-shadow .25s,border-color .2s;position:relative}
+.btn-primary{background:var(--signal);color:#04302B;box-shadow:0 8px 24px rgba(20,200,180,.28)}
+.btn-primary:hover{background:var(--signal-2);transform:translateY(-2px);box-shadow:0 12px 30px rgba(20,200,180,.4)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--mist)}
+.btn-ghost:hover{border-color:var(--slate);transform:translateY(-2px)}
+.btn-light{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.2);backdrop-filter:blur(6px)}
+.btn-light:hover{background:rgba(255,255,255,.16);transform:translateY(-2px);border-color:rgba(255,255,255,.34)}
+.btn .arw{transition:transform .22s var(--ease)}
+.btn:hover .arw{transform:translateX(4px)}
+.nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:84px;min-width:0;gap:16px}
+body{padding-top:84px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand-mark{height:58px;width:auto;border-radius:10px;display:block;flex-shrink:0}
+.brand-word{height:54px;width:auto;display:block;flex-shrink:0;max-width:240px;object-fit:contain;object-position:left center}
+.footer .brand-mark{height:36px}
+.footer .brand-word{height:32px;max-width:150px}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{font-size:15px;color:var(--slate);font-weight:500;transition:color .15s;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--signal);transition:width .25s var(--ease)}
+.nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--ink)}
+.nav-links a:hover::after,.nav-links a[aria-current="page"]::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.menu-btn span{display:block;width:22px;height:2px;background:var(--ink);margin:4px 0;transition:.2s}
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(120% 90% at 70% 0%,#000 30%,transparent 78%);mask-image:radial-gradient(120% 90% at 70% 0%,#000 30%,transparent 78%);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(720px 460px at 84% -12%,rgba(20,200,180,.26),transparent 66%),radial-gradient(560px 460px at 2% 116%,rgba(20,200,180,.12),transparent 68%);pointer-events:none}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center;padding:90px 0 96px}
+.hero h1{color:#fff;font-size:clamp(38px,5.6vw,66px);letter-spacing:-0.035em}
+.hero h1 .hi{background:linear-gradient(120deg,var(--signal-2),var(--signal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:#AFC0D0;font-size:19.5px;max-width:35ch;margin:24px 0 32px}
+.hero .eyebrow{color:var(--signal-2)}
+.hero .eyebrow::before{background:linear-gradient(90deg,var(--signal-2),transparent)}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin-top:30px;font-size:13.5px;color:#8397A9;display:flex;gap:20px;flex-wrap:wrap}
+.hero-note span{display:flex;align-items:center;gap:8px}
+.hero-note .dot{width:6px;height:6px;border-radius:50%;background:var(--signal);box-shadow:0 0 10px var(--signal)}
+.pipe{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.pipe::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--signal),transparent)}
+.pipe-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.pipe-h .t{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8397A9}
+.pipe-h .live{display:flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--signal)}
+.pipe-h .live b{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 8px var(--signal);animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.8)}}
+.stage{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:14px;padding:15px 0;position:relative;opacity:0;transform:translateX(10px);animation:stageIn .6s var(--ease-2) forwards}
+.stage+.stage::before{content:"";position:absolute;left:14px;top:-10px;width:1.5px;height:20px;background:linear-gradient(180deg,var(--signal-g),transparent)}
+.stage:nth-child(2){animation-delay:.15s}.stage:nth-child(3){animation-delay:.3s}.stage:nth-child(4){animation-delay:.45s}.stage:nth-child(5){animation-delay:.6s}.stage:nth-child(6){animation-delay:.75s}
+@keyframes stageIn{to{opacity:1;transform:none}}
+.stage .n{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Mono",monospace;font-size:12px;color:#7E92A6;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+.stage .lab{color:#EAF1F6;font-weight:500;font-size:15px}
+.stage .lab small{display:block;color:#7E92A6;font-weight:400;font-size:12px;font-family:"IBM Plex Mono",monospace;margin-top:3px;letter-spacing:.02em}
+.stage .val{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:#9FB2C4;background:rgba(255,255,255,.05);padding:5px 9px;border-radius:6px;border:1px solid rgba(255,255,255,.08)}
+.stage .val.ok{color:var(--signal);border-color:rgba(20,200,180,.3);background:var(--signal-t)}
+.stage.final .n{background:var(--signal);color:#04302B;border-color:transparent;box-shadow:0 0 18px var(--signal-g)}
+.stage.final .lab{color:#fff;font-weight:600}
+.strip{border-top:1px solid rgba(255,255,255,.1);position:relative;z-index:2}
+.strip-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip-in .s{padding:30px 24px;border-right:1px solid rgba(255,255,255,.08);transition:background .3s}
+.strip-in .s:hover{background:rgba(255,255,255,.03)}
+.strip-in .s:last-child{border-right:none}
+.strip-in .k{font-family:"Space Grotesk",sans-serif;font-size:34px;font-weight:600;color:#fff;letter-spacing:-.03em}
+.strip-in .k .u{color:var(--signal);font-size:22px}
+.strip-in .l{font-size:13px;color:#8397A9;margin-top:4px}
+.section{padding:100px 0}
+.section.paper{background:var(--paper)}
+.section.ink{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.section.ink::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(100% 80% at 20% 0%,#000 20%,transparent 75%);mask-image:radial-gradient(100% 80% at 20% 0%,#000 20%,transparent 75%)}
+.section.ink>.wrap{position:relative;z-index:2}
+.section.ink h2,.section.ink h3,.section.ink h4{color:#fff}
+.section.ink p{color:#AFC0D0}
+.sec-head{max-width:660px;margin-bottom:56px}
+.sec-head.center{margin:0 auto 60px;text-align:center}
+.sec-head h2{font-size:clamp(29px,3.8vw,44px);margin:17px 0 16px}
+.sec-head p{font-size:18.5px}
+.grid{display:grid;gap:20px}
+.grid.c2{grid-template-columns:repeat(2,1fr)}
+.grid.c3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:transform .28s var(--ease-2),box-shadow .28s,border-color .2s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--signal),var(--signal-2));transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease-2)}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.card:hover::before{transform:scaleX(1)}
+.card .ic{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--signal-t),rgba(20,200,180,.04));color:var(--signal-d);display:flex;align-items:center;justify-content:center;margin-bottom:20px;border:1px solid rgba(20,200,180,.16)}
+.card .ic svg{width:22px;height:22px}
+.card h3{font-size:20px;margin-bottom:10px;letter-spacing:-0.02em}
+.card p{font-size:14.5px;margin:0}
+.card .tag{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--signal-d);display:block;margin-bottom:13px}
+.card ul{margin:16px 0 0;padding:0;list-style:none}
+.card ul li{font-size:13.5px;color:var(--slate);padding:8px 0 8px 24px;position:relative;border-top:1px solid var(--line-2)}
+.card ul li:first-child{border-top:none}
+.card ul li::before{content:"✓";position:absolute;left:0;color:var(--signal-d);font-weight:700;font-size:12px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:62px;align-items:center}
+.split.rev .txt{order:2}
+.feat-list{list-style:none;margin:28px 0 0;padding:0}
+.feat-list li{display:grid;grid-template-columns:34px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.section.ink .feat-list li{border-top-color:rgba(255,255,255,.12)}
+.feat-list .fi{width:34px;height:34px;border-radius:9px;background:var(--signal-t);color:var(--signal-d);display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;border:1px solid rgba(20,200,180,.18)}
+.section.ink .feat-list .fi{background:rgba(20,200,180,.12)}
+.feat-list h4{font-size:16px;margin-bottom:4px;letter-spacing:-0.01em}
+.feat-list p{font-size:14px;margin:0}
+.panel{background:linear-gradient(180deg,var(--ink-1),var(--ink));border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:32px;color:#fff;box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.panel::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--signal-g),transparent)}
+.panel.on-paper{background:linear-gradient(180deg,var(--ink-1),var(--ink))}
+.spec-row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 0;border-bottom:1px dashed rgba(255,255,255,.12);font-size:14px}
+.spec-row:last-child{border-bottom:none}
+.spec-row .lab{color:#AFC0D0}
+.spec-row .v{font-family:"IBM Plex Mono",monospace;color:#fff;font-size:13px;text-align:right}
+.spec-row .v.ok{color:var(--signal)}
+.steps{display:grid;gap:0}
+.step{display:grid;grid-template-columns:108px 1fr;gap:30px;padding:30px 0;border-top:1px solid var(--line);transition:padding-left .3s var(--ease)}
+.step:hover{padding-left:8px}
+.step .num{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--signal-d);padding-top:6px;letter-spacing:.06em}
+.step h3{font-size:21px;margin-bottom:9px;letter-spacing:-0.02em}
+.step p{font-size:15px;margin:0}
+.compliance{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.comp-item{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:transform .25s var(--ease-2),box-shadow .25s}
+.comp-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+.comp-item .badge{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--signal-d);letter-spacing:.1em;background:var(--signal-t);padding:4px 8px;border-radius:5px}
+.comp-item h4{font-size:15.5px;margin:14px 0 7px;letter-spacing:-0.01em}
+.comp-item p{font-size:13px;margin:0}
+.whom{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.whom .p{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:11px 20px;font-size:14.5px;font-weight:500;color:var(--ink);transition:border-color .2s,transform .2s}
+.whom .p:hover{border-color:var(--signal);transform:translateY(-2px)}
+.whom .p b{color:var(--signal-d);font-family:"IBM Plex Mono",monospace;font-size:12px;margin-right:7px}
+.cta-band{background:linear-gradient(160deg,var(--ink-1),var(--ink));color:#fff;border-radius:26px;padding:68px 56px;text-align:center;position:relative;overflow:hidden;box-shadow:var(--shadow-lg)}
+.cta-band::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:radial-gradient(80% 100% at 50% 0%,#000,transparent 70%);mask-image:radial-gradient(80% 100% at 50% 0%,#000,transparent 70%)}
+.cta-band::after{content:"";position:absolute;inset:0;background:radial-gradient(560px 320px at 50% -30%,rgba(20,200,180,.28),transparent 68%)}
+.cta-band>*{position:relative;z-index:2}
+.cta-band h2{color:#fff;font-size:clamp(28px,3.8vw,42px)}
+.cta-band p{color:#AFC0D0;max-width:50ch;margin:16px auto 32px}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.form-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px;box-shadow:var(--shadow)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:600;color:var(--ink)}
+.field label .req{color:var(--signal-d)}
+.field input,.field select,.field textarea{font-family:inherit;font-size:16px;width:100%;max-width:100%;padding:13px 15px;border:1px solid var(--mist);border-radius:10px;background:var(--paper);color:var(--ink);transition:border-color .15s,box-shadow .15s,background .15s}
+.field input::placeholder,.field textarea::placeholder{color:#9DB0C2}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--signal);background:#fff;box-shadow:0 0 0 4px var(--signal-t)}
+.field textarea{resize:vertical;min-height:118px}
+.form-note{font-size:12.5px;color:var(--slate-2);margin-top:6px}
+.footer{background:var(--ink);color:#AFC0D0;padding:70px 0 32px;position:relative;overflow:hidden}
+.footer::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(80% 100% at 90% 0%,#000,transparent 70%);mask-image:radial-gradient(80% 100% at 90% 0%,#000,transparent 70%)}
+.footer>.wrap{position:relative;z-index:2}
+.footer h4{color:#fff;font-size:12px;font-family:"IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;font-weight:500}
+.footer-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.5fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer .brand{color:#fff;margin-bottom:16px;align-items:baseline;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.02em;gap:4px}
+.footer .brand .q{color:var(--signal)}
+.footer p{font-size:14px;color:#8397A9;max-width:34ch}
+.footer ul{list-style:none;padding:0;margin:0}
+.footer ul li{margin-bottom:11px}
+.footer ul li a{font-size:14px;color:#AFC0D0;transition:color .15s,padding-left .15s}
+.footer ul li a:hover{color:var(--signal);padding-left:4px}
+.footer .addr{font-size:13px;color:#8397A9;line-height:1.75}
+.footer .addr b{color:#C9D6E1;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em}
+.footer-btm{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:13px;color:#647889;flex-wrap:wrap;gap:10px}
+.footer-btm a{color:#8397A9;transition:color .15s}
+.footer-btm a:hover{color:var(--signal)}
+.footer-legal{display:flex;flex-wrap:wrap;gap:8px 18px}
+@media (max-width:940px){
+html,body{overflow-x:hidden !important;overflow-x:clip !important;overflow-y:auto;max-width:100% !important;width:100%;overscroll-behavior-x:none;touch-action:pan-y}
+.site{overflow-x:hidden;overflow-x:clip;max-width:100%}
+.nav{max-width:100%;left:0;right:0;width:100%}
+.pipe,.panel,.cta-band,.card,.comp-item,.form-card{box-shadow:none}
+.stage{transform:none !important;animation:none;opacity:1}
+.js .reveal{transform:none}
+.nav,.hero,.section,.footer,.wrap,.hero-in,.split,.grid,.panel,.pipe,.cta-band{max-width:100%}
+.nav .brand{min-width:0;overflow:hidden}
+h1,h2,h3,p,li,.addr,.spec-row .v{overflow-wrap:anywhere;word-break:break-word}
+.stage{grid-template-columns:28px minmax(0,1fr);gap:10px}
+.stage .val{justify-self:start;max-width:100%}
+.spec-row{flex-wrap:wrap}
+.wrap{padding:0 16px}
+.nav-in{height:68px}
+body{padding-top:68px}
+.brand-mark{height:46px}
+.brand-word{height:36px;max-width:min(120px,30vw)}
+.nav-cta .btn{display:none}
+.hero-in,.split,.split.rev .txt{grid-template-columns:1fr;order:0}
+.split{gap:20px}
+.grid.c3,.grid.c2,.strip-in,.compliance,.form-grid{grid-template-columns:1fr}
+.strip-in .s{border-right:none;border-bottom:1px solid rgba(255,255,255,.08);padding:16px 4px}
+.nav-links{display:none}.menu-btn{display:block}
+.nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:#fff;padding:8px 16px 16px;gap:0;border-bottom:1px solid var(--line);box-shadow:var(--shadow);z-index:70}
+.nav-links.open a{padding:13px 6px;font-size:16px}
+.nav-links.open a::after{display:none}
+.cta-band{padding:28px 18px;border-radius:18px}
+.section{padding:36px 0}
+.sec-head{margin-bottom:24px;max-width:none}
+.sec-head.center{margin:0 auto 24px}
+.sec-head h2{margin:10px 0 10px}
+.sec-head p{font-size:16px}
+.hero-in{padding:32px 0 28px !important;gap:24px}
+.hero > .wrap{padding-top:32px !important;padding-bottom:28px !important}
+.hero p.lead{font-size:16px;margin:12px 0 18px;max-width:none}
+.hero-actions,.cta-actions{gap:10px}
+.hero-actions .btn,.cta-actions .btn{flex:1 1 100%;justify-content:center}
+.card{padding:20px}
+.panel,.form-card{padding:18px}
+.footer{padding:40px 0 calc(28px + env(safe-area-inset-bottom,0px))}
+.footer>.wrap{padding-left:20px;padding-right:20px}
+.footer .brand{overflow:visible;white-space:normal;margin-bottom:10px;font-size:20px}
+.footer p{max-width:none;margin:0}
+.footer h4{margin-bottom:12px}
+.footer ul li{margin-bottom:6px}
+.footer ul li a{display:inline-block;padding:6px 0}
+.footer ul li a:hover{padding-left:0}
+.footer .addr,.footer p,.footer li{overflow-wrap:break-word;word-break:normal}
+.footer-grid{grid-template-columns:1fr 1fr;gap:28px 20px;padding-bottom:28px}
+.footer-grid>:first-child,.footer-grid>:last-child{grid-column:1/-1}
+.footer-btm{flex-direction:column;align-items:flex-start;gap:14px;padding-top:20px}
+.footer-legal{display:flex;flex-wrap:wrap;gap:8px 16px}
+.step{grid-template-columns:1fr;gap:6px;padding:16px 0}
+.step:hover{padding-left:0}
+.feat-list{margin:16px 0 0}
+.feat-list li{padding:12px 0;gap:12px}
+.whom{gap:8px}
+.whom .p{padding:8px 12px;font-size:13px}
+.grid{gap:14px}
+.compliance{gap:12px}
+}
+@media (max-width:600px){
+body{font-size:15.5px}
+.section{padding:28px 0}
+.hero-in{padding:24px 0 22px !important;gap:20px}
+.hero > .wrap{padding-top:24px !important;padding-bottom:20px !important}
+.cta-band{padding:22px 16px}
+.panel,.form-card,.card{padding:16px}
+.strip-in .k{font-size:26px}
+.sec-head h2{font-size:clamp(24px,7vw,32px)}
+.sec-head p{font-size:15px}
+.cta-band h2{font-size:clamp(22px,6.5vw,32px)}
+.cta-band p{margin:12px auto 20px}
+.form-grid{gap:12px}
+.footer-btm{flex-direction:column;align-items:flex-start;gap:8px}
+.footer-grid{grid-template-columns:1fr}
+.hero-note{margin-top:16px;gap:10px 14px;font-size:12.5px}
+}
+@media (prefers-reduced-motion:reduce){*,.stage,.reveal{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;scroll-behavior:auto}}
+
+</style>
 </head>
-
 <body>
-    <div id="content">
 
-    <footer id="footer">
-        <div id="contact">
-        </div>
-        <div id="social-icons">
-            <a href="https://www.linkedin.com/company/quoreb2bmarketing/" title="Linkdin"><i class="fa fa-linkedin"></i></a>
-        </div>
-    </footer>
-
-
-    <nav id="kazim" class="navbar">
-        <div class="nav-left">
-            <a href="index" class="logo">
-                <img src="image/ICONH.jpg" alt="gafru" class="logo-circle" />
-                <img src="image/QUORE.png" alt="gafru" class="gafru-circle" />
-            </a>
-        </div>
-
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <div class="nav-links" id="navLinks">
-            <a href="/index">HOME</a>
-            <a href="/about" class="active">ABOUT</a>
-            <li class="r-dropdown">
-                <a href="/service" class="dropdown-link">SERVICE</a>
-                <span class="dropdown-arrow">&#9662;</span>
-                <div class="r-dropdown-content">
-                  <div class="dropdown-sections-container">
-                    <div class="dropdown-section">
-                      <h4>SERVICES</h4>
-                      <a href="/pages/displayAdvertisement">Display Advertisement</a>
-                      <a href="/pages/Account-Based Marketing">Account-Based Marketing</a>
-                      <a href="/pages/Lead Generation">Lead Generation</a>
-                      <a href="/pages/Data Solutions">Data Solutions</a>
-                      <a href="/pages/webdesign">Web Design</a>
-                    </div>
-                    <div class="dropdown-section">
-                      <h4>SOLUTIONS</h4>
-                      <a href="/pages/contentsyndication">Content Syndication</a>
-                      <a href="/pages/sql">Sales Qualified Leads</a>
-                      <a href="/pages/intentLeadss">Intent Leads</a>
-                      <a href="/pages/emailMarketing">Email Marketing</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              
-              <!-- SOLUTION Dropdown (same content as SERVICE) -->
-              <li class="r-dropdown">
-                <a href="/solutions" class="dropdown-link">SOLUTION</a>
-                <span class="dropdown-arrow">&#9662;</span>
-                <div class="r-dropdown-content">
-                  <div class="dropdown-sections-container">
-                    <div class="dropdown-section">
-                      <h4>SERVICES</h4>
-                      <a href="/pages/displayAdvertisement">Display Advertisement</a>
-                      <a href="/pages/Account-Based Marketing">Account-Based Marketing</a>
-                      <a href="/pages/Lead-Generation">Lead Generation</a>
-                      <a href="/pages/Data Solutions">Data Solutions</a>
-                      <a href="/pages/webdesign">Web Design</a>
-                    </div>
-                    <div class="dropdown-section">
-                      <h4>SOLUTIONS</h4>
-                      <a href="/pages/contentsyndication">Content Syndication</a>
-                      <a href="/pages/sql">Sales Qualified Leads</a>
-                      <a href="/pages/intentLeadss">Intent Leads</a>
-                      <a href="/pages/emailMarketing">Email Marketing</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            <a href='/contact'>CONTACT</a>
-        </div>
-
-      
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="brand"><img src="image/ICON2.png" alt="" class="brand-mark"><img src="image/QUORE-logo.png" alt="Quore B2B" class="brand-word"></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="capabilities.html">Capabilities</a>
+      <a href="index.html#how">How it works</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-
-
-
-    <div class="r-hero">
-        <div class="r-hero-content">
-            <h1>We are a creative<br>B2B <span>Marketing Solutions Company</span></h1>
-            <div class=" r-about-underline">
-                <div class="r-line1"></div>
-                <div class="r-line2"></div>
-            </div>
-            <div class="r-about-para">
-                <p>Welcome to Quore B2B Marketing, where our passion for excellence drives us to deliver top-tier marketing solutions for businesses across various industries. With a focus on innovation, customer-centric strategies, and measurable results, we are committed to empowering our clients growth and success.</p>
-                <a href="#dis-section" class="r-read-more" onclick="smoothScroll(event)"><span>READ MORE</span></a>
-            </div>
-            <!-- <a href="#" class="r-read-more"><span>READ MORE</span></a> -->
-        </div>
-        <div class="r-hero-image">
-            <img src="https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/08/woman-photographer-drinking-coffee-and-working-PJNBP6U-768x566.jpg"
-                alt="Designer working">
-        </div>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Request capacity <span class="arw">→</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-
-
-    <div class="r-vision">
-      <div class="riya-try1">
-        <div class="r-v">
-            <p>Our Visions</p>
-        </div>
-
-        <div class="r-underline2">
-            <div class="r-white-line1"></div>
-            <div class="r-white-line2"></div>
-        </div>
-      </div>
-      
-      <div class="riya-try2">
-        <div class="r-features-section">
-            <div class="r-feature">
-                <div class="r-icon"><i class="fas fa-rocket"></i></div>
-                <h3>Our Mission
-                </h3>
-                <p>At Quore B2B Marketing, our mission is to revolutionize the B2B marketing landscape through forward-thinking strategies, cutting-edge technology, and a deep understanding of our clients' unique needs and aspirations.
-                </p>
-                <p>We strive to be the trusted partner that propels businesses towards sustainable growth and prosperity.</p>
-            </div>
-
-            <div class="r-feature">
-                <div class="r-icon"><i class="fas fa-database"></i></div>
-                <h3>Our Approach
-                </h3>
-                <p>We believe in the power of data-driven insights, creative ingenuity, and a relentless pursuit of excellence.
-                </p>
-                <p>Our approach is rooted in a deep understanding of B2B dynamics, enabling us to craft tailored marketing solutions that speak directly to the challenges and opportunities faced by our clients.</p>
-            </div>
-
-            <div class="r-feature">
-                <div class="r-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Our Values
-                </h3>
-                <p>Innovation: We are committed to exploring new frontiers and pushing the boundaries of B2B marketing to deliver fresh, impactful strategies.
-
-                </p>
-                <p>Collaboration: Our success is intertwined with the success of our clients. We believe in building strong, collaborative partnerships to achieve common goals.</p>
-            </div>
-
-            <div class="r-feature">
-                <div class="r-icon"><i class="fas fa-gem"></i></div>
-                <h3>Our Vision
-                </h3>
-                <p>Integrity: Trust is at the core of everything we do. We uphold the highest standards of integrity in all our interactions and strategies.
-                </p>
-                <p>Results-Driven: We are relentless in our pursuit of achieving tangible, measurable results for our clients.</p>
-            </div>
-        </div>
-      </div>
-    </div>
-    <section class="dis-intro">
-        <div class="dis-container">
-            <p class="dis-intro-text dis-animate-on-scroll">
-                At Quore B2B Marketing, we are passionate about helping businesses grow, thrive, and connect in meaningful ways. 
-                We believe that marketing is more than just a service—it's a partnership, a creative journey, and a strategic mission to drive results.
-            </p>
-        </div>
-    </section>
-
-    <section class="dis-section" id="dis-section">
-        <div class="dis-container">
-            <h2 class="dis-section-title">What We Love</h2>
-            <div class="dis-grid">
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">❤</div>
-                    <h3>Building Relationships</h3>
-                    <p>We love forging strong, lasting connections—not just between businesses and their clients, but also with our own partners. Your success is our success, and we thrive on collaboration.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">🧩</div>
-                    <h3>Solving Complex Challenges</h3>
-                    <p>B2B marketing is anything but simple, and that's what excites us! We love diving deep into your industry, understanding your unique challenges, and crafting tailored solutions that deliver real impact.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">🎨</div>
-                    <h3>Creativity Meets Strategy</h3>
-                    <p>We're passionate about blending creativity with data-driven strategies. Whether it's crafting compelling content or designing innovative campaigns, we love finding the perfect balance between art and analytics.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">📈</div>
-                    <h3>Driving Growth</h3>
-                    <p>There's nothing more rewarding than seeing our clients grow. We love being part of your journey, helping you reach new markets, generate leads, and achieve your business goals.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">🚀</div>
-                    <h3>Staying Ahead of the Curve</h3>
-                    <p>The world of B2B marketing is always evolving, and we love staying on the cutting edge. From emerging technologies to the latest trends, we're constantly learning and adapting to keep your business ahead of the competition.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">🌐</div>
-                    <h3>Global Perspective</h3>
-                    <p>We embrace a worldwide approach to marketing, understanding that each market has its unique nuances. Our global mindset allows us to craft strategies that resonate across different cultures and business landscapes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="dis-section">
-        <div class="dis-container">
-            <h2 class="dis-section-title">What We Do</h2>
-            <div class="dis-grid">
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">📊</div>
-                    <h3>Strategic Marketing Consulting</h3>
-                    <p>We work closely with you to develop a clear, actionable marketing strategy that aligns with your business objectives. From market research to competitive analysis, we lay the foundation for success.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">📝</div>
-                    <h3>Content Marketing & Storytelling</h3>
-                    <p>We create high-quality, engaging content that resonates with your audience. Whether it's blogs, whitepapers, case studies, or videos, we help you tell your story in a way that builds trust and drives action.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">📥</div>
-                    <h3>Lead Generation & Nurturing</h3>
-                    <p>We design targeted campaigns to attract and convert high-quality leads. From email marketing to account-based marketing (ABM), we ensure your pipeline is always full.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">🌐</div>
-                    <h3>Digital Marketing & SEO</h3>
-                    <p>We optimize your online presence to ensure you're visible where it matters most. Our team specializes in SEO, PPC, social media, and website optimization to drive traffic and conversions.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">🖋</div>
-                    <h3>Brand Development</h3>
-                    <p>Your brand is your identity, and we help you make it unforgettable. From logo design to messaging, we ensure your brand stands out and speaks directly to your target audience.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">📊</div>
-                    <h3>Data-Driven Analytics</h3>
-                    <p>We believe in measurable results. Our team uses advanced analytics tools to track performance, measure ROI, and refine strategies for continuous improvement.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">🎪</div>
-                    <h3>Event Marketing</h3>
-                    <p>Whether it's virtual or in-person, we help you create memorable experiences that connect you with your audience and amplify your brand.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">🤝</div>
-                    <h3>Why Choose Quore B2B Marketing?</h3>
-                    <p>We're not just another marketing agency—we're your growth partners. With a deep understanding of the B2B landscape, a passion for innovation, and a commitment to your success, we're here to help you achieve your goals and beyond.</p>
-                    <p>Let's build something extraordinary together. Contact us today to learn how Quore B2B Marketing can transform your business.</p>
-                    <p>Quore B2B Marketing: Where Strategy Meets Passion, and Results Speak Louder Than Words.</p>
-                </div>
-                <div class="dis-card dis-animate-on-scroll">
-                    <div class="dis-card-icon">🌟</div>
-                    <h3>Integrated Marketing Solutions</h3>
-                    <p>We understand that true marketing success comes from a holistic approach. Our integrated marketing solutions break down silos, ensuring that every aspect of your marketing strategy works in perfect harmony.</p>
-                    <p>From traditional channels to cutting-edge digital platforms, we create seamless, omnichannel experiences that engage your audience at every touchpoint. Our approach ensures consistent messaging, maximized reach, and a unified brand narrative.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!--
-    <div class="r-know-more">
-        <div class="r-div">
-            <p class="r-know1">Get to Know</p>
-            <p class="r-know2">our team</p>
-        </div>
-        <div class="r-underline2">
-            <div class="r-line1"></div>
-            <div class="r-line2"></div>
-        </div>
-    </div>
-
-
-    <div class="r-team-container">
-        <div class="r-item">
-            <img src="https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/08/Mask-Group-142@2x-443x424.png"
-                alt="Design 2">
-            <div class="r-overlay">
-                    <div class="r-member-name">RANDY SMITH</div>
-                    <p>Project Manager</p>
-                    <div class="r-member-opinion">
-                        Far far away, behind the word mountains, far from the countries Vokalia and Conson,
-                        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                        Semantics...
-                    </div>
-                    <div class="r-divider"></div>
-                    <div class="r-social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </div>
-            </div>
-        </div>
-
-        <div class="r-item">
-            <img src="https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/08/Mask-Group-143@2x-443x424.png"
-                alt="Design 2">
-            <div class="r-overlay">
-                <div class="r-member-name">RANDY SMITH</div>
-                <p>Project Manager</p>
-                <div class="r-member-opinion">
-                    Far far away, behind the word mountains, far from the countries Vokalia and Conson,
-                    there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                    Semantics...
-                </div>
-                <div class="r-divider"></div>
-                <div class="r-social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="r-item">
-            <img src="https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/08/Mask-Group-144@2x-443x424.png"
-                alt="Design 2">
-            <div class="r-overlay">
-                <div class="r-member-name">RANDY SMITH</div>
-                <p>Project Manager</p>
-                <div class="r-member-opinion">
-                    Far far away, behind the word mountains, far from the countries Vokalia and Conson,
-                    there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                    Semantics...
-                </div>
-                <div class="r-divider"></div>
-                <div class="r-social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="r-item">
-            <img src="https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/08/Mask-Group-146@2x-443x424.png"
-                alt="Design 2">
-            <div class="r-overlay">
-                <div class="r-member-name">RANDY SMITH</div>
-                <p>Project Manager</p>
-                <div class="r-member-opinion">
-                    Far far away, behind the word mountains, far from the countries Vokalia and Conson,
-                    there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                    Semantics...
-                </div>
-                <div class="r-divider"></div>
-                <div class="r-social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="r-item">
-            <img src="https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/08/Mask-Group-150@2x-443x424.png"
-                alt="Design 2">
-            <div class="r-overlay">
-                <div class="r-member-name">RANDY SMITH</div>
-                <p>Project Manager</p>
-                <div class="r-member-opinion">
-                    Far far away, behind the word mountains, far from the countries Vokalia and Conson,
-                    there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                    Semantics...
-                </div>
-                <div class="r-divider"></div>
-                <div class="r-social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="r-item">
-            <img src="https://demo.phlox.pro/business-2/wp-content/uploads/sites/57/2018/08/Mask-Group-145@2x-443x424.png"
-                alt="Design 2">
-            <div class="r-overlay">
-                <div class="r-member-name">RANDY SMITH</div>
-                <p>Project Manager</p>
-                <div class="r-member-opinion">
-                    Far far away, behind the word mountains, far from the countries Vokalia and Conson,
-                    there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
-                    Semantics...
-                </div>
-                <div class="r-divider"></div>
-                <div class="r-social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
-
-    <div class="r-contact-section">
-        <div class="r-contact-overlay"></div>
-        <div class="r-content">
-            <h1>PLEASE SEND US YOUR <span class="r-highlight">QUESTIONS</span> AND</h1>
-            <h1>WE CAN <span class="r-highlight">HELP</span> YOU BETTER</h1>
-            <a href="contact.html" class="r-contact-btn"><span>CONTACT US</span></a>
-        </div>
-    </div>
-    <div id="top-section">
-        <div id="box-dark" class="box">
-            <h3>Are You Ready?</h3>
-            <h2>Start a New Project</h2>
-            <form id="email-form" action="https://api.web3forms.com/submit" method="POST">
-              <div class="input-container">
-                  <input type="email" id="email-input" name="email" placeholder="Enter Your Email Address" required />
-                  <button type="submit" id="submit-text" style="background: none; border: none; color: inherit; font: inherit; cursor: pointer; padding: 0;">SUBMIT</button>
-              </div>
-              <!-- Web3Forms Required Fields -->
-              <input type="hidden" name="access_key" value="7106ba70-f32b-45ec-980b-410780296f86">
-              <input type="hidden" name="subject" value="New Project Signup">
-              <input type="hidden" name="from_name" value="Project Signup Form">
-              <input type="hidden" name="botcheck" value="">
-          </form>
-          <div id="status-message" style="margin-top: 15px; font-size: 14px;"></div>
-        </div>
-        <div id="box-light" class="box">
-            <h3>What Are You Waiting For?</h3>
-            <h2>Let's Talk About Work</h2>
-            <button id="start-button" onclick="window.location.href='contact.html#contact-form'"><span>Start Now</span></button>
-        </div>
-    </div>
-    <!-- arrow button top to bottom-->
-<div class="arrow-buttons">
-    <button id="scroll-up-btn" class="scroll-btn">
-        <i class="fa fa-arrow-up"></i>
-    </button>
-    <button id="scroll-down-btn" class="scroll-btn">
-        <i class="fa fa-arrow-down"></i>
-    </button>
   </div>
+</header>
+<div class="site">
 
-    <!-- <section class="client-section"> -->
-        <!-- <h2 class="section-title">Clients</h2>
-        <p class="subtitle"> We cater to some renowned brands</p>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap" style="padding:66px 0 60px; position:relative; z-index:2;">
+    <span class="eyebrow">About Quore B2B</span>
+    <h1 style="font-size:clamp(32px,4.6vw,50px); max-width:20ch; margin-top:14px;">A delivery operation, not another agency.</h1>
+    <p class="lead" style="max-width:54ch;">We built Quore B2B to do one thing well: fulfill the leads that demand generation teams have already committed to their clients - compliantly, verified, and on spec - so our partners can scale delivery without scaling their own operation.</p>
+  </div>
+</section>
 
-        <div class="logo-container">
-            <div class="logo-scroll">
-              
-                <div class="logo-item">
-                    <img src="image/1.jpg" alt="Client 1">
-                </div>
-                <div class="logo-item">
-                    <img src="image/2.jpg" alt="Client 2">
-                </div>
-                <div class="logo-item">
-                    <img src="image/3.jpg" alt="Client 3">
-                </div>
-                <div class="logo-item">
-                    <img src="image/4.jpg" alt="Client 4">
-                </div>
-                <div class="logo-item">
-                    <img src="image/6.jpg" alt="Client 5">
-                </div>
-                <div class="logo-item">
-                    <img src="image/7.jpg" alt="Client 6">
-                </div>
-                <div class="logo-item">
-                    <img src="image/8.jpg" alt="Client 7">
-                </div>
-                <div class="logo-item">
-                    <img src="image/9.jpg" alt="Client 8">
-                </div>
-                <div class="logo-item">
-                    <img src="image/11.jpg" alt="Client 9">
-                </div>
-                <div class="logo-item">
-                    <img src="image/12.jpg" alt="Client 10">
-                </div>
-                <div class="logo-item">
-                  <img src="image/5.jpg" alt="Client 10">
-              </div>
-              <div class="logo-item">
-                <img src="image/10.jpg" alt="Client 10">
-            </div>
-            </div>
-        </div> -->
-    </section>
-    <!-- Footer Section -->
-    <!-- Footer Section -->
-  <footer>
-    <div class="footer-container">
-        
-        <!-- Company Info -->
-        <div class="footer-section company-info">
-            <div id="dh1">
-                <img src="image/ICON.jpg" alt="Company Logo" class="dlogo1">
-            <span id="dheading">QUORE B2B MARKETING</span></div>
-            <div class="underline2">
-                <div class="line1"></div>
-                <div class="line2"></div>
+<!-- STORY -->
+<section class="section">
+  <div class="wrap split">
+    <div class="txt reveal">
+      <span class="eyebrow">What we're built on</span>
+      <h2>Nine years of B2B data, an owned audience, and a delivery team.</h2>
+      <p>Our foundation is a proprietary US B2B contact database, developed and refined over roughly nine years and activated under CAN-SPAM. It's ours - built and owned in-house, not licensed or resold - which is what lets our partners deliver from it with confidence.</p>
+      <p>Delivery runs through our Pune-based tele-verification and SDR team, who confirm every lead by phone before it ships. That combination - proprietary data plus human verification - is what lets our partners resell our fulfillment under their own name with confidence.</p>
     </div>
-            <p>At Quore B2B Marketing, we help businesses grow through strategic, creative partnerships that drive results and make them stand out in the competitive B2B landscape.</p>
-        </div>
-
-        <!-- Quick Links (Updated) -->
-        <div class="footer-section quick-links">
-            <div id="dh2">QUICK LINKS</div>
-            <div class="underline2">
-                <div class="line1"></div>
-                <div class="line2"></div>
-            </div>
-            <ul>
-                <li><a href="/careers">Careers</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/terms">Terms of use</a></li>
-                <li><a href="/privcy">Privacy & Policy</a></li>
-                <li><a href="/do not sell my info">California Do Not Sell My Info</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
-
-        <!-- Contact Details -->
-            <div class="footer-section contact">
-            <div id="dh3">CONTACT</div>
-            <div class="underline2">
-                <div class="line1"></div>
-                <div class="line2"></div>
-            </div>
-            <p> <span class="my" style="color:#00d8a6; font-size: 18px;"><b>India:</b></span>
-Omicron commerz, 8th floor Office 804, Z lane Koregaon Park Annex, Mundhwa, Pune Maharashtra 411028</p>
-<p> <span class="my" style="color:#00d8a6; font-size: 18px;"><b>USA:</b></span>
-  539 W. Commerce St #2577 Dallas,TX 75208
-</p>
-            <p>Email: contactus@quoreb2b.com</p>
-            <p>Phone:+1 332-231-0404</p>
-        </div>
-        <!-- Google Map -->
-        <div class="footer-section map2">
-            <div id="dh4">LOCATION ON MAP</div>
-            <div class="underline2">
-                <div class="line1"></div>
-                <div class="line2"></div>
-            </div>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2294415337057!2d73.856743!3d18.5204303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c08744a74c81%3A0x4cbe7e56a3d1a1a9!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1633958808463!5m2!1sen!2sin
-                "
-                width="310"
-                height="160"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
-        </div>
+    <div class="panel reveal">
+      <div class="spec-row"><span class="lab">Founded on</span><span class="v">~9 yrs B2B data</span></div>
+      <div class="spec-row"><span class="lab">Data source</span><span class="v ok">Proprietary database</span></div>
+      <div class="spec-row"><span class="lab">Verification</span><span class="v ok">Human, by phone</span></div>
+      <div class="spec-row"><span class="lab">HQ</span><span class="v">Dallas, TX</span></div>
+      <div class="spec-row"><span class="lab">Delivery ops</span><span class="v">Pune, India</span></div>
+      <div class="spec-row"><span class="lab">Model</span><span class="v">White-label supply</span></div>
     </div>
+  </div>
+</section>
+
+<!-- HOW WE'RE DIFFERENT -->
+<section class="section paper">
+  <div class="wrap">
+    <div class="sec-head reveal center">
+      <span class="eyebrow">Why partners work with us</span>
+      <h2>Built for the buy side of your business</h2>
+      <p>Everything about how we operate is designed for partners who resell fulfillment, not for end vendors.</p>
+    </div>
+    <div class="grid c3">
+      <div class="card reveal">
+        <span class="tag">White-label</span>
+        <h3>Invisible by design</h3>
+        <p>We deliver into your process under your brand. Your client sees your name, your quality, your report - never ours.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Owned supply</span>
+        <h3>Owned, not rented</h3>
+        <p>Our contact database is built and owned in-house, so you deliver from proprietary data - not a rented or resold file.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Human-verified</span>
+        <h3>Confirmed, not scored</h3>
+        <p>A live agent confirms every delivered lead. Records that don't clear your criteria are dropped before you see them.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">On spec</span>
+        <h3>Delivered to your field map</h3>
+        <p>You define the fields and filters. We match them, dedupe and suppress, and replace anything out of spec.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Predictable</span>
+        <h3>CPL, no surprises</h3>
+        <p>Cost-per-lead pricing agreed up front, so your margin is clear before a campaign goes live.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Scalable</span>
+        <h3>Capacity when you need it</h3>
+        <p>Add volume across categories without adding headcount, tooling, or compliance overhead on your side.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COVERAGE -->
+<section class="section ink">
+  <div class="wrap split">
+    <div class="txt reveal">
+      <span class="eyebrow">Category coverage</span>
+      <h2>Where our audience already lives.</h2>
+      <p>Our proprietary database spans the software categories B2B buyers actively research - so your programs run against contacts relevant to your space.</p>
+      <div class="whom" style="margin-top:22px;">
+        <div class="p" style="background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14); color:#fff;">CRM</div>
+        <div class="p" style="background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14); color:#fff;">VoIP / UCaaS</div>
+        <div class="p" style="background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14); color:#fff;">Payroll</div>
+        <div class="p" style="background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14); color:#fff;">HR</div>
+        <div class="p" style="background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14); color:#fff;">Cybersecurity</div>
+        <div class="p" style="background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14); color:#fff;">Fleet</div>
+        <div class="p" style="background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.14); color:#fff;">and more</div>
+      </div>
+    </div>
+    <div class="panel reveal">
+      <div class="pipe-h" style="margin-bottom:14px;"><span class="t">Operating footprint</span></div>
+      <div class="spec-row"><span class="lab">United States</span><span class="v">Dallas, TX - HQ</span></div>
+      <div class="spec-row"><span class="lab">India</span><span class="v">Pune - delivery &amp; verification</span></div>
+      <div class="spec-row"><span class="lab">Proprietary data</span><span class="v ok">Built &amp; owned in-house</span></div>
+      <div class="spec-row"><span class="lab">Delivery team</span><span class="v">Tele-verification &amp; SDR</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <span class="eyebrow" style="justify-content:center; color:var(--signal);">Work with us</span>
+      <h2>Add a fulfillment partner you don't have to manage.</h2>
+      <p>Bring us a program spec and we'll handle sourcing, compliance, verification, and delivery - so you can say yes to more volume without stretching your team.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary">Request delivery capacity <span class="arw">→</span></a>
+        <a href="capabilities.html" class="btn btn-light">See capabilities</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="brand"><span class="q">Quore</span> B2B</div>
+        <p>The white-label lead fulfillment partner for demand generation teams. Proprietary data, human-verified delivery, on your spec.</p>
+      </div>
+      <div><h4>Fulfillment</h4><ul>
+        <li><a href="capabilities.html#syndication">Content syndication</a></li>
+        <li><a href="capabilities.html#hql">High-quality leads</a></li>
+        <li><a href="capabilities.html#bant">BANT / tele-verified</a></li>
+        <li><a href="capabilities.html#abm">ABM list delivery</a></li>
+        <li><a href="capabilities.html#data">Verified data</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="compliance.html">Compliance</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.linkedin.com/company/quoreb2bmarketing/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+      </ul></div>
+      <div><h4>Contact</h4><div class="addr">
+        <b>USA</b><br>539 W. Commerce St #2577, Dallas, TX 75208<br><br>
+        <b>INDIA</b><br>Office 804, Omicron Commerz, Koregaon Park Annex, Mundhwa, Pune 411028<br><br>
+        <b>EMAIL</b> contactus@quoreb2b.com<br><b>PHONE</b> +1 332-231-0404
+      </div></div>
+    </div>
+    <div class="footer-btm">
+      <span>© 2026 Quore B2B Marketing. All rights reserved.</span>
+      <span class="footer-legal"><a href="https://www.linkedin.com/company/quoreb2bmarketing/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Do Not Sell My Info</a></span>
+    </div>
+  </div>
 </footer>
-
-<!-- downav-->
-  <!-- Footer-Bottom -->
-  <div id="footer-bottom">
-    <div class="dcopy"> © 2025 quoreb2b.com | All Rights Reserved.</div>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/company/quoreb2bmarketing/" title="Linkdin"><i class="fa fa-linkedin"></i></a>
-    </div>
-  </div>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    document.querySelectorAll('.dis-animate-on-scroll').forEach((el) => observer.observe(el));
-
-
-    function smoothScroll(event) {
-        event.preventDefault(); // Prevent the default anchor behavior
-        const targetId = event.currentTarget.getAttribute("href"); // Get the target ID
-        const targetElement = document.querySelector(targetId); // Find the target element
-
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: "smooth", // Enable smooth scrolling
-                block: "start" // Align to the top of the section
-            });
-        }
-    }
-</script>
-
-    <script src="script.js"></script>
-    <script src="script1.js"></script>
-    <script src="script2.js"></script>
-
 </div>
+<script>
+  const mb=document.getElementById('menuBtn'),nl=document.getElementById('navLinks');
+  mb&&mb.addEventListener('click',()=>nl.classList.toggle('open'));
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>el.classList.add('in')),1400);
+</script>
 </body>
-
 </html>
