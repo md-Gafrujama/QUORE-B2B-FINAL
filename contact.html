@@ -230,8 +230,12 @@ html,body{overflow-x:hidden !important;overflow-x:clip !important;overflow-y:aut
 .nav,.hero,.section,.footer,.wrap,.hero-in,.split,.grid,.panel,.pipe,.cta-band{max-width:100%}
 .nav .brand{min-width:0;overflow:hidden}
 h1,h2,h3,p,li,.addr,.spec-row .v{overflow-wrap:anywhere;word-break:break-word}
-.stage{grid-template-columns:28px minmax(0,1fr);gap:10px}
-.stage .val{justify-self:start;max-width:100%}
+.stage{grid-template-columns:28px minmax(0,1fr) max-content;gap:8px 8px;align-items:center}
+.stage .n{width:28px;height:28px}
+.stage+.stage::before{left:13px}
+.stage .lab{min-width:0}
+.stage .val{justify-self:end;align-self:center;white-space:nowrap;max-width:none;width:max-content;font-size:11px;padding:4px 8px}
+.pipe,.home .pipe{padding:16px 14px 12px}
 .spec-row{flex-wrap:wrap}
 .wrap{padding:0 16px}
 .nav-in{height:68px}
