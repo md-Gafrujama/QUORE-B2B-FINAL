@@ -1,4 +1,14 @@
 {
   "cleanUrls": true,
-  "trailingSlash":false
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/.well-known/(.*)\\.svg",
+      "headers": [
+        { "key": "Content-Type", "value": "image/svg+xml" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
 }
