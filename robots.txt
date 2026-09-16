@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# Favicon crawl access for Google Search
+Allow: /favicon.ico
+Allow: /favicon.png
+Allow: /favicon-48x48.png
+Allow: /apple-touch-icon.png
+Allow: /image/favicon.png
+
 Sitemap: https://www.quoreb2b.com/sitemap.xml
