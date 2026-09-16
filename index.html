@@ -183,13 +183,40 @@ body{padding-top:84px}
 .prod-row{display:grid;grid-template-columns:120px 1.3fr 1.6fr auto;gap:28px;align-items:center;padding:32px 36px;border:1px solid var(--line);border-radius:18px;background:var(--white);transition:border-color .25s,box-shadow .25s,transform .25s}
 .prod-row:first-child{border-top:1px solid var(--line)}
 .prod-row:hover{border-color:rgba(20,200,180,.35);box-shadow:0 16px 40px rgba(10,21,34,.08);transform:translateY(-2px);background:linear-gradient(90deg,rgba(20,200,180,.06),transparent 50%)}
-.how-visual{display:grid;gap:20px;position:sticky;top:96px;align-self:start}
-.how-visual-frame{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(10,21,34,.1);background:var(--ink);line-height:0}
-.how-visual-frame img{width:100%;height:auto;display:block;object-fit:contain;object-position:center}
-.how-visual-cap{padding:14px 16px;background:var(--white);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.35}
-.how-visual-cap .t{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal-d)}
-.how-visual-cap .v{font-size:12.5px;color:var(--slate);font-weight:500;text-align:right}
 .model-visual,.fulfill-visual{align-self:start}
+.b2b-workflow,.product-suite{position:relative;border:1px solid var(--line);border-radius:20px;padding:36px 28px 32px;background:linear-gradient(180deg,#E4EBF2 0%,var(--paper) 45%,#E8EEF4 100%);box-shadow:0 24px 60px rgba(10,21,34,.08);overflow:hidden}
+.b2b-workflow::before,.product-suite::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(10,21,34,.05) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+.wf-head,.ps-head{text-align:center;margin-bottom:28px;position:relative;z-index:1}
+.wf-kicker,.ps-kicker{display:block;font-family:"Space Grotesk",sans-serif;font-size:clamp(17px,2.2vw,26px);font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);line-height:1.2}
+.wf-sub,.ps-sub{display:block;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate-2);margin-top:10px;padding-top:12px;border-top:1px solid rgba(10,21,34,.12)}
+.wf-track{display:flex;align-items:stretch;gap:0;position:relative;z-index:1}
+.wf-card{flex:1;min-width:0;background:var(--ink);border-radius:4px;overflow:hidden;box-shadow:0 14px 36px rgba(10,21,34,.22);display:flex;flex-direction:column}
+.wf-card .bar{height:5px;background:var(--signal);flex-shrink:0}
+.wf-card .body{padding:18px 14px 20px;flex:1;display:flex;flex-direction:column}
+.wf-card .num{font-family:"Space Grotesk",sans-serif;font-size:clamp(26px,2.8vw,34px);font-weight:700;color:#5EC8E8;line-height:1;letter-spacing:-.02em}
+.wf-card h4{font-family:"Space Grotesk",sans-serif;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#fff;margin:10px 0 8px;line-height:1.3}
+.wf-card p{font-size:11.5px;line-height:1.55;color:#AFC0D0;margin:0}
+.wf-arrow{display:flex;align-items:center;justify-content:center;width:24px;flex-shrink:0;color:var(--signal);font-size:16px;font-weight:600;padding:0 1px;line-height:1}
+.flow-detail-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:36px}
+@media (max-width:1100px) and (min-width:941px){
+.wf-track{overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.wf-card{min-width:128px}
+.flow-detail-grid{grid-template-columns:repeat(2,1fr)}
+.flow-detail-cell:last-child{grid-column:1/-1}
+}
+.flow-detail-cell{padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:var(--white)}
+.flow-detail-cell .meta{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--signal-d);margin-bottom:8px;display:block}
+.flow-detail-cell h3{font-size:15px;margin:0 0 6px;letter-spacing:-.01em}
+.flow-detail-cell p{font-size:13px;margin:0;line-height:1.65;color:var(--slate-2)}
+.product-suite{padding:28px 22px 24px}
+.ps-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;position:relative;z-index:1}
+.ps-card{background:var(--ink);border-radius:4px;overflow:hidden;box-shadow:0 10px 28px rgba(10,21,34,.18);display:flex;flex-direction:column;min-height:118px}
+.ps-card .bar{height:4px;background:var(--signal);flex-shrink:0}
+.ps-card .body{padding:14px 12px 16px;flex:1;display:flex;flex-direction:column}
+.ps-card .num{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#5EC8E8;margin-bottom:6px}
+.ps-card h4{font-family:"Space Grotesk",sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin:0 0 6px;line-height:1.25}
+.ps-card p{font-size:10.5px;line-height:1.5;color:#AFC0D0;margin:0}
+.fulfill-visual{position:sticky;top:96px}
 .flow-diagram{border-radius:20px;padding:28px 22px 24px;box-shadow:0 30px 70px rgba(10,21,34,.18)}
 .trust-strip{border-radius:24px;box-shadow:0 20px 50px rgba(10,21,34,.06)}
 .partner-list{border-radius:20px;box-shadow:0 16px 40px rgba(10,21,34,.05)}
@@ -440,7 +467,12 @@ body{padding-top:72px}
 .split,.flow-split,.model-split,.data-split,.spec-band,.fulfill-split{gap:24px}
 .hero-proof{grid-template-columns:1fr;gap:8px;margin-top:20px}
 .hero-steps{grid-template-columns:repeat(2,1fr)}
-.fulfill-visual,.how-visual{position:static;top:auto}
+.fulfill-visual{position:static;top:auto}
+.wf-track{flex-direction:column;gap:10px}
+.wf-arrow{width:auto;height:20px;transform:rotate(90deg);padding:4px 0}
+.flow-detail-grid{grid-template-columns:1fr;gap:12px;margin-top:24px}
+.ps-grid{grid-template-columns:1fr}
+.b2b-workflow,.product-suite{padding:24px 16px 20px;border-radius:16px}
 .prod-row{grid-template-columns:1fr;gap:10px;padding:18px 16px}
 .prod-row .points{justify-content:flex-start}
 .trust-strip{grid-template-columns:1fr}
@@ -654,11 +686,18 @@ body{font-size:15.5px}
       </div>
     </div>
     <div class="fulfill-visual reveal" data-d="2">
-      <div class="fulfill-visual-frame">
-        <img src="image/b2b-fulfill-products.png" alt="B2B lead products: content syndication, HQL qualification, BANT tele-verification, and ABM list delivery" width="900" height="1200" loading="lazy">
-        <div class="fulfill-visual-cap">
-          <span class="t">Product suite</span>
-          <span class="v">CS · HQL · BANT · ABM · Intent · Data</span>
+      <div class="product-suite" aria-label="B2B lead product suite">
+        <div class="ps-head">
+          <span class="ps-kicker">B2B product suite</span>
+          <span class="ps-sub">Six lead types · one fulfillment partner</span>
+        </div>
+        <div class="ps-grid">
+          <div class="ps-card"><span class="bar"></span><div class="body"><span class="num">CS · ST/DT</span><h4>Content syndication</h4><p>Whitepaper · Webinar · Report · Guide</p></div></div>
+          <div class="ps-card"><span class="bar"></span><div class="body"><span class="num">HQL</span><h4>High-quality leads</h4><p>3–5 qualifiers · Asset confirmed</p></div></div>
+          <div class="ps-card"><span class="bar"></span><div class="body"><span class="num">BANT</span><h4>Tele-verified BANT</h4><p>Live agent · Custom script · Hand-off notes</p></div></div>
+          <div class="ps-card"><span class="bar"></span><div class="body"><span class="num">ABM</span><h4>ABM list delivery</h4><p>Named accounts · Title match · Reporting</p></div></div>
+          <div class="ps-card"><span class="bar"></span><div class="body"><span class="num">INTENT</span><h4>Intent-qualified leads</h4><p>Topic overlay · In-market · Any product</p></div></div>
+          <div class="ps-card"><span class="bar"></span><div class="body"><span class="num">DATA</span><h4>Verified data &amp; list build</h4><p>Firmographic · Human verify · Dedupe</p></div></div>
         </div>
       </div>
     </div>
@@ -691,133 +730,91 @@ body{font-size:15.5px}
 </section>
 
 <section class="section paper" id="how">
-  <div class="wrap flow-split">
-    <div class="flow-text reveal">
-      <div class="sec-head">
-        <span class="eyebrow">How it works</span>
-        <h2>From order to delivery — a fixed pipeline, not guesswork</h2>
-        <p>Every program runs through the same controlled flow: your spec defines the inputs, our proprietary database and verification stack process each record, and only leads that pass the quality gate ship to you.</p>
+  <div class="wrap">
+    <div class="sec-head wide center reveal">
+      <span class="section-label center">How it works</span>
+      <h2 class="section-title" style="max-width:none;margin:0 auto;">From order to delivery — a fixed pipeline, not guesswork</h2>
+      <p class="section-lead center">Every program runs through the same controlled flow: your spec defines the inputs, our proprietary database and verification stack process each record, and only leads that pass the quality gate ship to you.</p>
+    </div>
+
+    <div class="b2b-workflow reveal" data-d="1" aria-label="B2B lead generation workflow">
+      <div class="wf-head">
+        <span class="wf-kicker">B2B lead generation workflow</span>
+        <span class="wf-sub">A structured process from order to delivery</span>
       </div>
-      <div class="flow-steps">
-        <div class="flow-step">
-          <span class="idx">01</span>
-          <div>
-            <span class="meta">Input · S(spec)</span>
-            <h3>Define the order</h3>
-            <p>You set asset, geo, titles, volume, custom qualifiers, and the exact field map. We confirm feasibility and a per-lead rate before activation.</p>
+      <div class="wf-track">
+        <div class="wf-card">
+          <span class="bar"></span>
+          <div class="body">
+            <span class="num">01</span>
+            <h4>Define</h4>
+            <p>Set asset, geo, titles, volume, and field map.</p>
           </div>
         </div>
-        <div class="flow-step">
-          <span class="idx">02</span>
-          <div>
-            <span class="meta">Source · D → A → E</span>
-            <h3>Source, activate &amp; engage</h3>
-            <p>We pull from our proprietary B2B database, activate outreach under CAN-SPAM, and engage contacts against your content or qualification script.</p>
+        <span class="wf-arrow" aria-hidden="true">→</span>
+        <div class="wf-card">
+          <span class="bar"></span>
+          <div class="body">
+            <span class="num">02</span>
+            <h4>Source</h4>
+            <p>Pull from proprietary database and activate outreach.</p>
           </div>
         </div>
-        <div class="flow-step">
-          <span class="idx">03</span>
-          <div>
-            <span class="meta">Filter · f(ICP)</span>
-            <h3>Profile &amp; match</h3>
-            <p>Firmographic, title, and account filters are applied. Only contacts that match your ICP and program rules move forward.</p>
+        <span class="wf-arrow" aria-hidden="true">→</span>
+        <div class="wf-card">
+          <span class="bar"></span>
+          <div class="body">
+            <span class="num">03</span>
+            <h4>Match</h4>
+            <p>Apply ICP, title, and account filters on every contact.</p>
           </div>
         </div>
-        <div class="flow-step">
-          <span class="idx">04</span>
-          <div>
-            <span class="meta">Verify · V(lead)</span>
-            <h3>Human tele-verification</h3>
-            <p>Our Pune delivery team calls to confirm identity, interest, and — where required — BANT plus your custom qualifying questions. Failures are dropped.</p>
+        <span class="wf-arrow" aria-hidden="true">→</span>
+        <div class="wf-card">
+          <span class="bar"></span>
+          <div class="body">
+            <span class="num">04</span>
+            <h4>Verify</h4>
+            <p>Human tele-check confirms interest, BANT, and qualifiers.</p>
           </div>
         </div>
-        <div class="flow-step">
-          <span class="idx">05</span>
-          <div>
-            <span class="meta">Output · Q(spec) → L</span>
-            <h3>QA gate &amp; delivery</h3>
-            <p>Dedupe, suppression, and spec validation run on every batch. Out-of-spec records are replaced. Clean leads ship in your format, on your cadence.</p>
+        <span class="wf-arrow" aria-hidden="true">→</span>
+        <div class="wf-card">
+          <span class="bar"></span>
+          <div class="body">
+            <span class="num">05</span>
+            <h4>Deliver</h4>
+            <p>QA gate, dedupe, and ship clean leads to your spec.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="how-visual reveal" data-d="2">
-      <div class="how-visual-frame">
-        <img src="image/b2b-lead-gen-process.png" alt="B2B lead generation process: order brief, database sourcing, campaign engagement, tele-verification, and lead delivery" width="1400" height="788" loading="lazy">
-        <div class="how-visual-cap">
-          <span class="t">How B2B lead gen works</span>
-          <span class="v">Order → Source → Engage → Verify → Deliver</span>
-        </div>
+    <div class="flow-detail-grid reveal">
+      <div class="flow-detail-cell">
+        <span class="meta">Input · S(spec)</span>
+        <h3>Define the order</h3>
+        <p>You set asset, geo, titles, volume, custom qualifiers, and the exact field map. We confirm feasibility and a per-lead rate before activation.</p>
       </div>
-      <div class="flow-diagram" aria-label="Lead fulfillment process flow diagram">
-        <div class="flow-diagram-h">
-          <span class="t">Fulfillment flow</span>
-          <span class="live"><b></b> deterministic</span>
-        </div>
-        <svg class="flow-svg" viewBox="0 0 420 640" role="img" aria-labelledby="flowTitle flowDesc">
-          <title id="flowTitle">Quore B2B lead fulfillment flow</title>
-          <desc id="flowDesc">Process flow from partner order spec through database sourcing, activation, engagement, ICP filtering, tele-verification, QA gate, and delivery.</desc>
-          <defs>
-            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#14C8B4"/></marker>
-            <marker id="arr-dim" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#64788D"/></marker>
-            <linearGradient id="nodeGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="rgba(255,255,255,0.12)"/>
-              <stop offset="100%" stop-color="rgba(255,255,255,0.04)"/>
-            </linearGradient>
-            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="3" result="b"/>
-              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-          </defs>
-          <rect x="110" y="16" width="200" height="44" rx="10" fill="#64788D" stroke="rgba(255,255,255,.15)"/>
-          <text x="210" y="36" text-anchor="middle" fill="#fff" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.2">INPUT</text>
-          <text x="210" y="52" text-anchor="middle" fill="#EAF1F6" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Partner order spec S</text>
-          <line x1="210" y1="60" x2="210" y2="88" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
-          <rect x="90" y="88" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
-          <text x="210" y="110" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">PROCESS</text>
-          <text x="210" y="128" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">Proprietary database D</text>
-          <line x1="210" y1="140" x2="210" y2="168" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
-          <rect x="90" y="168" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
-          <text x="210" y="190" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">PROCESS</text>
-          <text x="210" y="208" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">CAN-SPAM activation A</text>
-          <line x1="210" y1="220" x2="210" y2="248" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
-          <rect x="90" y="248" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
-          <text x="210" y="270" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">PROCESS</text>
-          <text x="210" y="288" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">Campaign engagement E</text>
-          <line x1="210" y1="300" x2="210" y2="328" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
-          <rect x="90" y="328" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
-          <text x="210" y="350" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">FILTER</text>
-          <text x="210" y="368" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">ICP match f(ICP)</text>
-          <line x1="210" y1="380" x2="210" y2="408" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
-          <rect x="90" y="408" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
-          <text x="210" y="430" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">VERIFY</text>
-          <text x="210" y="448" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">Human tele-check V(lead)</text>
-          <line x1="210" y1="460" x2="210" y2="488" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
-          <polygon points="210,488 268,522 210,556 152,522" fill="#14C8B4" filter="url(#glow)"/>
-          <text x="210" y="518" text-anchor="middle" fill="#04302B" font-family="IBM Plex Mono, monospace" font-size="10" font-weight="600">Q(spec)</text>
-          <text x="210" y="532" text-anchor="middle" fill="#04302B" font-family="IBM Plex Mono, monospace" font-size="9">pass?</text>
-          <line x1="268" y1="522" x2="340" y2="522" stroke="#64788D" stroke-width="1.5" marker-end="url(#arr-dim)"/>
-          <text x="292" y="512" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9">fail</text>
-          <rect x="342" y="502" width="68" height="40" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)"/>
-          <text x="376" y="520" text-anchor="middle" fill="#AFC0D0" font-family="IBM Plex Mono, monospace" font-size="9">drop</text>
-          <text x="376" y="533" text-anchor="middle" fill="#AFC0D0" font-family="IBM Plex Mono, monospace" font-size="9">replace</text>
-          <path d="M376 542 C376 580 210 590 210 560" fill="none" stroke="#64788D" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-dim)"/>
-          <line x1="210" y1="556" x2="210" y2="584" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
-          <text x="198" y="574" fill="#14C8B4" font-family="IBM Plex Mono, monospace" font-size="9">pass</text>
-          <rect x="110" y="578" width="200" height="48" rx="10" fill="#0B9A8B" stroke="rgba(20,200,180,.45)"/>
-          <text x="210" y="598" text-anchor="middle" fill="#fff" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.2">OUTPUT</text>
-          <text x="210" y="615" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Delivered leads L → partner</text>
-          <text x="24" y="130" fill="#64788D" font-family="IBM Plex Mono, monospace" font-size="9" transform="rotate(-90 24 130)">SOURCE LAYER</text>
-          <text x="24" y="290" fill="#64788D" font-family="IBM Plex Mono, monospace" font-size="9" transform="rotate(-90 24 290)">ENGAGEMENT</text>
-          <text x="24" y="440" fill="#64788D" font-family="IBM Plex Mono, monospace" font-size="9" transform="rotate(-90 24 440)">QUALIFICATION</text>
-        </svg>
-        <div class="flow-legend">
-          <span><i class="in"></i> Input</span>
-          <span><i class="proc"></i> Process</span>
-          <span><i class="gate"></i> QA gate</span>
-          <span><i class="out"></i> Output</span>
-        </div>
+      <div class="flow-detail-cell">
+        <span class="meta">Source · D → A → E</span>
+        <h3>Source, activate &amp; engage</h3>
+        <p>We pull from our proprietary B2B database, activate outreach under CAN-SPAM, and engage contacts against your content or qualification script.</p>
+      </div>
+      <div class="flow-detail-cell">
+        <span class="meta">Filter · f(ICP)</span>
+        <h3>Profile &amp; match</h3>
+        <p>Firmographic, title, and account filters are applied. Only contacts that match your ICP and program rules move forward.</p>
+      </div>
+      <div class="flow-detail-cell">
+        <span class="meta">Verify · V(lead)</span>
+        <h3>Human tele-verification</h3>
+        <p>Our Pune delivery team calls to confirm identity, interest, and — where required — BANT plus your custom qualifying questions.</p>
+      </div>
+      <div class="flow-detail-cell">
+        <span class="meta">Output · Q(spec) → L</span>
+        <h3>QA gate &amp; delivery</h3>
+        <p>Dedupe, suppression, and spec validation run on every batch. Out-of-spec records are replaced. Clean leads ship in your format.</p>
       </div>
     </div>
   </div>
