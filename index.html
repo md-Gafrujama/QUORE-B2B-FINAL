@@ -160,13 +160,14 @@ body{padding-top:84px;scroll-padding-top:100px}
 .section-title{font-size:clamp(28px,3.6vw,40px);letter-spacing:-0.03em;line-height:1.15;margin:0 0 12px;max-width:16ch}
 .section-lead{font-size:16.5px;line-height:1.65;color:var(--slate);max-width:52ch;margin:0}
 .partner-list{display:grid;gap:0;margin-top:36px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--white)}
-.partner-row{display:grid;grid-template-columns:56px 1fr auto;gap:20px;align-items:center;padding:20px 24px;border-top:1px solid var(--line);transition:background .2s}
+.partner-row{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px 20px;align-items:start;padding:20px 24px;border-top:1px solid var(--line);transition:background .2s}
 .partner-row:first-child{border-top:none}
 .partner-row:hover{background:var(--paper)}
-.partner-row .n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--signal-d);font-weight:600}
-.partner-row h4{font-size:16px;margin:0 0 3px;letter-spacing:-0.01em}
+.partner-row .n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--signal-d);font-weight:600;padding-top:4px}
+.partner-row .partner-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.partner-row h4{font-size:16px;margin:0;letter-spacing:-0.01em}
 .partner-row p{font-size:13.5px;margin:0;line-height:1.55;color:var(--slate-2)}
-.partner-row .tag{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-2);padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--paper);white-space:nowrap}
+.partner-row .tag{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-2);padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--paper);white-space:nowrap;flex-shrink:0}
 .fulfill-head{margin-bottom:40px;max-width:640px}
 .fulfill-head .section-title{max-width:none}
 .fulfill-split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:start}
@@ -460,20 +461,19 @@ body.menu-open{overflow:hidden;touch-action:none}
 .js .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s var(--ease-2),transform .55s var(--ease-2)}
 .js .reveal.in{opacity:1;transform:none}
 .reveal[data-d="1"],.reveal[data-d="2"],.reveal[data-d="3"],.reveal[data-d="4"],.reveal[data-d="5"],.reveal[data-d="6"]{transition-delay:0s}
-.nav,.hero,.section,.footer,.wrap,.hero-in,.split,.grid,.panel,.pipe,.cta-band{max-width:100%}
-.nav .brand{min-width:0;overflow:hidden}
+.nav,.hero,.section,.footer,.wrap,.hero-in,.split,.grid,.panel,.pipe,.cta-band,.model-split,.fulfill-split,.data-split,.spec-band,.partner-list,.model-visual,.workflow-img-frame{max-width:100%;width:100%;box-sizing:border-box}
+.nav .brand{min-width:0;overflow:hidden;flex:1 1 auto}
 .nav .brand-mark{height:40px}
 .nav .brand-word{height:38px;max-width:min(150px,38vw)}
+.nav-in{height:68px;padding:0 2px;width:100%;max-width:100%}
 h1,h2,h3,p,li,.addr,.spec-row .v{overflow-wrap:anywhere;word-break:break-word}
-.stage{grid-template-columns:28px minmax(0,1fr) max-content;gap:8px 8px;align-items:center}
-.stage .n{width:28px;height:28px}
-.stage+.stage::before{left:13px}
-.stage .lab{min-width:0}
-.stage .val{justify-self:end;align-self:center;white-space:nowrap;max-width:none;width:max-content;font-size:11px;padding:4px 8px}
-.pipe,.home .pipe{padding:16px 14px 12px}
-.spec-row{flex-wrap:wrap}
-.wrap{padding:0 18px}
-.nav-in{height:68px;padding:0 2px}
+.wrap{padding:0 16px;width:100%;max-width:100%;box-sizing:border-box}
+.hero-in,.split,.split.rev .txt,.flow-split,.model-split,.data-split,.spec-band,.fulfill-split{grid-template-columns:1fr !important;order:0;width:100%}
+.model-visual img,.data-visual img,.workflow-img-frame img,.hero-panel .main-shot img{width:100%;height:auto;display:block}
+.hero-panel,.hero-panel .main-shot,.fulfill-visual,.fulfill-products{width:100%;max-width:100%}
+.cta-band{padding:28px 16px;border-radius:18px;width:100%;max-width:100%;box-sizing:border-box}
+.model-visual-cap{padding:12px 14px;flex-wrap:wrap;gap:6px}
+.model-visual-cap .v{text-align:left}
 body{padding-top:68px;scroll-padding-top:84px}
 .brand-mark{height:40px}
 .brand-word{height:38px;max-width:min(140px,34vw)}
@@ -515,11 +515,13 @@ body{padding-top:68px;scroll-padding-top:84px}
 .trust-strip{grid-template-columns:1fr;border-radius:16px}
 .trust-cell{border-right:none;border-bottom:1px solid var(--line);padding:18px 16px}
 .trust-cell:last-child{border-bottom:none}
-.partner-list{border-radius:14px}
-.partner-row{grid-template-columns:36px 1fr;padding:14px 14px;gap:12px}
-.partner-row .tag{display:none}
-.partner-row h4{font-size:15px}
-.partner-row p{font-size:13px}
+.partner-list{border-radius:14px;width:100%}
+.partner-row{grid-template-columns:32px minmax(0,1fr);gap:10px 12px;padding:14px 14px;align-items:start}
+.partner-row .partner-top{align-items:flex-start;gap:8px;margin-bottom:6px}
+.partner-row .n{padding-top:2px}
+.partner-row h4{font-size:15px;line-height:1.3}
+.partner-row p{font-size:13px;line-height:1.5}
+.partner-row .tag{font-size:9px;padding:5px 8px}
 .model-visual,.data-visual{border-radius:14px}
 .model-visual-cap{padding:12px 14px;flex-wrap:wrap}
 .data-spec{grid-template-columns:1fr}
@@ -688,17 +690,41 @@ body{font-size:15px}
       <h2 class="section-title">We don't compete for your clients. We deliver the leads you've already sold.</h2>
       <p class="section-lead">Quore B2B is the supply side of demand generation. Agencies, media companies, and vendor channel teams route their orders to us — we fulfill against agreed specs, on CPL terms, with compliance and verification handled end to end.</p>
       <div class="partner-list">
-        <div class="partner-row"><span class="n">01</span><div><h4>Demand gen agencies</h4><p>White-label fulfillment for programs you've already sold to the end client.</p></div><span class="tag">Primary</span></div>
-        <div class="partner-row"><span class="n">02</span><div><h4>Media &amp; publishers</h4><p>Resell lead capacity without building an in-house delivery operation.</p></div><span class="tag">Reseller</span></div>
-        <div class="partner-row"><span class="n">03</span><div><h4>Vendor &amp; channel teams</h4><p>Scale syndication and tele-verified programs across geos and titles.</p></div><span class="tag">Channel</span></div>
-        <div class="partner-row"><span class="n">04</span><div><h4>ABM &amp; performance shops</h4><p>Named-account delivery with human verification on every record.</p></div><span class="tag">ABM</span></div>
+        <div class="partner-row">
+          <span class="n">01</span>
+          <div>
+            <div class="partner-top"><h4>Demand gen agencies</h4><span class="tag">Primary</span></div>
+            <p>White-label fulfillment for programs you've already sold to the end client.</p>
+          </div>
+        </div>
+        <div class="partner-row">
+          <span class="n">02</span>
+          <div>
+            <div class="partner-top"><h4>Media &amp; publishers</h4><span class="tag">Reseller</span></div>
+            <p>Resell lead capacity without building an in-house delivery operation.</p>
+          </div>
+        </div>
+        <div class="partner-row">
+          <span class="n">03</span>
+          <div>
+            <div class="partner-top"><h4>Vendor &amp; channel teams</h4><span class="tag">Channel</span></div>
+            <p>Scale syndication and tele-verified programs across geos and titles.</p>
+          </div>
+        </div>
+        <div class="partner-row">
+          <span class="n">04</span>
+          <div>
+            <div class="partner-top"><h4>ABM &amp; performance shops</h4><span class="tag">ABM</span></div>
+            <p>Named-account delivery with human verification on every record.</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="model-visual reveal" data-d="2">
-      <img src="image/b2b-process-desk.png" alt="Lead order, ICP checklist, headset and delivery batch on fulfillment desk" width="1200" height="900" loading="lazy">
+      <img src="image/b2b-who-we-serve.png" alt="Who we serve: demand gen agencies, media publishers, vendor channel teams, and ABM performance shops" width="1200" height="900" loading="lazy">
       <div class="model-visual-cap">
-        <span class="t">How we work</span>
-        <span class="v">Spec → source → verify → deliver</span>
+        <span class="t">Who we serve</span>
+        <span class="v">Agencies · Media · Channel · ABM</span>
       </div>
     </div>
   </div>
