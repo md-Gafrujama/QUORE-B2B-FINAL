@@ -102,48 +102,93 @@ img{max-width:100%;display:block}
 .nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:100px;min-width:0;gap:20px;padding:0 8px}
 body{padding-top:100px}
-.home .hero-in{gap:72px;padding:108px 0 92px;align-items:center}
+.home .hero-in{gap:72px;padding:112px 0 96px;align-items:center}
+.home .section{padding:112px 0}
 .home .hero h1{margin-top:18px}
 .home .hero p.lead{line-height:1.85;max-width:38ch}
 .home .pipe{padding:28px 28px 20px}
 .home .strip{background:rgba(0,0,0,.22)}
 .home .strip-in .s{padding:34px 20px}
 .home .strip-in .k{font-size:36px}
-.home .whom .p{background:var(--paper);box-shadow:var(--shadow-sm)}
-.home .card{padding:32px 28px}
-.home .card h3{line-height:1.35}
-.home .steps{border-top:1px solid var(--line)}
-.home .step{border-top:none;border-bottom:1px solid var(--line);padding:28px 0 28px 4px;grid-template-columns:118px 1fr}
-.home .step:last-child{border-bottom:none}
-.home .step .num{color:var(--signal-d);font-weight:600}
-.home .comp-item{padding:26px 22px;height:100%}
 .home .panel{padding:36px 32px}
-.home .cta-band{padding:72px 56px}
-.hero-visual{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow-lg);background:var(--ink-1)}
-.hero-visual img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
-.hero-visual .pipe{position:absolute;left:16px;right:16px;bottom:16px;margin:0;padding:20px 22px 16px;background:rgba(10,21,34,.88);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.14)}
-.hero-visual .pipe .stage{padding:11px 0}
-.hero-visual .pipe .stage+.stage::before{height:14px;top:-8px}
-.hero-badge{position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;background:rgba(10,21,34,.82);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);z-index:2}
-.hero-badge img{width:28px;height:28px;border-radius:7px}
-.hero-badge span{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#AFC0D0}
-.model-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:56px;align-items:center}
-.model-visual{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--white)}
-.model-visual img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
-.model-visual-cap{padding:16px 20px;border-top:1px solid var(--line);background:var(--paper);display:flex;justify-content:space-between;align-items:center;gap:12px}
-.model-visual-cap .t{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal-d)}
-.model-visual-cap .v{font-size:13px;color:var(--slate);font-weight:500}
-.visual-stack{display:grid;gap:18px}
-.visual-frame{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow-lg)}
-.visual-frame img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
-.visual-frame .cap{position:absolute;left:14px;right:14px;bottom:14px;padding:12px 14px;border-radius:11px;background:rgba(10,21,34,.84);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px)}
-.visual-frame .cap .t{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--signal);margin-bottom:4px;display:block}
-.visual-frame .cap .v{font-size:13px;color:#EAF1F6;font-weight:500;line-height:1.45}
-.fulfill-banner{margin:0 0 48px;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow-sm);background:var(--white);display:grid;grid-template-columns:1.1fr .9fr;align-items:stretch}
-.fulfill-banner img{width:100%;height:100%;min-height:220px;object-fit:cover;display:block}
-.fulfill-banner .copy{padding:36px 34px;display:flex;flex-direction:column;justify-content:center}
-.fulfill-banner .copy h3{font-size:24px;margin:10px 0 12px;letter-spacing:-0.02em}
-.fulfill-banner .copy p{margin:0;font-size:15px;line-height:1.75}
+.home .cta-band{padding:80px 64px;border-radius:28px}
+.hero-console{position:relative;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:linear-gradient(165deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0 40px 80px rgba(0,0,0,.35)}
+.hero-console::before{content:"";position:absolute;inset:0;background:radial-gradient(480px 280px at 80% 0%,rgba(20,200,180,.22),transparent 70%);pointer-events:none}
+.hero-console-in{position:relative;z-index:1;padding:28px 28px 24px}
+.hero-console-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.08)}
+.hero-console-top img{width:32px;height:32px;border-radius:8px}
+.hero-console-top .t{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8397A9}
+.hero-console-img{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);margin-bottom:22px;line-height:0}
+.hero-console-img img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;opacity:.92}
+.hero-track{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;position:relative}
+.hero-track::before{content:"";position:absolute;top:18px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,rgba(20,200,180,.45),transparent);z-index:0}
+.hero-node{position:relative;z-index:1;text-align:center}
+.hero-node .dot{width:36px;height:36px;margin:0 auto 10px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:"IBM Plex Mono",monospace;font-size:11px;color:#7E92A6;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);transition:background .25s,border-color .25s,color .25s}
+.hero-node .lab{font-size:11px;color:#AFC0D0;line-height:1.35;font-weight:500}
+.hero-node .lab small{display:block;font-family:"IBM Plex Mono",monospace;font-size:9px;color:#64788D;margin-top:3px;letter-spacing:.04em}
+.hero-node.done .dot{background:var(--signal-t);border-color:rgba(20,200,180,.35);color:var(--signal)}
+.hero-node.active .dot{background:var(--signal);border-color:transparent;color:#04302B;box-shadow:0 0 20px var(--signal-g)}
+.hero-node.active .lab{color:#fff}
+.model-split{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:72px;align-items:center}
+.model-visual{position:relative;border-radius:20px;overflow:hidden;background:var(--ink);border:1px solid rgba(10,21,34,.08);box-shadow:var(--shadow-lg)}
+.model-visual img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;opacity:.94}
+.model-visual-cap{padding:18px 22px;background:var(--white);border-top:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.model-visual-cap .t{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--signal-d)}
+.model-visual-cap .v{font-size:13px;color:var(--slate);font-weight:500;text-align:right}
+.partner-list{display:grid;gap:0;margin-top:36px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--white)}
+.partner-row{display:grid;grid-template-columns:56px 1fr auto;gap:20px;align-items:center;padding:20px 24px;border-top:1px solid var(--line);transition:background .2s}
+.partner-row:first-child{border-top:none}
+.partner-row:hover{background:var(--paper)}
+.partner-row .n{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--signal-d);font-weight:600}
+.partner-row h4{font-size:16px;margin:0 0 3px;letter-spacing:-0.01em}
+.partner-row p{font-size:13.5px;margin:0;line-height:1.55;color:var(--slate-2)}
+.partner-row .tag{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-2);padding:6px 10px;border-radius:999px;border:1px solid var(--line);background:var(--paper);white-space:nowrap}
+.prod-matrix{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--white)}
+.prod-row{display:grid;grid-template-columns:140px 1.2fr 1.8fr auto;gap:24px;align-items:start;padding:28px 32px;border-top:1px solid var(--line);transition:background .2s}
+.prod-row:first-child{border-top:none}
+.prod-row:hover{background:linear-gradient(90deg,var(--signal-t),transparent 55%)}
+.prod-row .code{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--signal-d);padding-top:4px}
+.prod-row h3{font-size:19px;margin:0 0 8px;letter-spacing:-0.02em}
+.prod-row .desc{font-size:14.5px;color:var(--slate);margin:0;line-height:1.72;max-width:42ch}
+.prod-row .points{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.prod-row .points li{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;color:var(--slate-2);padding:6px 10px;border-radius:8px;background:var(--paper);border:1px solid var(--line-2)}
+.data-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.data-visual{position:relative;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:var(--ink-1)}
+.data-visual img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.data-visual .overlay{position:absolute;inset:auto 16px 16px 16px;padding:16px 18px;border-radius:14px;background:rgba(10,21,34,.88);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px)}
+.data-visual .overlay .t{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin-bottom:6px;display:block}
+.data-visual .overlay .v{font-size:14px;color:#EAF1F6;line-height:1.5;font-weight:500}
+.data-spec{margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+.data-spec div{font-size:13px;color:#AFC0D0;display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+.data-spec div:last-child,.data-spec div:nth-last-child(2){border-bottom:none}
+.data-spec b{font-family:"IBM Plex Mono",monospace;font-size:11px;color:#8397A9;font-weight:500}
+.data-spec span{color:var(--signal);font-family:"IBM Plex Mono",monospace;font-size:11px;text-align:right}
+.trust-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--white)}
+.trust-cell{padding:32px 28px;border-right:1px solid var(--line);position:relative}
+.trust-cell:last-child{border-right:none}
+.trust-cell::before{content:"";position:absolute;top:0;left:28px;right:28px;height:2px;background:linear-gradient(90deg,var(--signal),var(--signal-2));opacity:.85}
+.trust-cell .badge{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal-d);margin-bottom:14px;display:block}
+.trust-cell h4{font-size:17px;margin:0 0 8px;letter-spacing:-0.01em}
+.trust-cell p{font-size:13.5px;margin:0;line-height:1.65;color:var(--slate-2)}
+.spec-band{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.spec-sheet{border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;background:rgba(255,255,255,.03)}
+.spec-sheet-h{padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center}
+.spec-sheet-h .t{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8397A9}
+.spec-sheet-h .live{display:flex;align-items:center;gap:7px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--signal)}
+.spec-sheet-h .live b{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 8px var(--signal);animation:blink 1.6s infinite}
+.spec-sheet .spec-row{padding:14px 24px;border-bottom-color:rgba(255,255,255,.08)}
+.section-label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--signal-d);margin-bottom:14px;display:inline-flex;align-items:center;gap:10px}
+.section-label::before{content:"";width:22px;height:1.5px;background:linear-gradient(90deg,var(--signal),transparent);display:inline-block}
+.section-label.center{display:inline-flex}
+.sec-head.wide.center .section-label::before,.sec-head.wide.center .section-label::after{content:"";width:22px;height:1.5px;background:linear-gradient(90deg,transparent,var(--signal))}
+.sec-head.wide.center .section-label::before{background:linear-gradient(90deg,var(--signal),transparent)}
+.hero-console-top .brand-mini{display:flex;align-items:center;gap:10px}
+.section-title{font-size:clamp(32px,4vw,48px);letter-spacing:-0.035em;line-height:1.12;margin:0 0 18px;max-width:14ch}
+.section-lead{font-size:18px;line-height:1.75;color:var(--slate);max-width:52ch;margin:0}
+.section-lead.light{color:#AFC0D0}
+.section-lead.center{margin:0 auto}
+.sec-head.wide{max-width:780px}
+.sec-head.wide.center{text-align:center;margin-left:auto;margin-right:auto}
 .brand{display:flex;align-items:center;gap:10px}
 .brand-mark{height:58px;width:auto;border-radius:10px;display:block;flex-shrink:0}
 .brand-word{height:66px;width:auto;display:block;flex-shrink:0;max-width:300px;object-fit:contain;object-position:left center}
@@ -340,11 +385,21 @@ body{padding-top:78px}
 .brand-mark{height:46px}
 .brand-word{height:44px;max-width:min(150px,36vw)}
 .nav-cta .btn{display:none}
-.hero-in,.split,.split.rev .txt,.flow-split,.model-split,.fulfill-banner{grid-template-columns:1fr;order:0}
-.split,.flow-split,.model-split{gap:20px}
-.hero-visual .pipe{position:relative;left:auto;right:auto;bottom:auto;margin-top:0;border-radius:0;border-left:none;border-right:none;border-bottom:none}
-.fulfill-banner img{min-height:200px;max-height:280px}
-.fulfill-banner .copy{padding:24px 20px}
+.hero-in,.split,.split.rev .txt,.flow-split,.model-split,.data-split,.spec-band{grid-template-columns:1fr;order:0}
+.split,.flow-split,.model-split,.data-split,.spec-band{gap:28px}
+.hero-track{grid-template-columns:1fr;gap:12px}
+.hero-track::before{display:none}
+.hero-node{display:grid;grid-template-columns:36px 1fr;gap:12px;text-align:left;align-items:center}
+.hero-node .dot{margin:0}
+.prod-row{grid-template-columns:1fr;gap:10px;padding:22px 20px}
+.prod-row .points{justify-content:flex-start}
+.trust-strip{grid-template-columns:1fr}
+.trust-cell{border-right:none;border-bottom:1px solid var(--line);padding:24px 20px}
+.trust-cell:last-child{border-bottom:none}
+.partner-row{grid-template-columns:44px 1fr;padding:18px 16px}
+.partner-row .tag{display:none}
+.data-spec{grid-template-columns:1fr}
+.section-title{max-width:none}
 .flow-step{grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0}
 .flow-step .idx{width:44px;height:44px;border-radius:12px;font-size:12px}
 .flow-diagram{padding:20px 16px 18px}
@@ -453,22 +508,25 @@ body{font-size:15.5px}
       </div>
     </div>
 
-    <div class="hero-visual reveal" data-d="2" aria-label="Lead fulfillment pipeline visual">
-      <div class="hero-badge">
-        <img src="image/Quoreicon.svg" alt="">
-        <span>Quore B2B · live pipeline</span>
-      </div>
-      <img src="image/hero-fulfillment.png" alt="Lead fulfillment pipeline from database to verified delivery" width="960" height="600" loading="eager">
-      <div class="pipe">
-        <div class="pipe-h">
-          <span class="t">Qualification pipeline</span>
-          <span class="live"><b></b> processing</span>
+    <div class="hero-console reveal" data-d="2" aria-label="Lead fulfillment pipeline">
+      <div class="hero-console-in">
+        <div class="hero-console-top">
+          <div class="brand-mini">
+            <img src="image/Quoreicon.svg" alt="">
+            <span class="t">Fulfillment engine</span>
+          </div>
+          <span class="live"><b></b> active</span>
         </div>
-        <div class="stage"><span class="n">01</span><span class="lab">Proprietary database<small>built &amp; owned in-house</small></span><span class="val">source</span></div>
-        <div class="stage"><span class="n">02</span><span class="lab">Compliant activation<small>activated under CAN-SPAM</small></span><span class="val">can-spam</span></div>
-        <div class="stage"><span class="n">03</span><span class="lab">Engaged &amp; profiled<small>firmographic + intent match</small></span><span class="val">icp fit</span></div>
-        <div class="stage"><span class="n">04</span><span class="lab">Tele-verified<small>human BANT confirmation</small></span><span class="val ok">verified ✓</span></div>
-        <div class="stage final"><span class="n">→</span><span class="lab">Delivered to spec<small>your fields, your format, your SLA</small></span><span class="val ok">shipped</span></div>
+        <div class="hero-console-img">
+          <img src="image/hero-fulfillment.png" alt="B2B lead fulfillment pipeline visualization" width="960" height="540" loading="eager">
+        </div>
+        <div class="hero-track">
+          <div class="hero-node done"><span class="dot">01</span><span class="lab">Database<small>source</small></span></div>
+          <div class="hero-node done"><span class="dot">02</span><span class="lab">Activate<small>can-spam</small></span></div>
+          <div class="hero-node done"><span class="dot">03</span><span class="lab">Engage<small>icp fit</small></span></div>
+          <div class="hero-node active"><span class="dot">04</span><span class="lab">Verify<small>human</small></span></div>
+          <div class="hero-node"><span class="dot">→</span><span class="lab">Deliver<small>to spec</small></span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -486,20 +544,18 @@ body{font-size:15.5px}
 <section class="section">
   <div class="wrap model-split">
     <div class="reveal">
-      <div class="sec-head" style="margin-bottom:28px;">
-        <span class="eyebrow">The model</span>
-        <h2>We don't compete for your clients. We deliver the leads you've already sold.</h2>
-        <p>Quore B2B is the supply side of demand generation. Agencies, media companies, and vendor channel teams route their content syndication and lead orders to us — and we fulfill them against agreed specs, on cost-per-lead terms, with compliance and verification handled end to end.</p>
-      </div>
-      <div class="whom" data-d="1">
-        <div class="p"><b>01</b> Demand gen agencies</div>
-        <div class="p"><b>02</b> Media &amp; publishers reselling capacity</div>
-        <div class="p"><b>03</b> Vendor &amp; channel marketing teams</div>
-        <div class="p"><b>04</b> ABM &amp; performance shops</div>
+      <span class="section-label">The model</span>
+      <h2 class="section-title">We don't compete for your clients. We deliver the leads you've already sold.</h2>
+      <p class="section-lead">Quore B2B is the supply side of demand generation. Agencies, media companies, and vendor channel teams route their orders to us — we fulfill against agreed specs, on CPL terms, with compliance and verification handled end to end.</p>
+      <div class="partner-list">
+        <div class="partner-row"><span class="n">01</span><div><h4>Demand gen agencies</h4><p>White-label fulfillment for programs you've already sold to the end client.</p></div><span class="tag">Primary</span></div>
+        <div class="partner-row"><span class="n">02</span><div><h4>Media &amp; publishers</h4><p>Resell lead capacity without building an in-house delivery operation.</p></div><span class="tag">Reseller</span></div>
+        <div class="partner-row"><span class="n">03</span><div><h4>Vendor &amp; channel teams</h4><p>Scale syndication and tele-verified programs across geos and titles.</p></div><span class="tag">Channel</span></div>
+        <div class="partner-row"><span class="n">04</span><div><h4>ABM &amp; performance shops</h4><p>Named-account delivery with human verification on every record.</p></div><span class="tag">ABM</span></div>
       </div>
     </div>
     <div class="model-visual reveal" data-d="2">
-      <img src="image/partner-model.png" alt="White-label partner model: your agency, Quore B2B fulfillment, your end client" width="800" height="800" loading="lazy">
+      <img src="image/partner-model.png" alt="White-label partner model: your agency, Quore B2B fulfillment, your end client" width="800" height="600" loading="lazy">
       <div class="model-visual-cap">
         <span class="t">Partner flow</span>
         <span class="v">You keep the client · We deliver the leads</span>
@@ -510,87 +566,66 @@ body{font-size:15.5px}
 
 <section class="section paper" id="fulfill">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">What we fulfill</span>
-      <h2>Every lead type your programs run on</h2>
-      <p>Order a single product or a blended program. Volume, geo, and qualification are all set by you.</p>
+    <div class="sec-head wide center reveal">
+      <span class="section-label center">What we fulfill</span>
+      <h2 class="section-title" style="max-width:none;margin-left:auto;margin-right:auto;">Every lead type your programs run on</h2>
+      <p class="section-lead center">Order a single product or a blended program. Volume, geo, and qualification are all set by you.</p>
     </div>
-    <div class="fulfill-banner reveal" data-d="1">
-      <img src="image/hero-fulfillment.png" alt="B2B lead fulfillment products and delivery pipeline" width="960" height="600" loading="lazy">
-      <div class="copy">
-        <span class="eyebrow">Full-stack fulfillment</span>
-        <h3>One partner for every lead product in your stack</h3>
-        <p>From content syndication and HQL to tele-verified BANT and ABM — all sourced from our proprietary database, verified by humans, and delivered to your exact field map.</p>
+    <div class="prod-matrix reveal">
+      <div class="prod-row">
+        <span class="code">CS · ST/DT</span>
+        <div><h3>Content syndication</h3><p class="desc">Your asset promoted to matched contacts from our proprietary database. Every lead engages content and clears your filters.</p></div>
+        <ul class="points"><li>Whitepaper</li><li>Webinar</li><li>Report</li><li>Guide</li></ul>
       </div>
-    </div>
-    <div class="grid c3">
-      <div class="card reveal" data-d="1">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16M4 12h16M4 19h10"/></svg></div>
-        <span class="tag">Content syndication</span><h3>Single &amp; double-touch</h3>
-        <p>Your asset promoted to the right contacts from our proprietary database. Every lead engages the content and clears your filters before delivery.</p>
-        <ul><li>Single-touch (ST) and double-touch (DT)</li><li>Whitepaper, webinar, report, guide</li><li>Per-asset landing &amp; tracking</li></ul>
+      <div class="prod-row">
+        <span class="code">HQL</span>
+        <div><h3>High-quality leads</h3><p class="desc">Content-engaged leads with custom qualifying questions and a second confirmation touch.</p></div>
+        <ul class="points"><li>3–5 qualifiers</li><li>Asset confirmed</li><li>Enterprise</li></ul>
       </div>
-      <div class="card reveal" data-d="2">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 17l-5.5 3 1-6.3L3 8.9 9 8z"/></svg></div>
-        <span class="tag">Premium quality</span><h3>High-Quality Leads (HQL)</h3>
-        <p>Content-engaged leads elevated with additional custom qualifying questions and a second confirmation touch.</p>
-        <ul><li>Up to 3-5 custom qualifiers</li><li>Confirmed asset engagement</li><li>Ideal for enterprise-value programs</li></ul>
+      <div class="prod-row">
+        <span class="code">BANT</span>
+        <div><h3>Tele-verified BANT</h3><p class="desc">Human confirmation of Budget, Authority, Need, and Timeline — plus solution and challenge captured on the call.</p></div>
+        <ul class="points"><li>Live agent</li><li>Custom script</li><li>Hand-off notes</li></ul>
       </div>
-      <div class="card reveal" data-d="3">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <span class="tag">Sales-ready</span><h3>BANT / tele-verified</h3>
-        <p>Human confirmation of Budget, Authority, Need, and Timeline - plus current solution and challenge captured on the call.</p>
-        <ul><li>Live agent qualification</li><li>BANT + custom scripting</li><li>Sales-ready hand-off notes</li></ul>
+      <div class="prod-row">
+        <span class="code">ABM</span>
+        <div><h3>ABM list delivery</h3><p class="desc">Fulfillment mapped to your named-account or ICP list. Only contacts within target accounts are delivered.</p></div>
+        <ul class="points"><li>Named accounts</li><li>Title match</li><li>Reporting</li></ul>
       </div>
-      <div class="card reveal" data-d="1">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg></div>
-        <span class="tag">Account-based</span><h3>ABM list delivery</h3>
-        <p>Fulfillment mapped to your named-account or ICP list. We deliver only contacts within your target accounts.</p>
-        <ul><li>Account-suppressed sourcing</li><li>Persona &amp; title targeting</li><li>Named-account match reporting</li></ul>
+      <div class="prod-row">
+        <span class="code">INTENT</span>
+        <div><h3>Intent-qualified leads</h3><p class="desc">Sourcing prioritized by topic and buying signals so accounts reached are already in-market.</p></div>
+        <ul class="points"><li>Topic overlay</li><li>In-market</li><li>Any product</li></ul>
       </div>
-      <div class="card reveal" data-d="2">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 7-8"/><path d="M17 7h4v4"/></svg></div>
-        <span class="tag">Intent-led</span><h3>Intent-qualified leads</h3>
-        <p>Sourcing prioritized by topic and buying signals, so the accounts you reach are already in-market for your category.</p>
-        <ul><li>Topic &amp; category intent overlay</li><li>In-market account prioritization</li><li>Layer onto any delivery product</li></ul>
-      </div>
-      <div class="card reveal" data-d="3">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg></div>
-        <span class="tag">Data</span><h3>Verified data &amp; list build</h3>
-        <p>Custom contact lists built and tele-verified against your ICP - accurate, deliverable, and refreshed at the point of use.</p>
-        <ul><li>Firmographic &amp; technographic build</li><li>Human verification pass</li><li>Suppression &amp; dedupe applied</li></ul>
+      <div class="prod-row">
+        <span class="code">DATA</span>
+        <div><h3>Verified data &amp; list build</h3><p class="desc">Custom contact lists built and tele-verified against your ICP — accurate, deliverable, refreshed at point of use.</p></div>
+        <ul class="points"><li>Firmographic</li><li>Human verify</li><li>Dedupe</li></ul>
       </div>
     </div>
   </div>
 </section>
 
 <section class="section ink">
-  <div class="wrap split">
-    <div class="txt reveal">
-      <span class="eyebrow">Why our leads hold up</span>
-      <h2>Sourced from our own proprietary B2B database.</h2>
-      <p>Most fulfillment sits on rented lists and borrowed audiences. Ours doesn't. We source from a proprietary B2B contact database we've built and refined in-house over roughly nine years - owned outright, activated under CAN-SPAM, and maintained against our own quality standards.</p>
-      <ul class="feat-list">
-        <li><span class="fi">◆</span><div><h4>Proprietary database</h4><p>A B2B contact base we own outright - not a rented or resold third-party file.</p></div></li>
-        <li><span class="fi">◆</span><div><h4>Compliant activation</h4><p>Our database is activated and outreach conducted within CAN-SPAM requirements.</p></div></li>
-        <li><span class="fi">◆</span><div><h4>Category-level context</h4><p>Coverage across software categories - CRM, VoIP, payroll, HR, security, fleet and more.</p></div></li>
-      </ul>
-    </div>
-    <div class="visual-stack reveal" data-d="2">
-      <div class="visual-frame">
-        <img src="image/data-network.png" alt="Proprietary B2B database network with verification and compliance layers" width="800" height="800" loading="lazy">
-        <div class="cap">
-          <span class="t">Proprietary data layer</span>
-          <span class="v">Owned in-house · CAN-SPAM activated · Human verified at delivery</span>
-        </div>
+  <div class="wrap data-split">
+    <div class="reveal">
+      <span class="section-label">Proprietary data</span>
+      <h2 class="section-title" style="color:#fff;">Sourced from our own B2B database — not rented lists.</h2>
+      <p class="section-lead light">Most fulfillment sits on borrowed audiences. Ours doesn't. Nine years of in-house contact data, activated under CAN-SPAM, verified by humans at delivery.</p>
+      <div class="data-spec">
+        <div><b>Data source</b><span>Proprietary</span></div>
+        <div><b>Ownership</b><span>In-house</span></div>
+        <div><b>Compliance</b><span>CAN-SPAM</span></div>
+        <div><b>Verification</b><span>Human</span></div>
+        <div><b>Delivery</b><span>Pune, IN</span></div>
+        <div><b>Categories</b><span>CRM · HR · Security</span></div>
       </div>
-      <div class="panel">
-        <div class="spec-row"><span class="lab">Data source</span><span class="v ok">Proprietary database</span></div>
-        <div class="spec-row"><span class="lab">Ownership</span><span class="v ok">Built &amp; owned in-house</span></div>
-        <div class="spec-row"><span class="lab">Compliance framework</span><span class="v">CAN-SPAM</span></div>
-        <div class="spec-row"><span class="lab">Verification</span><span class="v ok">Human tele-check</span></div>
-        <div class="spec-row"><span class="lab">Delivery team</span><span class="v">Pune, India</span></div>
-        <div class="spec-row"><span class="lab">Categories</span><span class="v">CRM · VoIP · HR · Payroll · Security</span></div>
+    </div>
+    <div class="data-visual reveal" data-d="2">
+      <img src="image/data-network.png" alt="Proprietary B2B database network with verification and compliance layers" width="800" height="800" loading="lazy">
+      <div class="overlay">
+        <span class="t">Data layer</span>
+        <span class="v">Owned · Compliant · Tele-verified on every batch</span>
       </div>
     </div>
   </div>
@@ -754,45 +789,45 @@ body{font-size:15.5px}
   </div>
 </section>
 
-<section class="section paper" id="compliance">
+<section class="section" id="compliance">
   <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Compliance &amp; consent</span>
-      <h2>Leads you can put your name on</h2>
-      <p>When you resell our fulfillment to your client, our compliance becomes your reputation. We treat it that way.</p>
+    <div class="sec-head wide center reveal">
+      <span class="section-label center">Compliance &amp; consent</span>
+      <h2 class="section-title" style="max-width:none;margin-left:auto;margin-right:auto;">Leads you can put your name on</h2>
+      <p class="section-lead center">When you resell our fulfillment, our compliance becomes your reputation. We treat it that way.</p>
     </div>
-    <div class="compliance">
-      <div class="comp-item reveal" data-d="1"><span class="badge">SOURCE</span><h4>Proprietary data</h4><p>Leads come from a B2B database we own in-house, not rented or resold third-party lists.</p></div>
-      <div class="comp-item reveal" data-d="2"><span class="badge">CAN-SPAM</span><h4>Activated under CAN-SPAM</h4><p>Our contact activation and outreach operate within CAN-SPAM requirements.</p></div>
-      <div class="comp-item reveal" data-d="3"><span class="badge">VERIFY</span><h4>Human tele-verification</h4><p>Every delivered lead is confirmed by a live agent, not an automated check.</p></div>
-      <div class="comp-item reveal" data-d="4"><span class="badge">TRACEABLE</span><h4>Documented sourcing</h4><p>Data source, qualification, and verification are traceable for every lead we deliver.</p></div>
+    <div class="trust-strip reveal">
+      <div class="trust-cell"><span class="badge">Source</span><h4>Proprietary data</h4><p>B2B database owned in-house — not rented or resold third-party lists.</p></div>
+      <div class="trust-cell"><span class="badge">CAN-SPAM</span><h4>Compliant activation</h4><p>Contact activation and outreach within CAN-SPAM requirements.</p></div>
+      <div class="trust-cell"><span class="badge">Verify</span><h4>Human tele-check</h4><p>Every delivered lead confirmed by a live agent, not automation.</p></div>
+      <div class="trust-cell"><span class="badge">Traceable</span><h4>Documented sourcing</h4><p>Source, qualification, and verification traceable on every record.</p></div>
     </div>
-    <div style="text-align:center; margin-top:34px;" class="reveal">
-      <a href="compliance.html" class="btn btn-ghost">See our full compliance approach <span class="arw">&rarr;</span></a>
+    <div style="text-align:center;margin-top:40px;" class="reveal">
+      <a href="compliance.html" class="btn btn-ghost">Full compliance approach <span class="arw">→</span></a>
     </div>
   </div>
 </section>
 
 <section class="section ink">
-  <div class="wrap split rev">
-    <div class="panel on-paper reveal">
-      <div class="pipe-h" style="margin-bottom:18px;"><span class="t">Standard delivery spec</span><span class="live"><b></b> live spec</span></div>
-      <div class="spec-row"><span class="lab">Pricing model</span><span class="v ok">Cost per lead (CPL)</span></div>
-      <div class="spec-row"><span class="lab">Products</span><span class="v">CS · HQL · BANT · ABM</span></div>
-      <div class="spec-row"><span class="lab">Custom qualifiers</span><span class="v">Up to 3-5 per program</span></div>
-      <div class="spec-row"><span class="lab">Fields delivered</span><span class="v">Your field map</span></div>
-      <div class="spec-row"><span class="lab">Dedupe &amp; suppression</span><span class="v ok">Applied pre-delivery</span></div>
-      <div class="spec-row"><span class="lab">Out-of-spec leads</span><span class="v ok">Replaced</span></div>
-      <div class="spec-row"><span class="lab">Reporting</span><span class="v">Per-batch delivery report</span></div>
-    </div>
-    <div class="txt reveal" data-d="2">
-      <span class="eyebrow">Built for partners</span>
-      <h2>Priced, specced, and delivered the way agencies actually buy.</h2>
-      <p>Cost-per-lead pricing with no ambiguity about what qualifies. You define the field map and the filters; we deliver clean records that match, replace anything that doesn't, and report on every batch. White-label throughout - your client never sees us.</p>
-      <div class="hero-actions" style="margin-top:26px;">
-        <a href="capabilities.html" class="btn btn-light">Review full capabilities</a>
+  <div class="wrap spec-band">
+    <div class="reveal">
+      <span class="section-label">Built for partners</span>
+      <h2 class="section-title" style="color:#fff;">Priced, specced, and delivered the way agencies actually buy.</h2>
+      <p class="section-lead light">Cost-per-lead pricing with no ambiguity. You define the field map; we deliver clean records, replace out-of-spec leads, and report on every batch. White-label throughout.</p>
+      <div class="hero-actions" style="margin-top:32px;">
+        <a href="capabilities.html" class="btn btn-light">Full capabilities</a>
         <a href="contact.html" class="btn btn-primary">Get a rate card <span class="arw">→</span></a>
       </div>
+    </div>
+    <div class="spec-sheet reveal" data-d="2">
+      <div class="spec-sheet-h"><span class="t">Standard delivery spec</span><span class="live"><b></b> live</span></div>
+      <div class="spec-row"><span class="lab">Pricing model</span><span class="v ok">Cost per lead (CPL)</span></div>
+      <div class="spec-row"><span class="lab">Products</span><span class="v">CS · HQL · BANT · ABM</span></div>
+      <div class="spec-row"><span class="lab">Custom qualifiers</span><span class="v">Up to 3–5 per program</span></div>
+      <div class="spec-row"><span class="lab">Fields delivered</span><span class="v">Your field map</span></div>
+      <div class="spec-row"><span class="lab">Dedupe &amp; suppression</span><span class="v ok">Pre-delivery</span></div>
+      <div class="spec-row"><span class="lab">Out-of-spec leads</span><span class="v ok">Replaced</span></div>
+      <div class="spec-row"><span class="lab">Reporting</span><span class="v">Per-batch report</span></div>
     </div>
   </div>
 </section>
