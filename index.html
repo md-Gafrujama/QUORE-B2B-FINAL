@@ -100,38 +100,63 @@ img{max-width:100%;display:block}
 .btn .arw{transition:transform .22s var(--ease)}
 .btn:hover .arw{transform:translateX(4px)}
 .nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:100px;min-width:0;gap:20px;padding:0 8px}
-body{padding-top:100px}
-.home .hero-in{gap:64px;padding:100px 0 56px;align-items:center}
-.home .section{padding:110px 0}
-.home .hero h1{margin-top:18px;font-size:clamp(40px,5.4vw,64px);max-width:13ch}
-.home .hero p.lead{line-height:1.8;max-width:38ch;font-size:18px}
-.home .strip{background:rgba(0,0,0,.35)}
-.home .strip-in .s{padding:34px 20px}
-.home .strip-in .k{font-size:36px}
-.home .cta-band{padding:80px 56px;border-radius:24px}
+.nav-in{height:84px}
+body{padding-top:84px}
+.brand-mark{height:48px}
+.brand-word{height:52px;max-width:240px}
+.sec-head{margin-bottom:36px}
+.sec-head.center{margin:0 auto 36px}
+.section{padding:72px 0}
+.home .hero-in{gap:40px;padding:56px 0 0;align-items:center}
+.home .section{padding:72px 0}
+.home .hero h1{margin-top:12px;font-size:clamp(36px,5vw,56px);max-width:14ch;line-height:1.08}
+.home .hero p.lead{line-height:1.7;max-width:40ch;font-size:17px;margin:16px 0 22px}
+.home .strip{background:rgba(0,0,0,.4)}
+.home .strip-in .s{padding:24px 16px}
+.home .strip-in .k{font-size:30px}
+.home .cta-band{padding:56px 40px;border-radius:20px}
+.home .sec-head{margin-bottom:32px}
+.home .sec-head.wide.center{margin-bottom:36px}
+.home .section-title{margin-bottom:12px}
+.home .partner-list{margin-top:24px}
+.home .flow-split{gap:36px;align-items:start}
+.home .flow-text .sec-head{margin-bottom:20px}
+.home .flow-step{padding:14px 0}
+.home .prod-row{padding:22px 24px}
+.home .trust-cell{padding:24px 20px}
+.home .model-split,.home .data-split,.home .spec-band{gap:40px}
 .hero{position:relative;overflow:hidden;background:var(--ink)}
 .hero-media{position:absolute;inset:0;z-index:0}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.38}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(10,21,34,.96) 0%,rgba(10,21,34,.88) 48%,rgba(10,21,34,.55) 100%)}
-.hero::before,.hero::after{display:none}
-.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.hero-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
-.hero-proof .cell{padding:18px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px}
-.hero-proof .k{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin-bottom:8px;display:block}
-.hero-proof .v{font-size:13.5px;color:#D6E0EA;line-height:1.45;font-weight:500}
-.photo-frame{position:relative;border-radius:20px;overflow:hidden;line-height:0;box-shadow:0 28px 70px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.12);background:#0D1C2E}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.32}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,21,34,.97) 0%,rgba(10,21,34,.9) 45%,rgba(10,21,34,.62) 100%)}
+.hero::before,.hero::after{display:none!important}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:40px;align-items:center;padding:56px 0 0}
+.hero-panel{display:grid;gap:12px}
+.hero-panel .main-shot{border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.14);box-shadow:0 24px 60px rgba(0,0,0,.4);line-height:0;position:relative}
+.hero-panel .main-shot img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover}
+.hero-panel .main-shot .badge{position:absolute;top:14px;left:14px;display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(10,21,34,.82);border:1px solid rgba(255,255,255,.14);font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#EAF1F6}
+.hero-panel .main-shot .badge i{width:7px;height:7px;border-radius:50%;background:var(--signal);box-shadow:0 0 8px var(--signal-g);display:inline-block}
+.hero-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.hero-steps .hs{padding:12px 10px;border-radius:12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);text-align:center}
+.hero-steps .hs b{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--signal);letter-spacing:.08em;margin-bottom:4px}
+.hero-steps .hs span{display:block;font-size:12px;color:#D6E0EA;font-weight:500;line-height:1.3}
+.hero-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.hero-proof .cell{padding:14px 12px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px}
+.hero-proof .k{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--signal);margin-bottom:6px;display:block}
+.hero-proof .v{font-size:12.5px;color:#D6E0EA;line-height:1.4;font-weight:500}
+.photo-frame{position:relative;border-radius:16px;overflow:hidden;line-height:0;box-shadow:0 20px 50px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.12);background:#0D1C2E}
 .photo-frame img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover;object-position:center}
-.photo-frame.square img{aspect-ratio:1/1}
-.photo-frame .caption{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;background:linear-gradient(180deg,transparent,rgba(10,21,34,.92));color:#EAF1F6;font-size:13.5px;font-weight:500;line-height:1.4}
-.photo-frame .caption small{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--signal);margin-bottom:5px}
-.model-split,.data-split,.spec-band,.how-split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.model-visual,.data-visual{border-radius:20px;overflow:hidden;line-height:0;box-shadow:0 24px 60px rgba(10,21,34,.14);border:1px solid var(--line);background:var(--ink)}
-.section.ink .model-visual,.section.ink .data-visual{border-color:rgba(255,255,255,.1);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.photo-frame .caption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(180deg,transparent,rgba(10,21,34,.92));color:#EAF1F6;font-size:13px;font-weight:500;line-height:1.35}
+.photo-frame .caption small{display:block;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--signal);margin-bottom:4px}
+.model-split,.data-split,.spec-band{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.model-visual,.data-visual{border-radius:16px;overflow:hidden;line-height:0;box-shadow:0 18px 44px rgba(10,21,34,.12);border:1px solid var(--line);background:var(--ink)}
+.section.ink .model-visual,.section.ink .data-visual{border-color:rgba(255,255,255,.1);box-shadow:0 24px 60px rgba(0,0,0,.35)}
 .model-visual img,.data-visual img{width:100%;height:auto;display:block;aspect-ratio:4/3;object-fit:cover}
-.model-visual-cap{padding:16px 20px;background:var(--white);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.4}
+.model-visual-cap{padding:14px 16px;background:var(--white);border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.35}
 .model-visual-cap .t{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal-d)}
-.model-visual-cap .v{font-size:13px;color:var(--slate);font-weight:500;text-align:right}
+.model-visual-cap .v{font-size:12.5px;color:var(--slate);font-weight:500;text-align:right}
+.section-title{font-size:clamp(28px,3.6vw,40px);letter-spacing:-0.03em;line-height:1.15;margin:0 0 12px;max-width:16ch}
+.section-lead{font-size:16.5px;line-height:1.65;color:var(--slate);max-width:52ch;margin:0}
 .partner-list{display:grid;gap:0;margin-top:36px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--white)}
 .partner-row{display:grid;grid-template-columns:56px 1fr auto;gap:20px;align-items:center;padding:20px 24px;border-top:1px solid var(--line);transition:background .2s}
 .partner-row:first-child{border-top:none}
@@ -150,7 +175,7 @@ body{padding-top:100px}
 .flow-diagram{border-radius:20px;padding:28px 22px 24px;box-shadow:0 30px 70px rgba(10,21,34,.18)}
 .trust-strip{border-radius:24px;box-shadow:0 20px 50px rgba(10,21,34,.06)}
 .partner-list{border-radius:20px;box-shadow:0 16px 40px rgba(10,21,34,.05)}
-.cta-band{background:url("image/b2b-hero-office.png") center/cover no-repeat;position:relative}
+.cta-band{background:url("image/b2b-workflow-hero.png") center/cover no-repeat;position:relative}
 .cta-band::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,21,34,.88),rgba(10,21,34,.82));z-index:0}
 .cta-band::after{content:"";position:absolute;inset:0;background:radial-gradient(560px 320px at 50% -30%,rgba(20,200,180,.28),transparent 68%);z-index:0}
 .prod-row .code{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--signal-d);padding-top:4px}
@@ -188,8 +213,6 @@ body{padding-top:100px}
 .sec-head.wide.center .section-label::before,.sec-head.wide.center .section-label::after{content:"";width:22px;height:1.5px;background:linear-gradient(90deg,transparent,var(--signal))}
 .sec-head.wide.center .section-label::before{background:linear-gradient(90deg,var(--signal),transparent)}
 .hero-console-top .brand-mini{display:flex;align-items:center;gap:10px}
-.section-title{font-size:clamp(32px,4vw,48px);letter-spacing:-0.035em;line-height:1.12;margin:0 0 18px;max-width:14ch}
-.section-lead{font-size:18px;line-height:1.75;color:var(--slate);max-width:52ch;margin:0}
 .section-lead.light{color:#AFC0D0}
 .section-lead.center{margin:0 auto}
 .sec-head.wide{max-width:780px}
@@ -385,27 +408,31 @@ h1,h2,h3,p,li,.addr,.spec-row .v{overflow-wrap:anywhere;word-break:break-word}
 .pipe,.home .pipe{padding:16px 14px 12px}
 .spec-row{flex-wrap:wrap}
 .wrap{padding:0 16px}
-.nav-in{height:78px;padding:0 4px}
-body{padding-top:78px}
-.brand-mark{height:46px}
-.brand-word{height:44px;max-width:min(150px,36vw)}
+.nav-in{height:72px;padding:0 4px}
+body{padding-top:72px}
+.brand-mark{height:40px}
+.brand-word{height:38px;max-width:min(140px,34vw)}
+.nav-links.open{top:72px}
 .nav-cta .btn{display:none}
-.hero-in,.split,.split.rev .txt,.flow-split,.model-split,.data-split,.spec-band,.how-split{grid-template-columns:1fr;order:0}
-.split,.flow-split,.model-split,.data-split,.spec-band,.how-split{gap:28px}
-.hero-proof{grid-template-columns:1fr;gap:10px;margin-top:28px}
+.hero-in,.split,.split.rev .txt,.flow-split,.model-split,.data-split,.spec-band{grid-template-columns:1fr;order:0}
+.split,.flow-split,.model-split,.data-split,.spec-band{gap:24px}
+.hero-proof{grid-template-columns:1fr;gap:8px;margin-top:20px}
+.hero-steps{grid-template-columns:repeat(2,1fr)}
 .photo-frame img,.model-visual img,.data-visual img{aspect-ratio:16/10}
 .how-visual .photo-frame img{max-height:none}
-.prod-row{grid-template-columns:1fr;gap:10px;padding:22px 20px}
+.prod-row{grid-template-columns:1fr;gap:10px;padding:18px 16px}
 .prod-row .points{justify-content:flex-start}
 .trust-strip{grid-template-columns:1fr}
-.trust-cell{border-right:none;border-bottom:1px solid var(--line);padding:24px 20px}
+.trust-cell{border-right:none;border-bottom:1px solid var(--line);padding:20px 16px}
 .trust-cell:last-child{border-bottom:none}
-.partner-row{grid-template-columns:44px 1fr;padding:18px 16px}
+.partner-row{grid-template-columns:40px 1fr;padding:14px 14px}
 .partner-row .tag{display:none}
 .data-spec{grid-template-columns:1fr}
 .section-title{max-width:none}
-.home .hero-in{padding:56px 0 32px;gap:28px;align-items:start}
-.home .hero h1{font-size:clamp(32px,8vw,44px);max-width:none}
+.home .hero-in{padding:36px 0 0;gap:22px;align-items:start}
+.home .hero h1{font-size:clamp(30px,8vw,40px);max-width:none}
+.home .section{padding:48px 0}
+.section{padding:48px 0}
 .flow-step{grid-template-columns:44px minmax(0,1fr);gap:14px;padding:18px 0}
 .flow-step .idx{width:44px;height:44px;border-radius:12px;font-size:12px}
 .flow-diagram{padding:20px 16px 18px}
@@ -499,27 +526,35 @@ body{font-size:15.5px}
 
 <section class="hero">
   <div class="hero-media" aria-hidden="true">
-    <img src="image/b2b-hero-office.png" alt="" width="1600" height="900" fetchpriority="high">
+    <img src="image/b2b-workflow-hero.png" alt="" width="1600" height="900" fetchpriority="high">
   </div>
   <div class="wrap hero-in">
     <div>
       <span class="eyebrow">White-label lead fulfillment</span>
       <h1>The fulfillment partner behind your <span class="hi">demand gen numbers.</span></h1>
-      <p class="lead">Content syndication, high-quality leads, and tele-verified BANT — delivered to your spec from our proprietary B2B database. You keep the client. We deliver the leads.</p>
+      <p class="lead">Content syndication, HQL, and tele-verified BANT — delivered to your spec from our proprietary B2B database. You keep the client. We deliver the leads.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-primary">Request delivery capacity <span class="arw">→</span></a>
         <a href="capabilities.html" class="btn btn-light">See what we fulfill</a>
       </div>
       <div class="hero-proof">
-        <div class="cell"><span class="k">Source</span><span class="v">Proprietary B2B database, owned in-house</span></div>
-        <div class="cell"><span class="k">Verify</span><span class="v">100% human tele-verified before delivery</span></div>
-        <div class="cell"><span class="k">Deliver</span><span class="v">Your fields, your format, your SLA</span></div>
+        <div class="cell"><span class="k">01 Source</span><span class="v">Proprietary B2B database</span></div>
+        <div class="cell"><span class="k">02 Verify</span><span class="v">Human tele-BANT check</span></div>
+        <div class="cell"><span class="k">03 Deliver</span><span class="v">Your fields · your SLA</span></div>
       </div>
     </div>
 
-    <div class="photo-frame reveal" data-d="2">
-      <img src="image/b2b-televerify.png" alt="Quore B2B tele-verification delivery team qualifying leads" width="1200" height="900" loading="eager">
-      <div class="caption"><small>Delivery ops · Pune</small>Human tele-verification on every lead before it ships</div>
+    <div class="hero-panel reveal" data-d="1">
+      <div class="main-shot">
+        <span class="badge"><i></i> How B2B fulfillment works</span>
+        <img src="image/b2b-workflow-hero.png" alt="B2B workflow: order brief, database sourcing, tele-verification, lead delivery" width="1400" height="875" loading="eager">
+      </div>
+      <div class="hero-steps">
+        <div class="hs"><b>01</b><span>Order / Spec</span></div>
+        <div class="hs"><b>02</b><span>Source &amp; Match</span></div>
+        <div class="hs"><b>03</b><span>Tele-Verify</span></div>
+        <div class="hs"><b>04</b><span>Ship to Spec</span></div>
+      </div>
     </div>
   </div>
 
@@ -547,10 +582,10 @@ body{font-size:15.5px}
       </div>
     </div>
     <div class="model-visual reveal" data-d="2">
-      <img src="image/b2b-partner-meeting.png" alt="Agency partner meeting for white-label lead fulfillment" width="1200" height="900" loading="lazy">
+      <img src="image/b2b-process-desk.png" alt="Lead order, ICP checklist, headset and delivery batch on fulfillment desk" width="1200" height="900" loading="lazy">
       <div class="model-visual-cap">
-        <span class="t">Partner model</span>
-        <span class="v">You keep the client · We deliver the leads</span>
+        <span class="t">How we work</span>
+        <span class="v">Spec → source → verify → deliver</span>
       </div>
     </div>
   </div>
@@ -677,8 +712,8 @@ body{font-size:15.5px}
 
     <div class="how-visual reveal" data-d="2">
       <div class="photo-frame">
-        <img src="image/b2b-televerify.png" alt="Tele-verification team confirming BANT leads" width="1200" height="675" loading="lazy">
-        <div class="caption"><small>Live verification</small>Human BANT checks before every delivery batch</div>
+        <img src="image/b2b-process-desk.png" alt="Fulfillment process tools: CRM, ICP checklist, headset, delivery batch" width="1200" height="675" loading="lazy">
+        <div class="caption"><small>Process in practice</small>Order brief · database match · tele-verify · delivery batch</div>
       </div>
       <div class="flow-diagram" aria-label="Lead fulfillment process flow diagram">
         <div class="flow-diagram-h">
