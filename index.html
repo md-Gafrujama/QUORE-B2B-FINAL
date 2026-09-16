@@ -102,11 +102,10 @@ img{max-width:100%;display:block}
 .btn:hover .arw{transform:translateX(4px)}
 .nav{position:fixed;top:0;left:0;right:0;width:100%;z-index:80;background:rgba(255,255,255,.94);backdrop-filter:saturate(160%) blur(16px);-webkit-backdrop-filter:saturate(160%) blur(16px);border-bottom:1px solid var(--line);transition:box-shadow .25s var(--ease),background .25s}
 .nav.scrolled{box-shadow:0 8px 28px rgba(10,21,34,.08)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:84px;min-width:0;gap:20px;padding:0 8px;position:relative}
-body{padding-top:84px;scroll-padding-top:100px}
-body.home{padding-top:72px;scroll-padding-top:88px}
-.brand-mark{height:48px}
-.brand-word{height:52px;max-width:240px}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:100px;min-width:0;gap:20px;padding:0 8px;position:relative}
+body{padding-top:100px;scroll-padding-top:116px}
+.brand-mark{height:58px}
+.brand-word{height:66px;max-width:300px}
 .sec-head{margin-bottom:36px}
 .sec-head.center{margin:0 auto 36px}
 .section{padding:72px 0}
@@ -182,9 +181,6 @@ body.home{padding-top:72px;scroll-padding-top:88px}
 .home #how .workflow-img-frame{margin-bottom:4px}
 .home .data-spec div{padding:8px 0;font-size:12.5px}
 .home .data-spec span{font-weight:500}
-.home .nav-in{height:72px}
-.home .brand-mark,.home .nav .brand-mark{height:40px}
-.home .brand-word,.home .nav .brand-word{height:42px;max-width:190px}
 .hero{position:relative;overflow:hidden;background:var(--ink)}
 .hero-media{position:absolute;inset:0;z-index:0}
 .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.32}
@@ -353,8 +349,8 @@ body.home{padding-top:72px;scroll-padding-top:88px}
 .sec-head.wide{max-width:780px}
 .sec-head.wide.center{text-align:center;margin-left:auto;margin-right:auto}
 .brand{display:flex;align-items:center;gap:10px;min-width:0}
-.nav .brand-mark{height:48px;width:auto;border-radius:10px;display:block;flex-shrink:0}
-.nav .brand-word{height:52px;width:auto;display:block;flex-shrink:0;max-width:240px;object-fit:contain;object-position:left center}
+.nav .brand-mark{height:58px;width:auto;border-radius:10px;display:block;flex-shrink:0}
+.nav .brand-word{height:66px;width:auto;display:block;flex-shrink:0;max-width:300px;object-fit:contain;object-position:left center}
 .brand-mark{height:58px;width:auto;border-radius:10px;display:block;flex-shrink:0}
 .brand-word{height:66px;width:auto;display:block;flex-shrink:0;max-width:300px;object-fit:contain;object-position:left center}
 .footer .brand-mark{height:36px}
@@ -560,9 +556,9 @@ body.menu-open{overflow:hidden;touch-action:none}
 .reveal[data-d="1"],.reveal[data-d="2"],.reveal[data-d="3"],.reveal[data-d="4"],.reveal[data-d="5"],.reveal[data-d="6"]{transition-delay:0s}
 .nav,.hero,.section,.footer,.wrap,.hero-in,.split,.grid,.panel,.pipe,.cta-band,.model-split,.fulfill-split,.data-split,.spec-band,.partner-list,.model-visual,.workflow-img-frame{max-width:100%;width:100%;box-sizing:border-box}
 .nav .brand{min-width:0;overflow:hidden;flex:1 1 auto}
-.nav .brand-mark{height:40px}
-.nav .brand-word{height:38px;max-width:min(150px,38vw)}
-.nav-in{height:68px;padding:0 2px;width:100%;max-width:100%}
+.nav .brand-mark{height:46px}
+.nav .brand-word{height:44px;max-width:min(150px,36vw)}
+.nav-in{height:78px;padding:0 4px;width:100%;max-width:100%}
 h1,h2,h3,p,li,.addr,.spec-row .v{overflow-wrap:anywhere;word-break:break-word}
 .wrap{padding:0 16px;width:100%;max-width:100%;box-sizing:border-box}
 .hero-in,.split,.split.rev .txt,.flow-split,.model-split,.data-split,.spec-band,.fulfill-split{grid-template-columns:1fr !important;order:0;width:100%}
@@ -571,17 +567,17 @@ h1,h2,h3,p,li,.addr,.spec-row .v{overflow-wrap:anywhere;word-break:break-word}
 .cta-band{padding:28px 16px;border-radius:0;width:100%;max-width:100%;box-sizing:border-box}
 .model-visual-cap{padding:12px 16px;flex-wrap:wrap;gap:6px}
 .model-visual-cap .v{text-align:left}
-body{padding-top:68px;scroll-padding-top:84px}
-.brand-mark{height:40px}
-.brand-word{height:38px;max-width:min(140px,34vw)}
+body{padding-top:78px;scroll-padding-top:94px}
+.brand-mark{height:46px}
+.brand-word{height:44px;max-width:min(150px,36vw)}
 .nav-cta .btn{display:none}
 .menu-btn{display:inline-flex}
-.nav-links{display:flex;position:fixed;top:68px;left:0;right:0;flex-direction:column;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:8px 18px 20px;gap:0;border-bottom:1px solid var(--line);box-shadow:0 18px 40px rgba(10,21,34,.12);z-index:75;max-height:min(70vh,420px);overflow-y:auto;-webkit-overflow-scrolling:touch;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px);transition:opacity .28s var(--ease),transform .32s var(--ease),visibility .32s}
+.nav-links{display:flex;position:fixed;top:78px;left:0;right:0;flex-direction:column;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:8px 18px 20px;gap:0;border-bottom:1px solid var(--line);box-shadow:0 18px 40px rgba(10,21,34,.12);z-index:75;max-height:min(70vh,420px);overflow-y:auto;-webkit-overflow-scrolling:touch;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px);transition:opacity .28s var(--ease),transform .32s var(--ease),visibility .32s}
 .nav-links.open{opacity:1;visibility:visible;pointer-events:auto;transform:none}
 .nav-links a{padding:14px 10px;font-size:16px;border-radius:10px;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent}
 .nav-links a:active{background:var(--paper)}
 .nav-links a::after{display:none}
-.nav-backdrop{display:block;position:fixed;inset:68px 0 0;background:rgba(10,21,34,.35);z-index:70;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s var(--ease),visibility .28s;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+.nav-backdrop{display:block;position:fixed;inset:78px 0 0;background:rgba(10,21,34,.35);z-index:70;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s var(--ease),visibility .28s;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
 .nav-backdrop.open{opacity:1;visibility:visible;pointer-events:auto}
 .hero-in,.split,.split.rev .txt,.flow-split,.model-split,.data-split,.spec-band,.fulfill-split{grid-template-columns:1fr;order:0}
 .split,.flow-split,.model-split,.data-split,.spec-band,.fulfill-split{gap:22px}
