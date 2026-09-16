@@ -146,10 +146,8 @@ body{padding-top:100px}
 .prod-row:hover{border-color:rgba(20,200,180,.35);box-shadow:0 16px 40px rgba(10,21,34,.08);transform:translateY(-2px);background:linear-gradient(90deg,rgba(20,200,180,.06),transparent 50%)}
 .how-visual{display:grid;gap:16px}
 .how-visual .photo-frame{box-shadow:0 24px 60px rgba(10,21,34,.12);border:1px solid var(--line)}
-.how-rail{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:18px;background:var(--ink);border-radius:16px;border:1px solid rgba(10,21,34,.08)}
-.how-rail .n{text-align:center;padding:8px 4px}
-.how-rail .n b{display:flex;width:32px;height:32px;margin:0 auto 8px;align-items:center;justify-content:center;border-radius:9px;background:rgba(20,200,180,.12);color:var(--signal);font-family:"IBM Plex Mono",monospace;font-size:11px;border:1px solid rgba(20,200,180,.25)}
-.how-rail .n span{display:block;font-size:11px;color:#AFC0D0;line-height:1.3;font-weight:500}
+.how-visual .photo-frame img{aspect-ratio:16/9;max-height:220px;width:100%;object-fit:cover}
+.flow-diagram{border-radius:20px;padding:28px 22px 24px;box-shadow:0 30px 70px rgba(10,21,34,.18)}
 .trust-strip{border-radius:24px;box-shadow:0 20px 50px rgba(10,21,34,.06)}
 .partner-list{border-radius:20px;box-shadow:0 16px 40px rgba(10,21,34,.05)}
 .cta-band{background:url("image/b2b-hero-office.png") center/cover no-repeat;position:relative}
@@ -396,8 +394,7 @@ body{padding-top:78px}
 .split,.flow-split,.model-split,.data-split,.spec-band,.how-split{gap:28px}
 .hero-proof{grid-template-columns:1fr;gap:10px;margin-top:28px}
 .photo-frame img,.model-visual img,.data-visual img{aspect-ratio:16/10}
-.how-rail{grid-template-columns:repeat(3,1fr)}
-.how-rail .n:nth-child(4),.how-rail .n:nth-child(5){grid-column:auto}
+.how-visual .photo-frame img{max-height:none}
 .prod-row{grid-template-columns:1fr;gap:10px;padding:22px 20px}
 .prod-row .points{justify-content:flex-start}
 .trust-strip{grid-template-columns:1fr}
@@ -680,15 +677,77 @@ body{font-size:15.5px}
 
     <div class="how-visual reveal" data-d="2">
       <div class="photo-frame">
-        <img src="image/b2b-hero-office.png" alt="Demand generation team managing lead fulfillment programs" width="1200" height="900" loading="lazy">
-        <div class="caption"><small>How delivery works</small>Order in → source &amp; verify → ship to your spec</div>
+        <img src="image/b2b-televerify.png" alt="Tele-verification team confirming BANT leads" width="1200" height="675" loading="lazy">
+        <div class="caption"><small>Live verification</small>Human BANT checks before every delivery batch</div>
       </div>
-      <div class="how-rail" aria-label="Fulfillment steps">
-        <div class="n"><b>01</b><span>Spec</span></div>
-        <div class="n"><b>02</b><span>Source</span></div>
-        <div class="n"><b>03</b><span>Match</span></div>
-        <div class="n"><b>04</b><span>Verify</span></div>
-        <div class="n"><b>05</b><span>Deliver</span></div>
+      <div class="flow-diagram" aria-label="Lead fulfillment process flow diagram">
+        <div class="flow-diagram-h">
+          <span class="t">Fulfillment flow</span>
+          <span class="live"><b></b> deterministic</span>
+        </div>
+        <svg class="flow-svg" viewBox="0 0 420 640" role="img" aria-labelledby="flowTitle flowDesc">
+          <title id="flowTitle">Quore B2B lead fulfillment flow</title>
+          <desc id="flowDesc">Process flow from partner order spec through database sourcing, activation, engagement, ICP filtering, tele-verification, QA gate, and delivery.</desc>
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#14C8B4"/></marker>
+            <marker id="arr-dim" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#64788D"/></marker>
+            <linearGradient id="nodeGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.12)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0.04)"/>
+            </linearGradient>
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <rect x="110" y="16" width="200" height="44" rx="10" fill="#64788D" stroke="rgba(255,255,255,.15)"/>
+          <text x="210" y="36" text-anchor="middle" fill="#fff" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.2">INPUT</text>
+          <text x="210" y="52" text-anchor="middle" fill="#EAF1F6" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Partner order spec S</text>
+          <line x1="210" y1="60" x2="210" y2="88" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="90" y="88" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
+          <text x="210" y="110" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">PROCESS</text>
+          <text x="210" y="128" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">Proprietary database D</text>
+          <line x1="210" y1="140" x2="210" y2="168" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="90" y="168" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
+          <text x="210" y="190" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">PROCESS</text>
+          <text x="210" y="208" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">CAN-SPAM activation A</text>
+          <line x1="210" y1="220" x2="210" y2="248" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="90" y="248" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
+          <text x="210" y="270" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">PROCESS</text>
+          <text x="210" y="288" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">Campaign engagement E</text>
+          <line x1="210" y1="300" x2="210" y2="328" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="90" y="328" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
+          <text x="210" y="350" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">FILTER</text>
+          <text x="210" y="368" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">ICP match f(ICP)</text>
+          <line x1="210" y1="380" x2="210" y2="408" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
+          <rect x="90" y="408" width="240" height="52" rx="12" fill="url(#nodeGrad)" stroke="rgba(255,255,255,.16)"/>
+          <text x="210" y="430" text-anchor="middle" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing="1">VERIFY</text>
+          <text x="210" y="448" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13.5" font-weight="600">Human tele-check V(lead)</text>
+          <line x1="210" y1="460" x2="210" y2="488" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
+          <polygon points="210,488 268,522 210,556 152,522" fill="#14C8B4" filter="url(#glow)"/>
+          <text x="210" y="518" text-anchor="middle" fill="#04302B" font-family="IBM Plex Mono, monospace" font-size="10" font-weight="600">Q(spec)</text>
+          <text x="210" y="532" text-anchor="middle" fill="#04302B" font-family="IBM Plex Mono, monospace" font-size="9">pass?</text>
+          <line x1="268" y1="522" x2="340" y2="522" stroke="#64788D" stroke-width="1.5" marker-end="url(#arr-dim)"/>
+          <text x="292" y="512" fill="#8397A9" font-family="IBM Plex Mono, monospace" font-size="9">fail</text>
+          <rect x="342" y="502" width="68" height="40" rx="8" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.12)"/>
+          <text x="376" y="520" text-anchor="middle" fill="#AFC0D0" font-family="IBM Plex Mono, monospace" font-size="9">drop</text>
+          <text x="376" y="533" text-anchor="middle" fill="#AFC0D0" font-family="IBM Plex Mono, monospace" font-size="9">replace</text>
+          <path d="M376 542 C376 580 210 590 210 560" fill="none" stroke="#64788D" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#arr-dim)"/>
+          <line x1="210" y1="556" x2="210" y2="584" stroke="#14C8B4" stroke-width="1.5" marker-end="url(#arr)"/>
+          <text x="198" y="574" fill="#14C8B4" font-family="IBM Plex Mono, monospace" font-size="9">pass</text>
+          <rect x="110" y="578" width="200" height="48" rx="10" fill="#0B9A8B" stroke="rgba(20,200,180,.45)"/>
+          <text x="210" y="598" text-anchor="middle" fill="#fff" font-family="IBM Plex Mono, monospace" font-size="10" letter-spacing="1.2">OUTPUT</text>
+          <text x="210" y="615" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="13" font-weight="600">Delivered leads L → partner</text>
+          <text x="24" y="130" fill="#64788D" font-family="IBM Plex Mono, monospace" font-size="9" transform="rotate(-90 24 130)">SOURCE LAYER</text>
+          <text x="24" y="290" fill="#64788D" font-family="IBM Plex Mono, monospace" font-size="9" transform="rotate(-90 24 290)">ENGAGEMENT</text>
+          <text x="24" y="440" fill="#64788D" font-family="IBM Plex Mono, monospace" font-size="9" transform="rotate(-90 24 440)">QUALIFICATION</text>
+        </svg>
+        <div class="flow-legend">
+          <span><i class="in"></i> Input</span>
+          <span><i class="proc"></i> Process</span>
+          <span><i class="gate"></i> QA gate</span>
+          <span><i class="out"></i> Output</span>
+        </div>
       </div>
     </div>
   </div>
