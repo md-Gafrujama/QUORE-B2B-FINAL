@@ -223,9 +223,14 @@ body{padding-top:84px;scroll-padding-top:100px}
 .ps-card h4{font-family:"Space Grotesk",sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin:0 0 6px;line-height:1.25}
 .ps-card p{font-size:10.5px;line-height:1.5;color:#AFC0D0;margin:0}
 .fulfill-visual{position:sticky;top:96px}
-.workflow-img-frame{border-radius:18px;border:1px solid var(--line);box-shadow:0 20px 50px rgba(10,21,34,.1);line-height:0;background:linear-gradient(180deg,#E8EEF4,var(--paper));padding:8px}
+.workflow-img-frame{border-radius:18px;border:1px solid var(--line);box-shadow:0 20px 50px rgba(10,21,34,.1);line-height:0;background:linear-gradient(180deg,#E8EEF4,var(--paper));padding:8px;overflow:hidden}
 .workflow-img-frame img{width:100%;height:auto;display:block;object-fit:contain;object-position:center;border-radius:12px}
-.fulfill-visual .workflow-img-frame{padding:10px}
+.fulfill-visual .workflow-img-frame{padding:10px;display:grid;gap:10px;background:var(--white)}
+.fulfill-visual .workflow-img-frame img{border-radius:12px}
+.fulfill-visual .fulfill-photo{border-radius:12px;border:1px solid var(--line)}
+.fulfill-visual .fulfill-cap{padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px;line-height:1.35;background:var(--paper);border-radius:10px;border:1px solid var(--line)}
+.fulfill-visual .fulfill-cap .t{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--signal-d)}
+.fulfill-visual .fulfill-cap .v{font-size:12px;color:var(--slate);font-weight:500;text-align:right}
 .flow-diagram{border-radius:20px;padding:28px 22px 24px;box-shadow:0 30px 70px rgba(10,21,34,.18)}
 .trust-strip{border-radius:24px;box-shadow:0 20px 50px rgba(10,21,34,.06)}
 .partner-list{border-radius:20px;box-shadow:0 16px 40px rgba(10,21,34,.05)}
@@ -775,6 +780,11 @@ body{font-size:15px}
       <div class="fulfill-visual reveal" data-d="2">
         <div class="workflow-img-frame">
           <img src="image/b2b-product-suite-v2.png" alt="B2B product suite: Content syndication, HQL, BANT, ABM, Intent, and Verified Data — six lead types, one fulfillment partner" width="900" height="1200" loading="lazy">
+          <div class="fulfill-cap">
+            <span class="t">B2B product suite</span>
+            <span class="v">Six lead types · One fulfillment partner</span>
+          </div>
+          <img class="fulfill-photo" src="image/hero-fulfillment.png" alt="B2B lead fulfillment workflow and delivery pipeline" width="1200" height="900" loading="lazy">
         </div>
       </div>
     </div>
