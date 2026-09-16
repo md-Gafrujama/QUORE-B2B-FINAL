@@ -242,24 +242,39 @@ body{padding-top:100px}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--signal);background:#fff;box-shadow:0 0 0 4px var(--signal-t)}
 .field textarea{resize:vertical;min-height:118px}
 .form-note{font-size:12.5px;color:var(--slate-2);margin-top:6px}
-.footer{background:var(--ink);color:#AFC0D0;padding:70px 0 32px;position:relative;overflow:hidden}
-.footer::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:26px 26px;-webkit-mask-image:radial-gradient(80% 100% at 90% 0%,#000,transparent 70%);mask-image:radial-gradient(80% 100% at 90% 0%,#000,transparent 70%)}
+.footer{background:#08121C;color:#AFC0D0;padding:52px 0 22px;position:relative;overflow:hidden}
+.footer::before{content:"";position:absolute;inset:0;background:radial-gradient(520px 220px at 12% -10%,rgba(20,200,180,.12),transparent 70%),radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:auto,22px 22px;pointer-events:none}
+.footer::after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 0%,rgba(20,200,180,.5) 50%,transparent 100%);pointer-events:none}
 .footer>.wrap{position:relative;z-index:2}
-.footer h4{color:#fff;font-size:12px;font-family:"IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;font-weight:500}
-.footer-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.5fr;gap:44px;padding-bottom:44px;border-bottom:1px solid rgba(255,255,255,.1)}
-.footer .brand{color:#fff;margin-bottom:16px;align-items:baseline;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.02em;gap:4px}
+.footer-main{display:grid;grid-template-columns:minmax(0,1.35fr) repeat(3,minmax(0,1fr));gap:36px 32px;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-brand-block{min-width:0;padding-right:12px}
+.footer .brand{color:#fff;margin:0 0 14px;align-items:center;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:19px;letter-spacing:-0.02em;gap:8px}
 .footer .brand .q{color:var(--signal)}
-.footer p{font-size:14px;color:#8397A9;max-width:34ch}
+.footer-brand-block .eyebrow{color:var(--signal);margin-bottom:10px;font-size:10px;letter-spacing:.16em}
+.footer-brand-block .eyebrow::before{width:16px;background:linear-gradient(90deg,var(--signal),transparent)}
+.footer-brand-block p{font-size:13px;color:#7E92A6;max-width:32ch;margin:0 0 18px;line-height:1.65}
+.footer-actions{display:flex;flex-wrap:wrap;gap:10px}
+.footer-actions .btn{padding:10px 16px;font-size:13px;border-radius:8px}
+.footer-actions .btn-light{background:transparent;border-color:rgba(255,255,255,.18);color:#EAF1F6}
+.footer-actions .btn-light:hover{border-color:var(--signal);background:rgba(20,200,180,.08);color:#fff;transform:none}
+.footer-col h4{color:#EAF1F6;font-size:10.5px;font-family:"IBM Plex Mono",monospace;letter-spacing:.16em;text-transform:uppercase;margin:0 0 14px;font-weight:500;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.08)}
 .footer ul{list-style:none;padding:0;margin:0}
-.footer ul li{margin-bottom:11px}
-.footer ul li a{font-size:14px;color:#AFC0D0;transition:color .15s,padding-left .15s}
-.footer ul li a:hover{color:var(--signal);padding-left:4px}
-.footer .addr{font-size:13px;color:#8397A9;line-height:1.75}
-.footer .addr b{color:#C9D6E1;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em}
-.footer-btm{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:13px;color:#647889;flex-wrap:wrap;gap:10px}
-.footer-btm a{color:#8397A9;transition:color .15s}
+.footer ul li{margin:0}
+.footer ul li a{font-size:13px;color:#9BB0C2;transition:color .2s;display:inline-block;padding:5px 0;line-height:1.45}
+.footer ul li a:hover{color:var(--signal);transform:none}
+.footer .addr{font-size:12.5px;color:#7E92A6;line-height:1.65}
+.footer .addr-block{margin:0 0 14px;padding:0}
+.footer .addr-block:last-child{margin-bottom:0}
+.footer .addr b{display:block;color:#C9D6E1;font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px;font-weight:500}
+.footer-meta{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06);font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#647889}
+.footer-meta span{display:inline-flex;align-items:center;gap:7px}
+.footer-meta span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--signal);box-shadow:0 0 8px rgba(20,200,180,.45);flex-shrink:0}
+.footer-btm{display:flex;justify-content:space-between;align-items:center;padding-top:16px;font-size:11.5px;color:#5A6F82;flex-wrap:wrap;gap:10px 16px}
+.footer-btm a{color:#7E92A6;transition:color .15s;font-size:11.5px}
 .footer-btm a:hover{color:var(--signal)}
-.footer-legal{display:flex;flex-wrap:wrap;gap:8px 18px}
+.footer-legal{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.footer-legal a+a{position:relative;padding-left:12px}
+.footer-legal a+a::before{content:"";position:absolute;left:0;top:50%;width:3px;height:3px;border-radius:50%;background:#45596E;transform:translateY(-50%)}
 @media (max-width:940px){
 html,body{overflow-x:hidden !important;overflow-x:clip !important;overflow-y:auto;max-width:100% !important;width:100%;overscroll-behavior-x:none;touch-action:pan-y}
 .site{overflow-x:hidden;overflow-x:clip;max-width:100%}
@@ -304,19 +319,18 @@ body{padding-top:78px}
 .hero-actions .btn,.cta-actions .btn{flex:1 1 100%;justify-content:center}
 .card{padding:20px}
 .panel,.form-card{padding:18px}
-.footer{padding:40px 0 calc(28px + env(safe-area-inset-bottom,0px))}
-.footer>.wrap{padding-left:20px;padding-right:20px}
-.footer .brand{overflow:visible;white-space:normal;margin-bottom:10px;font-size:20px}
-.footer p{max-width:none;margin:0}
-.footer h4{margin-bottom:12px}
-.footer ul li{margin-bottom:6px}
-.footer ul li a{display:inline-block;padding:6px 0}
-.footer ul li a:hover{padding-left:0}
+.footer{padding:40px 0 calc(22px + env(safe-area-inset-bottom,0px))}
+.footer>.wrap{padding-left:18px;padding-right:18px}
+.footer-main{grid-template-columns:1fr 1fr;gap:24px 18px;padding-bottom:24px}
+.footer-brand-block{grid-column:1/-1;padding-right:0}
+.footer-brand-block p{max-width:none;margin:0 0 14px;font-size:13px}
+.footer .brand{margin-bottom:10px;font-size:18px}
+.footer-col h4{margin-bottom:10px;padding-bottom:8px}
+.footer ul li a{padding:6px 0}
 .footer .addr,.footer p,.footer li{overflow-wrap:break-word;word-break:normal}
-.footer-grid{grid-template-columns:1fr 1fr;gap:28px 20px;padding-bottom:28px}
-.footer-grid>:first-child,.footer-grid>:last-child{grid-column:1/-1}
-.footer-btm{flex-direction:column;align-items:flex-start;gap:14px;padding-top:20px}
-.footer-legal{display:flex;flex-wrap:wrap;gap:8px 16px}
+.footer-meta{gap:8px 14px;padding:14px 0;font-size:10px}
+.footer-btm{flex-direction:column;align-items:flex-start;gap:10px;padding-top:14px}
+.footer-legal{gap:4px 12px}
 .step{grid-template-columns:1fr;gap:6px;padding:16px 0}
 .step:hover{padding-left:0}
 .feat-list{margin:16px 0 0}
@@ -340,7 +354,7 @@ body{font-size:15.5px}
 .cta-band p{margin:12px auto 20px}
 .form-grid{gap:12px}
 .footer-btm{flex-direction:column;align-items:flex-start;gap:8px}
-.footer-grid{grid-template-columns:1fr}
+.footer-main{grid-template-columns:1fr}
 .hero-note{margin-top:16px;gap:10px 14px;font-size:12.5px}
 }
 @media (prefers-reduced-motion:reduce){*,.stage,.reveal{animation:none!important;transition:none!important;opacity:1!important;transform:none!important;scroll-behavior:auto}}
@@ -483,34 +497,63 @@ body{font-size:15.5px}
 
 <footer class="footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
+    <div class="footer-main">
+      <div class="footer-brand-block">
+        <span class="eyebrow">White-label fulfillment</span>
         <div class="brand"><span class="q">Quore</span> B2B</div>
-        <p>The white-label lead fulfillment partner for demand generation teams. Proprietary data, human-verified delivery, on your spec.</p>
+        <p>Proprietary B2B data. Human tele-verification. Delivery on your field map, CPL terms, and SLA.</p>
+        <div class="footer-actions">
+          <a href="contact.html" class="btn btn-primary">Request capacity <span class="arw">→</span></a>
+          <a href="mailto:contactus@quoreb2b.com" class="btn btn-light">Email us</a>
+        </div>
       </div>
-      <div><h4>Fulfillment</h4><ul>
-        <li><a href="capabilities.html#syndication">Content syndication</a></li>
-        <li><a href="capabilities.html#hql">High-quality leads</a></li>
-        <li><a href="capabilities.html#bant">BANT / tele-verified</a></li>
-        <li><a href="capabilities.html#abm">ABM list delivery</a></li>
-        <li><a href="capabilities.html#data">Verified data</a></li>
-      </ul></div>
-      <div><h4>Company</h4><ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html#how">How it works</a></li>
-        <li><a href="compliance.html">Compliance</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://www.linkedin.com/company/quoreb2bmarketing/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      </ul></div>
-      <div><h4>Contact</h4><div class="addr">
-        <b>USA</b><br>539 W. Commerce St #2577, Dallas, TX 75208<br><br>
-        <b>INDIA</b><br>Office 804, Omicron Commerz, Koregaon Park Annex, Mundhwa, Pune 411028<br><br>
-        <b>EMAIL</b> contactus@quoreb2b.com<br><b>PHONE</b> +1 332-231-0404
-      </div></div>
+      <div class="footer-col">
+        <h4>Fulfillment</h4>
+        <ul>
+          <li><a href="capabilities.html#syndication">Content syndication</a></li>
+          <li><a href="capabilities.html#hql">High-quality leads</a></li>
+          <li><a href="capabilities.html#bant">BANT / tele-verified</a></li>
+          <li><a href="capabilities.html#abm">ABM list delivery</a></li>
+          <li><a href="capabilities.html#data">Verified data</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="compliance.html">Compliance</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://www.linkedin.com/company/quoreb2bmarketing/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Offices</h4>
+        <div class="addr">
+          <div class="addr-block">
+            <b>Dallas, USA</b>
+            539 W. Commerce St #2577<br>Dallas, TX 75208
+          </div>
+          <div class="addr-block">
+            <b>Pune, India</b>
+            Office 804, Omicron Commerz<br>Mundhwa, Pune 411028
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>Dallas HQ</span>
+      <span>Pune delivery</span>
+      <span>100% tele-verified</span>
+      <span>CAN-SPAM aligned</span>
     </div>
     <div class="footer-btm">
       <span>© 2026 Quore B2B Marketing. All rights reserved.</span>
-      <span class="footer-legal"><a href="https://www.linkedin.com/company/quoreb2bmarketing/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Do Not Sell My Info</a></span>
+      <span class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Do Not Sell My Info</a>
+      </span>
     </div>
   </div>
 </footer>
